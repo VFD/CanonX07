@@ -32,7 +32,7 @@ Canon X‑07 Peripheral Manuals & Documentation
 |-----------------------------------------|----------------|------|----------|-------------|
 | Cassette Interface (data recorder link) | X‑710          | 1983 | French   | (Referenced in Silicium archive, no PDF link) |
 | RS‑232C Communication Interface         | X‑711          | 1983 | French   | (Mentioned in Club C7 docs, no PDF link) |
-| Video Extension Module                  | X‑720          | 1984 | French   | [Manualzz – Canon X‑720](https://manualzz.com/doc/5207856/canon-x-720-module-d-extension--x-07-ordinateur-individue...) |
+| Video Extension Module                  | X‑720          | 1984 | French   | () |
 | Color Graphic Printer                   | X‑722          | 1984 | French   | (Listed in Silicium archive, PDF in progress) |
 | RAM Cards (various capacities)          | X‑721 series   | 1980s| French   | (Referenced in accessory catalog, no PDF link) |
 | Plotter / Printer Interface             | (Canon ref.)   | 1980s| French   | (Mentioned in Club C7 bulletins) |
