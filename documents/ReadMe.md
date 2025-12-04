@@ -15,7 +15,7 @@ Canon X‑07 Publications & Resources (PDF / Archives)
 
 | Title / Publication                                      | Author / Publisher        | Year       | Language | Source Link |
 |----------------------------------------------------------|---------------------------|------------|----------|-------------|
-| 40 Programmes pour Canon X‑07                            | Gilles Probst             | 1985       | French   | [Casio.ledudu.com](https://casio.ledudu.com/images/pockets/Canon/manuels/40programmespourx07.pdf) |
+| 40 Programmes pour Canon X‑07                            | Gilles Probst - Micro System ETSF            | 1985       | French   | [Casio.ledudu.com](https://casio.ledudu.com/images/pockets/Canon/manuels/40programmespourx07.pdf) |
 | Applications en Assembleur dans l’Univers du Canon X‑07  | Éditions Neptune          | 1986       | French   | [Internet Archive](https://archive.org/details/editions-neptune-applications-en-assembleur-dans-l-univers-du-canon-x-07) |
 | Les Mystères du X‑07                                     | Éditions Neptune          | 1985       | French   | [Silicium Archive](https://oldskool.silicium.org/calc/x07/docs.htm) |
 | Faites vos jeux avec Canon X‑07                          | Eyrolles                  | 1984       | French   | [Internet Archive](https://archive.org/details/eyrolles-faites-vos-jeux-avec-canon-x-07) |
