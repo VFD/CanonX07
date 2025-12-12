@@ -1,4 +1,4 @@
-# Faites vos Jeux
+# Faites vos jeux avec CANONXO7
 
 
 ## Introduction
