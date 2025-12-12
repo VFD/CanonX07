@@ -3,7 +3,7 @@
 ___
 # Introduction
 
-he Canon X‑07 is part of our retro‑computing playground. By saving old manuals, programs, and club magazines, we’re keeping its history alive.
+The Canon X‑07 is part of our retro‑computing playground. By saving old manuals, programs, and club magazines, we’re keeping its history alive.
 It’s not just about preservation — it’s also about having fun writing BASIC and assembly again, just like in the ’80s.
 Retro programming on the X‑07 is a way to reconnect with the roots of coding and share that spirit with today’s community.
 
