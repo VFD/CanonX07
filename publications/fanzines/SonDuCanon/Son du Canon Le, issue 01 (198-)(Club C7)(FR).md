@@ -25,9 +25,36 @@ Nombre Aléatoire
 80 IF G$=CHR$(13) THEN 50
 90 CLS:BEEP:9,5:END
 ```
+```asm
 
+org 1F2C
 
-
+LD D,00
+LD E,00
+LD A,R
+LD L,A
+LD A,(1F6A)
+XORL
+RLA
+LO L,A
+LO A,R
+XORL
+LD(1F6A),A
+CALL 1F48
+LD A,H
+INC A
+NOP
+JP 1F56
+LD HL,0000
+ADD HL,HL
+SLA A
+JPNC 1F52
+ADD HL,DE
+JPNZ 1F48
+RET
+LD(1F26),A
+RET
+```
 
 ```basic
 ```
