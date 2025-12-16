@@ -1,15 +1,22 @@
-# to do
-
-Reorg à faire.\
-Trier par publication.
-
-Club C7\
-Hebdogiciel\
-Logi'Stick\
-Micro Systèmes\
-...
+# Code sources Canon X07
 
 
-place evrything here....
+## Introduction
 
-for futur experimentation
+Les codes sources sont thésaurisé ici.\
+Rangés par "éditeurs".
+
+- Hebdogiciel
+- Logi'Stick
+- Micro Systèmes
+- ...
+
+Ou livres :
+
+- 40 Programmes pour Canon X07
+- Faites vos Jeux avec Canon X07
+- PlusLoin avec Canon X07
+
+Travail en cours.
+
+___
