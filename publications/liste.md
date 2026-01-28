@@ -502,6 +502,7 @@ ___
 | 53 | 1984-10    | Déplacer un point à travers l'écran     | ❕   | p227, listing                |
 | 58 | 1984-04    | Éssai                                   | ❕   | p182                         |
 | 63 | 1984-10    | Publicité                               | ❕   | p16                          |
+| 69 | 1985-04    | Des rosaces de toutes les couleurs      | ❕   | p155, à adapter (CGP-115)    |
 
 Voir pour les BASIC standard.
 
