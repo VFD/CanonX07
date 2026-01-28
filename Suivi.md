@@ -213,6 +213,7 @@ ___
 | CMX 16  | Carte 16 Ko                   | ERIE         | ❕    | Format carte de crédit |
 | CMX 8P  | Carte 8 Ko                    | ERIE         | ❕    | Format carte de crédit Protégé en écriture |
 | CMX 16P | Carte 16 Ko                   | ERIE         | ❕    | Format carte de crédit Protégé en écriture |
+|         | Câble X07 Minitel             | Feeling Soft | ❕    | Cf. Club Canon no 4 |
 
 NDR : La carte RAM CES à fait l'objet d'un article dans le Figaro (no ???).
 
