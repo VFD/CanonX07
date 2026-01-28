@@ -589,6 +589,14 @@ En cours d'extraction.\
 Il faudra netoyer les PDF et refaire les plans de jeu.
 
 ___
+### Votre Ordinateur
+
+| No | Date       | Réf.                         | État | Commentaire                  |
+|----|------------|------------------------------|------|------------------------------|
+|    | 1985-05    | 
+
+
+___
 ### suite
 
 TO DO pour les autres revues.
