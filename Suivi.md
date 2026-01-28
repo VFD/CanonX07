@@ -91,7 +91,7 @@ Documentations des périphériques Canon.
 | XR-100  | Module Extention Mémoire 8ko    | ❕ | Puce dans le compartiment dédié !!! Atention au switch devant !!! |
 | XM-100  | Carte Extention 4ko             | ❕ | |
 | XM-101  | Carte Extention 8ko             | ❕ | |
-| XC-910  | Câble Cassette                  | ❌ | Voir X-730, (mini DIN 5b? vers 3 x Jack 3.5) |
+| XC-910  | Câble Cassette                  | ❌ | Voir X-730, (mini DIN 5b vers 3 x Jack 3.5) |
 | XC-920  | Câble // pour X-710             | ❌📝 | Voir X-710, non standrd |
 | XC-930  | Câble // Centronics             | ❌📝 | Non standard vers Centronics |
 | XC-940  | Câble Série pour X-722          | ❌ | Voir X-722 (DB25 ?) |
@@ -105,7 +105,7 @@ Documentations des périphériques Canon.
 
 NDR :
 - Attention avec le AD-5, bien vérifier les polarités de la prise (inversée).
-- XC-910 ; on cherche la réf de la prise DIN (ça y ressemble, mais ça n'a pas l'aire d'être ça.
+- XC-910 ; la réf de la prise DIN :  Mini DIN 5 broches (les modèles récent sont difficile à ennficher).
 - XR-100 : Il y a des Toshiba compatibles encore disponible sur ebay (2026).
 - XC-920, XC-930, AD-4 II ; photos.
 - BP-1 et BP-2 : Alternative disponible (liens à mettre).
@@ -227,7 +227,8 @@ ___
 |         | Controleur disquette 5 1/4    |              | !      | Club Canon 1986 |
 |         | Serveur Minitel               |              | !      | Club Canon No 3 1986, p17 absente |
 |         | EPROM routines système        |              | !      | Club Orléans |
-
+|         | Synthétiseur de parole        |              | !      | Micro et Robots | 
+|         | Synthétiseur de parole        |              | !      | Club Canon no 4 (port //) |
 
 ___
 
