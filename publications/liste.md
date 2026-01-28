@@ -503,6 +503,7 @@ ___
 | 58 | 1984-04    | Éssai                                   | ❕   | p182                         |
 | 63 | 1984-10    | Publicité                               | ❕   | p16                          |
 | 69 | 1985-04    | Des rosaces de toutes les couleurs      | ❕   | p155, à adapter (CGP-115)    |
+| 71 | 1985-06    | Attention, Prêt ? Paramétrer !          | ❕   | p157-162 (X-710)             |
 
 Voir pour les BASIC standard.
 
@@ -515,6 +516,16 @@ Recherche à faire
 
 | No | Date       | Réf.                         | État | Commentaire                  |
 |----|------------|------------------------------|------|------------------------------|
+
+
+___
+### Soft et Micro
+
+Recherche à faire
+
+| No | Date       | Réf.                         | État | Commentaire                  |
+|----|------------|------------------------------|------|------------------------------|
+|    | 1985-07,08 | Convertion programmes        |      | X-07 dans la liste           |
 
 
 
