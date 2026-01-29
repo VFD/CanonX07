@@ -10,6 +10,8 @@ Faire clique droit car GitHub n'accepte pas le target="_blank".
 Actuellement la date la plus ancienne est Octobre 1983, pour les premières publications.\
 Le Canon X07 ayant été montré au SICOB '83.
 
+Pour les 2 Fanzines connus se référer à leur propre répertoire, ce sont des publications dédiées.
+
 Note :\
 PHC-25 : Tilt 08; led micro 1  \
 Squal : Tilt 21. led micro 14  \
