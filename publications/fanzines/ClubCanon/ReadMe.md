@@ -27,20 +27,20 @@ Tableau de suivi :
 
 Tableau de l'état d'avancement des restaurations :
 
-| No | Dates | État |Commentaire |
-|----|-------|------|------------|
-| 01| | ❕ | Manquant |
-| 02| | 📝 | PNG lisible |
-| 03| | 📝 | PNG lisible |
-| 04| | 📝 | PNG lisible |
-| 05| | 📝 | PNG lisible |
-| 06| | ❕ | Manquant |
-| 07| | 📝 | PNG lisible |
-| 08| | 📝 | PNG lisible |
-| 09| | 📝 | PNG lisible |
-| 10| | 📝 | PNG lisible |
-| 11| | 📝 | PNG lisible |
-| 12-13| | 📝 | Numéro double |
+| No   | Dates | État |Commentaire |
+|------|-------|------|------------|
+| 01   | 198 | ❕ | Manquant |
+| 02   | 198 | 📝 |   |
+| 03   | 198 | 📝 |   |
+| 04   | 198 | 📝 |   |
+| 05   | 198 | 📝 | Incomplet |
+| 06   | 198 | ❕ | Manquant |
+| 07   | 1986-03 | 📝 |   |
+| 08   |  | 📝 |   |
+| 09   |  | 📝 |   |
+| 10   |  | 📝 |   |
+| 11   |  | 📝 |   |
+| 12-13|  | 📝 | Numéro double |
 
 ___
 ## Note de restauration
