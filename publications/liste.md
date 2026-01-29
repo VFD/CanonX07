@@ -405,6 +405,8 @@ Recherche à faire.
 
 Voir si les BASIC générique sont adaptables.
 
+NDR : La revue fusionne avec Votre Ordinateur pour créer Micro V.O.
+
 ___
 ### Micro Ordinateurs
 
@@ -606,6 +608,7 @@ ___
 |----|------------|------------------------------|------|------------------------------|
 |    | 1985-05    | 
 
+NDR : La revue fusionne avec Micro 7 pour créer Micro V.O.
 
 ___
 ### suite
