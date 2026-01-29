@@ -36,11 +36,11 @@ Tableau de l'état d'avancement des restaurations :
 | 05   | 198 | 📝 | Incomplet |
 | 06   | 198 | ❕ | Manquant |
 | 07   | 1986-03 | 📝 |   |
-| 08   |  | 📝 |   |
-| 09   |  | 📝 |   |
-| 10   |  | 📝 |   |
-| 11   |  | 📝 |   |
-| 12-13|  | 📝 | Numéro double |
+| 08   | 1986-06 | 📝 |   |
+| 09   | 198 | 📝 |   |
+| 10   | 198 | 📝 |   |
+| 11   | 198 | 📝 |   |
+| 12-13| 198 | 📝 | Numéro double |
 
 ___
 ## Note de restauration
