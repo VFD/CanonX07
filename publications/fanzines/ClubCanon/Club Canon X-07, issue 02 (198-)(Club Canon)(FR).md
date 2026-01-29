@@ -1,4 +1,4 @@
-# CLub Canon X-07, issue 02 (198-)(Club Canon)(FR)[OCR]
+# Club Canon X-07, issue 02 (198-)(Club Canon)(FR)[OCR]
 
 ___
 ## Introduction
