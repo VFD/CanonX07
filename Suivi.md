@@ -235,7 +235,8 @@ ___
 |         | Controleur disquette 5 1/4    |              | !      | Club Canon 1986 |
 |         | Serveur Minitel               |              | !      | Club Canon No 3 1986, p17 absente |
 |         | EPROM routines système        |              | !      | Club Orléans |
-|         | Synthétiseur de parole        |              | !      | Micro et Robots | 
+|         | Synthétiseur de parole        |              | !      | Micro et Robots No 7 | 
+|         | Interface // -> série         |              | !      | Micro et Robots No 7 | 
 |         | Synthétiseur de parole        |              | !      | Club Canon no 4 (port //) |
 |         | X-07 et appareil photo        |              | !      | Club Canon no 5 |
 
