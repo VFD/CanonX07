@@ -438,20 +438,23 @@ ___
 | No  | Date    | Réf.                      | État | Commentaire                  |
 |-----|---------|---------------------------|------|------------------------------|
 | 035 | 1983-10 | Éssais                    | 📝   | p78, Présentation |
-| 042 | 1984-05 | Un Moniteur/Désassembleur | 📝   | p179 |
-| 044 | 1984-07 | Vérouillage minuscule     | 📝   | p139 |
-| 046 | 1984-10 | Mazog                     | 📝   | p215 |
-| 046 | 1984-10 | Reset                     | 📝   | p225 |
-| 046 | 1984-10 | Bomber                    | 📝   | p229 |
-| 047 | 1984-11 | Basic étendu              | 📝   | p221 |
-| 048 | 1984-12 | Graphisme assité par ordinateur | 📝   | p213 |
+| 042 | 1984-05 | Un Moniteur/Désassembleur | 📝   | p179, Listing |
+| 044 | 1984-07 | Vérouillage minuscule     | 📝   | p139, Listing |
+| 046 | 1984-10 | Mazog                     | 📝   | p215, Listing |
+| 046 | 1984-10 | Reset                     | 📝   | p225, Listing |
+| 046 | 1984-10 | Bomber                    | 📝   | p229, Listing |
+| 047 | 1984-11 | Basic étendu              | 📝   | p221, Listing |
+| 048 | 1984-12 | Graphisme assité par ordinateur | 📝   | p213, Listing |
 | 049 | 1985-01 | Password                  | 📝   | p147, Assembleur, ref. au no 42 |
-| 049 | 1985-01 | Assembleur 2 passes       | 📝   | p151, carte 4k nécessaire |
-| 050 | 1985-02 | Dictator                  | 📝   | p199, jeu simulation |
-| 052 | 1985-04 | Basic étendu              | 📝   | p175 |
-| 056 | 1985-09 | Un clavier Azerty         | 📝   | p227 |
-| 060 | 1986-01 | Basic étendu              | 📝   | p139 |
-| 061 | 1986-02 | Labyrinthe                | 📝   | p153 |
+| 049 | 1985-01 | Assembleur 2 passes       | 📝   | p151, carte 4k nécessaire, Listing |
+| 050 | 1985-02 | Dictator                  | 📝   | p199, jeu simulation, Listing |
+| 052 | 1985-04 | Basic étendu              | 📝   | p175, Listing |
+| 056 | 1985-09 | Un clavier Azerty         | 📝   | p227, Listing |
+| 056 | 1985-09 | Interface centronics peritel | 📝   |  |
+| 060 | 1986-01 | Basic étendu              | 📝   | p139, Listing |
+| 061 | 1986-02 | Labyrinthe                | 📝   | p153, Listing |
+
+- Electronique R. Paulmier distribue la carte Centronic/Peritel (1100Fr en kit, 1750Fr. montée).
 
 Compléter les recherches.\
 à confirmmer.
