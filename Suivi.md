@@ -143,6 +143,7 @@ Il s'agit des logiciels comercialisés.
 |       | Graph            | POCKET-SOFT | ❕ | |
 |       | Statistiques     | POCKET-SOFT | ❕ | |
 |       | PERT             | POCKET-SOFT | ❕ | |
+|       | FORTH             | POCKET-SOFT | ❕ | |
 |       | Jeux volume un   | Power Soft  | 📝 | Cassette de 6 jeux |
 |       | Easy Bank        | Power Soft  | ❕ | |
 |       | Easy File        | Power Soft  | ❕ | |
@@ -179,7 +180,7 @@ Il s'agit des logiciels comercialisés.
 |       | K7 Applications  | Club C7     | ❕ | Cassette du livre Applications Assembleur du Club C7 |
 |       | Mille Milliards  | SYCOMEX     | ❕ | Publicité et tarifs, voir "ads" |
 |       | Compta 86        | Informatique cdp | ❕ | Publicité et tarifs, voir "ads" (Chirurgien dentiste) |
-|       | CAN'ELL          | Feeling Soft | ❕ | Liaison Minitel |
+|       | CAN'ELL          | Feeling Soft | ❕ | Liaison Minitel; voir Club Canon no 5 |
 |       | X-07 Pilot       | AP-Soft      | ❕ | Assistance pilote d'avion |
 |       | X-07 COM         | AP-Soft      | ❕ | ? |
 |       | RATIOGALA        | CCPA         | ❕ | Rations vaches laitières |
@@ -187,9 +188,12 @@ Il s'agit des logiciels comercialisés.
 |       | RATIOPORC        | CCPA         | ❕ | Rations Porcs |
 
 
-NDR : Les Réf. sont à vérifier.
+NDR :
+- Les Réf. sont à vérifier.
+- Chez Power Soft, il y aurait plusieurs version des logiciels
+- Des annonces logiciels faites par AP Soft, pas de preuve de sortie sauf pour le Traitement de text (voir du coté MSX et du V20).
+- Pour les logiciels publiés dans les revues, voir [src](https://github.com/VFD/CanonX07/tree/main/src).
 
-NDR : Pour les logiciels publiés dans les revues, voir [src](https://github.com/VFD/CanonX07/tree/main/src).
 
 ___
 ### Canon X‑07, Autres Périphériques
@@ -202,6 +206,7 @@ ___
 | C1      | Câble allume cigare           | Club C7 ?    | ❕ | Club C7 |
 | C2      | Câble alimentation X07        | Club C7 ?    | ❕ | Club C7 |
 | C3      | Câble alimentation imprimante | Club C7 ?    | ❕ | Club C7 |
+|         | Kit'Appel                     | Logi'Stick   | ❕ |  |
 |         | Carte RAM CES 32 à 128ko      | CMI          | ❕ | Publicité voir "ads" |
 |         | Attaché-case                  | Création Aimé-Gérard | ❌ | Publicité et tarifs, voir "ads" |
 | EX 7007 | Malette Communication         | E.M.R.       | ! | cf. club C7 no 8 |
@@ -213,22 +218,26 @@ ___
 | CMX 16  | Carte 16 Ko                   | ERIE         | ❕    | Format carte de crédit |
 | CMX 8P  | Carte 8 Ko                    | ERIE         | ❕    | Format carte de crédit Protégé en écriture |
 | CMX 16P | Carte 16 Ko                   | ERIE         | ❕    | Format carte de crédit Protégé en écriture |
-|         | Câble X07 Minitel             | Feeling Soft | ❕    | Cf. Club Canon no 4 |
+|         | CAN'ELL X07 Minitel             | Feeling Soft | ❕    | Cf. Club Canon no 4, 5 |
+|         | Extention 24Ko                | KAP          | ❕    | Cf. Club Canon no 5 |
 
-NDR : La carte RAM CES à fait l'objet d'un article dans le Figaro (no ???).
-
+NDR :
+- La carte RAM CES à fait l'objet d'un article dans le Figaro (no ???).
+- Il y a d'autres élément de ERIE dans Club Canon no5, et les références sont vagues.
+- Un lecteur de code barre, un système multiple de POLYTEL.
 
 ___
 ### Canon X‑07, Périphériques DIY
 
 | Ref.    | Périphérique / Accessoire     | Constructeur | Status | Commentaire |
 |---------|-------------------------------|--------------|--------|-------------|
-|         | Interface Peritel             |              | !      | Micro Systèmes 09/1986 |
+|         | Interface Peritel             |              | !      | Micro Systèmes 09/1985 |
 |         | Controleur disquette 5 1/4    |              | !      | Club Canon 1986 |
 |         | Serveur Minitel               |              | !      | Club Canon No 3 1986, p17 absente |
 |         | EPROM routines système        |              | !      | Club Orléans |
 |         | Synthétiseur de parole        |              | !      | Micro et Robots | 
 |         | Synthétiseur de parole        |              | !      | Club Canon no 4 (port //) |
+|         | X-07 et appareil photo        |              | !      | Club Canon no 5 |
 
 ___
 
