@@ -1,0 +1,440 @@
+# Plus Loin avec le Canon X07 (1985)(Soracom)(FR)
+
+___
+## Introduction
+
+Reprise des listings ici.
+
+
+___
+## Les listings
+
+
+```basic
+```
+
+___
+### page 22 : INITIALISATON DES TOUCHES FONCTION
+
+```basic
+10 key$()="lisLIST"
+20 key$()="runRUN"
+30 key$()="gotGOTO"
+40 key$()="forFOR"
+50 key$()="nexNEXT"
+60 key$()="RO "+CHR$(8)
+70 key$()="tim?TIME$"+CHR$(13)
+80 key$()="chrCHR$"
+90 key$()="beeBEEP"
+100 KEy$()="gosGOSUB"
+110 KEY$()="retRETURN"
+120 KEY$()="conCONSOLE0,4,0,1,1"
+```
+
+___
+### page 44 : LOTO
+
+```basic
+10 REM * LOTO *
+20 CLS: GOTO 100
+30 FOR I=1 TO J-1
+40 IF N(I)=N(J) THEN 170
+50 NEXT I
+60 GOTO 200
+100 PRINT "Tirage du LOTO"
+110 R=VAL(MID$(TIME$,4,2))*VAL(MID$(TIME$,7,2))
+120 R=RND(-R)
+130 DIM N(7)
+140 N=N+1
+150 PRINT"Tirage no";N
+155 LPRINT"Tirage no";N
+160 FOR J=1 TO 7
+170 N(J)=INT(RND(1)*49+1)
+180 IF J=1 THEN 200
+190 GOTO 30
+200 NEXT J
+210 FOR J=1 TO 6: PRINT" "; USING"##";N(j);
+215 LPRINT" "; USiNG"##";N(J);: NEXT J
+220 PRINT: PRINT "complementaire : "" ;USING"##";N(7)
+225 LFRINT" complementaire : "" ;USING"##";N(7)
+230 A$=INKEY$: IF A$=CHR$(13) THEN 140 ELSE 230
+```
+
+
+___
+### page 46 : COURBE
+
+```basic
+l REM*COURBE*
+2 CLS
+100 H=119:V=31
+120 X1=H/2:x2=X1*X1:Y1=V/2:Y2=V/4
+130 FOR X=0 TO X1
+140 X4=X*X:L=-y1
+150 A=SQR(X2-X4)
+160 FOR I=-A TO A STEP V/2
+170 R=SQR(X4+I*i)/X1
+180 F=(1-R)*COS(8*R)
+l90 Y=I/5+F*y2
+200 IF y<=L THEN 230
+210 L=Y:Y=y1-y
+220 PSET(X1-X,Y):PSET(X1+X,Y)
+230 NEXT i :NeXT X
+```
+
+
+___
+### page 48 : HORLOGE MUSICALE
+
+```basic
+10 CONSOLE@0
+20 CLS: FONT$(144)="48,72,72,72,132,252,48,0": X=6: Y=1
+30 FONT$(145)="252,0,0,0,252,0,0,0"
+40 J$="GANLUNMARMERJEUVENSAMDIM": K$="TIMEMONTUEWEDTHUFRISATSUN"
+50 PRJNT STRING$(20,CHR$(145)): GOSUB 360
+60 LOCATE 0,3: PRINT MID$(ALM$,15,5);: GOTO 220
+70 LOCATE X,Y: PRINT TIME$: LINE (0,2)-(2*S+1,2)
+80 LDCATE 2,2: IF AL THEN PRINT CHR$(144); ELSE PRINT " ";
+90 S=VAL(MID$(TIME$,7,2))
+100 IF S=0 THEN LDCATE0,0: PRINT STRING$(20,CHR$(145))
+110 RETURN
+120 H=VAL(MID$(TIME$,1,2))
+130 HM=(H=0)
+140 H=H MOD 12: IF HM THEN H=12
+```
+
+NDR : à finir, scan mediocre
+
+___
+### page 67 : MORSE
+
+```basic
+10 CLS: PR1NT"  ENTRAINEMENT AU DECODAGE DU MORSE"
+15 CONSOLE0,4,0,0,1
+20 CLEAR100: DIM M$(40):DIM C$(40)
+30 FOR I=0TO39: READ M$(I):NEXTI
+35 FOR I=0TO39: READ C$(I):NEXTI
+40 PRINT:INPUT"Vitesse (1 A 10)";V:V=11-V
+50 D%=38:GOSUB 1000
+60 A$=INKEY$: IF A$=CHR$(13)THEN D%=39:GOSUB1000: GOTO 40
+65 IF A$="" THEN 60
+70 C%=ASC(A$)
+72 IF C%=46 THEN D%=36: GOTO 510
+74 IF C%=101 THEN D%=37: A$="erreur": GOTO 510
+75 IF C%<48THEN60
+77 IF C%<58THEN D%=C%-48:GOTO510
+80 IF C%<65 OR C%>90 THEN 60
+90 D%=C%-55
+510 PRINTA$;: GOSLJB 1000
+520 GOTO60
+1000 A$=M$(D%):PRINTC$(D%);" ";
+1020 FORA=1TO LEN(A$)
+1030 BEEP34,(VAL(MID$(A$,A,1))+1)*V
+1035 BEEP0,1
+1040 NEXTA
+1050 RETURN
+2000 DATA11111,01111,00111
+2010 DATA00011,00001,00000,10000,11000,11100,11110
+2020 DATA01,1000,1010,100,0,0010,110,0000,00,0111,101,0100
+2030 DATA11,10,111,0110,1101,010,000,1,001,0001,011
+2040 DATA1001,1011,1100,010101,00000000,10101,01010
+4000 DATA-----,.----,..---
+4010 DATA...--,....-,.....,-....,--...,---..,----.
+4020 DATA.-,-...,-.-.,-..,.,..-.,--.,....,..,.---,-.-,.-..
+4030 DATA--,-.,---,.--.,--.-,.-.,...,-,..-,...-,.--
+4040 DATA-..-,-.--,--..,.-.-.-,........
+4050 DATA-.-.- DEBUT DE TRANSMISSION,.-.-. FIN DE TRANSMISSION
+```
+
+
+___
+### page 69 : DECOMPOSITION EN FACTEURS PREMIERS
+
+```basic
+5 REM DECOMPOSITION EN FACTEURS PREMIERS
+10 INPUT"NOMBRE"; A
+30 CLS
+40 AM=A
+50 PRiNT A;"=";
+60 FOR N=2 TO A
+70 X=A/N-A\N
+80 IF X=0 THEN A=A/N; PRJNT "X";N;: GOTO 60
+110 NEXT N
+120 LOCATE 0,0: PRINT AM;"= ";
+130 LOCATE 0,3: GOTO 10
+```
+
+
+___
+### page 72 : DAO
+
+```basic
+TO DO
+```
+
+
+___
+### page 78 : COURBE
+
+```basic
+10 LPRINT CHR$(18)
+16 LPRINT"M0,0"
+20 LPRINT"M240,0"
+40 PL=3.141592654
+50 P=PI/180
+55 R=522
+60 FOR I=60 TO 110STEP1
+69 REM ORG CERCLE : 170,-522
+70 X=170+R*COS(I*P)
+80 Y=-522+R*SIN(I*P)
+82 IF I=60 THEN 85 ELSE 90
+85 LPRINT"M";STR$(INT(X));",";STR$(INT(Y))
+90 LPRINT"D";STR$(INT(X));",";STR$(INT(Y))
+110 NEXT I
+120 LPRLNT"A"
+```
+
+
+___
+### page 79 : COURBE
+
+```basic
+10 LPRINT CHR$(18)
+20 LPRINT"M240,0"
+30 LPRINT"I"
+40 P=3.141592654/180
+50 FOR I=1 TO 360 STEP 10
+60 X=200*COS(P*I)
+70 Y=200*SIN(P*I)
+80 LPRINT"L0,D";STR$(X);",";STR$(Y)
+90 NEXT I
+100 LPRINT "A"
+```
+
+___
+### page 80 : COURBE
+
+```basic
+10 LPRINT CHR$(18)
+20 LPRINT"M240,0"
+30 LPRINT"I"
+40 P=3.141592654/180
+50 FOR I=1 TO 400 STEP 5
+60 X=R*COS(P*I)
+70 Y=R*SIN(P*I)
+80 LPRINT"L0,D";STR$(X);",";STR$(Y)
+85 R=R+3
+90 NEXT I
+100 LPRINT "A"
+```
+
+___
+### page 81 : PARABOLE
+
+```basic
+10 LPRLNT CHR$(L8J
+20 LPRINT"M0,-200"
+30 LPRINT"I"
+40 LPRINT"D480,0"
+50 LPRINT"M240,200"
+60 LPRINT"D240,0"
+80 LPRINT"I"
+90 FOR X=-200 TO 200 STEP 10
+100 Y=(X^2)/200+10
+110 IF X=-200 THEN 160
+120 LPRINT"D";STR$(X);",";STR$(Y)
+130 NEXT X
+140 LPRINT"A"
+150 END
+160 LPRINT"M";STR$(X);",";STR$(Y)
+170 GOTO 130
+```
+
+___
+### page 82 : CERCLE
+
+```basic
+10 LPRINT CHR$(18)
+20 LPRINT"M240,0"
+30 LPRINT"I"
+35 R=70
+40 P=3.141592654/180
+50 FOR I=0 TO 360 STEP 5
+60 X=R*COS(P*I)
+70 Y=R*SIN(P*I)
+75 IF I=0 THEN 120
+80 LPRINT"L0,D";STR$(X);",";STR$(Y)
+90 NEXT I
+100 LPRINT"A"
+110 END
+120 LPRINT"L0,M";STR$(X);",";STR$(Y)
+130 GOTO 90
+```
+
+NDR : Cette application du tracé de cercle n'est pas optimum.
+
+___
+### page 82 : LISSAJOU
+
+```basic
+60 X=R*SIN(P*I)*COS(P*I)
+```
+
+NDR : Pas explicite, changer uniquement la ligne en question sur le programme précédent ?
+
+___
+### page 83
+
+```basic
+100 Y=(X^3)/36500+10
+```
+
+NDR : On fait quoi de la ligne ?
+
+___
+### page 83,84
+
+```basic
+10 LPRINT CHR$(18)
+20 LPRINT"M240,0"
+30 LPRINT"I"
+35 R=70
+40 P=3.141592654/180
+50 FOR I=0 TO 360 STEP 5
+55 LPRINT"L0,M0,0"
+60 X=R*SIN(P*I)*COS(P*I)
+70 Y=R*SIN(P*I)
+75 IF I=0 THEN 120
+80 LPRINT"L0,D";STR$(X);",";STR$(Y)
+90 NEXT I
+100 LPRINT"A"
+110 END
+120 LPRINT"L0,M";STR$(X);",";STR$(Y)
+130 GOTO 90
+```
+
+___
+### page 84
+
+```basic
+10 LPRINT CHR$(18)
+20 LPRINT"M240,0"
+30 LPRINT"I"
+35 R=70
+40 P=3.141592654/180
+50 FOR I=0 TO 360 STEP 5
+55 LPRINT"L0,M0,0"
+60 X=R*COS(P*I)
+70 Y=R*SIN(P*I)
+75 'IF I=0 THEN 120
+80 LPRINT"L0,D";STR$(X);",";STR$(Y)
+90 NEXT I
+100 LPRINT"A"
+110 END
+120 LPRINT"L0,M";STR$(X);",";STR$(Y)
+130 GOTO 90
+```
+
+___
+### page 85
+
+```basic
+10 LPRINT CHR$(18)
+20 LPRINT"M240,0"
+30 LPRINT"I"
+40 P=3.141592654/180
+50 FOR I=0 TO 360 STEP 10
+60 X=200*COS(P*I)
+70 Y=200*SIN(P*I)
+80 LPRINT"L0,D";STR$(X);",";STR$(Y)
+90 NEXT I
+100 LPRINT"A"
+```
+
+___
+### page 85
+
+```basic
+10 P=3.141592654/180: R=200
+20 LPRINT CHR$(18): LPRINT"M240,;"STR$(-R): LPRINT"I"
+30 LPRINT"M";STR$(R);",0"
+40 FOR I=0 TO 360 STEP 20
+50 FOR J=0 TO 360 STEP 20
+60 X=R*COS(P*I): Y=R*SIN(P*I)
+70 Z=R*COS(P*J): T=R*SIN(P*J)
+80 LPRINT"D";STR$(X);",";STR$(Y);",";STR$(Z);",";STR$(T)
+90 NEXT J,I
+```
+
+___
+### page 87 : KALEIDOSCOPE
+
+```basic
+10 DEFINT A,z: CLS: C=0: F=20
+20 X=INT(RND(1)*60)
+30 y=INT(RND(1)*16)
+40 C=C+4: IF C>2000 THEN X=RND(-vAL(RighT$(TIME$,2))): GOTO 10
+50 PSET(X,Y)
+60 PSET(119-X,Y)
+70 PSET(119-X,31-Y)
+80 PSET(X,31-Y): BEEP X+C/F,Y/3
+90 GOTO 20
+```
+
+
+___
+### page 89 : Simulation d'atterissage
+
+```basic
+TO DO
+```
+
+___
+### page 97 : Master Mind
+
+```basic
+TO DO
+```
+
+___
+### page 101 : Dessiner la France
+
+```basic
+TO DO
+```
+
+___
+### page 110 : Calculette
+
+```basic
+TO DO
+```
+
+___
+### page 113 : Dump Mémoire
+
+```basic
+TO DO
+```
+
+___
+### page 115 : Renumérotation
+
+```basic
+10 REM* RENUM simple *
+20 DEFINT I-L:DEFSGN A-F,M-Z
+30 A=&H553: REM ADRESSE DEBUT PROGRAMME
+40 B=PEEK(A)+256*PEEKCA+l ) : REM Add DEBUT proch. ligne
+50 IF B=0 THEN PRINT"Ok": END : REM Renum. termine
+60 C=C+10: REM PAS de renumerotation
+70 O=PEEK(A+2)+PEEK(A+3)*256
+80 PRINT O,">";C
+90 POKE A+2,(C-256*INT(C/256): REM renumertation LSB
+100 POKE A+3,INT(C/256): REM renumerotation MSB
+110 A=B: REM preparation ligne suivante
+120 GOTO 40
+```
+
+
+EOF
+___

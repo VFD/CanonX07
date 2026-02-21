@@ -1,0 +1,65 @@
+;
+; Club C7
+; Le Son du Canon no 6
+; page 27-29
+;
+; Inversion rapide
+;
+
+        ORG &4000
+
+4000    PUSH BC
+4001    PUSH DE
+4002    PUSH HL
+4003    PUSH AF
+4004    CP   20h
+4006    JP   C,&41D7
+4009    POP  BC
+400A    CP   40h
+400C    JR   NC,+4
+400E    ADD  A,60h
+4010    JR   +7
+4012    CP   60h
+4014    JP   NC,&41C6
+4017    POP  BC
+4018    ADD  A,A0h
+401A    JP   &41C6
+
+        ORG &4100
+
+4100    LD   A,0FFh
+4102    LD   DE,&2060
+4105    LD   B,20h
+4107    PUSH AF
+4108    PUSH BC
+4109    PUSH DE
+410A    LD   A,D
+410B    LD   BC,&0108
+410E    LD   DE,&026F
+4111    LD   HL,&01D4
+4114    LD   (HL),A
+4115    LD   A,1Bh
+4117    CALL &C92F
+411A    EX   DE,HL
+411B    LD   B,08h
+411D    LD   A,0FCh
+411F    SUB  (HL)
+4120    LD   (HL),A
+4121    INC  HL
+4122    DJNZ -7
+4124    POP  DE
+4125    LD   HL,&026E
+4128    LD   A,D
+4129    ADD  A,E
+412A    LD   (HL),A
+412B    LD   BC,&0900
+412E    LD   A,1Ah
+4130    CALL &C92F
+4133    POP  BC
+4134    INC  D
+4135    DJNZ -2F
+4137    POP  AF
+4138    INC  A
+4139    RET  NZ
+413A    LD   DE,&40A0
+413D    JR   -3A

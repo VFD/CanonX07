@@ -1,0 +1,4 @@
+1 REM Ordinateur Individuel 63
+100 PSET(X,Y): Z=STICK(0): V=X-(Z=3)+(Z=7): U=Y+(Z=1)-(Z=5)
+110 IF POINT(U,V) THEN BEEP Z,3 ELSE PRESET(X,Y)
+120 IF X<11 THEN 100
