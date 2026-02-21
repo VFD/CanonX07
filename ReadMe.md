@@ -25,17 +25,23 @@ For now, all the content is written in French.
 For more information, you can check out:
 - [Olipix’s channel](https://www.youtube.com/@Olipix) (You Tube)
 
-With the upcoming arrival of a whole range of tools for creating AI Agents, the goal is also to prepare all the necessary data for building an AI Agent dedicated to the Canon X‑07
+With the upcoming arrival of a whole range of tools for creating AI Agents, the goal is also to prepare all the necessary data for building an AI Agent dedicated to the Canon X‑07.
 
 
 ___
-## Other Ressources on the web
+## Ressources on the web
 
 Ressources :
-- Hebdogiciel les listing
-- Abandonware magazines
+- [Abandonware listing](http://abandonlistings.free.fr/) /!\ http
+- [Abandonware magazines](https://abandonware-magazines.org/)
+- [Silicium.org](https://silicium.org/)
+- [Old School Silicium](https://oldskool.silicium.org/)
+- Stéphane SIBUE
+  - [Blog](https://coding4phone.com/?p=1044)
+  - [GitHub](https://github.com/Sydney680928/X07-Studio)
 - ...
 
+[Olipix on You Tube](https://www.youtube.com/@Olipix)
 
 ___
 ## Work in progress
