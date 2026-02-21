@@ -1,0 +1,533 @@
+;------- TASM ASM mnemonics, -------
+	; Compile this file using
+	
+	; Set TASMOPTS = -b
+	; tasm -80 ThisCode,tas MyBinary,BIN
+	;-----------------------------------
+	
+#define ORG  .org       ; TASM cross-assembler definitions
+#define DEFB .byte
+#define DEFM .byte
+	
+ORG $6680
+	
+	
+	LD BC,$0
+	LD A,$B8
+	CALL $C92F
+	LD A,$C
+	RST 28H
+	LD HL,TZ
+	CALL $FEF7
+	LD B,$4
+WV:
+	LD H,B
+	LD L,$0
+	PUSH HL
+	POP IY
+	LD H,B
+	PUSH BC
+	LD DE,ZR
+	PUSH DE
+	CALL $C2DF
+ZR:
+	POP BC
+	LD IY,$0
+	LD H,$1
+	PUSH BC
+	LD DE,ZC
+	PUSH DE
+	CALL $C2DF
+ZC:
+	POP BC
+	DJNZ WV
+	CALL $C8C5
+	JR TT
+TZ:
+DEFM "COPYRIGHT(C) 1985 BY F,VACHER"
+DEFM "      ~~~~~~~~~~~~~~~~~~~~"
+DEFM "~~~~~SERPENTINE~~~~"
+DEFB $0
+TT:
+	XOR A
+	LD (RB),A
+	LD (MM),A
+	LD (BB),A
+	LD (NB),A
+	LD (LL),A
+	LD (LL+$1),A
+	LD (NO),A
+	LD A,$22
+	LD (PP),A
+	INC A
+	LD (P1),A
+	LD A,$25
+	LD (XX),A
+	LD A,$15
+	LD (QQ),A
+	LD (Q1),A
+	LD (YY),A
+	LD A,$51
+	LD (AA),A
+	LD (II),A
+	LD A,$19
+	LD (KK),A
+	LD A,$C
+	RST 28H
+	LD HL,FV
+	LD B,$7
+JA:
+	PUSH BC
+	LD BC,$900
+	LD A,$1A
+	CALL $C92F
+	POP BC
+	DJNZ JA
+	JR JV
+FV:
+DEFB $80,$FC,$FC,$84,$7C,$8C,$F4,$0C,$FC,$81,$FC
+DEFB $FC,$8C,$7C,$7C,$7C,$8C,$FC,$82,$FC,$FC,$8C
+DEFB $74,$74,$74,$8C,$FC,$83,$FC,$FC,$A4,$9C,$BC
+DEFB $BC,$BC,$FC,$84,$FC,$FC,$8C,$74,$04,$7C,$84
+DEFB $FC,$85,$F4,$F4,$84,$74,$74,$74,$84,$FC,$86
+DEFB $FC,$FC,$FC,$FC,$FC,$FC,$FC,$FC
+JV:
+	LD HL,$3329
+	LD (BB),HL
+	LD HL,T1
+	CALL $FEF7
+	LD HL,$3331
+	LD (BB),HL
+	LD HL,T2
+	CALL $FEF7
+	LD HL,$3842
+	LD (BB),HL
+	LD HL,$0
+	CALL $BB98
+	LD HL,$3844
+	LD (BB),HL
+	LD HL,(RE)
+	CALL $BB98
+	LD HL,$3330
+	LD (BB),HL
+	LD A,$34 ;????????????????$134
+	RST 28H
+	LD HL,$3332
+	LD (BB),HL
+	RST 28H
+	JR GG
+T1:
+DEFB $134,$134,$128,$129,$130,$131,$132,$134,$0
+T2:
+DEFB $134,$134,$131,$132,$129,$130,$131,$133,$0
+GG:
+	LD DE,$0
+	LD BC,$70
+	PUSH BC
+	LD A,$14
+	CALL $CE28
+	POP BC
+	LD DE,$1795 ;????????????????$17951
+	PUSH DE
+	LD A,$14
+	CALL $CE28
+	POP DE
+	LD BC,$7936
+	LD A,$14
+	PUSH BC
+	CALL $CE28
+	POP BC
+	LD DE,$0
+	LD A,$14
+	CALL $CE28
+	LD BC,$35
+	LD DE,$8969
+	LD A,$14
+	CALL $CE28
+	LD BC,$5667
+	LD A,$14
+	LD DE,$8991
+	CALL $CE28
+J1:
+	LD A,$4E
+	OUT ($F4),A
+	LD A,$7
+	RST 28H
+	LD DE,(YY)
+	PUSH DE
+	CALL $CE0E
+	POP DE
+	LD A,($26E)
+	OR A
+	JR NZ,KT
+	LD A,(NO)
+	LD B,A
+	LD HL,TP
+BX:
+	LD A,(HL)
+	CP E
+	JR Z,BY
+	INC HL
+	INC HL
+	DJNZ BX
+	JP PL
+BY:
+	INC HL
+	LD A,(HL)
+	CP D
+	JR Z,OF
+	INC HL
+	DJNZ BX
+	JP PL
+OF:
+	LD A,(MM)
+	ADD A,$4
+	LD (MM),A
+	PUSH DE
+	LD D,H
+	LD E,L
+	DEC DE
+	INC HL
+	LD A,(NO)
+	LD C,A
+	LD B,$0
+	LDIR
+	SUB $2
+	LD (NO),A
+	POP DE
+KT:
+	LD A,$11
+	CALL $CDFE
+	LD DE,(QQ)
+	LD HL,(Q1)
+	RST 20H
+	JR Z,EQ
+	LD A,$12
+	CALL $CDFE
+EQ:
+	LD DE,(QQ)
+	LD (Q1),DE
+	CALL $D7E6
+	LD A,($26E)
+	CP $49
+	JR Z,TA
+	CP $51
+	JR Z,TA
+	CP $53
+	JR Z,TA
+	CP $55
+	JR NZ,IO
+TA:
+	LD (AA),A
+	LD HL,BB
+	CP (HL)
+	JR Z,IO
+	LD A,(NB)
+	LD B,$0
+	LD C,A
+	LD HL,DT
+	ADD HL,BC
+	LD A,(YY)
+	LD (HL),A
+	LD A,(XX)
+	INC HL
+	LD (HL),A
+	LD A,(AA)
+	INC HL
+	LD (HL),A
+	LD A,(NB)
+	ADD A,$3
+	LD (NB),A
+IO:
+	LD A,(AA)
+	LD (BB),A
+	LD A,(KK)
+	INC A
+	LD (KK),A
+	CP $35
+	JR NZ,S3
+	XOR A
+	LD (KK),A
+	LD A,(NO)
+	CP $20
+	JR NC,S3
+ES:
+	LD A,R
+	LD B,A
+	LD A,R
+	ADC A,C
+	RLA
+	ADC A,B
+SC:
+	CP $30
+	JR C,BK
+	SUB $30
+	JR SC
+BK:
+	LD E,A
+	LD A,R
+	LD B,A
+	LD A,R
+	ADC A,C
+	RLA
+	ADc A,B
+HF:
+	CP $70
+	JR C,GO
+	SUB $70
+	JR HF
+GO:
+	LD D,A
+	PUSH DE
+	CALL $CE0E
+	LD A,(*26E)
+	OR A
+	POP DE
+	JR Z,ES
+	LD A,(NO)
+	LD B,$0
+	LD C,A
+	LD HL,TP
+	ADD HL,BC
+	LD (HL),E
+	INC HL
+	LD (HL),D
+	ADD A,$2
+	LD (NO),A
+	LD A,$11
+	CALL $CDFE
+S3:
+	LD A,(MM)
+	OR A
+	JR Z,S4
+	XOR A
+	OUT ($F3),A
+	LD A,(AA)
+	SLA A
+	SUB $F
+	OUT ($F2),A
+RV:
+	LD HL,$3842
+	LD (BB),HL
+	LD HL,(LL)
+	INC HL
+	LD (LL),HL
+	CALL $BB98
+S4:
+	LD HL,(LL)
+	LD DE,(RE)
+	AND A
+	SBC HL,DE
+	JR NC,S8
+	JR DM
+S8:
+	JR Z,DM
+	LD HL,$3844
+	LD (BB),HL
+	LD HL,(LL)
+	LD (RE),HL
+	CALL $BB98
+	LD A,$77
+	LD (RB),A
+DM:
+	LD A,(MM)
+	OR A
+	JR Z,M0
+	DEC A
+	LD (MM),A
+	JR NZ,BY
+M0:
+	LD A,(NB)
+	OR A
+	JR Z,BQ
+	LD A,(QQ)
+	LD HL,DT
+	CP (HL)
+	JR NZ,BQ
+	LD A,(PP)
+	INC HL
+	CP (HL)
+	JR NZ,BQ
+	INC HL
+	LD A,(HL)
+	LD (II),A
+	LD DE,DT
+	INC HL
+	LD A,(NB)
+	LD C,A
+	LD B,$0
+	LDIR
+	SUB $3
+	LD (NB),A
+BQ:
+	LD HL,(QQ)
+	LD A,(II)
+	CP $49
+	JR Z,HA
+	CP $51
+	JR Z,DR
+	CP $53
+	JR Z,BA
+	CP $55
+	JR NZ,BT
+	DEC H
+	JR AQ
+HA:
+	DEC L
+	JR AQ
+DR:
+	INC H
+	JR AQ
+BA:
+	INC L
+AQ:
+	LD (QQ),HL
+BT:
+	LD HL,(YY)
+	LD A,(AA)
+	CP $49
+	JR Z,H
+	CP $51
+	JR Z,D
+	CP $53
+	JR Z,B
+	DEC H
+	JR AT
+H:
+	DEC L
+	JR AT
+D:
+	INC H
+	JR AT
+B:
+	INC L
+AT:
+	LD (YY),HL
+	LD A,H
+	OUT ($F2),A
+SQ:
+	LD A,R
+	JR Z,SQ
+	OUT ($F3),A
+	JP J1
+PL:
+	LD BC,$700
+G0:
+	LD DE,(YY)
+	LD A,$12
+	PUSH BC
+	CALL $CDFE
+	POP BC
+	LD H,$4
+	PUSH BC
+	POP IY
+	PUSH BC
+	LD DE,G1
+	PUSH DE
+	CALL $C2DF
+G1:
+	POP BC
+	LD DE,(YY)
+	LD A,$11
+	PUSH BC
+	CALL $CDFE
+	POP BC
+	LD H,$4
+	LD IY,$4
+	PUSH BC
+	LD DE,G3
+	PUSH DE
+	CALL $C2DF
+G3:
+	POP BC
+	LD H,$4
+	LD A,$C
+	RST 28H
+	LD HL,MS
+	CALL $FEF7
+	LD A,(RB)
+	CP $77
+	JR NZ,G4
+	LD HL,M1
+	CALL $FEF7
+	LD HL,(RE)
+	CALL $BB98
+	LD HL,M2
+	CALL $FEF7
+	CALL $C8C5
+	JR FG
+G4:
+	LD A,137;??????????????$137
+	RST 28H
+	LD A,$32
+	RST 28H
+	LD HL,(LL)
+	CALL $BB98
+	LD HL,M2
+	CALL $FEF7
+	CALL $C8C5
+FG:
+	LD A,$A
+	RST 28H
+	LD HL,$772
+	LD (BB),HL
+	LD HL,M3
+	CALL $FEF7
+	CALL $C8C5
+JK:
+	CP 'O'
+	JP Z,TT
+	CP 'N'
+	RET Z
+	CALL $C8C5
+	JR JK
+MS:
+DEFM "Vous vous êtes planté"
+DEFB $32,$0
+M1:
+DEFM ",mais vous détenez "
+DEFM "le record avec"
+DEFB $32,$0
+M2:
+DEFM "PTS..."
+DEFB $0
+M3:
+DEFM "Encore (O/N) ?"
+DEFB $0
+YY:
+	NOP
+XX:
+	NOP
+QQ:
+	NOP
+PP:
+	NOP
+Q1:
+	NOP
+P1:
+	NOP
+MM:
+	NOP
+AA:
+	NOP
+BB:
+	NOP
+II:
+	NOP
+KK:
+	NOP
+RE:
+DEFB $3A,$1
+RB:
+	NOP
+LL
+DEFB $2
+NO:
+	NOP
+TP:
+DEFB $40
+NB:
+	NOP
+DT:
+	NOP
+.end

@@ -1,0 +1,272 @@
+;------- TASM ASM mnemonics. -------
+; Compile this file using:
+; Set TASMOPTS = -b
+; tasm -80 ThisCode.tas MyBinary.BIN
+;-----------------------------------
+; Zx81 Program name: VB81 XuR [] : Empty Basic Segment.
+
+#define ORG  .org       ; TASM cross-assembler definitions
+#define equ  .equ
+
+
+ORG $1CF5 ;
+Lb1CF5
+	CALL $FE5E ; [65118]
+	PUSH AF 
+	RST 08H 
+.db	$2C ; RST8 Arg: Error Code:'_'
+	CALL $FE5E ; [65118]
+	POP BC 
+	LD C,A 
+	PUSH BC 
+	RST 08H 
+.db	$2C ; RST8 Arg: Error Code:'_'
+	CALL $FE5E ; [65118]
+	OUT ($F3),A ; User port.
+	POP BC 
+Lb1D09:
+	PUSH BC 
+	XOR A 
+	DEC A 
+	OUT ($F4),A ; User port.
+	XOR A 
+Lb1D0F:
+	OUT ($F2),A ; User port.
+	POP BC 
+	PUSH BC 
+Lb1D13:
+	DEC C 
+	JR NZ, Lb1D13 ; [$2D13:11539]
+	DEC A 
+	JR NZ, Lb1D0F ; [$2D0F:11535]
+	POP BC 
+	DJNZ Lb1D09 ; [$2D09:11529]
+	OUT ($F4),A ; User port.
+	RET ; ==========================
+
+ORG $1DBF; 
+	CPL 
+	LD HL,$1E00 
+	LD ($009A),HL 
+	LD HL,$E80C 
+	LD ($0045),HL 
+	INC SP 
+	INC SP 
+	RET ; ==========================
+
+Lb1D9A:    ; <<< Uncharted Entry ]
+
+	SUB H 
+	DEC E 
+	LD L,C 
+	DEC E 
+	LD HL,$00B4 
+	LD (HL),$84 
+	LD A,$A3 
+	CALL $E428 ; [58408]
+	RET ; ==========================
+
+Lb1DA9:    ; <<< Uncharted Entry ]
+
+	LD HL,$1D9A 
+	LD ($0045),HL 
+	RST 38H 
+	RET C 
+	CALL $007E+36 ; []*BIOS ROM*
+	CALL $CE9E ; [52894]
+	XOR A 
+	LD ($002B),A 
+	CPL 
+	INC A 
+	OUT ($F4),A ; User port.
+	RET ; ==========================
+
+Lb1DC0:    ; <<< Uncharted Entry ]
+
+ORG $1E00;  
+	CALL $FE5E ; [65118]
+	CP $05 
+	JR C, Lb1E0C ; [$2E0C:11788]
+	LD E,$05 
+	JP $F1C7 ; [61895]
+Lb1E0C:
+	LD B,A 
+	RST 08H 
+.db	$2C ; RST8 Arg: Error Code:'_'
+	SLA B 
+	LD D,$00 
+	LD E,B 
+	PUSH IX 
+	LD IX,$1E26 
+	ADD IX,DE 
+	LD E,(IX+0) 
+	LD D,(IX+1) 
+	POP IX 
+	PUSH DE 
+	RET ; ==========================
+
+Lb1E26:    ; <<< Uncharted Entry ]
+
+	XOR D 
+	POP AF 
+	DEC (HL) 
+	LD E,$46 
+	LD E,$5B 
+	LD E,$F5 
+	INC E 
+	NOP 
+	NOP 
+	NOP 
+	NOP 
+	NOP 
+	CALL $FFCC ; [65484]
+	XOR A 
+	DEC A 
+	OUT ($F4),A ; User port.
+	PUSH BC 
+	LD C,$F2 
+	OUT (c),E 
+	INC C 
+	OUT (c),D 
+	POP BC 
+	RET ; ==========================
+
+Lb1E46:    ; <<< Uncharted Entry ]
+
+	CALL $FE5E ; [65118]
+	AND A 
+	JR NZ, Lb1E4F ; [$2E4F:11855]
+	OUT ($F4),A ; User port.
+	RET ; ==========================
+
+Lb1E4F:
+	DEC A 
+	JR Z, Lb1E57 ; [$2E57:11863]
+	LD E,$05 
+	JP $F1C7 ; [61895]
+Lb1E57:
+	DEC A 
+	OUT ($F4),A ; User port.
+	RET ; ==========================
+
+Lb1E5B:    ; <<< Uncharted Entry ]
+
+	CALL $FE5E ; [65118]
+	LD C,A 
+	PUSH BC 
+	RST 08H 
+.db	$2C ; RST8 Arg: Error Code:'_'
+	CALL $FE5E ; [65118]
+	POP BC 
+	LD B,A 
+	PUSH BC 
+	RST 08H 
+.db	$2C ; RST8 Arg: Error Code:'_'
+	CALL $FE5E ; [65118]
+	OUT ($F3),A ; User port.
+	POP BC 
+Lb1E70:
+	PUSH BC 
+	XOR A 
+	CPL 
+	OUT ($F4),A ; User port.
+	XOR A 
+Lb1E76:
+	OUT ($F2),A ; User port.
+	POP BC 
+	PUSH BC 
+Lb1E7A:
+	DJNZ Lb1E7A ; [$2E7A:11898]
+	INC A 
+	JR NZ, Lb1E76 ; [$2E76:11894]
+	POP BC 
+	DEC C 
+	JR NZ, Lb1E70 ; [$2E70:11888]
+	OUT ($F4),A ; User port.
+	RET ; ==========================
+
+Lb1E86:    ; <<< Uncharted Entry ]
+
+ORG $1E88;  
+
+	ADD A,B 
+	ADD A,D 
+	ADD A,E 
+	ADD A,E 
+	ADD A,H 
+	ADD A,L 
+	ADD A,(HL) 
+	ADD A,H 
+	ADD A,D 
+	ADD A,E 
+	ADD A,A 
+	ADD A,D 
+	ADD A,E 
+	ADC A,B 
+	ADD A,E 
+	ADD A,(HL) 
+	ADD A,H 
+	ADD A,(HL) 
+	ADD A,H 
+	ADD A,B 
+	ADD A,C 
+	ADC A,C 
+	ADC A,C 
+	ADD A,D 
+	ADD A,E 
+	ADD A,E 
+	ADC A,D 
+	ADD A,D 
+	ADD A,H 
+	ADC A,C 
+	ADC A,L 
+	ADC A,(HL) 
+	ADC A,C 
+	ADD A,D 
+	ADD A,E 
+	ADC A,B 
+	ADD A,A 
+	ADC A,L 
+	ADC A,C 
+	ADD A,C 
+	ADD A,B 
+	ADC A,(HL) 
+	ADC A,L 
+	ADC A,L 
+	ADC A,B 
+	ADD A,E 
+	ADC A,C 
+	ADD A,L 
+	ADD A,E 
+	ADD A,D 
+	ADD A,E 
+	ADD A,E 
+	ADC A,E 
+	ADC A,L 
+	ADC A,B 
+	ADD A,A 
+	ADD A,D 
+	ADC A,C 
+	ADC A,L 
+	ADD A,B 
+	ADD A,C 
+	ADC A,A 
+	SUB B 
+	SUB B 
+	SUB B 
+	ADD A,A 
+	ADC A,A 
+	SUB B 
+	SUB B 
+	SUB C 
+	ADC A,A 
+	SUB B 
+	SUB B 
+	ADD A,D 
+	SUB B 
+	SUB B 
+	SUB C 
+	ADC A,A 
+	SUB C 
+
+.end

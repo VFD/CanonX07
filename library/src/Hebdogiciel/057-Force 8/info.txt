@@ -1,0 +1,18 @@
+Force 8.
+
+tiré du magazine Hebdogiciel N°57
+
+	Voici une version amusante et très bien faite de Puissance 4. "Alignez-vous" contre X-07 ou contre vos amis à ce jeu...interminable.
+
+Mode d'emploi :
+	Nécessité de l'extension 8Ko.
+	Tout d'abord, tapez les lignes 20 à 30 et faites RUN. La touche [ en position GRPH devient une balle blanche et la touche ; une balle noire. Le but du jeu est bien sûr d'aligner 4 balles horizontalement, verticalement ou en diagonale, le plus de fois possible et de chercher à obtenir le meilleur score en cas d'ex-aequo.
+	Vous pouvez jouer seul contre X-07 ou contre un autre joueur. En appuyant sur les touches 1, 2, 3 et 4 vous lancez vos balles sur les lignes 1, 2, 3 ou 4. Le programme trace un trait sur les quatres balles alignées ( bonus de 1000 points ).
+	A droite de l'écran, s'affiche le score de chaque joueur et son nombre de marque. L'appui sur une touche quelconque permet d'obtenir au même endroit l'affichage du temps réel et le nombre de coups joués, retour au jeu de la même manière. L'empilage est limité sur la droite, d'où le décalage des balles sur la gauche, sans modification de la partie. Ainsi, pas de limite dans le temps ni l'espace.
+	Quelques explications pour le calcul du score : après chaque coup joué, le programme donne une "côte" pour chacune des 4 lignes. Il attribue à celui qui joue, un nombre de points égal au 1/10° de cette côte, pour la ligne réellement jouée. Cette côte est calculée en fonction des positions des balles jouées et du résultat de chaque possibilité de jeux, par rapport à ces positions. Le score, est donc l'addition de la valeur "côte" de chacun des coups.
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+
+Cordialement,
+Christian DUBROEUCQ.

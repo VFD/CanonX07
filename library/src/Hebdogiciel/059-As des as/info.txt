@@ -1,0 +1,61 @@
+Assembleur-Déseassembleur.
+
+tiré du magazine Hebdogiciel N°59
+
+	La lenteur du basic n'est pas au niveau de votre vivacité d'esprit? Cessez de bailler, l'usage de cet utilitaire devrait permettre à Canon de passer à la vitesse supérieure.
+
+Mode d'emploi :
+	Les 693 instructions du processeur Z80 se trouvent dans les 366 DATAS avec leur code HEXA et le nombre d'octets qu'occupe l'instruction.
+	Pour l'écriture des mnémoniques, respecter l'emploi des minuscules. Exemple : LD BC,mn. Il faut que ce soit ainsi pour l'assemblage dont le code est 01, octet bas, octet haut.
+	Après avoir trouvé la mnémonique, le programme demande :
+nb? valeur de l'octet poids faible
+nh? valeur de l'octet poids fort
+n? quand une seule valeur est demandée 00->FF
+d? en particulier pour les instructions de branchement relatif telle JRd et les opérations d'adressage indexées telle LDA,(IX+d) où d représente une valeur en complément à deux.
+FFH=-1 FEH=-2...80H=-12B
+00H=0 01H=1...7FH=+127
+
+Fonctionnement :
+1- démarrer le programme par un RUN qui initialise le langage machine et réserver l'espace nécessaire par un CLEAR approprié ( il anticipe la consommation de mémoire affectée aux variables ainsi que celui nécesaire à la pile d'adresses ( SP ) géré par le microprocesseur ).
+	On peut même conserver un ou quelques petits programmes en RAM à condition qu'ils ne soient pas trop longs!
+	Avec la RAM vide et libre de tout programme, on dispose ainsi d'environ 6000 octets! De quoi faire!
+	L'écran affiche la première adresse disponible ainsi que le nombre d'octets libres à partir de cette adresse.
+2- vient le choix de la sortir, si l'on veut garder une trace de son programme ou du désassemblage d'un autre.
+imprimante : centronic 1 - RS 232 2
+Ecran : 3
+	L'avantage de la sortie RS 232 sur l'imprimante centronics du Canon c'est que le programme ne s'arrête que très peu de temps pour effectuer sa transmission de données.
+3-menu :
+	Pour assembler/désassembler, charger un programme ou sauvegarder sur cassette arrêt.
+	C'est une boucle INKEY$ qui arrête l'ordinateur par la fonction SLEEP au bout de 4000 résolutions. On peut ainsi lui demander un désassemblage assez long et partir faire autre chose. Il s'arrêtera tout seul une fois le travail terminé.
+	Donc, la frappe de la touche appropriée 1 à 5 nous mène directement au programme demandé.
+4- assemblage :
+"adresse début" : on donne une adresse début d'implantation selon les renseignements donnés par l'ordinateur en Hexa donc précédé de "DH" ou en décimal.
+"nouvel input " : pour la mnémonique, le programme compare avec ce qu'il a en mémoire ( DATA, POKE, le ou les codes ) et passe à l'adresse suivante. Si l'on met FIN, il y a retour au menu. Si l'on met L, il demande une nouvelle adresse.
+	Si l'on veut mettre directement un code, on fait précéder celui-ci par le symbole #.
+	Si dans la succession de codes il y a une valeur variable, le programme s'arrête pour vous la demander.
+Note : pour l'ensemble du programme, à chaque fois que l'on entre une valeur mnémonique, elle peut être en Hexa ou en décimal. C'est le sous-programme de la ligne 400 qui teste la validité de l'entrée ( n'essayez quand même pas de vouloir lui faire avaler une valeur du genre &H AFGG ou par exemple 100 en Hexa en oubliant le &H qui serait pris pour une valeur décimale.
+5- désassemblage :
+adresse début
+adresse fin
+	Là, il ne vous demande plus rien, sauf si votre adresse de fin est inférieure à celle du début.
+	Le premier octet d'une instruction multi octet sera suivi de la mnémonique quand un octet est une valeur attribuée à une varibale, celle-ci sera indiquée à la suite de sa valeur.
+	Quand on désassemble des pages mémoires appartenant au système on remarque parfois qu'un "...?" est mis avant la mnémonique. Cela signifie qu'on est en train d'attribuer une mnémonique à une adresse contenant une valeur variable explorée par le micro-processeur, et donc la valeur a changé entre le moment de la comparaison avec les datas et le moment de la comparaison où on imprime les résultats.
+	Cela se produit de nombreuses fois quand on explore la mémoire à partir du 0000.
+	Certaines de ces adresses sont connues et données dans le manuel utilisateur, d'autres pas du tout. Par exemple, à partir de 532 ( décimal ) il y a 80 octets qui servent à l'afficheur où chaque lettre ou caractère affichés a son code.
+	Il y a là, bien des choses à découvrir.
+6- sauvegarde sur cassette :
+	Demande un nom pour le programme, les adresses de début et de fin de routine.
+	Enregistrement du nom du programme, du nombre d'octets de celui-ci et des octets le composant.
+	Arrêt du programme par END.
+7- chargement à partir d'une cassette LOAD :
+	Nom du programme appelé, première adresse d'implantation.
+	Si le nom appelé est différent de celui-ci, arrêt pour permettre la lecture du nombre d'octets à charger.
+	Test pour ajuster la boucle de chargement avec le défilement de la bande chargement.
+Un dernier conseil : surtout pour la frappe des DATAs, ne pas confondre les zéro 0 avec les O ( la lettre ).
+
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+
+Cordialement,
+Christian DUBROEUCQ.

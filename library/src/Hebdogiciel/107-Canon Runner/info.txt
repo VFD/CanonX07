@@ -1,0 +1,29 @@
+Canon runner.
+
+tiré du magazine Hebdogiciel N°107
+
+	C'est bien connu, où il y a de la gemme, il y a du plaisir.
+
+Mode d'emploi :
+	Tapez et sauvegardez à la suite ces deux programmes, chargez et lancez de même. Ce jeu très "speed" ( LM oblige ), nécessitant un minimum d'extension, est fortement inspiré de "gentleman cambrioleur" du N°90. Votre but est de ramasser les quinze ou quatorze gemmes contenues dans chacun des quarante tableaux modifiables à volonté.
+	A la question "(C)hargement/(R)edéfinition", tapez "C" pour charger les tableaux puis PAINT ou EXEC &H28A4 pour jouer. Le programme demande ensuite le numéro du tableau par lequel vous désirez commencer. Vous êtes représenté par un petit bonhomme poursuivi par deux vilains oiseaux, vous disposez de 20 vies et en gagnez 3 à la fin de chaque tableau. Le déplacement s'effectue à l'aide des touches fléchées, avec possibilité de déplacement intermédiaire. Dans ce cas, le personnage cherche d'abord à se déplacer verticalement et horizontalement. La touche centrale F6 permet de tirer ( creuser un trou ) sur une des deux cases adjacentes à celle où vous vous trouvez, la case touchée étant celle opposée au sens de votre déplacement horizontal. Sachez que vous ne pourrez tirer sur la ligne du bas, ou si le caractère visé n'est ni le sol, ni le sol plus plafond.
+	Si vous désirez modifier les tableaux chargés en mémoire, répondez zéro à "numéro ?" et indiquez ensuite le numéro du tableau à modifier. Le tableau en question s'affiche, ainsi qu'un "?" en haut à gauche à déplacer à l'aide du curseur. Pour placer à l'endroit du "?" le caractère désiré, appuyez sur une des touches de zéro à neuf en sachant que :
+0 = sol+plafond
+1 = sol
+2 = échelle
+3 = plafond
+4 = vide
+5 = plafond+barre
+6 = barre
+7 = gemme+sol+plafond
+8 = gemme+sol
+9 = mur
+	Vous ne pouvez pas placer d'échelle sur la première ligne, ni de caractère sans sol sur la quatrième. Votre modification terminée, placez le "?" à l'endroit où vous désirez placer votre personnage et tapez RETURN. Le programme vérifie qu'un mur (9) n'est pas placé sans un caractère avec sol au-dessus, puis que le tableau comporte bien quinze gemmes minimum. Si le programme découvre un mur sans sol au-dessus, il vous le signale en positionnant à cet endroit un caractère tramé de la présentation. Si il manque des gemmes, le curseur se repositionne en haut à gauche et vous laisse la main.
+	Les modifications terminées et acceptées, le programme redemande "numéro ?".
+	Si vous désirez sauvegarder en DATA des tableaux modifiés, relancez le programme, appuyez sur "R" et donnez le numéro du tableau. Le programme "tape" les DATA du tableau en question et revient à la présentation. Toutes les modifications effectuées, il ne vous reste plus qu'à sauvegarder votre programme nanti de ses nouveaux tableaux.
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+
+Cordialement,
+Christian DUBROEUCQ.

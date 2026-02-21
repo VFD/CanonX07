@@ -1,0 +1,15 @@
+fifine la tortue ( pas de programme )
+tiré du magazine Hebdogiciel N°60
+
+	Adiez Fifine la gentille tortue à "gagner" sa liberté en guidant ses petits pas dans deux parcours dangereux, imposés par une âme malveillante...
+
+Mode d'emploi :
+	Déplacement à l'aide des 4 flèches. Des parois sont électrifiées, attention à son museau et ses papattes. Fifine a 6 vies et doit constamment se ravitailler en bouts de salade. Veillez à ne pas en oublier sinon retour au début avec pénalité d'une vie. Pour "manger" un point, Fifine approche son museau dessus et fait demi-tour avant électrocution. Un point effacé autrement, pas d'incrémentation. Premier parcours effectué bonus de 10 points, soit pour gagner un total de 34 points ( nombre de points effacés ).
+	Modification : les parcours et le nombre de points lignes 580, 660 et 690, 790. Dans ce cas, modifier aussi 14, 540 et 550.
+
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+
+Cordialement,
+Christian DUBROEUCQ.

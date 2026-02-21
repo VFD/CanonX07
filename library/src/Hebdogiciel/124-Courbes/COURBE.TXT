@@ -1,0 +1,304 @@
+## X-07 BASIC FILE.
+##
+## NAME: COURBE
+##
+ 10 '*****************
+ 20 '*   TRACE  DE   *
+ 30 '*    COURBES    *
+ 40 '*               *
+ 50 '* Alain NORGUES *
+ 60 '*****************
+ 70 '
+ 90 FSET 20:CLEAR 220:GOTO2000
+ 95 '*Avance du stylo
+ 100 XT=A*X+B:YT=C*Y+D
+ 110 IFAV%THENZ=XT:XT=YT:YT=-Z
+ 120 LPRINT G$+STR$(XT)+","+STR$(YT)
+ 130 RETURN 
+ 145 '**CODAGE**
+ 150 C%=0:IFX<FGTHENC%=1:GOTO170
+ 160 IFX>FDTHENC%=2
+ 170 IFY<FBTHENC%=C%+4:RETURN 
+ 180 IFY>FHTHENC%=C%+8
+ 190 RETURN 
+ 195 '**FENETRAGE**
+ 200 XS=X:YS=Y:GOSUB 150:CS%=C%
+ 210 IFCA%ORCS%THEN230:ELSE GOSUB 100
+ 220 XA=XS:YA=YS:CA%=CS%:RETURN 
+ 230 XM=XS:YM=YS:CM%=CS%
+ 240 IF(CA%ANDCM%)<>0THEN220:ELSE IFCA%THENC%=CA%:ELSE C%=CM%
+ 250 GOSUB 350:GOSUB 150:IFC%THEN290:ELSE GOSUB 100
+ 260 IFCA%=0:THENG$="M":GOTO220
+ 270 G$="D":IFCM%=0THENX=XS:Y=YS:GOSUB 100:GOTO220
+ 280 XA=X:YA=Y:CA%=C%:GOTO240
+ 290 IFCA%THENXA=X:YA=Y:CA%=C:ELSE XM=X:YM=Y:CM%=C%
+ 300 GOTO240
+ 340 '**DECOUPAGE**
+ 350 IF(C%AND1)=1THENY=YA+(YM-YA)*(FG-XA)/(XM-XA):X=FG:RETURN 
+ 360 IF(C%AND2)=2THENY=YA+(YM-YA)*(FD-XA)/(XM-XA):X=FD:RETURN 
+ 370 IF(C%AND4)=4THENX=XA+(XM-XA)*(FB-YA)/(YM-YA):X=FB:RETURN 
+ 380 IF(C%AND8)=8THENX=XA+(XM-XA)*(FH-YA)/(YM-YA):X=FH:RETURN 
+ 390 '**OPTIONS**
+ 400 P=12:R$="(O/N)"
+ 410 LOCATE P,3:PRINT R$;
+ 420 R$=INKEY$:IFR$<>""THEN440:ELSE LOCATE 17,3:PRINT "->";:BEEPBI,3:BEEP0,1
+ 430 LOCATE 17,3:PRINT "  ";:BEEP0,4:BEEP0,1:GOTO420
+ 440 IFR$=" "THENBI=6-BI:GOTO420
+ 450 IFR$="C"GOTO800
+ 460 IFNOTG%GOTO580
+ 470 IFR$="G"GOTO850
+ 480 IFR$="T"GOTO900
+ 490 IFQ%ANDR$="A"GOTO950
+ 500 IFQ%ANDR$="D"GOTO1080
+ 510 IFNOTL%GOTO580
+ 520 S=STICK(0):IFSTHENGOTO690
+ 530 IFR$="B"THENG$="J":CLS:PRINT "Stylo baisse->dessin":GOTO420
+ 540 IFR$="E"GOTO1000
+ 550 IFR$="L"THENV$="1":CLS:PRINT "Deplacement lent":GOTO420
+ 560 IFR$="R"THENG$="R":CLS:PRINT "Stylo releve":GOTO420
+ 570 IFR$="V"THENV$="20":CLS:PRINT "Deplacement RAPIDE":GOTO420
+ 580 R%=VAL(R$):CLS:RETURN 
+ 590 '*Affichage des*     * coordonnes  *
+ 600 CLS:R$="###.#####":U$="":IFTC%=1GOTO620
+ 610 U$=" radians":PRINT "T=";USING +R$;T;:PRINT U$;
+ 620 LOCATE 0,1:PRINT "X=";USING +R$;X:PRINT "Y=";USING +R$;Y;
+ 630 R$="(?/A/D/C/T)":P=6:GOSUB 410
+ 640 IFR$="?"THENRESTORE 1800:N=4:GOSUB 650:GOTO600:ELSE RETURN 
+ 645 '*Explications*
+ 650 FORJ=1TO N:READT$:CLS:PRINT T$;:GOSUB 420
+ 660 IFR$="S"THENRETURN 
+ 670 NEXT:RETURN 
+ 680 'PILOTAGE DU STYLO
+ 690 GOSUB 700:S=STICK(0):IFSTHEN690:ELSE R$="":RETURN 
+ 700 ON SGOTO710,720,730,740,750,760,770,780
+ 710 LPRINT G$+"0,"+V$:RETURN 
+ 720 LPRINT G$+V$+","+V$:RETURN 
+ 730 LPRINT G$+V$+",0":RETURN 
+ 740 LPRINT G$+V$+",-"+V$:RETURN 
+ 750 LPRINT G$+"0,-"+V$:RETURN 
+ 760 LPRINT G$+"-"+V$+",-"+V$:RETURN 
+ 770 LPRINT G$+"-"+V$+",0":RETURN 
+ 780 LPRINT G$+"-"+V$+","+V$:RETURN 
+ 790 S=STICK(0):IFSTHEN710:ELSE RETURN 
+ 795 '*Couleur*
+ 800 CLS:PRINT "CHOIX DE LA COULEUR:0->NOIR 1->BLEU     2->VERT 3->ROUGE";
+ 810 P=8:R$="(0 A 3)?":GOSUB 410:IFR%>3THEN800
+ 820 IFG%THENLPRINT "C"+STR$(R%):ELSE LPRINT [,R%]
+ 830 RETURN 
+ 840 'Taile d'ecriture
+ 850 CLS:PRINT "Grandeur d'ecriture?0->petit 1->moyenne 2->grande";
+ 860 R$="(0/1/2)":P=10:GOSUB 410:IFR%>2THEN850
+ 870 E$="S"+STR$(R%):E%=R%+1:R%=3*E%:CG%=0
+ 880 T1$=STR$(R%):T2$=STR$(R%*2):T3$=STR$(R%*3):T4$=STR$(R%*4)
+ 890 RETURN 
+ 895 'Choix du trait
+ 900 CLS:PRINT "Type de trait ?","0->trait plein","1 A 9->tirets";
+ 910 P=8:R$="(0 A 9)":GOSUB 410:L$="L"+STR$(R%):LPRINT L$
+ 920 RETURN 
+ 940 '*Interruption*
+ 950 CLS:PRINT "Arret du trace ?":GOSUB 400:IFR$="O"THENT=FI:Q%=0:RETURN 
+ 960 IFR$<>"N"THEN950:ELSE RETURN 
+ 990 '* Ecriture *
+ 1000 CLS:IFCG%THEN1040
+ 1010 PRINT "La taille d'ecritureactuelle est ";E$,"O.K.?";:GOSUB 400
+ 1020 IFR$="N"THENGOSUB 850:ELSE IFR$<>"O"GOTO1000
+ 1030 CG%=-1
+ 1040 LINE INPUT"Texte ?";R$
+ 1050 IFAV%THENLPRINT E$+",Q1,P"+R$:ELSE LPRINT E$+",Q0,P"+R$
+ 1060 RETURN 
+ 1070 '* Decoupage *
+ 1080 IFF%THENF%=0:R$="HORS":ELSE F%=-1:R$="EN"XA=X:YA=Y:GOSUB 150:CA%=C%
+ 1090 CLS:PRINT "Mise ";R$;" en service","de la routine de de-coupage":GOTO420
+ 1095 'Calcul de graduation d'axe
+ 1100 CLS:INPUT" Intervalle suivant OX";PX
+ 1110 IFTC%>1THENXD=(INT(FG/PX)+1)*PX :ELSE XD=(INT(UG/PX)+1)*PX*K:PX=PX*K
+ 1120 INPUT" Intervalle suivant OY";PY
+ 1130 YD=(INT(FB/PY)+1)*PY
+ 1140 RETURN 
+ 1145 '* Messages *
+ 1150 IFNOTQ%THENRETURN 
+ 1160 CLS:PRINT " Presser une touche  pour afficher les   cordonnees";
+ 1170 PRINT "ou acceder aux commandes";:RETURN 
+ 1180 '*Impression des     *parametres
+ 1200 IM%=1:LPRINT [1]
+ 1210 LINE INPUT"  TITRE DU DESSIN ?";R$:LPRINT R$:RETURN 
+ 1215 '
+ 1220 LPRINT:LPRINT "EQUATION";:ON TC%GOTO1230,1240,1250
+ 1230 LPRINT " CARTESIENNE -> Y(X)=";R$:RETURN 
+ 1240 LPRINT " POLAIRE -> R(T)=";R$:RETURN 
+ 1250 LPRINT "S PARAMETRIQUES -> X(T)=";R$:LPRINT TAB( 26);"Y(T)=";Y$:RETURN 
+ 1260 LPRINT:LPRINT "Intervalle d'etude :";DE;U$;",";FI;U$
+ 1270 LPRINT "Pas du calcul :";PA;U$:RETURN 
+ 1290 '
+ 1300 LPRINT STRING$ (20,"-");" FENETRE ";STRING$ (20,"-")
+ 1310 LPRINT TAB( 23);FH
+ 1320 LPRINT FG;U$;:IFTC%>1ORK=1THENLPRINT TAB( 46);FD:GOTO1350
+ 1330 LPRINT TAB( 36);FD;U$:LPRINT "(";INT(FG*K*100+.5)/100;"radians)";
+ 1340 LPRINT TAB( 35);"(";INT(FD*K*100+.5)/100;"radians)"
+ 1350 LPRINT TAB( 23);FB:RETURN 
+ 1355 '
+ 1360 LPRINT STRING$ (21,"-");" CADRE ";STRING$ (21,"-")
+ 1370 LPRINT "Largeur =";LC;"pas";TAB( 32);"Hauteur =";HC;"pas"
+ 1380 LPRINT TAB( 13);MARGE A GAUCHE =";MG;"PAS"
+ 1390 LPRINT TAB( 15);"AXE DES X ";
+ 1400 IFAV%THENLPRINT "vertical" :ELSE LPRINT "horizontal"
+ 1405 '
+ 1410 LPRINT STRING$ (50,"^"):RETURN 
+ 1430 'mode d'emploi
+ 1500 DATA" Ce signale signifie qu'il faut presser  UNE touche pour avancer..."
+ 1510 DATA"Une pression sur la touche S interrompt une sequence explicative"
+ 1520 DATA"Un appui de la barred'espace met ou suprime le sigale sonore"
+ 1530 DATA"On rapelle entre (),devant la ->,les options utiles a cet   endroit"
+ 1540 DATA" Le role des comman-des ,ou bien des ex-plications complementaires.."
+ 1550 DATA"sont disponibles si un (?) apparait avecles commandes propo-sees"
+ 1560 '
+ 1600 DATA" Apres avoir defini la fonction,la ligne 2310 sera affiche..."
+ 1610 DATA"Ne pas oublier de la valider:remonter le curseur et presser RETURN"
+ 1620 DATA"Ensuite,il ne reste plus qu'a relancer le programme en pressant F6
+ 1630 '
+ 1700 DATA"4 possibilites sont offertes pour preci-ser l'unite de X (ou de T)"
+ 1710 DATA"D->degre  R->radian M->multiple de PI   Q->quelconque"
+ 1720 DATA"ATTENTION !. Dans le cas d'une equation cartesienne Y=FN(X)..."
+ 1730 DATA"...n'oubliez surtoutpas d'employer cettememe unite pour definir..."
+ 1740 DATA"la fenetre sur ox et eventuellement la  graduation de cet   axe"
+ 1790 '
+ 1800 DATA"L'option  (A) permet d'arreter le trace en cours"
+ 1810 DATA"L'option  (D) met enou hors service la  procedure de decoup-age"
+ 1820 DATA"L'option  (C) permetde selectionner une des 4 couleurs"
+ 1830 DATA"L'option  (T) permetde tracer en traits pleins ou en tirets"
+ 1840 DATA"L'option  (G) permet de choisir la gros-seur des caracteres"
+ 1850 DATA"Commencez par entrerles valeurs a ecriresuivant l'axe des Y"
+ 1860 DATA"Pour passer a l'axe des X preser la tou-che X"
+ 1870 DATA"Pour revenir a l'axedes Y,il suffit de  presser la touche Y"
+ 1880 DATA"Quand c'est fini surl'ensemble des deux axes,presser la tou-che (F)"
+ 1890 '
+ 1900 DATA"Une pression sur (B)baisse le stylo et  le dessin se fait..."
+ 1910 DATA"...en utilisant les touches du curseur  pour deplacer le    stylo.."
+ 1920 DATA"qui peut se mouvoir (L)entement ou (V)ite,a votre gre !"
+ 1930 DATA"Une pression sur (R)releve le stylo"
+ 1940 DATA"Pour ecrire un textepositionner le stylo,puis preser la tou-che (E)"
+ 1950 DATA"Presser la touche(F)quand vous avez fini"
+ 1970 '*1ere PARTIE*
+ 2000 N=6:GOSUB 650
+ 2010 PRINT "Que choisissez vous?(D)essin libre","(T)race de courbe"
+ 2020 R$="(D/T)":P=12:GOSUB 410:IFR$="T"THEN2070:ELSE IFR$<>"D"GOTO2010
+ 2030 PRINT "Explications sur lescommandes ?":GOSUB 400
+ 2040 IFR$="N"THEN2060:ELSE IFR$<>"O"GOTO2030
+ 2050 RESTORE 1900:N=6:GOSUB 650:IFR$<>"S"THENRESTORE 1820:N=3:GOSUB 650
+ 2060 G%=-1:L%=-1:LPRINT CHR$(18):GOTO4230
+ 2070 PRINT " Impression des parametres du trace ?":R$="(C/?/O/N)":P=8
+ 2080 GOSUB 410:IFR$="?"THENRESTORE 1820:N=1:GOSUB 650:GOTO2070
+ 2090 IFR$="O"THENGOSUB 1200:ELSE IFR$<>"N"GOTO2070
+ 2095 'Choix de           l'equation
+ 2100 CLS:PRINT "EQUATION (1)->CARTE-SIENNE (2)->POLAIRE (3)->PARAMETRIQUE";
+ 2110 R$="(?/1/2/3)":P=8:GOSUB 410
+ 2120 IFR$="?"THENRETO RE1600:N=3:GOSUB 650:GOTO2100
+ 2130 TC%=VAL(R$):IFTC%<1ORTC%>3THEN2100
+ 2140 POKE 16375,TC%:POKE 16376,IM%:POKE 16377,NC%
+ 2150 KEY$(6)="runRUN2300"+CHR$(13)
+ 2160 CLS:ON TC%GOTO2200,2210,2220
+ 2195 'Entree de           l'equation
+ 2200 LINE INPUT"Y(X)=";R$:U$="Y(X)":GOTO2230
+ 2210 LINE INPUT"R(T)=";R$:U$="R(T)":GOTO2230
+ 2220 LINE INPUT"X(T)=";R$:LINE INPUT"Y(T)=";Y$:U$="X(T)"
+ 2230 IFIM%THENGOSUB 120
+ 2240 CLS:PRINT "2310 DEFFN";U$;"=";R$;:IFTC%=3THENPRINT ":DEFFNY(T)=";Y$
+ 2250 END
+ 2270 '2eme partie
+ 2300 CLEAR 200:PI=4*ATN(1):K=1:CLS 
+ 2310 DEFFN Y(X)=SIN(X)
+ 2320 TC%=PEEK(16375):IM%=-1*PEEK(16376):NC%=-1*PEEK(16377)
+ 2330 ON ERROR GOTO5000
+ 2340 IFTC%=1THENY=FN Y(0)
+ 2350 IFTC%=2THENRO=FN R(0)
+ 2360 IFTC%=3THENX=FN X(0):Y=FN Y(0)
+ 2390 '* Choix de          * l'unite
+ 2400 PRINT "  Preciser l'UNITE  utilisee pour ";
+ 2410 IFTC%=1THENPRINT "X":ELSE PRINT "T"
+ 2420 R$="(?/D/M/R/Q)":P=6:GOSUB 410
+ 2430 IFR$="?"THENN=5:RESTORE 1700:GOSUB 650:GOTO2400
+ 2440 IFR$="D"THENU$="(degres)":K=PI/180:GOTO2500
+ 2450 IFR$="M"THENU$="(fois PI)":K=PI:GOTO2500
+ 2460 IFR$="R"THENU$="(radians)":GOTO2500
+ 2470 U$="":IFR$<>"Q"THEN2400
+ 2490 '
+ 2500 PRINT "Intervalle d'etude :";:INPUT"DEBUT";DE:INPUT"FIN";FI
+ 2510 INPUT"PAS";PA:CLS:IFIM%THENGOSUB 1260
+ 2590 '* Fenetre *
+ 2600 Y$=" Limites gauche et  droite de la fenetre ":IFTC%>1THEN2640
+ 2610 PRINT Y$;"<> de l'intervalle  d'etude ?";:GOSUB 400
+ 2620 IFR$="N"THENFG=DE:UG=DE:FD=FI:GOTO2650
+ 2630 IFR$<>"O"GOTO2610
+ 2640 PRINT Y$;:INPUTFG,FD:UG=FG:IFTC%>1THENU$=""
+ 2650 CLS:INPUT"  Limites basse et  haute de la fenetre";FB,FH
+ 2660 IFIM%THENGOSUB 1300
+ 2670 IFK<>1THENDE=DE*K:FI=FI*K:PA=PA*K:IFTC%=1THENFG=FG*K:FD=FD*K
+ 2690 '*  CADRE  *
+ 2700 CLS:INPUT" Largeur du cadre : (<999 pas)";LC:IFLC>480THENAV%=-1:ELSE AV%=0
+ 2710 IFLC>999THENPRINT "Largeur>999 pas";:GOSUB 420:GOTO2700
+ 2720 CLS:PRINT " Hauteur du cadre : (P)roportinelle","(I)mposee ?";:R$="(P/I)"
+ 2730 P=12:GOSUB 410:IFR$="P"THENHC=INT((FH-FB)*LC/(FD-FG)+.5):GOTO2750
+ 2740 CLS:IFR$<>"I"THEN2720:ELSE INPUT" Hauteur(<999 pas)";HC
+ 2750 IFHC>999THENCLS:PRINT "Hauteur=";HC;">999":GOSUB 420:GOTO2700
+ 2760 CLS:IFLC<481ORHC<481THEN2800
+ 2770 PRINT "  Il faut qu'une au moins des dimensions du cadre =<480";
+ 2780 GOSUB 420:GOTO2700
+ 2790 '** CADRAGE **
+ 2800 PRINT "Cadrage automatique?":GOSUB 400:IFR$="O"THEN2880:ELSE IFR$<>"N"GOTO2800
+ 2810 IFAV%ORHC>480GOTO2840
+ 2820 PRINT "Axe des X horizontalou vertical sur l'i-mprimante ?":R$="(H/V)":P=12
+ 2830 GOSUB 410:IFR$="V"THENAV%=-1:ELSE IFR$<>"H"GOTO2820
+ 2840 INPUT"Marge a gauche(pas)";MG
+ 2850 IFAV%THENIFHC+MG>480THEN2870:ELSE 2900
+ 2860 IFLC+MG<481GOTO2900
+ 2870 CLS:PRINT "Marge a gauche trop grande":GOSUB 420:GOTO2840
+ 2880 IFLC>480OR(HC>LANDHC<480)THENAV%=-1
+ 2890 IFAV%THENMG=(480-HC)/2:ELSE MG=(480-LC)/2
+ 2895 'Verif cadrage
+ 2900 R%=1:IF(LC+HC)<700THENR%=0:ELSE IF(LC+HC)>1200THENR%=2
+ 2910 GOSUB 870
+ 2920 A=LC/(FD-FG):B=-FG*LC/(FD-FG):C=HC/(FH-FB):D=-FB*HC/(FH-FB)
+ 2930 CLS:PRINT "Dimension du cadre:";LC;"*";HC;"PAS","Axe des X ";
+ 2940 IFAV%THENPRINT "vertical":ELSE PRINT "horizontal";
+ 2950 PRINT "O.K.?";:GOSUB 400
+ 2960 IFR$<>"O"THEN2700:ELSE IFIM%THENGOSUB 1360
+ 2970 G%=-1:IFNC%GOTO4000
+ 2980 LPRINT CHR$(18)+"M"+STR$(MG)+",-30":IFNOTAV%THENLPRINT "R0,-"+STR$(HC)
+ 2990 LPRINT "I"
+ 2995 'Dessin du cadre
+ 3000 PRINT "Dessin du cadre ?":R$="(C/T/?/O/N)":P=6:GOSU410
+ 3010 IFR$="?"THENRESTORE 1820:N=2:GOSUB 650:GOTO3000
+ 3020 IFR$="N"THEN3280:ELSE IFR$<>"O"THEN3000:ELSE CA%=-1
+ 3030 X=FD:Y=FB:G$="D":GOSUB 100:Y=FH:GOSUB 100:X=FG:GOSUB 100:Y=FB:GOSUB 100
+ 3040 LPRINT "L0"
+ 3090 'Quadrillage //      a OX
+ 3100 PRINT "Quadrillage ?":R$="(C/T/O/N)":P=8:GOSUB 410
+ 3110 IFR$="N"THEN3280:ELSE IFR$<>"O"GOTO310
+ 3120 GOSUB 1100:Q%=0:Y=FB
+ 3130 FORX=XDTO (FD-1E-3)STEPPX
+ 3140 G$="M":GOSUB 100
+ 3150 Y=FB*Q%+FH*(1-Q%):G$="D":GOSUB 100:Q%=1-Q%
+ 3160 NEXT:Q%=0:CLS 
+ 3190 'Quadrillage //      a OY
+ 3200 PRINT "Presser la touche(S)pour continuer":R$="(C/T/S)":P=10:GOSUB 410
+ 3210 IFR$<>"S"GOTO3200
+ 3220 LPRINT "H":X=FG
+ 3230 FORY=YDTO (FH-1E-3)STEPPY
+ 3240 G$="M":GOSUB 100
+ 3250 X=FG*Q%+FD*(1-Q%):G$="D":GOSUB 100:Q%=1-Q%
+ 3260 NEXT
+ 3270 LPRINT "L0":Q%=0:X0=FG:Y0=FB:GOTO3700
+ 3280 R%=1:IF(LC+HC)<700THENR%=0:ELSE IF(LC+HC)>1200THENR%=2
+ 3290 GOSUB 870
+ 3295 'Dessin axes
+ 4000 END
+ 4230 V$="1":G$="R":L%=-1
+ 4290 '*** MENU ***
+ 4300 CLS:PRINT "Deplace (L)ent(V)ite(B)aisse (R)eleve lestylo (E)crire (F)in";
+ 4310 R$="(B/C/E/F/G/L/T/V)":P=0:GOSUB 410
+ 4320 IFR$="F"THEN4400:ELSE 4300
+ 4390 '
+ 4400 IFTC%=0THENLPRINT "A":END
+ 5000 IFERR <>2THENRESUME NEXT
+ 5010 CLS:PRINT "Erreur de syntaxe   dans la ligne 2310";ERR:420:LIST @2310
+ 5100 IFC$="I"THENDE=DE+PA:RESUME 4050:ELSE T=T+PA:RESUME 4120

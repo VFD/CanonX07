@@ -1,0 +1,177 @@
+;------- TASM ASM mnemonics. -------
+; Compile this file using:
+; Set TASMOPTS = -b
+; tasm -80 ThisCode.tas MyBinary.BIN
+;-----------------------------------
+; Zx81 Program name: VB81 XuR [] : Empty Basic Segment.
+; REM   line   name: D=5002/5191 : H=138A/1447
+
+#define ORG  .org       ; TASM cross-assembler definitions
+
+
+ORG $138A ; [@5002/@h138A]
+Lb138A:    ; <<< AFM
+	LD HL,$0214 
+	LD BC,$004F 
+	LD DE,(Lb_PC) 
+	LDIR 
+	RET ; ==========================
+
+Lb1397:    ; <<< MAF
+
+	PUSH DE 
+	POP HL 
+	INC HL 
+	LD E,(HL) 
+	INC HL 
+	LD D,(HL) 
+	LD HL,(Lb_PC) 
+	PUSH HL 
+	LD BC,$004F 
+	PUSH BC 
+	LDIR 
+	POP HL 
+	POP BC 
+	ADD HL,BC 
+	LD BC,$004E 
+	DEC HL 
+Lb13AE:
+	LD A,(HL) 
+	CP $20 
+	JR NZ, Lb13B7 ; [$13B7:5047]
+	DEC HL 
+	DEC C 
+	JR NZ, Lb13AE ; [$13AE:5038]
+Lb13B7:
+	LD A,C 
+	LD (Lb_LE),A 
+	RET ; ==========================
+
+Lb13BC:    ; <<< INS
+
+	INC HL 
+	INC HL 
+	LD E,(HL) 
+	INC HL 
+	LD D,(HL) 
+	LD HL,(Lb_DF) 
+	PUSH HL 
+	CP A 
+	SBC HL,DE 
+	PUSH HL 
+	POP BC 
+	INC BC 
+	POP DE 
+	PUSH DE 
+	POP HL 
+	DEC HL 
+	LDDR 
+	INC HL 
+	LD (HL),$20 
+	RET ; ==========================
+
+Lb13D5:    ; <<< DEL
+
+	INC HL 
+	INC HL 
+	LD E,(HL) 
+	INC HL 
+	LD D,(HL) 
+	LD HL,(Lb_DF) 
+	CP A 
+	SBC HL,DE 
+	PUSH HL 
+	POP BC 
+	PUSH DE 
+	POP HL 
+	INC HL 
+	LDIR 
+	LD HL,(Lb_DF) 
+	LD (HL),$20 
+	RET ; ==========================
+
+Lb13ED:    ; <<< IPC
+
+	LD HL,(Lb_PC) 
+	LD BC,$004F 
+	ADD HL,BC 
+	LD (Lb_PC),HL 
+	RET ; ==========================
+
+Lb13F8:    ; <<< DPC
+
+	LD HL,(Lb_PC) 
+	LD BC,$004F 
+	CP A 
+	SBC HL,BC 
+	LD (Lb_PC),HL 
+	RET ; ==========================
+
+Lb1405:    ; <<< VDE
+
+	LD HL,(Lb_DF) 
+	LD BC,(Lb_DB) 
+	CP A 
+	SBC HL,BC 
+	PUSH HL 
+	POP BC 
+	LD HL,(Lb_DB) 
+	PUSH HL 
+	POP DE 
+	INC DE 
+	LD (HL),$20 
+	LDIR 
+	RET ; ==========================
+
+Lb141C:    ; <<< EOF
+
+	LD HL,(Lb_DF) 
+Lb141F:
+	LD A,(HL) 
+	CP $20 
+	DEC HL 
+	JR Z, Lb141F ; [$141F:5151]
+	LD (Lb_LE),HL 
+	RET ; ==========================
+
+	NOP 
+	NOP 
+	NOP 
+	NOP 
+	NOP 
+	NOP 
+	NOP 
+	NOP 
+	NOP 
+	NOP 
+	NOP 
+	NOP 
+	NOP 
+	NOP 
+	NOP 
+	NOP 
+	NOP 
+	NOP 
+	NOP 
+	NOP 
+	NOP 
+	NOP 
+	NOP 
+	NOP 
+	NOP 
+
+Lb_DB: ; DB
+.db $60  ; DATA
+.db $14  ; DATA
+
+Lb_DF: ; DF
+.db $F0  ; DATA
+.db $1F  ; DATA
+
+Lb_PC: ; PC
+.db $60  ; DATA
+.db $14  ; DATA
+
+Lb_LE: ; LE
+.db $00  ; DATA
+.end

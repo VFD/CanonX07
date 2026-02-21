@@ -1,0 +1,136 @@
+0 ' DESTRUCTION
+1 ' ~~~~~~~~~~~
+2 ' de Frederick FARGEOT
+3 CLEAR 300:DEFSTR A-B:GOSUB 30000:CLS:POKE 115,195:GOTO 30
+4 LOCATE 2,Z:PRINT STRING$(16,32);:LOCATE 10-(LEN(A)/2),Z:PRINT A;
+5 FOR I=0 TO 1000:NEXT:LOCATE 2,Z:PRINT STRING$(16,32);:RETURN
+10 FOR X=1 TO LEN(B)
+15 LOCATE 2,Z:PRINT MID$(B,X,16);:IF X=1 THEN FOR I=0 TO 500:NEXT
+20 NEXT:RETURN
+30 FOR C=0 TO 119:X=INT(RND(1)*5)-2:Y=INT(RND(1)*5)-2:D=D+X:F=F+Y
+50 LOCATE 5,1:PRINT "TABLEAU 01":LOCATE 5,2:PRINT "TABLEAU 01":FOR I=0 TO 1000:NEXT
+60 CLS:PRINT "-<                >-";
+100 CLEAR 300:DEFSTR A-B:GOSUB 30000
+110 A="Le décor":GOSUB 4:GOSUB 10000
+120 A="Votre vaisseau":GOSUB 4
+130 FOR X=1 TO 7:PSET (1,15):PSET (2,15):FOR I=0 TO 50:NEXT:PRESET (1,15):PRESET (2,15)
+140 FOR I=0 TO 50:NEXT:BEEP 5,1:NEXT
+150 A="Les cibles":GOSUB 4:FOR X=0 TO 7:FOR I=0 TO 8:PSET (C(I),31):NEXT
+155 FOR I=0 TO 50:NEXT
+160 BEEP 5,1:FOR I=0 TO 8:PRESET (C(I),31):NEXT:NEXT
+170 B="Dans ce tableau, votre vaisseau avance constamment.":GOSUB 10
+180 B="Vous pouvez modifier votre altitude grace aux touches du curseur ( "
+190 B=B+HA$+" "+BA$+" ). ":GOSUB 10
+200 B="Vous pouvez tirer des bombes en appuyant sur 'ESPACE'.":GOSUB 10
+210 B="Si vous tirez une bombe alors que la précédente n'a pas explosé,"
+220 B=B+"la nouvelle bombe remplace l'ancienne.":GOSUB 10
+230 B="Vous devez bien entendu éviter les météorites.":GOSUB 10
+240 B="Les 9 cibles descendues, vous passez au tableau suivant-":GOSUB 10
+241 CLS:LOCATE 5,1:PRINT "TABLEAU 02":LOCATE 5,2:PRINT "TABLEAU 02";
+242 FOR I=0 TO 1000:NEXT:CLS
+250 CLS:PRINT "-<                >-";:A="Le décor":GOSUB 4:GOSUB 11000
+260 A="Votre vaisseau":GOSUB 4:FOR X=0 TO 7:PRESET (0,20):FOR I=0 TO 50:NEXT
+270 PSET (0,20):FOR I=0 TO 50:NEXT:BEEP 5,1:NEXT
+280 B="Ce tableau est divisé en 2 parties.":GOSUB 10
+290 B="La 1ère se situe au début jusqu'au milieu du couloir, a la séparation."
+300 GOSUB 10:B="Dans cette partie, vous devez éviter un météore qui arrive sur "
+310 B=B+"vous tout en percutant les parois du tunnel.":GOSUB 10
+320 B="Regardez son parcours a l'écran ":GOSUB 10
+325 Y=17:D=1:X=48
+330 IF X<1 THEN 350 ELSE PRESET (X,Y):IF Y=17 THEN D=1 ELSE IF Y=23 THEN D=-1
+340 Y=Y+D:X=X-1:PSET (X,Y):FOR I=0 TO 30:NEXT:GOTO 330
+350 B="ATTENTION ! dès que le météore passe derrière vous, celui-ci se remet "
+360 B=B+"au milieu du couloir et continue son chemin.":GOSUB 10
+370 B="Vous pouvez vous déplacer grace a la touche du curseur ( "+DR$+" )."
+371 GOSUB 10
+373 A="Regardez l'écran":GOSUB 4
+374 X=0
+375 IF X=55 THEN 380 ELSE PRESET (X,20):X=X+1:PSET (X,20):FOR I=0 TO 30:NEXT:GOTO 375
+380 GOSUB 10:B="La 2ème partie se situe dans la 2ème moitié du couloir."
+390 GOSUB 10:B="Cette fois-ci, vous pouvez soit avancer soit reculer ( "
+400 B=B+DR$+" "+GA$+" ).":GOSUB 10
+410 B="Vous devez éviter les champs magnétiques qui vont clignoter dans "
+420 B=B+"quelques instants sur votre écran. ":GOSUB 10
+425 FOR I=0 TO 3
+430 FOR Y=16 TO 23 STEP 2:FOR X=60 TO 65:PRESET (X,Y):PRESET (X+24,Y):PRESET (X+48,Y)
+440 NEXT:NEXT
+450 FOR Y=16 TO 23 STEP 2:FOR X=60 TO 65:PRESET (X,Y):PSET (X+24,Y):PSET (X+48,Y)
+460 NEXT:NEXT:NEXT
+470 B="La place de ces champs sera tirée au hasard parmi les 3 que vous pouvez"
+475 B=B+" voir.":GOSUB 10
+480 B="Ils apparaitront de plus en plus fréquemment au fur et a mesure "
+490 B=B+"des stages.":GOSUB 10:B="Une fois au bout du couloir, vous passez au "
+500 B=B+"tableau suivant.":GOSUB 10:A="Regardez l'écran":GOSUB 4
+510 FOR Y=16 TO 23 STEP 2:FOR X=60 TO 65:PRESET (X,Y):PRESET (X+24,Y):PRESET (X+48,Y)
+520 NEXT:NEXT
+530 X=55
+540 IF X=119 THEN 541 ELSE PRESET (X,20):X=X+1:PSET (X,20):FOR I=0 TO 30:NEXT:GOTO 540
+541 CLS:B="Exceptionnellement pour le tableau 3, la fenêtre de lecture va se "
+542 B=B+"trouver en bas pour une question de vue d'ensemble.":GOSUB 10:Z=3
+550 CLS:LOCATE 5,1:PRINT "TABLEAU 03":LOCATE 5,2:PRINT "TABLEAU 03";
+560 FOR I=0 TO 1000:NEXT:CLS:POKE 186,21:LOCATE 0,3:PRINT "-<                >-";:Z=3
+570 A="Le décor":GOSUB 4:GOSUB 12000:LOCATE 0,3:PRINT "-<                >-";
+580 B="Votre vaisseau se trouve au milieu du carré noir, a gauche de l'écran."
+590 GOSUB 10:B="En appuyant sur une touche, vous démarrez.":GOSUB 10
+600 A="    ALLEZ-Y     ":GOSUB 4:POKE 43,4
+610 FOR X=4 TO 8:FOR Y=13 TO 17:PRESET (X,Y):NEXT:NEXT:PSET (6,15)
+620 B="Maintenant le X-07 se charge de vous faire avancer.":GOSUB 10
+630 B="A vous de régler votre altitude pour éviter les parois et les météores."
+640 GOSUB 10:B="Une fois arrivé au bout de l'écran a droite, le X-07 se "
+650 B=B+"chargera de vous faire faire demi-tour a temps pour ne pas vous "
+660 B=B+"scratcher.":GOSUB 10:B="Vous vous dirigez grace aux touches du curseur"
+670 B=B+" ( "+BA$+HA$+" ).":GOSUB 10:B="Votre but dans ce tableau est de "
+680 B=B+"descendre le point situé au milieu de l'écran.":GOSUB 10:B="Le tir "
+690 B=B+"s'effectue avec la touche 'ESPACE'.":GOSUB 10
+700 B="Une fois la cible descendue, vous recommencez au tableau 1 avec "
+710 B=B+"cependant plus de difficultés.":GOSUB 10
+720 CLS
+730 LOCATE 5,0:PRINT "MAINTENANT"
+740 LOCATE 8,1:PRINT "VOUS"
+750 LOCATE 7,2:PRINT "POUVEZ"
+760 LOCATE 6,3:PRINT "DEMARRER";:POKE 43,4:CLS:POKE 186,20:CLOAD
+10000 '
+10110 D=25:F=12
+10120 '
+10130 FOR C=0 TO 119:X=INT(RND(1)*5)-2:Y=INT(RND(1)*5)-2:D=D+X:F=F+Y
+10140 IF D>31 OR D<26 THEN D=D-X*2
+10150 IF F<8 OR F>16 THEN F=F-Y*2
+10160 LINE (C,8)-(C,F):LINE (C,31)-(C,D):NEXT
+10170 FOR I=1 TO 9:C(I-1)=INT(RND(1)*I+I*11)
+10180 FOR C=C(I-1)-1 TO C(I-1)+1:FOR D=29 TO 31:PRESET (C,D):NEXT:NEXT:PSET (C(I-1),31)
+10190 NEXT:FOR C=0 TO 50:X=INT(RND(1)*119):Y=INT(RND(1)*20+8):PSET (X,Y):NEXT
+10200 RETURN
+11000 '
+11430 FOR X=0 TO 119:LINE (X,8)-(X,16):LINE (X,31)-(X,24):NEXT
+11440 FOR X=50 TO 54:LINE (X,15)-(X,19):LINE (X,21)-(X,25):NEXT
+11450 RETURN
+12000 DEFDBL A-B
+12710 CLS:R=1/6:R1=2/3:Y=10
+12730 ON ERROR GOTO 12920
+12740 FOR X=0 TO 60:Y=Y-R:Y1=Y:A=INT(RND(1)*2-1):Y1=Y1+A
+12750 LINE (X,0)-(X,Y1):LINE (X,31)-(X,31-Y1):NEXT
+12760 FOR X=60 TO 119:Y=Y+R:Y1=Y:A=INT(RND(1)*2-1):Y1=Y1+A
+12770 LINE (X,0)-(X,Y1):LINE (X,31)-(X,31-Y1):NEXT
+12780 X=10:FOR Y=0 TO 15:X=X-R1:Y1=X:A=INT(RND(1)*2-1):Y1=Y1+A
+12790 LINE (0,Y)-(Y1,Y):LINE (119,Y)-(119-Y1,Y):NEXT
+12800 FOR Y=15 TO 31:X=X+R1:Y1=X:A=INT(RND(1)*2-1):Y1=Y1+A
+12810 LINE (0,Y)-(Y1,Y):LINE (119,Y)-(119-Y1,Y):NEXT
+12820 X=60:X1=X:FOR Y=5 TO 15:X=X-4.5:X1=X1+4.5
+12830 LINE (X,Y)-(X1,Y):NEXT
+12840 FOR Y=15 TO 24:X=X+4.5:X1=X1-4.5
+12850 LINE (X1,Y)-(X,Y):NEXT
+12860 FOR X=0 TO 50
+12870 A=INT(RND(1)*119):B=INT(RND(1)*31)
+12880 IF POINT(A,B) THEN 12870
+12890 PSET (A,B):NEXT
+12900 FOR X=59 TO 61:FOR Y=14 TO 16:PRESET (X,Y):NEXT:NEXT:PSET (60,15)
+12910 GOTO 12930
+12920 RESUME NEXT
+12930 FOR X=4 TO 8:FOR Y=13 TO 17:PSET (X,Y):NEXT:NEXT:PRESET (6,15)
+12940 DEFSTR A-B
+30000 FONT$(128)="0,16,24,252,24,16,0,0"
+30010 FONT$(129)="0,32,96,252,96,32,0,0"
+30020 FONT$(130)="0,32,112,248,32,32,32,0"
+30030 FONT$(131)="0,32,32,32,248,112,32,0"
+30040 DR$=CHR$(128):GA$=CHR$(129):BA$=CHR$(131):HA$=CHR$(130):RETURN
+

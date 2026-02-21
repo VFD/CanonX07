@@ -1,0 +1,20 @@
+
+Programme pour Canon X-07.
+
+"BEACH-HEAD" de Stéphane DOCZEKALSKI
+Hebdogiciel N°168.
+
+Programme incomplet, car le n°169 n'est jamais paru!
+
+Mis à votre disposition pour vous inspirer du début du programme...
+
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+Fichier ".cas" pouvant être renomé ".lst" selon l'émulateur.
+
+Compilé/décompilé grâce au programme de XavSnap:
+"X07token" (http://dskcenter.free.fr/X07/)
+
+Cordialement,
+XavSnap.

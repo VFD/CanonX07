@@ -1,0 +1,29 @@
+Eudipe.
+
+tiré du magazine Hebdogiciel N°72
+
+	Mais oui ! Grâce à un tel programme, vos talents de dessinateur peuvent très bien s'exprimer sur un Canon...
+
+Mode d'emploi :
+	Ce programme est destiné à un Canon X-07 muni d'une carte d'extension 4Ko RAM. Après l'avoir tapé ( et vérifié les DATA ) faites RUN et effacez toutes les lignes. Tapez ensuite : START$="POKE 154,160:POKE 155,31"+CHR$(13). OFF1.
+	Il vous suffira pour le faire fonctionner de taper PAINT. Après apparition du message d'entrée, tapez une touche et le programme se mettra en route. Pour interrompre son fonctionnement, tapez BREAK ou OFF.
+	Si vous désirez entrer un autre programme que celui-ci, n'oubliez pas de taper la ligne CLEAR 50,&H1F9F en début de programme afin de le préserver.
+NB : le déplacement du crayon se fait avec les touche du curseur ( huit directions ).
+	Lorsqu'on valide un point, le crayon disparait, un déplacement le fait réapparaitre ce qui permet de se repérer.
+
+COMMANDES : OBJET -> UTILISATION
+validation : valide le point où se trouve le crayon -> touche centrale
+ligne : trace une ligne entre le point validé et le crayon -> L
+rectangle : trace un rectangle ayant pour diagonale la distance entre le point validé et le crayon -> R
+cercle : trace un cercle ayant pour rayon la distance entre le point validé et le crayon -> C
+marquage : supprime le clignotement du crayon lors du déplacement et permet le tracé en continu -> M+curseur
+effacement : efface l'écran -> E
+image rappel : rappelle une image mise auparavant en mémoire -> I+R+N°image
+image mémoire : met une image en mémoire -> I+M+N°image
+image superposée : superpose l'image appelée avec le contenu de l'écran -> I+S+N°image
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+
+Cordialement,
+Christian DUBROEUCQ.

@@ -20,8 +20,8 @@ ___
 
 [Cassette Hebdogiciel](http://www.hebdogiciel.free.fr/CANONX07_software)
 
-Report des sources dans ce GIT, attention uniquement les sources pour le moment.\
-Travail en cours.
+Report des sources dans ce GIT.\
+Travaux en cours.
 
 ___
 ## Liste

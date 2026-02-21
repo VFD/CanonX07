@@ -1,0 +1,19 @@
+Tridi4 "TIC TAC TOE"
+tiré du magazine Hebdogiciel N°67
+
+	Dans un cube, tentez d'aligner vos pions avant l'ordinateur plus malin que jamais.
+
+Mode d'emploi :
+	Le but du jeu est d'aligner 4 pions dans un cube à 4 niveaux, suivant les diagonales, verticales et horizontales.
+	En début de jeu, l'ordinateur vous demande si vous désirez commencer, répondez ensuite aux questions Niveau, Abscisse et Ordonnée par un chiffre de 1 à 4.
+Le niveau 1 est le plus élevé
+L'abscisse 1 est la plus à droite
+L'ordonnée 1 est la plus en avant
+	En fin de partie, l'ordinateur affichage le gagnant et les coordonnées de la case jouée. L4appui sur une touche quelconque affiche alors les positions gagnantes, un nouvel appui vous offre la possibilité de recommencer.
+	Sachez que l'ordinateur met environ 20 secondes pour jouer un coup, mais qu'il le joue très bien.
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+
+Cordialement,
+Christian DUBROEUCQ.

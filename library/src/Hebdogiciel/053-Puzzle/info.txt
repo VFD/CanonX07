@@ -1,0 +1,15 @@
+Puzzle.
+
+tiré du magazine Hebdogiciel N°53
+
+	Il faut, en un minimum de temps, reconstituer le dessin de Pac-Man et son ami ou ennemi le fantôme.
+
+Mode d'emploi :
+	Déplacez le pavé noir à l'aide des quatre flèches. Choisissez le bloc graphique à l'aide de la touche ESPACE, placez-le à l'endroit choisi et appuyez de nouveau sur ESPACE.
+
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+
+Cordialement,
+Christian DUBROEUCQ.

@@ -1,0 +1,19 @@
+Gentleman Cambrioleur.
+tiré du magazine Hebdogiciel N°90
+
+	Un cambrioleur de votre acabit, ne saurait résister à autant de richesses;malheureusement, il devra se jouer de gendarmes plutôt sportifs...
+
+Mode d'emploi :
+	Vous devez en un temps minimum et malgré la poursuite effrénée de 2 gendarmes, dérober les 15 caisses de bijoux à chaque tableau. Les déplacements de votre personnage, s'effectuent à l'aide des flèches. Ce jeu occupe environ 15,5Ko et nécessite, dans sa version intégrale, l'emploi de l'extension XM-101. Néanmoins, la suppression de la notice et la réduction du nombre de tableaux, devrait permettre une moindre capacité mémoire. Avant tout, faire un FSET 500 et tapez : INIT#1,"record",150:?#1,100,"gugus" pour créer le fichier record. Très inspiré du célèbre "lode runner", ce jeu comporte 40 tableaux (!), 7 niveaux de difficulté et offre la possibilité de créer vos propres tableaux. En outre, deux modes de jeu vous sont proposés. Dans l'ordre :
+1- débutant : vous commencez au premier tableau et continuez dans l'ordre
+2- pro : vous choisissez le numéro de votre premier tableau ( 1 à 40 ) et arrivé au 40ème, recommencez au premier.
+- dans le désordre : les tableaux vous sont distribués au hasard et pendant les 25 premiers, aucun n'est semblable ( utilisation d'une mémorisation des tableaux à l'aide d'une chaine mémoire ).
+
+création de tableaux :
+	Vous pouvez en rajouter, ou remplacer ceux existant de la façon suivante : les DATA sont espacés de 10 en 10 ( lignes 1240 à 3620 ). 5 lignes de DATA sont allouées à chaque tableau. Les 4 premières, comportant chacune 19 chiffres de 0 à 9, qui correspondent aux 19 caractères des 4 lignes d'écran. Le caractère entre guillemets du début de la première ligne, identifie le tableau. Les 2 chiffres de la 5ème ligne, sont les coordonnées de départ de votre personnage. Lors d'un rajout de tableau, changez le chiffre 40 de la ligne 9200 ( sélection d'un tableau au hasard ) et ajoute des lignes après 9600 avec, par exemple A=41 ( pour 41ème tableau ) THEN RESTORE 3640 ( numéro de DATA du 41ème tableau ).
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+
+Cordialement,
+Christian DUBROEUCQ.

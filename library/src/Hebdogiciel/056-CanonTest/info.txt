@@ -1,0 +1,38 @@
+Canontest.('CanonText')
+
+tiré du magazine Hebdogiciel N°56
+
+	Voici un programme utilitaire de traitement de texte, sur Canon, en version de base et son imprimante X-710.
+
+Mode d'emploi :
+	Ce programme modulaire est en trois parties :
+1- AMORCE : implantation des différentes routines en langage machine et définition des caractères spéciaux utilisés pour le contrôle de l'impression.
+2- SAISIE :saisie et modification du texte ( 37 lignes de 78 caractères). Le programme contrôle des sorties de lignes. Utilisation normale des touches INS et DEL.
+- passage à la ligne suivante : CTRL X
+- retour à la ligne précédente : CTRL W
+- retour au menu : CTRL P
+	La sauvegarde et le chargement du programme s'effectuent automatiquement, néanmoins, on peut positionner la bande en fonction de l'option choisie, à savoir : si l'on sélectionne l'option impression, l'ordinateur charge le programme X-710, qui dispose du même menu que la saisie. Mais ici, l'option saisie provoque un CLOAD, il faut donc être en début du programme saisi sur la cassette. Le contrôle de l'impression se fait à l'aide des caractères graphiques ( voir le magazine ).
+	Notez que le "line feed" fait revenir l'imprimante à la ligne permettant plusieurs sauts de lignes au sein de la même ligne ( exemple menu ).
+	Pour le soulignage et le gras, l'imprimante reste en mode soulignage ou gras tant qu'elle n'a pas rencontré un autre caractère gras ou souligné.
+	Pour ceux qui désirent adapter le programme sur une version avec carte ou module d'extension, il faudra modifier l'adresse de DF, ici 8176 en la remplaçant dans le programme d'amorce à la ligne 20 ( ici 240,31 ) par la nouvelle valeur.
+Pointeurs :
+5186 DB : début du texte ( ici en 5216 )
+5188 DF : fin du texte ( ici en 8176 )
+5190 PC : pointeur sur la ligne courante
+5192 LE : longueur de chaine
+	De plus, pour ceux qui le désirent, voici les routines désassemblées, employées dans ce programme, elles peuvent être en effet utilisées dans d'autres programmes :
+AFM : transfère l'affichage à l'adresse indiquée par (PC)
+MAF : transfère dans une variable (A$,B$,...) préalablement définie par A$=STRING$(79,32), les 78 octets consécutifs au pointeur, l'appel se fait sous la forme A$=USR(MAF,A$)
+INS : insère un blanc à l'adresse A et cherche le premier caractère non-blanc à partir de PC+79 jusqu'à PC. La longueur trouvée est transférée en LE
+DEL : delete est un caractère à l'adresse A et met un blanc en DF ( DEL et INS sont appelés sous la forme A=USR(INS,a)
+IPC : incrémente PC de 79
+DPC : décrémente PC de 79
+EOF : recherche le premier caractère non-blanc de DF à DB, l'adresse trouvée est mise en LE
+VDE : met tous les octets de DB à DF à 32
+
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+
+Cordialement,
+Christian DUBROEUCQ.

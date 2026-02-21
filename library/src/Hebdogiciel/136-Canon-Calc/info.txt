@@ -1,0 +1,50 @@
+Canon-calc.
+
+tiré du magazine Hebdogiciel N°136
+
+	Petite machine très douée, cherche tableur à sa mesure...
+
+Mode d'emploi :
+	Ce programme d'environ 9Ko, nécessite un minimum d'extension et l'imprimante X-710. En ligne 2, le signe "\" doit être tapé en mode GRPH ( il s'agit du caractère "pique" ).
+	Sans avoir la prétention d'égaler ses ainés, ce petit tableur, qui comme son nom l'indique permet d'effectuer des séries de calculs sur un tableau bidimensionnel, n'en offre pas moins les principes de base. Après l'affichage du titre et l'appui sur RETURN ( symbolisé dans tout le programme par une flèche en bas à droite ), vous disposez des options suivantes par l'intermédiaire d'un menu principal :
+1 : LOAD - chargement d'un fichier à partir de la RAM fichier
+2 : SAVE - sauvegarde d'un fichier en RAM fichier
+3 : CONFIG - création du tableau ( n'oubliez pas le FSET approprié avant lancement )
+4 : ENTREE - entrée des données dans le tableau précédemment créé
+5 : CALCUL - opère des calculs dans le tableau
+6 : LECTURE - affichage du tableau et de ses données
+7 : IMPRESSION
+8 : MODIF - modification de la structure du tableau
+CHARGEMENT : entrez le nom du fichier. Ce dernier peut être consulté par DIR
+SAUVEGARDE : entrez le nom sous lequel vous désirez sauvegarder votre tableau
+CREATION DU TABLEAU : le type de variable vous est demandé ( entière, simple ou double précision ) afin d'économiser de la mémoire. Entrez ensuite le nombre de colonnes et de lignes de votre tableau, puis les noms de chaque colonne et de chaque ligne, le programme imprime le nombre de colonnes et de lignes, puis les noms de chaque colonne et de chaque ligne et retourne au menu principal.
+ENTREE DES DONNEES : choisissez l'entrée colonne par colonne ou ligne par ligne. Le nom de la colonne ou de la ligne vous est ensuite demandé. S'affichent alors les noms de la colonne et de la ligne dont l'intersection correspond à la cellule dans laquelle vous allez entrer la donnée. Une pression "à vide" sur RETURN vous renvoie au menu. Le programme passe à la ligne ou à la colonne suivante.
+CALCUL : le programme demande le nom de la première opérande ( soit le nom de la colonne ou de la ligne, dont chaque donnée sera considérée comme la première opérande de chaque calcul ) puis l'opérateur qui doit être composé d'un ou de deux caractères.
+"+" : addition
+"-" : soustraction
+"*" : multiplication
+"/" : division
+"%" : pourcentage ( 2° terme % du 1er )
+"%+" : pourcentage additionné au terme
+"%-" : pourcentage soustrait
+"%D" : expression du 1er terme en % du 2°
+	Après l'entrée du nom de la deuxième opérande, entrez le nom de la résultante ( colonne ou ligne où seront mémorisés les résultats de chaque calcul ). Pour les calculs portant sur deux colonnes, choisir l'option 1 du menu qui suit. Si les calculs portent sur deux lignes, choisir l'option 2. Une fois les calculs exécutés et le programme au début du module, il est possible d'en sortir par appui sur RETURN.
+AFFICHAGE DU TABLEAU : l'ordinateur demande le format (1/2/3) :
+	"1" : matrice d'affichage de 10 chiffres et 2 décimales
+	"2" : notation scientifique
+	"3" : notation entière
+	Libre à l'utilisateur de modifier ou de compléter ces possibilités d'affichage. A la question "CHOIX DU DEPART?", vous pouvez commencer la lecture au coin supérieur gauche du tableau en tapant "N" ( ou RETURN ), ou n'importe où dans celui-ci en entrant les noms de la colonne et de la ligne à l'intersection desquelles vous désirez commencer la lecture.
+	Une fois "dans le tableau", s'affichent le nom de la colonne et de la ligne à l'intersection desquelles vous vous trouvez, ainsi que la valeur de la cellule. Le déplacement s'effectue dans les quatre directions à l'aide des touches directionnelles du curseur.
+- "C" : demande d'une nouvelle valeur destinée à remplacer l'ancienne dans le tableau
+- RETURN : passage au début de la ligne suivante
+- "L" : impression de la colonne ou de la ligne
+- "H" (home ) :retour au coin supérieur gauche du tableau
+- "O" : affichage des opérations associées à la colonne et(ou) à la ligne
+	L'appui sur RETURN permet le retour à l'affichage normal du tableau. Modifications dans le tableau : l'instruction DIM ne permettant pas le changement des paramètres pendant l'exécution du programme, il est impossible de modifier la structure même du tableau : les noms seuls sont modifiables.
+	Après l'entrée du nom de la ligne ou de la colonne, le programme vous demande si les données sont toujours valables et de même pour les opérations. Répondre "O" ou "N" à chacune de ces questions. Ainsi, vous pouvez effacer le contenu d'une colonne ou d'une ligne, ou bien l'opération qui lui est associée. Il suffit pour cela d'entrer deux fois le même nom et de répondre "N" à l'une ou l'autre des questions, ou aux deux si vous souhaitez effacer totalement la colonne ou bien la ligne.
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+
+Cordialement,
+Christian DUBROEUCQ.

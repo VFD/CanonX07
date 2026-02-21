@@ -1,0 +1,26 @@
+Runner.
+
+tiré du magazine Hebdogiciel N°100
+
+	Laissez-vous suprendre par l'originalité de ce RUNNER et armez-vous de patience, vous n'êtes pas prêt d'atteindre le 25° tableau.
+
+Mode d'emploi :
+	Avant lancement, tapez FSET 527 puis INIT#1,"LIST",500. Après RUN, choisissez (J)ouer ou (C)réer.
+(J) le jeu ( environ 13Ko ) : vous devez parcourir 25 tableaux malgré les canons qui vous tirent dessus, les monstres qui vous suivent et les murs mobiles qui cherchent à vous enfermer. De plus, vous gagnerez vies et points en comblant un maximum de trous à l'aide de blocs noirs. A noter qu'un empilage judicieux de ces blocs, vous permet d'atteindre certaines échelles ( possibilité de pousser deux blocs en même temps ). Le déplacement de votre personnage s'effectue à l'aide des touches fléchées :
+	- gauche et droite;déplacement dans les directions correspondantes
+	- haut et bas;pour faire un bond, monter ou descendre d'une échelle
+	- les déplacements intermédiaires ( par appui simultané sur deux touches ) permettent de monter ou descendre de quelque chose dans la direction indiquée.
+Remarque : les tableaux sont TOUS réalisables...
+(C) éditeur de tableaux : le programme demande le numéro du tableau à modifier. Répondez par un nombre entre 1 et 25 et attendez l'apparition du tableau concerné. Placez le curseur clignotant sur le carré que vous désirez modifier et pressez la touche de fonction correspondant à la partie du décor que vous désirez placer à cet endroit.
+	ESPACE permet d'effacer
+	M place un mur
+	E place une échelle
+	B place un bout d'échelle ( plus esthétique )
+	T place un canon;ne tire que placé sur la deuxième ligne de l'écran
+	Le tableau achévé, tapez RETURN et attendez la fin de la compilation ( mise en DATE ).
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+
+Cordialement,
+Christian DUBROEUCQ.

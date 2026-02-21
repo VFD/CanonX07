@@ -1,0 +1,19 @@
+pin-up ( pas de programme )
+tiré du magazine Hebdogiciel N°119
+
+	Par l'intermédiaire de votre imprimante entièrement soumise à vos fantasmes, offrez-vous le somptueux strip-tease d'une créature de rêve...
+
+Mode d'emploi :
+	Nécessité de l'imprimante X-710. Ce..."programme", dans sa version intégrale, occupe environ 18Ko mais scindé en trois parties, s'accomode très bien d'une version de base. Après lancement ( de "çà" ), entrez la couleur désirée :
+0 : noir
+1 : bleu
+2 : vert
+3 : rouge
+	Le salace ( et spectaculaire ) résultat final, vous récompensera de vos efforts.
+
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+
+Cordialement,
+Christian DUBROEUCQ.

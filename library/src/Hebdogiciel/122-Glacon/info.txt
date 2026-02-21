@@ -1,0 +1,14 @@
+Glaçon.
+
+tiré du magazine Hebdogiciel N°122
+
+	Difficile et glaciale entreprise que de rassembler les diamants dispersés sur une banquise peuplée de gloutons voraces...
+
+Mode d'emploi :
+	Ce jeu qui occupe presque 7Ko, tourne sur version de base par suppression des REM. Avant lancement, faites FSET 100. Les règles sont incluses. Sachez que vous disposez de 3 vies et d'un temps quelque peu limité, figuré par le sablier à droite de l'écran. En ligne 3080, le signe "\" correspond au signe "yen" ( GRPH + "?" ).
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+
+Cordialement,
+Christian DUBROEUCQ.

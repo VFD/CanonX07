@@ -1,0 +1,64 @@
+Ghost. ("GHOSTBUSTER")
+
+tiré du magazine Hebdogiciel N°112
+
+	A l'aide de vos mines antiectoplasmes, débarassez une pauvre femme des redoutables fantômes qui peuplent les 60 pièces de sa lugubre et vaste demeure.
+
+Mode d'emploi :
+	Ce programme dans sa version intégrale ( 60 tableaux ), nécessite un minimum d'extension mais tourne sur version de base ( 10 tableaux ), en effectuant les modifications suivantes :
+LISTING 1 : 9000 GOSUB 8500:CLEAR 30,4098:DEFINT A-Z:FI=&H1F90:INIT#1,"casi:"
+LISTING 2 : n'entrez que les codes d'adresse inférieure à 2004
+LISTING 3 : 50 BEEP 22,5:EXEC &H1642:FOR I=0 TO 900:NEXT:EXEC &H178C:FOR I=0 TO 4000:NEXT:FI=&H1F90
+
+Entrée du programme :
+	Tapez le listing 1 et sauvegardez-le par CSAVE "ghostb". Entrez ensuite les codes machine du listing 2 à l'aide du programme suivant :
+10 FOR I=&H1004 TO &H2F3C STEP 8
+20 PRINT HEX$(I)
+30 LINE INPUT ".1.2.3.4.5.6.7.8som. ";A$:S=0
+40 IF A$="fin" THEN SLEEP:GOTO 20
+50 FOR J=1 TO 15 STEP 2
+60 A=VAL("&H"+MID$(A$,J,2)):S=S+A
+70 POKE I+(J-1)/2,A:NEXT J
+80 SO=VAL("&H"+MID$(A$,17)):IF S<>SO THEN BEEP 20,5:GOTO 20
+90 NEXT I:END
+	Entrez les codes ligne par ligne en omettant l'adresse et les espaces;exemple : pour 1004, tapez 21D2103E1177E5CD37B. Si vous désirez interrompre momentanément votre saisie, tapez FIN.
+	Tapez soigneusement le listing 3 ( en ligne 100 et 530, le signe "\" inversé correspond au signe YEN soit "?" en mode GRPH ) et vérifiez ensuite que : HEX$(PEEK(&H322)+256*PEEK(&H323))=0E6C.
+
+?HEX$(PEEK(&H322)+256*PEEK(&H323))
+
+INIT#1,"CASO:"
+	Sauvegardez ( en trois fois ) votre travail à la suite du programme 1 de la façon suivante : tapez en mode direct : INIT#1,"CASO:" et mettez votre magnéto sur RECORD. Faites ensuite :
+?#1,"LOGO":MOTORON:FOR I=4100 TO &H1318:OUT#1,PEEK(I):NEXT:MOTOROFF
+?#1,"GHOST":MOTORON:FOR I=1363 TO &H0E6C:OUT#1,PEEK(I):NEXT:MOTOROFF
+?#1,"BUSTER":MOTORON:FOR I=4100 TO &H3000:OUT#1,PEEK(I):NEXT:MOTOROFF
+
+Utilisation du programme :
+	Chargez "GHOSTB" par CLOAD et faites RUN en laissant votre magnéto sur PLAY. Après réponse à la question, attendez l'affichage du logo, le chargement automatique des programmes et l'animation du logo ( rayons de soleil ). Stoppez votre magnéto et appuyez sur une touche;le générique s'affiche, répondez à la sonnerie par appui sur une touche. Le menu comporte trois options :
+1) pour redéfinir un tableau.
+2) pour jouer.
+3) pour éteindre le X-07.
+
+NOTE de XavSnap:
+Pour charger le loader, tapez: "CLOAD", puis "RUN"
+Le logiciel attend alors le fichier...
+Préchargez le fichier "LOGO_[1].CAS", un cercle s'affiche alors si le bon fichier a été trouvé.
+Faites de même avec les autres fichiers "GHOST_[2].cas" et "BUSTER_[3].CAS".
+Le programme démarrera automatiquement...
+A l'heure actuelle,il m'a été possible de charger ce programme que de rares fois!
+Les émulateurs nayant pas la maturitée néssècaire pour fonctionner à la perfection.
+
+Testé sur 
+"eX-07": Plantage de l'émulateur sur les ES $F4 et $F2.
+"Emupocket": Problèmes de chargement de K7, et bloquage de l'émulation du son... puis saturation de l'émulateur avec rallentisement puis freezing écran.
+
+Il est donc urgent d'attendre des mises à jour au niveau des émulateurs...
+Pour que l'on puisse profiter de ce jeu.
+
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+
+Cordialement,
+Christian DUBROEUCQ.
+
+(XavSnap pour la conversion en fichiers 'CAS' pour émulateurs)

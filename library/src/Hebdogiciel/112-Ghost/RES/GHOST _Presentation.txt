@@ -1,0 +1,70 @@
+0 '****************
+1 '***TahitiSoft***
+2 '****présente****
+5 '**GHOST BUSTER**
+7 '****************
+8 'de hughes YONGUE
+9 '****************
+10 CONSOLE 0,4,0,0,0:CLS:GOSUB 8500
+20 CONSOLE @,1
+30 PRINT "Règle du jeu  O/N ?";
+40 A=INSTR(" ON",INKEY$):IF A<2 THEN 40 ELSE IF A=3 THEN 9000
+45 '****règle du jeu*
+46 CLS
+50 PRINT ,,"    DRIIIIINNGG!!!! Une femme  vous  ap-pelle:sa  maison est";
+60 GOSUB 8000
+70 PRINT "hantée par deux fan-tômes. Ne ternissez pas votre réputation";
+80 GOSUB 8000
+90 PRINT "de  chasseur de fan-tômes,éliminez  doncceux-là,  avec vos 4";
+100 GOSUB 8000
+110 PRINT "mines anti-fantômes,le plus vite  possi-ble,  en sachant que";
+120 GOSUB 8000
+130 PRINT "le gros fantôme vouspourchasse     alorsque  le  petit  vous";
+140 GOSUB 8000
+150 PRINT "fuira, si vous  vousapprochez de lui.   ATTENTION! les mines";
+160 GOSUB 8000
+170 PRINT "sont   indéfiniment actives, (même aprèsexplosion), et  vous";
+180 GOSUB 8000
+190 PRINT "sont fatales.          Dirigez-vous avecles   flèches, posez";
+200 GOSUB 8000
+210 PRINT "les  mines  avec  latouche espace.";:GOSUB 8000
+220 PRINT ,"Définition de       tableaux : E=échelle , S=sol , M=mur ,  ";
+230 GOSUB 8000
+240 PRINT "D=escalier montant àdroite ,  G=escaliermontant  à   gauche.";
+250 GOSUB 8000
+260 PRINT "F  validant  le  ta-bleau . Toute erreurde   conception  est";
+270 GOSUB 8000
+280 PRINT "signalée.Déplacementdu curseur avec  lesflèches.";
+290 GOSUB 8000
+300 PRINT ,"   Remarque à proposde votre déplacementvotre  personnage se";
+310 GOSUB 8000
+320 PRINT "déplace continuelle-ment  dans  la  mêmedirection , à  moins";
+330 GOSUB 8000
+340 PRINT "que vous n'en  chan-giez, ou  qu'un  ob-stacle ne  l'arrête.";
+350 GOSUB 8000
+360 PRINT "Si  un  escalier estsur  son  chemin, ille    montera     et";
+370 GOSUB 8000
+380 PRINT "continuera  dans  lesens    dernièrementcommandé.";
+390 GOSUB 8000
+400 PRINT ,"    Il  existe  plu-sieurs  niveaux   dejeu, de 1  pour  les";
+410 GOSUB 8000
+420 PRINT "rapides  ,   jusqu'àl'infini ou  presquepour  les   cerveaux";
+430 GOSUB 8000
+440 PRINT "très lents.";: GOSUB 8000
+450 PRINT ,"     BONNE CHANCE   et n'oubliez pas queles   fantômes    se";
+460 GOSUB 8000
+470 PRINT "moquent  des  obsta-cles, et qu'il  peu-vent     disparaitre";
+480 GOSUB 8000
+490 PRINT "du  bord  de l'écranpour réapparaitre    sur le bord opposé.";
+500 GOSUB 8000:GOTO 9000
+8000 FOR I=0 TO 5000:IF INKEY$<>"" THEN RETURN ELSE NEXT:RETURN
+8500 CLS:PRINT STRING$(19,"*")" ";"****GHOSTBUSTER**** ";STRING$(19,"*")" ";
+8510 RETURN
+9000 GOSUB 8500:CLEAR 30,4098:DEFINT A-Z:FI=&H2F30:INIT#1,"CASI:"
+9010 INPUT#1,A$:IF A$<>"LOGO" THEN 9010 ELSE CIRCLE(4,28),2
+9020 MOTORON:FOR I=4099 TO &H1318:POKE I,INP(#1):NEXT:MOTOROFF:EXEC &H10D9
+9040 INPUT#1,A$:IF A$<>"GHOST" THEN 9040 ELSE CIRCLE(4,28),2
+9050 MOTORON:FOR I=1362 TO &H0E6C:POKE (I),INP(#1):NEXT:MOTOROFF:POKE 1362,0 
+9070 INPUT#1,A$:IF A$<>"BUSTER" THEN 9070 ELSE CIRCLE(4,28),1
+9080 MOTORON:FOR I=4099 TO &H3000:POKE I,INP(#1):NEXT:MOTOROFF
+9090 POKE &H0322,&H6C:POKE &H0323,&H0E:RUN 30

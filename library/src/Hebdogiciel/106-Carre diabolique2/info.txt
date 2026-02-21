@@ -1,0 +1,15 @@
+Le carré diabolique.
+
+tiré du magazine Hebdogiciel N°106
+
+	Par ce casse-tête diabolique, stimulez vos méninges engourdies...
+
+Mode d'emploi :
+	Votre but est de remplir une grille de 6*6 à l'aide d'un motif. Vous avez le choix entre 4 figures qui représentent ce motif vu sous des angles différents, choisissez alors votre figure en tapant le numéro correspondant. Le curseur qui apparait sur la grille est à positionner ( touches fléchées ) à l'endroit où vous désirez placer votre figure. Ce dernier représente le centre du motif choisi, validez par F6. La grille entièrement remplie, l'ordinateur affiche votre nombre de coups. Sachez que lorsque vous remplissez un carré déjà rempli, celui-ci se vide.
+
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+
+Cordialement,
+Christian DUBROEUCQ.

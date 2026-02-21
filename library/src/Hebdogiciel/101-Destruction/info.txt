@@ -1,0 +1,15 @@
+Destruction.
+
+tiré du magazine Hebdogiciel N°101
+
+	Destructeurs habiles et raffinés, voici trois missions à votre mesure.
+
+Mode d'emploi :
+	Tapez et sauvegardez à la suite ces 3 programmes ( tournent sur version de base ). Le premier contient la présentation, le second les règles et la démonstration et le troisième, le jeu qui comporte 3 tableaux. Après lancement du premier programme, l'écran s'éteint. Attendre le beep ( environ 16 secondes ) et appuyez sur une touche. Il est préférable de stopper votre K7 pendant le déroulement du jeu ( excitation du relais de télécommande ).
+
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+
+Cordialement,
+Christian DUBROEUCQ.

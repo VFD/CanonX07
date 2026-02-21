@@ -1,0 +1,16 @@
+CANON Graff.
+
+tiré du magazine Hebdogiciel N°69
+
+	Imprimante très douée recherche programme sympa pour création graphique. Ecrire à Monsieur Canon qui transmettra.
+
+Mode d'emploi :
+	Programme de création de graphiques pour la version de base du Canon X-07 et de son imprimante X-710.
+	Ce programme est en deux parties;la première concerne la création de graphiques à colonnes ( jusqu'à 18 ) et celle de graphiques de pourcentages ( jusqu'à 10 valeurs ) sur imprimante. La seconde concerne la création de ces deux types de graphismes sur l'écran de votre Canon.
+	Appuyez sur une touche pour changer de page écran mais attention, l'appui sur F permet de revenir au choix général et un nouvel appui sur F arrête le programme.
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+
+Cordialement,
+Christian DUBROEUCQ.

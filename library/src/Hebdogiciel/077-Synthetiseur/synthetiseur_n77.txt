@@ -1,0 +1,218 @@
+1 '****************
+2 '* 	   *
+3 '*	   *
+4 '*	   *
+5 '*copyright 1/85*
+6 '*	   *
+7 '* synthétiseur *
+8 '*	   *
+9 '****************
+10 '**************
+11 'initialisation      *** notice ***
+12 '**************
+13 CLS:DEFINT A-Z:PRINT:PRINT "   Synthétiseur"
+15 PRINT "APPUYEZ SUR RETURN";
+18 J=242:OUT 243,0:OUT 244,78
+20 FOR I=0 TO 255:OUT J,I:OUT J,255-I:NEXT
+30 I$=INKEY$:IF I$="" THEN 20 ELSE OUT 244,0
+50 CLS:PRINT "Désirez-vous lire lanotice?"
+60 I$=INKEY$:IF I$<>"O" AND I$<>"N" THEN 60 ELSE IF I$="N" THEN 1000
+100 CLS:PRINT "\
+Ce petit programme  \
+va vous permettre d'\
+utiliser ":GOSUB 500
+110 PRINT "\
+Votre X-07 comme    \
+clavier:vous jouez  \
+avec les touches ":GOSUB 500
+120 CLS:PRINT "\
+ZSXDCVGBHNJM,L.;/?  \
+que vous verrez jou-\
+er sur le clavier":GOSUB 500
+130 CLS:PRINT "\
+La touche '^' sert à\
+rejouer le morceau  \
+en entier":GOSUB 500
+140 CLS:PRINT "\
+La touche '-' sert à\
+rejouer le morceau  \
+autant de fois":GOSUB 500
+150 PRINT "\
+qu'on le désire.":GOSUB 500
+160 CLS:PRINT "\
+La touche '@' sert à\
+effacer les fausses \
+notes":GOSUB 500
+170 CLS:PRINT "\
+La touche '0' sert à\
+reprendre le morceau\
+à la suite après":GOSUB 500
+180 PRINT "l'avoir écouté":GOSUB 500
+190 CLS:PRINT "\
+les flèches <= et =>\
+servent  à modifier \
+la durée des notes":GOSUB 500
+200 CLS:PRINT "\
+Les flèches bas et  \
+haut   servent   à  \
+changer d'octave":GOSUB 500
+210 CLS:PRINT "\
+La touche'SPACE' co-\
+rrespond à un soupir\
+variable (flèches)":GOSUB 500
+220 CLS:PRINT "\
+La touche 'P' sert à\
+imprimer la liste   \
+des codes des notes";:GOSUB 500
+230 PRINT "\
+ ainsi que leur durée":GOSUB 500
+240 CLS:PRINT "\
+La touche 'E' sert à\
+enregistrer un morc-\
+eau sur cassette.":GOSUB 500
+250 CLS:PRINT "\
+La touche 'A' sert à\
+appeler un morceau  \
+déjà sur cassette.":GOSUB 500
+260 CLS:PRINT "\
+La touche 'S' sert à\
+arrêter une composi-\
+tion et la reprendre";:GOSUB 500
+270 PRINT "\
+en appuyant sur 'ON'":GOSUB 500
+280 CLS:PRINT "\
+Après chaque morceau\
+pour en jouer un    \
+autre appuyez '^'":GOSUB 500
+300 GOTO 1000
+497 '*************
+498 'temporisation
+499 '*************
+500 FOR I=1 TO 700:IF INKEY$<>"" THEN I=700:NEXT:RETURN ELSE NEXT:RETURN
+1000 '*************
+1005 '**graphisme**
+1010 '*************
+1015 CLS:LINE (8,9)-(8,30)
+1020 FOR I=14 TO 104 STEP 6
+1031 LINE (I,9)-(I,30)
+1035 IF I=26 OR I=50 OR I=68 OR I=92 OR I=110 THEN 1040 ELSE LINE (I-1,9)-(I-1,20)
+1036 LINE (I+1,9)-(I+1,20)
+1040 NEXT
+1050 LINE (8,31)-(110,31)
+1052 LINE (8,8)-(110,8)
+1060 LINE (110,9)-(110,30)
+1500 X=242:Y=243:OUT Y,0:OUT X,0:OUT 244,78
+1510 FOR I=1 TO 7
+1520 FOR J=0 TO 15:OUT Y,J
+1525 FOR K=0 TO 5:NEXT K,J,I:OUT 244,0
+1530 FOR I=1 TO 4:LOCATE 0,0:PRINT " Micro-Synthétiseur"
+1540 FOR K=1 TO 5:NEXT K:LOCATE 0,0:PRINT "                   ":FOR K=1 TO 5:NEXT K,I
+4997 '*****************************
+4998 '*entrée des notes au clavier*
+4999 '*****************************
+5000 DUR=5
+5001 I=0
+5002 X=0:CONSOLE,,,0,1
+5003 ON ERROR GOTO 5550
+5004 IF X=0 THEN DIM T(500):X=1
+5005 LOCATE 0,0:PRINT " Micro-Synthétiseur"
+5006 A$=INKEY$:IF A$="" THEN 5006 ELSE A=0:Q=-1
+5007 IF A$="@" THEN I=I-5:GOSUB 5500:GOSUB 5006
+5011 IF A$="Z" THEN A=3:PO=10:Q=0
+5012 IF A$="S" THEN A=4:PO=14:Q=1
+5013 IF A$="X" THEN A=5:PO=16:Q=0
+5014 IF A$="D" THEN A=6:PO=20:Q=1
+5015 IF A$="C" THEN A=7:PO=22:Q=0
+5016 IF A$="V" THEN A=8:PO=28:Q=0
+5017 IF A$="G" THEN A=9:PO=32:Q=1
+5018 IF A$="B" THEN A=10:PO=34:Q=0
+5019 IF A$="H" THEN A=11:PO=38:Q=1
+5020 IF A$="N" THEN A=12:PO=40:Q=0
+5021 IF A$="J" THEN A=13:PO=44:Q=1
+5022 IF A$="M" THEN A=14:PO=46:Q=0
+5023 IF A$="L" THEN A=16:PO=56:Q=1
+5024 IF A$="." THEN A=17:PO=58:Q=0
+5025 IF A$=";" THEN A=18:PO=62:Q=1
+5026 IF A$="/" THEN A=19:PO=64:Q=0
+5027 IF A$="?" THEN A=20
+5100 IF A$="," THEN A=15:PO=52:Q=0
+5196 '*********************************
+5197 '*changement d'octave et de durée*
+5198 '*********************************
+5199 '*********************************
+5200 C=STICK(0):OCT=OCT+12*(C=5)-12*(C=1):DUR=DUR+(C=3)-(C=7)
+5205 IF (OCT<=12) AND (OCT>=0) THEN NIV=OCT*42/12 ELSE Q=-1
+5210 IF OCT<0 THEN OCT=0:ELSE IF OCT>24 THEN OCT=36
+5211 IF DUR<1 THEN DUR=1
+5212 IF A$=" " THEN A=555:Q=-1
+5213 IF A$="^" THEN 6000
+5215 IF A=0 THEN 5006
+5216 IF A=555 THEN GOSUB 7000:I=I+5:T(I)=0:T(I+1)=DUR:T(I+2)=0:T(I+3)=0:T(I+4)=0
+5217 IF A=555 THEN GOTO 5006
+5218 IF A+OCT>48 THEN 5006
+5220 BEEP A+OCT,DUR:IF Q=0 THEN GOSUB 5700 ELSE IF Q<>-1 THEN GOSUB 5800
+5221 I=I+5:T(I)=A+OCT:T(I+1)=DUR:T(I+2)=PO:T(I+3)=Q:T(I+4)=NIV
+5230 GOTO 5006
+5500 BEEP 12,1:BEEP 23,1:BEEP 35,1:RETURN
+5550 RESUME 5005
+5700 LINE (PO+1+NIV,27)-(PO+1+NIV,29):GOSUB 5900
+5710 PRESET (PO+1+NIV,27):PRESET (PO+1+NIV,28):PRESET (PO+1+NIV,29):RETURN
+5800 PRESET (PO+NIV,17):PRESET (PO+NIV,18):PRESET (PO+NIV,19):GOSUB 5900
+5810 LINE (PO+NIV,19)-(PO+NIV,17):RETURN
+5900 FOR W=0 TO 7:NEXT W:RETURN
+6000 FOR J=0 TO I STEP 5
+6010 IF I<5 THEN NEXT
+6015 IF I<5 THEN GOTO 5003
+6020 A=T(J):DUR=T(J+1):PO=T(J+2):Q=T(J+3):NIV=T(J+4):IF A=0 THEN GOSUB 7000:NEXT
+6022 IF DUR=0 THEN NEXT:GOTO 5003
+6030 BEEP A,DUR:IF Q=0 THEN GOSUB 5700 ELSE IF Q=1 THEN GOSUB 5800
+6035 NEXT J:GOSUB 7000:FOR O=1 TO 30:NEXT O,J
+6040 S$=INKEY$:IF S$="-" THEN 6000 ELSE IF S$="^" THEN 5003 ELSE IF S$="O" THEN 5006
+6050 IF S$="P" THEN 10000 ELSE IF S$="E" THEN 11000 ELSE IF S$="S" THEN SLEEP
+6060 IF S$="A" THEN 12000 ELSE 6040
+7000 FOR O=1 TO 5*DUR:NEXT O:RETURN
+9000 FOR I=1 TO 500:NEXT:RETURN
+9997 '***********************
+9998 '*sortie sur imprimante*
+9999 '***********************
+10000 LOCATE 0,0:PRINT "Imprimante(O/N)    ";
+10010 I$=INKEY$:IF I$<>"O" AND I$<>"N" THEN 10010 ELSE IF I$="N" THEN 5000
+10020 CLS:INPUT "Nom du morceau";N$:LPRINT [2,0]"     Nom du morceau : ";N$
+10025 LPRINT:LPRINT
+10030 LPRINT "          NOTE    :    Durée":LPRINT "          ------------------"
+10040 FOR J=5 TO I STEP 5
+10045 IF T(J)>9 THEN 10055
+10050 LPRINT "          ";T(J);"     :    ";T(J+1)
+10052 GOTO 10060
+10055 LPRINT "          ";T(J);"    :    ";T(J+1)
+10060 NEXT J:GOTO 1000
+10997 '********************
+10998 'sauvegarde cassette*
+10999 '********************
+11000 M$="    Magnéto prêt pour l'enregistrement:Appuyez sur 'RETURN' "
+11010 FOR J=1 TO 40:LOCATE 0,0:PRINT MID$(M$,J,20):FOR K=1 TO 30:NEXT K,J
+11016 BEEP 14,5
+11020 I$=INKEY$:IF I$<>CHR$(13) THEN 11020
+11030 FOR J=1 TO 100:NEXT J
+11040 INIT#1,"CASO:"
+11050 FOR J=1 TO 500
+11060 OUT#1,T(J):NEXT J
+11070 LOCATE 0,0:PRINT "Terminé             ";
+11080 FOR K=1 TO 300:NEXT K
+11090 LOCATE 0,0:PRINT " Micro-Synthétiseur ";
+11100 GOTO 6040
+11997 '************
+11998 '*chargement*
+11999 '* cassette *
+12000 '************
+12004 ON ERROR GOTO 13000
+12005 FOR J=1 TO 37:LOCATE 0,0:PRINT MID$(M$,J,20):FOR K=1 TO 30:NEXT K,J
+12006 BEEP 14,5:FOR K=1 TO 100:NEXT K
+12007 I$=INKEY$:IF I$<>CHR$(13) THEN 12007
+12010 INIT#1,"CASI:"
+12020 FOR J=1 TO 500
+12030 U=INP(#1):T(J)=U:NEXT J
+12040 BEEP 14,10:LOCATE 0,0:PRINT "Appuyez sur '-'     ";:FOR K=1 TO 100:NEXT K
+12050 LOCATE 0,0:PRINT " Micro-Synthétiseur";
+12060 GOTO 6040
+13000 PRINT ERL:END

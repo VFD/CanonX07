@@ -1,0 +1,348 @@
+##Programme N°3 :
+0 '****************
+1 '*		  *
+2 '* Basic Etendu *
+3 '* JOURDREN D-X *
+4 '*  (programme  *
+5 '* desassemblé) *
+6 '*              *
+7 '****************
+8 'Cette liste désassemblée a été réalisée avec une adresse d'implantation égale à 21352 ( &H5368)
+10 '**********
+11 '* CIRCLE *
+12 '**********
+13 ' 5368h	CP   88h
+14 ' 536Ah	JR   Z,537Bh
+15 ' 536Ch	CP   8Ch
+16 ' 536Eh	JR   Z,5832h
+17 ' 5370h	CP   8Bh
+18 ' 5372h	JR   Z,5395h
+19 ' 5374h	CP   99h
+20 ' 5376h	JR   Z,539Ch
+21 ' 5378h	JP   CE32h
+22 ' 537Bh	INC  HL
+23 ' 537Ch	CALL FFCCh
+24 ' 537Fh	JP   F624h
+25 ' 5382h	LD   C,03h
+26 ' 5384h	CALL D18Bh
+27 ' 5387h	POP  BC
+28 ' 5388h	PUSH HL
+29 ' 5389h	PUSH HL
+30 ' 538Ah	LD   HL,(01DBh)
+31 ' 538Dh	EX   (SP),HL
+32 ' 538Eh	LD   A,8Ch
+33 ' 5390h	PUSH AF
+34 ' 5391h	INC  SP
+35 ' 5392h	PUSH BC
+36 ' 5393h	JR   537Bh
+37 ' 5395h	INC  HL
+38 ' 5396h	CALL FFCCh
+39 ' 5399h	JP   D2A0h
+40 ' 539Ch	LC   A,(031Bh)
+41 ' 539Fh	OR   A
+42 ' 53A0h	JR   NZ,53ABh
+43 ' 53A2h	LD   (0319h),A
+44 ' 53A5h	LD   (031Ah),A
+45 ' 53A8h 	JP   F1B9h
+46 ' 53ABh	INC  A
+47 ' 53ACh	LD   (00B1h),A
+48 ' 53AFh	LD   A,(HL)
+49 ' 53B0h	CF   82h
+50 ' 53B2h	JP   Z,F75Ch
+51 ' 53B5h	INC  HL
+52 ' 53B6h	CALL FFCCh
+53 ' 53B9h	JP   F750h
+54 ' 53BCh	RST  30h
+55 ' 53BDh	INC  HL
+56 ' 53BEh	CALL FFCCh
+57 ' 53C1h	JP   F750h
+58 '********
+59 '* PSET *
+60 '********
+61 ' 53CCh	CP   9Bh
+62 ' 53CEh	JR   Z,53DFh
+63 ' 53D0h	CP   ACh
+64 ' 53D2h	JP   NZ,CDF4h
+65 ' 53D5h	PUSH HL
+66 ' 53D6h	LD   HL,0553h
+68 ' 53DCh	POP  HL
+69 ' 53DDh	INC  HL
+70 ' 53DEh	RET
+71 ' 53DFh	PUSH HL
+72 ' 53E0h	LD   HL,(0322h)
+73 ' 53E3h	DEC  HL
+74 ' 53E4h	DEC  HL
+75 ' 53E5h	LD   (00B2h),HL
+76 ' 53E8h	POP  HL
+77 ' 53E9h	INC  HL
+78 ' 53EAh	RET
+79 '***********************
+80 ' PRESET (1ere partie) *
+81 '***********************
+82 ' 5401h	CP   40h
+83 ' 5403h	JR   Z,540Ch
+84 ' 5405h	CP   5Bh
+85 ' 5407h	JR   Z,540Ch
+86 ' 5409h	JP   CDF7h
+87 ' 540Ch	JP   5624h
+88 ' ******************
+89 ' * initialisation *
+90 ' ******************
+91 ' 5430h	LD   HL,552Ah
+92 ' 5433h	LD   (0029h),HL
+93 ' 5436h	LD   HL,548Ch
+94 ' 5439h	LD   (009Ah),HL
+95 ' 543Ch	LD   HL,558Eh
+96 ' 543Fh	LD   (008Bh),HL
+97 ' 5542h	LD   HL,5462h
+98 ' 5445h	LD   (0097h),HL
+99 ' 5448h	LD   HL,53CCh
+100 ' 544Bh	LD   (008Eh),HL
+101 ' 544Eh	LD   HL,53FEh
+102 ' 5451h	LD   (0091h),HL
+103 ' 5454h	LD   HL,5368h
+104 ' 5457h	LD   (009Dh),HL
+105 ' 545Ah	RET
+106 ' ********
+107 ' * LINE *
+108 ' ********
+109 ' 5462h	CP   84h
+110 ' 5464h	JP   Z,F7CBh
+111 ' 5467h	CALL CE19h
+112 ' 546Ah	LD   A,(HL)
+113 ' 546Bh	CP   D2h
+114 ' 546Dh	RET  NZ
+115 ' 546Eh	JR   5467h
+116 '*********
+117 '* PAINT *
+118 '*********
+119 ' 548Ch	PUSH HL
+120 ' 548Dh	LD   IX,55C0h
+121 ' 5491h	PUSH IX
+122 ' 5493h	LD   (IX+00h),53h
+123 ' 5497h	LD   (IX+01h),57h
+124 ' 549Bh	LD   (IX+02h),23h
+125 ' 549Fh	LD   (IX+03h),DDh
+126 ' 54A3h	LD   DE,55C4h
+127 ' 54A6h	LD   A,(HL)
+128 ' 54A7h	CP   24h
+129 ' 54A9h	JR   NZ,54AFh
+130 ' 54ABh	LD   (IX+02h),24h
+131 ' 54AFh	CP   2Ch
+132 ' 54B1h	JR   Z,54B8h
+133 ' 54B3h	LD   (DE),A
+134 ' 54B4h	INC  DE
+135 ' 54B5h	INC  HL
+136 ' 54B6h	JR   54A6h
+137 ' 54B8h	XOR  A
+138 ' 54B9h	LD   (DE),A
+139 ' 54BAh	PUSH DE
+140 ' 54BBh	PUSH HL
+141 ' 54BCh	NOP
+142 ' 54BDh	NOP
+143 ' 54BEh	LD   HL,55C0h
+144 ' 54C1h	CALL F685h
+145 ' 54C4h	POP  HL
+146 ' 54C5h	POP  DE
+147 ' 54C6h	LD   A,DDh
+148 ' 54C8h	LD   (DE),A
+149 ' 54C9h	INC  DE
+150 ' 54CAh	PUSH DE
+151 ' 54CBh	INC  HL
+152 ' 54CCh	LD   A,(HL)
+153 ' 54CDh	OR   A
+154 ' 54CEh	JR   Z,54D9h
+155 ' 54D0h	CP   3Ah
+156 ' 54D2h	JR   Z,54D9h
+157 ' 54D4h	LD   (DE),A
+158 ' 54D5h	INC  DE
+159 ' 54D6h	INC  HL
+160 ' 54D7h	JR   54CCh
+161 ' 54D9h	XOR  A
+162 ' 54DAh	LD   (DE),A
+163 ' 54DBh	PUSH DE
+164 ' 54DCh	LD   HL,55C4h
+165 ' 54DFh	CALL 685h
+166 ' 54E2h	POP  DE
+167 ' 54E3h	LD   A,DDh
+168 ' 54E5h	LD   (DE),A
+169 ' 54E6h	PUSH DE
+170 ' 54E7h	POP  IX
+171 ' 54E9h	LD   (IX+01h),53h
+172 ' 54EDh	LD   (IX+02h),57h
+173 ' 54F1h	LD   (IX+03h),23h
+174 ' 54F5h	LD   (IX+04h),00h
+175 ' 54F9h	POP  HL
+176 ' 54FAh	POP  IY
+177 ' 54FCh	LD   A,(IY+02h)
+178 ' 54FFh	CP   24h
+179 ' 5501h	JR   NZ,5507h
+180 ' 5503h	LD   (IX+03h),24h
+181 ' 5507h	CALL F685h
+182 ' 550Ah	POP  HL
+183 ' 550Bh	LD   A,(HL)
+184 ' 550Ch	OR   A
+185 ' 550Dh	RET  Z
+186 ' 550Eh	CP   3Ah
+187 ' 5510h	RET  Z
+188 ' 5511h	INC  HL
+189 ' 5512h	JR   550Bh
+190 ' *************
+191 ' * affichage *
+192 ' *************
+193 ' 552Ah	PUSH AF
+194 ' 552Bh	LD   A,50h
+195 ' 552Dh	LD   (0073h),A
+196 ' 5530h	POP  AF
+197 ' 5531h	PUSH HL
+198 ' 5532h	PUSH DE
+199 ' 5533h	PUSH BC
+200 ' 5534h	PUSH AF
+201 ' 5535h	CALL 003Fh
+202 ' 5538h	POP  AF
+203 ' 5539h	POP  DE
+204 ' 553Ah	POP  DE
+205 ' 553Bh	POP  HL
+206 ' 553Ch	PUSH AF
+207 ' 553Dh	LD   A,31h
+208 ' 553Fh	LD   (0073h),A
+209 ' 5542h	POP  AF
+210 ' 5543h	RET
+211 ' ***********************
+212 ' * COLOR (1ere partie) *
+213 ' ***********************
+214 ' 555Ch	CALL C59Bh
+215 ' 555Fh	LD   HL,0000h
+216 ' 5562h	LD   IX,555Ch
+217 ' 5566h	LD   A,(IX+29h)
+218 ' 5569h	LD   D,A
+219 ' 556Ah	INC  HL
+220 ' 556Bh	LD   A,H
+221 ' 556Ch	CP   FFh
+222 ' 556Eh	JR   Z,555Ch
+223 ' 5570h	IN   A,(F1h)
+224 ' 5572h	CP   D
+225 ' 5573h	JR   Z,557Ah
+226 ' 5575h	CP   E
+227 ' 5576h	JR   Z,5566h
+228 ' 5578h	JR   5562h
+229 ' 557Ah	LD   E,D
+230 ' 557Bh	INC  IX
+231 ' 557Dh	LD   A,(IX+29h)
+232 ' 5580h	CP   FFh
+233 ' 5582h	JR   NZ;5566h
+234 ' 5584h	RET
+235 ' ***********************
+236 ' * COLOR (2eme partie) *
+237 ' ***********************
+238 ' 558Eh	CP   22h
+239 ' 5590h	RET  NZ
+240 ' 5591h	INC  HL
+241 ' 5592h	LD   DE,5585h
+242 ' 5595h	LD   B,04h
+243 ' 5597h	LD   A,(HL)
+244 ' 5598h	OR   A
+245 ' 5599h	RET  Z
+246 ' 559Ah	CP   3Ah
+247 ' 559Ch	RET  Z
+248 ' 559Dh	CP   22h
+249 ' 559Fh	RET  Z
+250 ' 55A0h	LD   (DE),A
+251 ' 55A1h	INC  DE
+252 ' 55A2h	INC  HL
+253 ' 55A3h	DJNZ 5597h
+254 ' 55A5h	INC  HL
+255 ' 55A6h	LD   A,FFh
+256 ' 55A8h	LD   (5589h),A
+257 ' 55ABh	PUSH HL
+258 ' 55ACh	CALL CE9Eh
+259 ' 55AFh	CALL 555Ch
+260 ' 55B2h	CALL C0BDh
+261 ' 55B5h	CALL 5430h
+262 ' 55B8h	POP  HL
+263 ' 55B9h	RET
+264 ' ************************
+265 ' * PRESET (2eme partie) *
+266 ' ************************
+267 ' 5624h	INC  HL
+268 ' 5625h	CALL FFCCh
+269 ' 5628h	LD   A,(HL)
+270 ' 5629h	OR   A
+271 ' 562Ah	JR   Z,5630h
+272 ' 562Ch	CP   3Ah
+273 ' 5630h	PUSH HL
+274 ' 5631h	EX   DE,HL
+275 ' 5632h	CALL BB98h
+276 ' 5635h	POP  HL
+277 ' 5636h	LD   A,(0000h)
+278 ' 5639h	CP   5Bh
+279 ' 563Bh	RET  NZ
+280 ' 563Ch	LD   A,20h
+281 ' 563Eh	RST 28h
+282 ' 563Fh	RET
+283 ' 5640h	LD   (0050h),DE
+284 ' 5644h	INC  HL
+285 ' 5645h	CALL FFCCh
+286 ' 5648h	LD   (004Eh),DE
+287 ' 564Ch	LD   A,(HL)
+288 ' 564Dh	OR   A
+289 ' 564Eh	JR   Z,5654h
+290 ' 5650h	CP   3Ah
+291 ' 5652h	JR   NZ,5659h
+292 ' 5654h	LD   DE,0001h
+293 ' 5657h	JR   565Dh
+294 ' 5659h	INC   HL
+295 ' 565Ah	CALL FFCCh
+296 ' 565Dh	PUSH HL
+297 ' 565Eh	LD   BC,(00B8h)
+298 ' 5662h	PUSH BC
+299 ' 5663h	LD   HL,(0050h)
+300 ' 5666h	LD   BC,(004Eh)
+301 ' 566Ah	PUSH HL
+302 ' 566Bh	PUSH DE
+303 ' 566Ch	PUSH BC
+304 ' 566Dh	CALL BB98h
+305 ' 5670h	POP  BC
+306 ' 5671h	POP  DE
+307 ' 5672h	POP  HL
+308 ' 5673h	LD   A,(0000h)
+309 ' 5676h	CP   5Bh
+310 ' 5678h	JR   NZ,567Dh
+311 ' 567Ah	LD   A,20h
+312 ' 567Ch	RST 28h*
+313 ' 567Dh	CALL E8E8h
+314 ' 5680h	JR   Z,5691h
+315 ' 5682h	LD   HL,0000h
+316 ' 5685h	LD   (004Eh),HL
+317 ' 5688h	LD   HL,00C9h
+318 ' 568Bh	LD   (0050h),HL
+319 ' 568Eh	POP  BC
+320 ' 568Fh	POP  HL
+321 ' 5690h	RET
+322 ' 5691h	BIT  7,D
+323 ' 5693h	JR   NZ,56ACh
+324 ' 5695h	LD   A,H
+325 ' 5696h	CP   B
+326 ' 5697h	JR   C,563Fh
+327 ' 5699h	JR   NZ,5682h
+328 ' 569Bh	LD   A,L
+329 ' 569Ch	CP   C
+330 ' 569Dh	JR   NC,5682h
+331 ' 569Fh	ADD  HL,DE
+332 ' 56A0h	POP  BC
+333 ' 56A1h	LD   (00B8h),BC
+334 ' 56A5h	PUSH BC
+335 ' 56A6h	LD   BC,(004Eh)
+336 ' 56AAh	JR   566Ah
+337 ' 56ACh	LD   A,H
+338 ' 56ADh	CP   B
+339 ' 56AEh	JR   Z,56B2h
+340 ' 56B0h	JR   NC,569Fh
+341 ' 56B2h	LD   A,L
+342 ' 56B3h	CP   C
+343 ' 56B4h	JR   C,5682h
+344 ' 56B6h	JR   Z,5682h
+345 ' 56B8h	JR   569Fh
+346 ' ********************
+347 ' * FIN : 849 octets *
+384 ' ********************

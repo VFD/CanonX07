@@ -1,0 +1,6 @@
+
+##Programme DECI ( 122 pas de programme ) :
+0 DEFINT A,B:CLS:INPUT "A,B...";A,B:IF B=0 THEN 0
+10 CLS:PRINT MID$(STR$(A),2"/"MID$(STR$(B),2)"="MID$(STR$(A\B),2)".";
+20 A=(A MOD B)*10:PRESET@A\B:GOTO 20
+

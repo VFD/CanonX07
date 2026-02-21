@@ -1,0 +1,15 @@
+Défenseur.
+
+tiré du magazine Hebdogiciel N°55
+
+	Votre mission est de détruire la base ennemie. Ce jeu dont le graphisme est remarquable, fera de vous un attaquant hors pair. Arriverez-vous à sauver le Terre?
+
+Mode d'emploi :
+	Pour le premier tableau : <- gauche, -> droite, barre d'espace pour tirer.
+	Pour le deuxième et troisième tableau : flèche du bas pour tirer.
+
+Programme :
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+Cordialement,
+Christian DUBROEUCQ.

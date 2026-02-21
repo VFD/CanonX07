@@ -1,0 +1,16 @@
+Synthétiseur.
+
+tiré du magazine Hebdogiciel N°77
+
+	Petit Canon par ses talents
+	Fait bien souvent mieux que les grands
+
+Mode d'emploi :
+	Ce petit programme, outre l'affichage du doigté d'exécution sur un clavier, offre les possibilités de sauvegarde sur cassette et d'impression des codes MUSIQUE sur imprimante X710.
+	Les commandes et les explications nécessaires sont incluses.
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+
+Cordialement,
+Christian DUBROEUCQ.

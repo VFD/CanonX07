@@ -1,0 +1,16 @@
+
+Programme pour Canon X-07.
+
+"TURBO-3D" de E.DE LAPPARENT
+
+Hebdogiciel N°146.
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+Fichier ".cas" pouvant être renomé ".lst" selon l'émulateur.
+
+Compilé/décompilé grâce au programme de XavSnap:
+"X07token" (http://dskcenter.free.fr/X07/)
+
+Cordialement,
+Christian.

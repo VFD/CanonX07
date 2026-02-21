@@ -1,0 +1,13 @@
+MORPION
+
+Version originale pour Canon X-07 par Cyrille Danes.
+
+Le jeu se déroule sur une grille de 10 x 10 (0 à 9 en vertical et horizontal).
+On rentre le coup en décimal, ordonnée-abscisse.
+Le programme "réfléchit" de 30 (au début) à 15 secondes (vers la fin).
+
+Pour suivre l'évolution du jeu, utilisez une grille sur papier !
+
+___
+
+

@@ -1,0 +1,17 @@
+Finances.
+
+tiré du magazine Hebdogiciel N°61
+
+	Vous avez de l'argent à placer ou à emprunter et vous songez à faire les frais d'un conseiller financier...Faites plutôt confiance à votre Canon.
+
+Mode d'emploi :
+	Ce programme très sérieusement réalisé, comporte 14 options qui vous permettront de parler d'égal à égal avec votre banquier. Le programme demande si vous désirez connaitre les options disponibles.
+O : à chaque pression sur une touche sauf ?; affichage du numéro et du titre de l'option. Votre option repérée, appuez sur ?.
+? : donnez le numéro de l'option choisie
+F : fin du programme
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+
+Cordialement,
+Christian DUBROEUCQ.

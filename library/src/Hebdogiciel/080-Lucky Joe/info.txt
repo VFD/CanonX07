@@ -1,0 +1,41 @@
+Lucky Joe.
+
+tiré du magazine Hebdogiciel N°80
+
+	Quelques malheureux dollars en poche, nanti d'une foi inébralable en sa bonne étoile, Lucky entra dans le tripot...
+
+Mode d'emploi :
+	La table était libre, Lucky s'avança vers elle et y posa ses deux flingues. A droite, il empila maladroitement ses 22 dollars, en haut à gauche s'aligneraient les 5 cartes constituant la "main". En haut à droite, un emplacement était prévu pour les messages du croupier Canon.
+	Le croupier demande : valeur de la mise ? 1 à 9 dollars. Lucky répondit prudemment 2. Les 5 cares distribuées apparurent une à une : as de coeur, roi de pique, 5 de trèfle, 6 de coeur et 6 de pique. En haut à droite, la première des 5 minuscules cartes clignota. Il décida de garder les deux 6 et appuya 3 fois sur J et 2 fois sur G pour conserver les deux 6. 3 nouvelles cartes s'affichèrent. La "main" était maintenant la suivante : JOKER, 7 de coeur, as de trèfle et les deux 6. Il jeta le 7 et l'as en pressant G, J, J, G, G et n'obtint qu'un 10 et un valet. Un message apparut : JOKER?? Il appuya sur 6 et sur la touche ":", le JOKER se transforma en 6 de trèfle. Le croupier annonça BRELAN et lui donna une fois sa mise, puis le jeu continua : valeur de la mise?
+	Vous jouez avec 54 cartes : AS, 2, 3, 4, 5, 6, 7, 8, 9, 10, valet, dame, roi dans chcacune des 4 couleurs, trèfle, coeur, pique et carreau plus 2 JOKERS. Au début du jeu vous disposez de 22 dollars. Le programme reconnait les configurations suivantes :
+POKER : 4 cartes identiques plus 1 JOKER ou 3 cartes identiques plus 2 JOKERS : mise multipliée par 10.
+FLUSH : 5 cartes se suivant dans la même couleur : ordre des cartes : AS, 2, 3, 4, 5, 6, 7, 8, 9, 10, valet, dame, roi : mise multipliée par 8.
+CARRE : 4 cartes identiques : mise multipliée par 7.
+FULL : 3 cartes identiques plus 2 cartes identiques : mise multipliée par 5.
+SUITE : 5 cartes se suivant de couleurs différentes : mise multipliée par 3.
+COULEUR : 5 cartes dans la même couleur : mise multipliée par 4.
+BRELAN : 3 cartes identiques : mise multipliée par 1.
+	Les paires et les doubles paires ne sont pas reconnues. Lorsque 1 ou 2 joueurs figurent dans la "main" à la fin des échanges, il faut donner la valeur et la couleur attribuée au(x) joueur(s). Frappez au clavier :
+1 pour AS
+2   "  2
+3   "  3
+4   "  4
+5   "  5
+6   "  6
+7   "  7
+8   "  8
+9   "  9
+0   "  10
+V   "  valet
+D   "  dame
+R   "  roi
+;   "  trèfle
+:   "  coeur
+/   "  pique
+?   "  carreau
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+
+Cordialement,
+Christian DUBROEUCQ.

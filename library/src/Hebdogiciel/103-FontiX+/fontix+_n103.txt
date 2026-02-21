@@ -1,0 +1,160 @@
+Fontix+ ( pas de programme )
+tiré du magazine Hebdogiciel N°103
+
+	Augmentez les possibilités de votre Canon par quelques fonctions de derrière les fagots.
+
+Mode d'emploi :
+	Le listing "source" ( listing 1 ) permettra à chacun de comprendre la structure de FONTIX+ et de découvrir les adresses des routines ROM utilisées. Le lancement ( RUN ) du programme 2 donne accès aux fonctions, cependant chaque mise sous tension nécessitera un EXEC 7556.
+	Ce programme permet tout d'abord le blocage du clavier en mode minuscule par appui simultané sur CTRL et N, un second appui rend au clavier son mode normal. De plus, votre BASIC se trouve enrichi des six fonctions suivantes :
+PAINT 0,adr1,NN : cette fonction équivaut au DOKE de l'ORIC et permet de poker à partir de l'adresse "adr1" la valeur NN comprise entre 0 et 65535.
+PAINT 1,adr,N,X1,X2,X3...Xn : permet de poker à partir de l'adresse "adr" un nombre N d'octets X1,X2,X3,...Xn. Cette instruction se rapproche du POKE de l'EXL 100.
+PAINT 2,adr1,adr2,N :permet d'effectuer le transfert d'un nombre N d'octets;le premier situé à l'adresse "adr1" se trouve transféré à l'adresse "adr2". Cette instruction permet en particulier la recopie d'un bloc de ROM en RAM pour d'éventuelles modifications.
+PAINT 3,X,Y : permet l'inversion vidéo d'un point, ce dernier allumé s'éteint et inversement. Cette instruction a pour principal avantage de remplacer la séquence BASIC suivante et de permettre ainsi une exécution plus rapide : IF POINT(X,Y)=-1 THEN PRESET (X,Y) ELSE PSET (X,Y)
+PAINT 4,N,M : permet de remplacer le caractère de code ASCII N situé sur l'écran ( excepté la dernière colonne ) par le caractère de code ASCII M.
+PAINT 5,X1,Y1,X2,Y2 : permet la simulation de l'instruction BOX;soit X1,Y1 et X2,Y2 les coordonnées des sommets d'une même diagonale d'un rectangle.
+
+Programme N°1 ( pas de programme ) :
+7000 '     CALL FE5E
+7003 '     PUSH af
+7004 '     RST 8
+7005 '     DEFM ",
+7006 '     POP af
+7007 '     CP 00
+7009 '     JR C,#DE
+7011 '     CP 06
+7013 '     JR C,#AP
+7015 ' #DE LD de,#ER
+7018 '     LD b,&14
+7020 ' #BO LD a,(de)
+7021 '     RST 28
+7022 '     INC de
+7023 '     DJNZ,#BO
+7025 '     RET
+7026 ' #ER DEFB #PAR
+7030 '     DEFB AMET
+7034 '     DEFB RE I
+7038 '     DEFB NCOR
+7042 '     DEFB RECT
+7046 ' #AP PUSH hl
+7047 '     ADD a,a
+7048 '     LD (0001),a
+7051 '     LD a,0
+7053 '     LD (0002),a
+7056 '     LD de,(0001)
+7060 '     LD hl,#AD
+7063 '     ADD hl,de
+7064 '     LD a,(hl)
+7065 '     LD(#JP+1),a
+7068 '     INC hl
+7069 '     LD a,(hl)
+7070 '     LD(#JP+2),a
+7073 '     POP hl
+7074 ' #JP JP C3C3
+7077 '     CALL FFCC
+7080 '     LD (0FFC),de
+7084 '     DEFM ,"
+7086 '     CALL FFCC
+7089 '     LD (8405),de
+7093 '     RET
+7094 '     CALL FFCC
+7097 '     PUSH de
+7098 '     RST 8
+7099 '     DEFM ",
+7100 '     CALL FE5E
+7103 '     LD b,a
+7104 '     POP de
+7105 ' #RT PUSH de
+7106 '     RST 8
+7107 '     DEFM ",
+7108 '     PUSH bc
+7109 '     CALL F5E5
+7112 '     POP bc
+7113 '     POP de
+7114 '     LD (de),a
+7115 '     INC de
+7116 '     DJNZ,#RT
+7118 '     RET
+7119 '     CALL FFCC
+7122 '     LD (1BEA),de
+7126 '     RST 8
+7127 '     DEFM ",
+7128 '     CALL FFCC
+7131 '     LD (1BED),de
+7135 '     RST 8
+7136 '     DEFM ",
+7137 '     CALL FFCC
+7140 '     LD (1BF0),de
+7144 '     PUSH hl
+7145 '     LD hl,8405
+7148 '     LD de,8405
+7151 '     LD bc,8405
+7154 '     LDIRc,8
+7156 '     POP hl
+7157 '     RET
+7158 '     CALL FE5E
+7161 '     LD (0001),a
+7165 '     DEFM ",
+7166 '     CALL FE5E
+7169 '     PUSH hl
+7170 '     LD (0002),a
+7173 '     LD e,a
+7174 '     LD a,(0001)
+7177 '     LD d,a
+7178 '     CALL CE0E
+7181 '     LD a,(026E)
+7184 '     OR a
+7185 '     JR Z,#PA
+7187 '     LD a,11
+7189 '     LD (1C26),a
+7192 '     JR #PO
+7194 ' #PA LD a,12
+7195 '     LD(1C26),a
+7199 ' #PO LD hl,0001
+7202 '     LD bc,0200
+7205 '     LD a,11
+7207 '     CALL C92F
+7210 '     POP hl
+7211 '     RET
+7212 '     CALL FE5E
+7215 '     LD (0001),a
+7218 '     RST 8
+7219 '     DEFM ",
+7220 '     CALL FE5E
+7223 '     LD (0002),a
+7226 '     PUSH hl
+7227 '     LD de,0214
+7230 '     LD hl,0101
+7233 '     LD b,50
+7235 ' #DS LD a,de
+7236 '     LD c,a
+7237 '     LD a,(0001)
+7240 '     CP c
+7241 '     JR NZ,#PS
+7243 '     LD a,(0002)
+7246 '     LD (00B8),hl
+7249 '     RST 28
+7250 '     NOP
+7251 '     NOP
+7252 ' #PS INC h
+7253 '     LD a,h
+7254 '     CP 14
+7256 '     JR NZ,#PA
+7258 '     LD h,00
+7260 '     INC l
+7261 ' #PA IND de
+7262 '     DJNZ,#DE
+7264 '     POP hl
+7265 '     RET
+7266 '     PUSH af
+7267 '     CP 0E
+7269 '     JR Z,#EN
+7271 '     SUB 41
+7273 '     AND 0F
+7275 '     CP 1A
+7277 '     JR C,#ED
+7279 '     POP af
+7280 '     JP CIBE
+7283 ' #ED POP af
+7284 '     XOR 00
+7286 '     JP C1BE
+7289 ' #EN PUSH hl

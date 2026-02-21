@@ -1,0 +1,74 @@
+1 'fred trancart
+2 'présente
+3 'catch-mean
+4 '(c) 1985
+5 'sur canon X-07
+6 'programme 1
+7 '
+8 '
+9 GOTO 50
+10 FOR F=1 TO 1000:NEXT:CLS:BEEP INT(RND(1)*10+28.5),1:RETURN
+50 CLEAR 200:CONSOLE 0,4,0,0,0
+55 CLS:PRINT "Patientez un instant"
+60 FOR F=0 TO 25:A$=FONT$(F+65):B$=""
+70 FOR G=0 TO 7:B$=B$+STR$(255-VAL("&h"+MID$(A$,3*G+2,2)))+",":NEXT G
+80 FONT$(128+F)=LEFT$(B$,LEN(B$)-1):NEXT F
+90 FONT$(255)="252,252,252,252,252,252,252,0"
+95 FONT$(254)="252,252,252,252,252,252,252,252"
+200 CLS:FOR F=50 TO 62
+205 BEEP 200-2*F,2
+300 CIRCLE (59,15),F:NEXT
+400 FOR F=1 TO 10:LOCATE 5,0:BEEP F,1:PRINT RIGHT$(" f.TRANCART",F)
+500 LOCATE 15-F,1:PRINT LEFT$(" présente  ",F)
+510 NEXT
+600 BEEP 38,10
+700 M$="CATCH-MEAN"
+710 FOR F=10 TO 1 STEP -1
+720 X(F)=INT(RND(2)*13+3.5):IF SCREEN(X(F),3)<>32 THEN 720
+730 BEEP X(F),1:LOCATE X(F),3:PRINT MID$(M$,F,1);:NEXT F
+740 FOR G=10 TO 0 STEP -1
+750 FOR F=1 TO 10:X=X(F)
+752 BEEP 25,1
+755 P=INT(RND(1)*3+1.5)
+760 IF P=3 THEN X=X+1
+770 IF P=7 THEN X=X-1
+810 IF X>16 OR X<3 THEN 900
+820 IF SCREEN(X,3)<>32 THEN 900
+830 LOCATE X,3:PRINT CHR$(SCREEN(X(F),3));:LOCATE X(F),3:PRINT " ";
+850 X(F)=X
+900 NEXT F
+905 NEXT G
+910 FOR F=1 TO 10:LOCATE F+4,2:A=ASC(MID$(M$,F,1))
+915 IF A<>ASC("-") THEN PRINT CHR$(63+A) ELSE PRINT "-"
+916 BEEP X(F),1:FOR G=1 TO INT(RND(1)*50+.5):NEXT G
+920 LOCATE X(F),3:PRINT " ";:NEXT F
+930 FOR G=1 TO 200:NEXT:LOCATE 6,3:PRINT "(c):1985";:BEEP 38,10
+940 FOR G=1 TO 2000:NEXT
+945 FOR F=49 TO 1 STEP -1
+946 BEEP 200-2*F,2
+947 CIRCLE (59,15),F
+949 NEXT F:BEEP 48,10:BEEP 0,10
+950 CLS:PRINT "Voulez-vous les     règles du jeu(O/N)";
+960 LOCATE 18,3:PRINT "?";:FOR F=1 TO 50:NEXT:A$=INKEY$:BEEP 38,1
+970 IF A$<>"O" AND A$<>"N" THEN LOCATE 18,3:PRINT " ";:FOR F=1 TO 50:NEXT:GOTO 960
+980 LOCATE 18,3:PRINT CHR$(ASC(A$)+63);
+990 IF A$="O" THEN GOSUB 5000
+1000 CLS:PRINT "OK...               On charge le        programme No2"
+1006 FOR F=18 TO 38:BEEP F,1:NEXT
+1010 CLOAD "CATCH2"
+5000 'règle
+5005 CLS
+5006 FOR F=1 TO 10:A=ASC(MID$(M$,F,1))
+5007 IF A<>ASC("-") THEN PRINT CHR$(63+A);ELSE PRINT "-";
+5008 NEXT F
+5010 PRINT " est un   jeu basé sur l'adres-se & la réflexion,";:GOSUB 10
+5020 PRINT "il faut, en effet   trouver des mots en un minimum de temps,";:GOSUB 10
+5025 PRINT "les  lettres  appar-raissent en désordrea l'écran et,":GOSUB 10
+5030 PRINT " JEU 1 : Tapez dans l'ordre les lettres constituant le mot,";:GOSUB 10
+5040 PRINT " JEU 2 : Réunissez  grace au curseur leslettres dans l'ordre";:GOSUB 10
+5050 PRINT " JEU 3 : Rattrapez  les lettres avant qu'elles soient au sol,";
+5055 GOSUB 10
+6060 PRINT "Une fois la partie  terminée vous passezau niveau supérieur"
+6070 PRINT "27 niveaux en tout!";:GOSUB 10
+6080 PRINT "Well I think that's all.","    GOOD-LUCK!";:GOSUB 10
+6100 RETURN

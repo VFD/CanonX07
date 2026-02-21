@@ -1,0 +1,45 @@
+0 ' EDF ( Eviter de Déranger la Femme de ménage )
+1 ' version 1.03 sur Canon X-07 16Ko
+3 ' copyright (c) 1985 by Elite 88
+5 CLEAR 90:CLS
+6 FONT$(128)="32,48,248,252,248,48,32,0":FONT$(129)="0,16,56,84,16,16,16,16"
+10 FOR I=1 TO 6:READ A$
+20 LOCATE 0,0:PRINT A$
+30 FOR J=0 TO 4:FOR K=0 TO 7:IF POINT(J,K) THEN 40 ELSE 50
+40 X=10+(I-1)*18+J*3:Y=6+K*3:FOR L=-1 TO 1:LINE (X-1,Y+L)-(X+1,Y+L):NEXT
+50 NEXT K,J,I:LOCATE 0,0:PRINT " ":POKE 43,4:CLS
+60 DATA E,.,D,.,F,.
+1000 INPUT "Désirez-vous le moded'emploi ";R$
+1010 IF LEFT$(R$,1)="N" THEN 10000 ELSE CLS
+1020 FOR I=1 TO 24:READ A$:FOR J=1 TO LEN(A$)
+1030 PRINT MID$(A$,J,1);:IF MID$(A$,J,1)<>" " THEN BEEP I/24*48,1
+1035 NEXT:POKE 43,4:PRINT:NEXT
+1040 DATA "     Vous êtes      employé à l'E.D.F,"
+1050 DATA "et vous devez rele- ver le compteur     électrique d'une    propriété"
+1060 DATA "gardée par une bonneméticuleuse,"
+1070 DATA "coléreuse et qui dé-teste le bruit."
+1080 DATA "Mais elle a un pointfaible, et c'est à  vous de le trouver."
+1090 DATA "Le jeu reconnait    environ 80 mots,"
+1100 DATA "et peut comprendre  des phrases com-    plexes du type"
+1110 DATA "'OUVRIR LA PORTE DE L'EST'. La structure générale est la sui-vante :"
+1120 DATA "VERBE {NOM [compl.]}Pour ceux qui dé-   sirent faire des    phrases"
+1130 DATA "parfaitement struc- turées, il est pos- sible d'écrire les  articles."
+1140 DATA "Un conseil : restez poli avec l'ordina- teur car il saurait"
+1150 DATA "le cas échéant,vous remettre à votre    place..."
+1160 DATA "Les mots spéciaux   sont les suivants : FIN arrête le jeu"
+1170 DATA "et le reprend à     l'endroit où il     s'est arrêté."
+1180 DATA "REVOIR permet de    revoir la pièce où  l'on se trouve,"
+1190 DATA "ce qui est très im- portant, car le jeu ne décrit pas les   pièces."
+1200 DATA "PLAN donne le plan  de la propriété."
+1210 DATA "INVENTAIRE vous     fournit la liste desobjets que vous     portez."
+1220 DATA "Il est possible d'u-tiliser des abrévia-tions :"
+1230 DATA "I, IN, ... pour     INVENTAIRE."
+1240 DATA "N, NO, ... pour NORD,..."
+1250 DATA "Enfin, un dernier   conseil, n'oubliez  pas que la bonne"
+1260 DATA "aime le silence,    l'ordre, et aussi lapropreté."
+1270 DATA "B O N N E                C H A N C E."
+10000 CLS:PRINT "Chargement de la    seconde partie."
+10010 FOR I=1 TO 500:NEXT
+10020 PRINT "Appuyer sur RETURN  quand le magnéto estbranché."
+10030 A$=INKEY$:IF A$="" THEN 10030 ELSE IF ASC(A$)<>13 THEN 10030
+10188 CLOAD "EDF2"

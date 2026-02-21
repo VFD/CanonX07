@@ -1,0 +1,17 @@
+
+Programme pour Canon X-07.
+
+"Formule 1" de A.FOUSSE.
+
+Hebdogiciel N°129/130 & 131.
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+Fichier ".cas" pouvant être renomé ".lst" selon l'émulateur.
+Fichier issus des exemples de l'émulateur X-07 de Jacques BRIGAUD.
+
+Compilé/décompilé grâce au programme de XavSnap:
+"X07token" (http://dskcenter.free.fr/X07/)
+
+Cordialement,
+Jacques Brigaud & Xavsnap.

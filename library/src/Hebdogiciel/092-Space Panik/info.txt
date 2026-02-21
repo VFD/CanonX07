@@ -1,0 +1,15 @@
+Space Panik.
+
+tiré du magazine Hebdogiciel N°92
+
+	Comment un conducteur de bulldozer peut-il venir à bout d'autant de monstres?
+
+Mode d'emploi :
+	Tourne sur version de base. Tapez et sauvegardez à la suite ces 3 programmes, chargez et lancez de même. Inutile de préciser que les DATA du listing 2, doivent être soigneusement vérifiés. Le listing 3 contient les règles et le programme principal.
+	Pensez à regarder le manuel afin d'utiliser FSET et y enregistrer les 3 programmes pour ensuite les exécuter.
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+
+Cordialement,
+Christian DUBROEUCQ.

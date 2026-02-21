@@ -1,0 +1,42 @@
+E.D.F.
+
+tiré du magazine Hebdogiciel N°99
+
+	Comment l'émancipation d'une bonne peut faire perdre son caractère routinier au relevé d'un compteur électrique.
+
+Mode d'emploi :
+	Tapez et sauvegardez à le suite ces deux programmes. Le premier contient la présentation, les règles et la définition des caractères. Le second, à sauvegarder par CSAVE"EDF", contient le programme principal ( environ 14Ko ).
+	Employé de l'EDF, vous devez relever le compteur électrique d'une maison gardée par une bonne plutôt irrascible ( d'où le titre : Eviter de Déranger le Femme de ménage )/ L'ordinateur peut comprendre 75 mots.
+	Il est possible d'utiliser le pluriel de certains mots. L'ordinateur comprend également quelques insultes. Il est préférable de surveiller votre langage. Sachez que cette maison possède un certain pouvoir : lorsque vous rangez un objet en votre possession, celui-ci disparait de la maison. Donc, si cet objet est indispensable à la réussite de votre mission, vous devez le prendre au bon moment sous peine de ne pouvoir le récupérer par la suite. Le fonctionnement du jeu est le suivant : après l'entrée dans un lieu, appuyez sur une touche pour accéder au mode texte. Entrez alors votre message et attendez la réponse de l'ordinateur pour rentrer un nouvel ordre. Les déplacements s'effectuent selon les points cardinaux, consultez le plan pour savoir où le Nord est situé. Soyez persévérant et examinez soigneusement lieux et objets, certains de ces derniers sont indispensables et bien dissimulés.
+
+VERBES :
+ALLER	ÉTUDIER		LIRE		REMERCIER
+ALLUMER	ÉVITER		MANGER		RÉPARER
+BOIRE	EXAMINER	METTRE		SOULEVER
+BOUFFER	FOUILLER	OUVRIR		TIRER
+CASSER	FRAPPER		PRENDRE		TUER
+CRIER	GRATTER		RAMASSER	VIOLER
+DIRE	JETER		RANGER		FERMER
+ESSUYER
+
+NOMS :
+ALLUMETTE	CHASSE		LIT	PLAT
+ARMOIRE		CLÉ		LIVRE	PORTE
+BONNE		COFFRE		MARTEAU	ROBINET
+BOUGIE		DISQUE		MASQUE	TABLE
+BOUTEILLE	ÉTAU		PAPIER	TAPIS
+BROSSE		FENÊTRE		PATIN	TÉLÉVISION
+CANAPÉ		FUSIL		PIED	TIROIR
+CHAISE		GRAMOPHONE	PLACARD	TOURNEVIS
+
+DIRECTIONS	ORDRES		PHRASES		ADVERBES
+NORD		INVENTAIRE	MERCI		DOUCEMENT
+SUD		FIN		AU REVOIR	DISCRÈTEMENT
+EST		PLAN				DÉLICATEMENT
+OUEST		REVOIR
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+
+Cordialement,
+Christian DUBROEUCQ.

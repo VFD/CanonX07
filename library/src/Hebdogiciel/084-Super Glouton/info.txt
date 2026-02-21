@@ -1,0 +1,17 @@
+Super Glouton.
+
+tiré du magazine Hebdogiciel N°84
+
+	Encore plus fort que notre bon vieux PAC, voici SUPER GLOUTON plus vorace que jamais.
+
+Mode d'emploi :
+	Ce programme tourne sur version de base. Tapez tout d'abord le premier programme et sauvegardez-le avant lancement. Inutile de préciser qu'il vous faudra vérifier soigneusement vos DATA avant RUN. Tapez ensuite le programme principal et sauvegardez-le à la suite du premier.
+	Le jeu propose 4 niveaux de difficulté. Au cours de la partie, apparaissent des portes que les fantomes peuvent franchir, mais qui barrent votre chemin. Un va et vient fait ouvrir ces portes, sauf lorsque vous allez vers la gauche, ou parfois lorsque vous descendez. Dans ces deux cas, l'appui sur ESPACE, en vous orientant dans la bonne direction, fait ouvrir ces portes mais réduit votre score. Après avoir mangé tous les points, vous devez manger les 4 fantômes devenus alors inoffensifs. Votre score tient compte du niveau choisi et un tableau complet vous octroie un BONUS tenant compte de votre temps de parcours.
+	Signalez la direction de vos déplacements à l'aide des 4 flèches. Les routines sonores provoquant l'excitation du relais de télécommande cassette, il est préférable de stopper celui-ci pendant le déroulement du jeu.
+
+
+Téléchargé sur "Hebdogiciel, les listings..." (http://www.hebdogiciel.fr)
+
+
+Cordialement,
+Christian DUBROEUCQ.

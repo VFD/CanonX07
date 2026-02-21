@@ -1,0 +1,297 @@
+0 REM Programme de Cyril GIROUX et Denis LELUC,1984
+1 '=>un homme à abattre
+2 'programme d'aventure pour CANON X-07
+5 CLEAR 300:D=RND(0)*3+1
+10 CLS:A$="Cyril GIROUX et":GOSUB 8500:A$="Denis LELUC":GOSUB 8500
+11 A$="Présentent.........":GOSUB 8500:A$="Un homme à abattre"
+12 GOSUB 8500:PRINT
+14 FOR I=1 TO 3:A$="AEIOU":B$="ZXLFR":K$=K$+MID$(A$,INT(RND(1)*5+1),1)
+17 K$=K$+MID$(B$,INT(RND(1)*5)+1,1):NEXT:K$=LEFT$(K$,5)
+18 LI=INT(RND(1)*6+5):IF LI=8 THEN 18
+19 'création des tableaux
+20 DIM OB$(18),O1$(18),LI(18),F(18),V$(15),LI$(12),SO$(12),D(12)
+29 'objets
+30 DATA le magicien,magicien,1,1,"un énorme dragon",dragon,3,1,un arbre,arbre
+40 DATA 4,1,une porte,porte,5,5,"une épée",épée,6,1,un sage,sage,7,1,un monstre
+50 DATA monstre,8,1,un grand coffre,coffre,9,1,une hache,hache,10,1
+55 DATA un sachet de poudre magique,sachet,11,1
+60 DATA "un brâve marchand",marchand,12,1,un vieux bouclier,bouclier,7,0
+70 DATA une clef de bois,clef,12,0,un gant,gant,9,0,un petit livre,livre,9,0
+80 DATA "un élixir",élixir,4,0,un mur bleu,mur,2,1,"des pièces d'or"
+90 DATA pièces,8,0
+100 FOR I=1 TO 18:READ O1$(I),OB$(I),LI(I),F(I):NEXT
+109 'verbes principaux
+110 DATA PRENDRE,POSER,OUVRIR,DONNER,COUPER,SAUPOUDRER,TUER,DIRE,POUSSER
+120 DATA METTRE,BOIRE,FERMER,FOUILLER,REGARDER,EXAMINER
+130 FOR I=1 TO 15:READ V$(I):NEXT
+139 'lieux
+140 DATA Dans une chambre du chateau,"Dans l'entrée du chateau"
+141 A$="        1984.":GOSUB 8500
+150 DATA dans une chambre    secrete,I,"Devant un château",I,I
+160 DATA "Dans une clairière",I,"Dans la demeure d'un bûcheron",I,I
+170 FOR I=1 TO 12:READ F$:IF F$="I" THEN F$="dans la forêt"
+175 LI$(I)=F$:NEXT
+179 'sorties lieux
+180 DATA E,OS,?,ES,EOS,OS,NES,NESO,NOS,N,N,N
+190 FOR I=1 TO 12:D(I)=I:READ SO$(I):NEXT
+195 INPUT "Dessins (O/N) ";R$
+199 'présentation du lieu visité
+200 GOSUB 600
+201 CLS:PRINT "Vous êtes",LI$(LI),"Sorties:";:LO=LEN(SO$(LI)):FOR I=1 TO LO
+205 PRINT MID$(SO$(LI),I,1);:IF I<>LO THEN PRINT "-";
+206 NEXT:GOSUB 9999:PRINT:PRINT "Vous voyez:"
+210 FF=0:FOR I=1 TO 18:IF F(I)=1 AND LI(I)=LI THEN PRINT O1$(I):FF=9
+220 NEXT:IF F=0 THEN PRINT "Rien de spécial"
+230 LINEINPUT "=>";A$:SP=0:IF LEFT$(A$,3)="STO" THEN CLS:SLEEP:GOTO 200
+231 FOR I=1 TO LEN(A$):B$=MID$(A$,I,1)
+232 IF B$=" " AND SP=0 THEN SP=1
+240 NEXT:IF LEN(A$)=1 THEN 500
+250 IF SP=0 THEN PRINT "Il me faut deux mots";:GOTO 230
+260 V$=LEFT$(A$,SP-1):O$=RIGHT$(A$,LEN(A$)-SP)
+262 IF V$="JETER" OR V$="ENVOYER" THEN V=2:GOTO 285 ELSE IF V$="CASSER" THEN GOTO 2900
+263 IF V$="TOUCHER" THEN 2910 ELSE IF V$="PARLER" OR V$="DEMANDER" OR V$="ÉCOUTER" THEN 2930
+264 IF V$="COMBATTRE" OR V$="ATTAQUER" THEN V=7:GOTO 285
+265 IF V$="MANGER" OR V$="AVALER" THEN M$="Quelle idée ???":GOTO 320
+270 V=0:FOR I=1 TO 15:IF V$(I)=V$ THEN V=I
+280 NEXT:IF V=0 THEN PRINT "Désolé, je ne connais pas ce verbe":GOTO 230
+285 IF V=8 THEN 310
+289 IF LEN(O$)<3 THEN M$="Vous voyez un "+O$+",ici? Pas moi!":GOTO 320
+290 O=0:FOR I=1 TO 18
+291 IF LEFT$(O$,3)=LEFT$(OB$(I),3) THEN O$=OB$(I)
+292 IF O$=OB$(I) AND (LI=LI(I) OR LI(I)=0) AND F(I)=1 THEN O=I
+300 NEXT:IF O=0 THEN PRINT "Il n'y a pas de",O$" ici.":GOTO 230
+310 ON V GOSUB 1000,2000,3000,4000,5000,6000,7000,8000,9000,10000,11000,12000,13000
+319 IF V=14 THEN M$="Vous voyez juste"+O1$(O) ELSE IF V=15 THEN GOSUB 13000
+320 PRINT M$:IF LI<>3 THEN 230
+330 IF LI(12)>0 THEN 400
+340 PRINT "Un dragon vous dit: '"K$"'":GOTO 230
+400 PRINT "'Il y a ici un dragon'  c'est votre dernier souvenir...":END
+500 PO=0:IF A$="N" OR A$="E" OR A$="S" OR A$="O" THEN 550
+505 IF A$="R" THEN 200
+510 IF A$<>"I" THEN PRINT "Je ne comprends pas":GOTO 230
+519 'inventaire
+520 PRINT "Vous possédez:":FOR I=1 TO 18:IF LI(I)=0 THEN PRINT "-"O1$(I):GOSUB 9999:PO=9
+530 NEXT:IF PO=0 THEN PRINT "Rien du tout"
+540 GOTO 230
+549 'directions
+550 FR=0:FOR I=1 TO LO:IF MID$(SO$(LI),I,1)=A$ THEN FR=9
+560 NEXT:IF FR=0 THEN PRINT "On ne peut pas allerdans cette direction";:GOTO 230
+565 IF LI=8 AND D(8)=8 THEN PRINT "Le monstre ne vous  laissera pas passer":GOTO 230
+566 IF LI=1 THEN PRINT "Le magicien ne vous laissera plus partir";:GOTO 230
+570 IF A$="N" THEN LI=LI-3 ELSE IF A$="E" THEN LI=LI+1 ELSE IF A$="S" THEN LI=LI+3
+580 IF A$="O" THEN LI=LI-1
+590 GOTO 200
+599 'début dessins
+600 CLS:G=D(LI):IF LEFT$(R$,1)="N" THEN RETURN
+610 ON G GOSUB 900,901,902,903,904,905,906,907,908,909,910,911,912,913,914,915,916
+611 READ N$
+###620 IF INKEY$="" THEN 620
+620 READ B$:IF B$="-" THEN 650 ELSE IF B$="C" THEN 660
+630 IF B$="D" THEN 670 ELSE IF B$="F" THEN 680
+640 A=VAL(B$):READ B,C,D:LINE (A,B)-(C,D):GOTO 620
+650 READ A,B:LINE -(A,B): GOTO 620
+660 READ A,B,C:CIRCLE (A,B),C:GOTO 620
+670 GOSUB 9999:RETURN
+680 READ A,B,C:FOR I=1 TO 4:READ A$(I):NEXT
+682 FOR I=A TO B STEP C:FOR H=1 TO 4
+684 IF A$(H)="X" THEN A(H)=I ELSE A(H)=VAL(A$(H))
+686 NEXT:LINE (A(1),A(2))-(A(3),A(4)):NEXT:GOTO 620
+
+## IMAGE 1:"Magicien"
+710 DATA D,38,8,54,8,-,55,9,-,56,11,-,55,14,-,52,15,-,50,15,-,47,11,-,45,11
+711 DATA -,44,12,44,13,42,15,-,39,15,-,37,14,-,36,10,-,38,8,45,13,45,15,-,42,18
+712 DATA -,42,19,-,43,20,-,44,20,-,45,21,-,47,21,-,48,20,-,49,20,44,24,48,24,-,50
+713 DATA 26,-,42,26,-,44,24,36,7,36,5,-,35,3,-,37,0,37,15,36,16,-,36,18,-,39,27
+714 DATA -,42,29,-,51,29,-,54,26,60,0,62,4,-,62,18,-,60,21,-,60,23,-,63,24,-,66
+715 DATA 24,58,31,66,25,-,68,20,-,65,17,-,63,17,68,22,68,26,-,66,31,68,22,88,26
+716 DATA -,90,31,38,31,34,24,-,34,19,-,35,18,34,22,16,27,-,14,31
+## IMAGE 2:"un mur bleu" avec flèche vers la gauche.
+720 DATA D,0,7,87,7,-,87,25,-,0,25,87,7,115,0,-,115,31,-,87,25,115,31,119,31
+721 DATA 115,0,119,0,65,15,50,15,-,54,11,50,15,54,19
+## IMAGE 3:"un dragon"
+730 DATA D,48,21,49,25,-,48,31,55, 31 ,53,21,-,62,18,-,77,20,-,80,18,-,83,8,-,81,6
+731 DATA -,75,7,-,70,6,-,68,8,-,69,14,69,13,63,14,-,58,13,C,54,11,3,56,9,58,8
+732 DATA -,59,8,60,9,60,12,55,6,51,4,57,6,60,4,C,79,10,1,C,72,10,1,79,10,79,10
+733 DATA 72,10,72,10,48,21,38,17,-,36,14,-,39,11,41,11,35,10,-,38,6,-,39,2,41,1
+734 DATA 41,3,43,1,43,3,-,45,9,44,7,52,6,49,23,42,26,-,48,31,54,11,54,11,58,11
+736 DATA 58,11,57,5,59,7,55,5,58,0,61,0,63,6,-,60,8
+## IMAGE 4:"Un arbre"
+740 DATA D,0,28,46,28,46,30,49,25,-,50,15,56,13,57,25,-,60,30,58,28,120,28
+741 DATA 56,13,65,11,-,79,0,50,15,40,14,-,30,10,50,12,40,11,-,37,0,35,0,37,10
+742 DATA -,30,7,53,10,66,7,-,69,0,72,0,70,5,-,76,0,C,53,22,2,55,10,54,5,52,11
+743 DATA 50,7,-,42,5,54,5,65,0,59,0,51,5,-,46,4,-,45,0
+750 DATA D,F,41,63,1,X,4,X,31,64,4,64,22,64,26,64,31,65,4,65,31,66,4,66,31
+751 DATA 0,0,119,0,39,31,39,2,-,68,2,-,68,31,F,3,31,3,0,X,39,X,F,3,31,3,68,X
+752 DATA 119,X
+## IMAGE 5:"une porte"
+760 DATA D,45,26,45,14,49,26,49,14,47,26,47,15,40,27,54,27,41,13,53,13
+761 DATA -,55,14,-,55,10,54,10,53,11,-,41,11,-,39,10,-,39,14,41,13,40,14
+762 DATA 46,11,46,4,48,11,48,4,44,4,50,4,-,50,2,-,44,2,-,44,4,0,22,45,22
+763 DATA 49,22,119,22
+## IMAGE 6:"une épéée"
+770 DATA D,10,8,18,8,-,19,12,-,9,12,-,10,8,10,13,11,14,-,17,14,-,18,12,21,8,28,8
+771 DATA -,29,12,-,19,12,-,21,8,21,13,22,14,-,27,14,-,28,12,20,15,20,16,-,23,20
+772 DATA -,25,22,-,25,24,-,22,25,-,21,24,18,22,20,21,20,25,14,25,-,10,22,-,12,31
+773 DATA 25,25,29,25,-,28,31,29,8,29,4,-,26,2,-,20,1,-,7,1,-,5,3,-,4,6,-,4,18
+774 DATA -,5,25,-,0,28,29,23,29,15,31,24,44,28,-,46,31,19,29,25,29,-,25,27
+775 DATA -,19,27,-,19,29,30,20,119,20,0,20,4,20,15,13,16,13,25,13,26,13
+## IMAGE 7:"un sage"
+780 DATA D,C,50,14,3,C,60,14,3,C,50,14,4,C,60,14,4,26,20,23,10,-,25,7,29,20,25,5
+781 DATA -,27,4,32,19,28,3,-,30,2,31,3,36,20,32,5,34,4,35,5,41,23,-,44,24
+782 DATA -,51,21,-,52,23,51,24,42,28,-,31,29,-,29,27,-,26,20,70,1,62,4,-,56,10
+783 DATA 40,1,48,4,-,54,10,50,20,60,20,-,60,26,-,50,26,65,29,65,24,-,68,18
+784 DATA -,68,10,-,66,6,51,3,59,3,45,6,43,10,-,43,18,-,46,24
+## IMAGE 8:"Un grand monstre"
+790 DATA D,20,17,70,17,-,70,28,-,20,28,-,20,17,70,17,75,14,-,75,25,-,70,28,70,17
+791 DATA 71,12,-,74,11,-,75,14,20,17,21,12,-,24,11,-,74,11,0,22,19,22,75,22,119
+792 DATA 22,22,19,68,19,-,68,26,-,22,26,-,22,19
+## IMAGE 9:"un cofffre"
+800 DATA D,0,31,22,26,-,22,3,-,0,0,6,29,6,15,-,15,14,22,26,47,26,-,47,13
+801 DATA F,11,14,1,43,X,76,X,72,12,72,26,-,68,24,-,68,12,15,15,15,27,46,26
+802 DATA 51,24,-,51,12,51,24,68,24,72,26,95,26,96,3,22,3,96,3,96,19,96,3,120,0
+803 DATA 115,16,99,16,-,96,22,-,96,27,-,112,29,-,112,23,-,96,22,112,23,115,17
+804 DATA -,117,16,-,117,29,-,113,29,13,22,13,22,120,31,114,30,92,9,92,16
+805 DATA -,84,16,-,84,9,-,92,9,27,26,27,10,-,35,10,-,35,26,C,31,15,3
+## IMAGE 10:"une hache"-pièce avec cheminée.
+810 DATA D,52,22,119,22,40,27,57,27,0,22,41,22,44,27,42,25,-,42,20,-,46,18,-
+811 DATA 46,16,-,44,14,-,50,14,-,48,16,-,48,18,-,51,19,-,52,20,-,52,25,-,51,26
+## IMAGE 11:"poudre magique"
+820 DATA D,50,15,50,9,-,52,6,-,54,5,-,56,7,-,56,15,46,15,46,9,-,48,6,-,50,6,-
+821 DATA 51,7,49,15,49,18,-,47,20,-,47,22,-,49,24,-,51,24,-,53,22,48,27,54,27
+822 DATA -,56,26,-,58,24,52,15,52,10,53,15,53,10,48,15,48,10,47,15,47,10
+823 DATA F,36,72,1,X,4,54,0,64,4,65,10,-,65,20,-,64,26,-,66,27,-,86,29,-,88,31
+824 DATA 44,27,27,29,-,25,31
+## IMAGE 12:"Un machand"
+830 DATA D,0,28,46,28,46,30,49,25,-,50,17,56,18,57,25,-,60,30,58,28,89,28
+831 DATA 56,18,50,17,-,56,19,C,53,23,2,93,24,90,28,-,92,31,-,95,30,-,95,28
+832 DATA -,94,24,-,120,23,92,31,120,30
+## IMAGE 13:"Un arbre coupé"
+840 DATA D,0,0,119,0,41,31,41,4,-,30,0,-,30,31,F,30,40,1,X,31,X,4
+841 DATA 31,3,36,3,31,2,31,1,41,4,63,4,-,63,31,65,31,65,2,-,39,2,31,2,34,2
+842 DATA 60,31,60,7,-,44,7,-,44,31,60,7,63,4,44,7,41,4,F,3,31,3,0,X,30,X,F,3,31
+843 DATA 3,65,X,119,X
+## IMAGE 14:"une porte ouverte"
+850 DATA D,0,22,119,22,40,27,54,27
+## IMAGE 15:"
+860 DATA D,20,26,20,31,-,50,31,-,50,26,-,20,26,-,53,18,-,71,18,-,50,25,71,18,71
+861 DATA 20,-,50,31,71,20,119,20,0,20,43,20,58,18,58,10,-,52,10,-,52,6,-,58,6
+862 DATA -,58,1,-,62,1,-,62,6,-,68,6,-,68,10,-,62,10,-,62,18,64,18,64,12,-,63,11
+863 DATA 64,12,70,12,-,69,11,70,12,70,8,-,69,7,64,5,64,3,-,63,2,58,12,54,12,-,53
+864 DATA 11
+## IMAGE 16:"Une tombe"
+870 DATA D,20,17,70,17,-,70,28,-,20,28,-,20,17,70,17,75,14,-,75,25,-,70,28
+871 DATA 0,22,19,22,75,22,119,22,22,19,68,19,-,68,26,-,22,26,-,22,19
+872 DATA 20,17,25,14,-,75,14,-,76,8,-,26,8,-,25,14,76,8,78,10,-,77,15,-,75,15
+## IMAGE 17: "un cofffre ouvert".
+880 DATA D
+900 RESTORE 710:RETURN
+901 RESTORE 720:RETURN
+902 RESTORE 730:RETURN
+903 RESTORE 740:RETURN
+904 RESTORE 750:RETURN
+905 RESTORE 760:RETURN
+906 RESTORE 770:RETURN
+907 RESTORE 780:RETURN
+908 RESTORE 790:RETURN
+909 RESTORE 800:RETURN
+910 RESTORE 810:RETURN
+911 RESTORE 820:RETURN
+912 RESTORE 830:RETURN
+913 RESTORE 840:RETURN
+914 RESTORE 850:RETURN
+915 RESTORE 860:RETURN
+916 RESTORE 870:RETURN
+950 'fin dessins
+1000 IF LI(O)=0 THEN M$="C'est déjà fait":RETURN
+1010 IF O<5 OR O=6 OR O=7 OR O=11 OR O=17 THEN M$="Impossible!":RETURN
+1020 IF O=8 THEN M$="Trop lourd!":RETURN
+1030 IF O=5 AND D(6)=6 THEN 1500
+1040 M$="OK vous l'avez":LI(O)=0:IF O=10 THEN D(11)=15
+1045 RETURN
+1500 IF GA=0 THEN 1700
+1510 M$="Vous avez l'épée maintenant!":LI(5)=0:D(6)=15:RETURN
+1700 PRINT "Elle est ensorcelée, vous n'auriez jamais du la toucher!":END
+2000 IF LI(O)>0 THEN M$="Vous ne l'avez pas":RETURN ELSE IF O=10 AND LI=9 THEN 6000
+2010 M$="Voilà.":LI(O)=LI:IF O=14 THEN GA=0 ELSE IF O=10 AND LI=11 THEN D(11)=11
+2011 IF O=5 AND LI=6 THEN D(6)=6
+2020 RETURN
+2900 M$="Ce n'est pas la     meilleure chose à faire":GOTO 320
+2910 M$="R.A.S":GOTO 320
+2930 M$="Aucune réponse.":GOTO 320
+3000 IF O<>4 AND O<>8 AND O<>15 THEN M$="C'est marrant, je n'y arrive pas.":RETURN
+3010 IF O=4 THEN 3200
+3020 IF O=15 THEN 3400
+3030 M$="Seule une force     surnaturelle en     serait capable":RETURN
+3200 IF LI(13)>0 THEN M$="Elle est fermée à   clef":RETURN
+3210 M$="Elle s'ouvre!":SO$(5)="NESO":D(5)=14:GOSUB 600:RETURN
+3400 PRINT "Il est écrit sur une des pages":GOSUB 9999
+3410 M$="'JE SUIS OSSAGE'":RETURN
+4000 IF O=5 OR O=9 OR O=10 OR OO=12 OR O=13 OR O=14 OR O=15 OR O=16 OR O=18 THEN 4020
+4010 PRINT "Je ne peux pas":M$="DONNER "+O1$(O):RETURN
+4020 IF LI<>1 AND LI<>3 AND LI<>7 AND LI<>12 THEN M$="à qui ?":RETURN
+4030 IF LI=12 AND DO=18 THEN 4100
+4040 IF LI=7 AND DO=15 THEN 4200
+4050 M$="Merci!celà pourra   me servir":IF O=14 THEN GA=0
+4051 GOTO 4110
+4100 M$="Il vous donne une   clef en échange":LI(13)=0:F(13)=1
+4110 LI(O)=12:F(O)=0:RETURN
+4200 M$="Il vous remercie et pose quelque chose  par terre"
+4210 F(12)=1:GOTO 4110
+5000 IF O<>3 AND O<>4 AND O<>7 THEN M$="Je ne peux pas faire une chose pareille":RETURN
+5010 IF O=7 THEN M$="??!!?! Utilisez plutôt 'TUER'":RETURN
+5020 IF O=4 THEN M$="Il y a plus simple":RETURN
+5030 IF D(4)>4 THEN M$="Encore ???":RETURN
+5035 IF LI(9)>0 THEN M$="Avec quoi ?":RETURN
+5040 PRINT "C'est bon!":M$="Tiens,il y a quelque chose dans le tronc"
+5050 D(4)=13:F(16)=1:RETURN
+6000 IF LI(10)>0 THEN M$="Il vous manque..."+O1$(10):RETURN
+6010 IF LI<>9 THEN M$="Rien ne se passe...":O=10:GOTO 4410
+6020 M$="Le coffre s'ouvre!!!":O=10:D(9)=17:F(15)=1:GOTO 4110
+7000 IF O=2 OR O=11 OR O=10 OR O=6 THEN 7500
+7010 IF O<>7 THEN M$="Je n'y parviens pas":RETURN
+7020 IF D(8)>8 THEN M$="MAIS...il est déjà  mort,non ?":RETURN
+7030 IF LI(5)>0 THEN PRINT "Vous n'avez pas d'  arme assez puisssante":GOTO 7499
+7040 D(8)=16:M$="C'est bon! il est mort!":O1$(7)="Une tombe"
+7045 OB$(7)="TOMBE":RETURN
+7499 GOSUB 9999
+7500 PRINT "PAUVRE FOU!je suis bien plus puissante  que toi!":GOSUB 9999
+7510 PRINT "Tu as choisi le jour de ta mort!!!":END
+8000 IF O$<>K$ THEN M$="Rien ne se passe.":RETURN
+8010 IF LI<>1 THEN M$="Le sol tremble...":RETURN
+8020 D=11:A$="Le magicien étouffe":GOSUB 8500:A$="Il suffoque...":GOSUB 8500
+8021 A$="et disparait":GOSUB 8500:A$="Vous avez gagné!":GOSUB 8500:END
+8500 FOR I=1 TO LEN(A$):B$=MID$(A$,I,1):PRINT B$;:IF B$<>" " THEN BEEP D,1 ELSE BEEP 0,2
+8510 FOR J=1 TO 10:NEXT J,I:PRINT:RETURN
+9000 IF O<>4 AND O<>8 AND O<>17 THEN M$="TROP dur pour moi.":RETURN
+9010 OF O=4 THEN 9500
+9020 IF O=17 THEN 9600
+9030 IF NU=0 THEN M$="C'est une bonne idée mais le coffre est  trop lourd":RETURN
+9040 S=S+1:IF LI(14)=9 AND F(14)=0 THEN 9100
+9050 M$="Une fois ca va,"+STR$(S)+"   fois...":RETURN
+9100 F(14)=1:M$="C'est bon!il y avait quelque chose en    dessous!":RETURN
+9500 IF D(5)>5 THEN PRINT "Elle est déjà      ouverte...":RETURN
+9510 M$="Elle est bien trop  robuste":RETURN
+9600 M$="Le mur pivote! Vous arrivez dans une    autre salle"
+9610 IF LI=2 THEN LI=3:LI(17)=3 ELSE LI=2:LI(17)=2
+9620 GOSUB 600:RETURN
+9999 IF INKEY$="" THEN 9999 ELSE RETURN
+10000 IF O<>14 THEN M$="C'est bizarre ce que vous dites...":RETURN
+10005 IF LI(14)>0 THEN M$="Vous ne l'avez pas":RETURN
+10010 GA=9:M$="OK":RETURN
+11000 IF O<>16 THEN M$="On ne peut boire une telle chose":RETURN
+11010 M$="Vous ressentez une étrange sensation...":BU=9:GOTO 4110
+12000 IF O<>4 AND O<>8 AND O<>15 THEN M$="Je ne peux pas":RETURN
+12010 IF O=4 THEN 12500
+12020 IF O=15 THEN M$="OK":RETURN
+12030 IF D(9)>9 THEN M$="OK":D(9)=9:RETURN
+12040 M$="Il est déjà fermé":RETURN
+12500 M$="OK":IF D(5)>5 THEN D(5)=5:SO$(5)="EOS":RETURN
+12510 M$="Elle est déjà fermée":RETURN
+13000 IF O<3 OR O=6 OR O=11 THEN 13500
+13010 IF O<>7 THEN M$="Vous ne trouvez rien de spécial...":RETURN
+13020 IF D(8)=8 THEN 13500
+13030 IF TT=0 THEN M$="Vous avez trouvé    quelque chose!":TT=9:F(18)=1:RETURN
+13040 M$="Il n'y a rien       d'autre":RETURN
+13500 M$="Je ne pense pas qu'il soit d'accord.":RETURN
+20000 FOR G=1 TO 18:CLS:PRINT G
+20010 GOSUB 610:FOR I=1 TO 1000:NEXTI:NEXTG
