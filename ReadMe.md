@@ -25,6 +25,9 @@ For now, all the content is written in French.
 For more information, you can check out:
 - [Olipix’s channel](https://www.youtube.com/@Olipix) (You Tube)
 
+With the upcoming arrival of a whole range of tools for creating AI Agents, the goal is also to prepare all the necessary data for building an AI Agent dedicated to the Canon X‑07
+
+
 ___
 ## Other Ressources on the web
 
