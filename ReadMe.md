@@ -36,7 +36,7 @@ Ressources :
 - [Abandonware magazines](https://abandonware-magazines.org/)
 - [Silicium.org](https://silicium.org/)
 - [Old School Silicium](https://oldskool.silicium.org/)
-- Stéphane SIBUE
+- Stéphane SIBUE - Canon X-O7 Studio
   - [Blog](https://coding4phone.com/?p=1044)
   - [GitHub](https://github.com/Sydney680928/X07-Studio)
 - ...
