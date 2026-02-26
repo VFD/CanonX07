@@ -41,6 +41,7 @@ Ressources :
   - [GitHub](https://github.com/Sydney680928/X07-Studio)
 - [DskCenter](http://fetrmartin.free.fr/index.html) /!\ http
 - [CASsette IO Utilities](https://www.mvcsys.de/doc/casioutil.html)
+- [MAME CASTool](https://docs.mamedev.org/tools/castool.html)
 - ...
 
 [Olipix on You Tube](https://www.youtube.com/@Olipix)
