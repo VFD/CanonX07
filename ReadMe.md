@@ -39,6 +39,8 @@ Ressources :
 - Stéphane SIBUE - Canon X-O7 Studio
   - [Blog](https://coding4phone.com/?p=1044)
   - [GitHub](https://github.com/Sydney680928/X07-Studio)
+- [DskCenter](http://fetrmartin.free.fr/index.html) /!\ http
+- [CASsette IO Utilities](https://www.mvcsys.de/doc/casioutil.html)
 - ...
 
 [Olipix on You Tube](https://www.youtube.com/@Olipix)
