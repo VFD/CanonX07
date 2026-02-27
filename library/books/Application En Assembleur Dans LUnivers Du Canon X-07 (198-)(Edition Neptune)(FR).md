@@ -11,7 +11,10 @@ Les programmes étant court, les espaces sont ajoutés pour rendre le code plus 
 ___
 # Les Listings
 
+Certain listings ont pu être retrouvés chez l'association Silicium.\
+On peut les retrouver aussi dans les sources.
 
+___
 ## Page 22
 
 Exemple 1
@@ -48,6 +51,7 @@ Exemple 2
 65010 EXEC AD%
 ```
 
+___
 ## Page 23
 
 Exemple 3
@@ -79,6 +83,7 @@ Exemple 4
 110 EXEC VARPTR (U(0)) : RETURN
 ```
 
+___
 ## Page 24
 
 Exemple 5
@@ -94,6 +99,8 @@ Exemple 5
 70 END
 ```
 
+
+___
 ## Page 25
 
 Exemple 6
@@ -119,7 +126,7 @@ Exemple 6
 NDR : Consulter la gazette No 5 du Club C7.
 
 
-
+___
 ## Page 32
 
 Trace de droite.
@@ -134,6 +141,7 @@ DROITE PUSH BC		; Sauvegarde de BC (nombre de droites)
 	RET				; ... si oui , on quitte la routine
 ```
 
+___
 ## page 33
 
 Implentation caractères graphiques.\
@@ -152,7 +160,7 @@ CC		PUSH BC				; Sauvegarde du nombre de caractères
 		RET					; ... si oui , on quitte le sous-programme
 ```
 
-
+___
 ## Page 34
 
 Test Curseur
@@ -177,6 +185,7 @@ FLECHE	CALL $COBD			; Les tampons clavier et sous-processeur sont vidés
 		RET					; Le registre A contient la valeur $30 si aucun curseur n'a été pressé ...
 ```
 
+___
 ## Page 35
 
 Test d'une touche particulière.
@@ -203,7 +212,7 @@ DELAY	DEC B				; Décrémentation du registre B
 		RET					; Le jour se lève : fini de dormir !
 ```
 
-
+___
 ## Page 36
 
 Musique
@@ -211,7 +220,7 @@ Musique
 ```asm
 ```
 
-
+___
 ## Page 37
 
 SET, RESET, POINT
@@ -227,6 +236,7 @@ SET1	LD HL, BUF			; Chargement de HL avec l'adresse du buffer utilisateur
 		JP $C92F			; Le traitement graphique se fait ...
 ```
 
+___
 ## Page 38
 
 Input
@@ -255,6 +265,7 @@ ACQ2	LD A ,C				;
 		RET					; Retour
 ```
 
+___
 ## Page 39
 
 Entrée d'un nombre
@@ -281,8 +292,8 @@ LPRINT	LD A , (HL)			; A est chargé avec l'un des codes de la chaîne
 		JR LPRINT			; On continue le cycle ...
 ```
 
-
-## PAGE 55
+___
+## Page 55
 
 ```basic
 10 REM LES 2
@@ -308,6 +319,8 @@ LPRINT	LD A , (HL)			; A est chargé avec l'un des codes de la chaîne
 ```
 Code à revoir car scan tronqué.
 
+
+___
 ## Page 56
 
 ```asm
@@ -344,6 +357,8 @@ Code à revoir car scan tronqué.
 102 DATA 3E,7,CD,BE,C1,ED,40
 ```
 
+
+___
 ## Page 60
 
 
@@ -362,14 +377,583 @@ Code à revoir car scan tronqué.
 
 ```
 
+___
 ## Page 61
 
 ```basic
-10 FOR I = &H1C00 TO &H1C00 + 103
-20 READ A$ : POKE I , V AL (" &H" + A$)
+10 FOR I=&H1C00 TO &H1C00+103
+20 READ A$ : POKE I,VAL("&H"+A$)
 30 NEXT I
 40 PRINT "EXEC &H1C00 POUR DEMARRER LE PROGRAMME"
-50 DATA 11 , 96 , E7 , FD , 21 , C5 , 2 , 3E , 0 , CD , A8 , E6 , DB , F4 , CB , C7 , D3 , F4 , CD , 54 , 1 C , CD , 54 , 1 C , 11 , CS , 2 , CD , 27 , E8 , 3E , 0 , CD, 8F , E8 , 3E , 0 , CD , 8F , E8 , 3E , 0 , CD , 8F , E8 , 21 , 61 , lC , 7E , FE , 0 , 28 , 6 , CD , 8F , E8 , 23 , 18 , F5 , 3E , FF , CD , 8F , E8 , 3E , FF , CD , 8F, E8 , 3E , FF, CD, 8F, E8 , CD , 54 , lC, DB , F4 , CB , 87 , D3 , F4 , C9 , C5 , 6 , 7F , E , FF , D , 20 , FD , 5 , 20 , F8 , C 1 , C9 , 1 , 2 , 3 , 4 , 5 , 6 , 0
+50 DATA 11,96,E7,FD,21,C5,2,3E,0,CD,A8,E6,DB,F4,CB,C7
+60 DATA D3,F4,CD,54,1C,CD,54,1C,11,CS,2,CD,27,E8,3E,0
+70 DATA CD,8F,E8,3E,0,CD,8F,E8,3E,0,CD,8F,E8,21,61,1C
+80 DATA 7E,FE,0,28,6,CD,8F,E8,23,18,F5,3E,FF,CD,8F,E8
+90 DATA 3E,FF,CD,8F,E8,3E,FF,CD,8F,E8,CD,54,1C,DB,F4
+100 DATA CB,87,D3,F4,C9,C5,6,7F,E,FF,D,20,FD,5,20,F8
+110 DATA C1,C9,1,2,3,4,5,6,0
+```
+
+NDR : Modifié pour être plus lisible
+
+
+___
+## Page 62
+
+```
+to do
+```
+
+___
+## Page 64
+
+
+```basic
+10 FOR I=&H1C00 TO &H1C00+82
+20 READ A$ : POKE I,VAL("&H"+A$)
+30 NEXT I
+40 PRINT "EXEC &H1C00 POUR DEMARRER LE PROGRAMME"
+50 DATA 11,87,E7,FD,21,CS,02,3E,00,CD,A8,E6,DB,F4,CB
+60 DATA C7,D3,F4,11,CS,02,CD,27,E8,CD,D4,E8,20,PB,CD,D4,E8
+70 DATA 20,F6,CD,D4,ES,20,F1,21,00,1B,CD,D4,E8,FE,FF,28,04
+80 DATA 77,23,18,F5,CD,D4,E8,FE,FF,28,04,7E,23,18,EA,CD,D4
+90 DATA E8,8F,FE,FF,28,04,7E,23,18,DF,DB,F4,CB,87,D3,F4,C9
+```
+
+NDR : Modifié pour être plus lisible
+
+___
+## Page 65
+
+Fichiers GPR et KBD
+
+
+```
+10  ' [
+20  ' ORG $1C00				; Les lignes 20 à 70 constituent l'initialisation
+30  ' * INIT #1,"GPR:"		; du dispositif 1 ...
+40  ' LD DE.$E7B2			; 
+50  ' LD IY.$02C5			; 
+60  ' LD A.$0				; 
+70  ' CALL $F6A8			; 
+80  ' * INIT #2,"KBD:"		; Les lignes 80 à 120 représentent l'initialisation
+90  ' LD DE.$E778			; du dispositif n°2 .
+100 ' LD IY.$02CD			; 
+110 ' LD A.$0				; 
+120 ' CALL $E6A8			; 
+130 ' * Assignation de KBD	; Entrées sur la console ...
+140 ' #BL LD DE.$2CD		; 
+150 ' CALL $E827			; 
+170 ' CALL $E8D4			; Entrée d'une touche ...
+175 ' PUSH AF				; 
+190 ' LD DE.$2C5			; Les sorties se font sur l'imprimante
+200 ' CALL $E827			; 
+205 ' POP AF				; 
+206 ' CP $0E				; Si on appuie sur CTRL N , on arrête
+207 ' RETZ					; 
+210 ' CALL $E88F			; Sinon , écriture sur l'imprimante .
+220 ' JR #BL				; 
+230 ' ]
 ```
 
 
+```basic
+10 FOR I=&H1C00 TO &H1C00+48
+20 READ A$: POKE I,VAL("&H"+A$): NEXT
+40 PRINT "EXEC &H1C00 pour démarrer ... "
+50 DATA 11,F8,E7,FD,21,CS,02,3E,00,CD,A8,E6,11,78,E7
+60 DATA FD,21,CD,02,3E,00,CD,A8,E6,11,CD,02,CD,27,E8,CD,D4
+70 DATA E8,F5,11,CS,02,CD,27,E8,F1,FE,0E,C8,CD,8F,E8,18,E7
+```
+
+NDR : Modifié pour être plus lisible
+
+___
+## Page 66
+
+Prise SERIE
+
+
+```
+10  ' [
+20  ' ORG $1C00				; 
+30  ' LD DE.$E7A4			; Dispositif COM activé
+40  ' LD A.$0				; 
+50  ' LD B."G"				; Mode G de l'ACIA
+60  ' LD IX.&1200			; Vitesse : 1200 bauds
+70  ' LD IY.$2C5			; 
+80  ' CALL $E6A8			; Ouverture ...
+85  ' LD DE.$2C5			; 
+86  ' CALL $E827			; 
+87  ' LD HL.#ME				; Ecriture du message ...
+90  ' #ET LD A.(HL)			; 
+91  ' CP $0					; 
+92  ' JR Z.#FI				; 
+100 ' CALL $E88F			; 
+105 ' INC HL				; 
+106 ' JR #ET				; 
+120 ' #FI RET				; 
+124 ' #ME DEFB &12			; 
+125 ' DEFM Cela marche bien comme cela ...
+126 ' DEFB $00				; 
+130 ' ]
+```
+
+___
+## Page 67
+
+
+```basic
+10 FOR I=&H1C00 TO &H1C00+63
+20 READ A$: POKE I,VAL("&H"+A$): NEXT
+40 PRINT "EXEC &H1C00 pour démarrer ... "
+60 DATA 11,A4,E7,3E,00,06,47,DD,21,BO,04,FD,21,CS,02
+70 DATA CD,A8,E6,11,C5,02,CD,27,E8,21,27,1C,7E,FE,00,28,06
+80 DATA CD,8F,E8,23,18,F5,C9,0C,43,41,20,4D,41,52,43,48
+90 DATA 45,20,42,49,45,4E,20,43,4F,4D,4D,45,20,43,41,00
+```
+
+NDR : Modifié pour être plus lisible
+
+Lecture Série
+
+
+```
+20  ' [
+30  ' ORG $1C00				; 
+40  ' LD DE.$E7A4			; Les lignes 40 à 90 initialisent le 1er fichier
+50  ' LD A.$0				;à COM .
+60  ' LD B."G"				; 
+70  ' LD IX.&1200			; 
+80  ' LD IY.$2C5			; 
+90  ' CALL $E6A8			; 
+100 ' LD DE.$2C5			; Les lignes 100 à 110 assignent l'entrée .
+110 ' CALL $E827			; 
+120 ' CALL $E8D4			; Caractère entré dans A .
+130 ' CALL $C1BE			; Caractère affiché à l'écran
+140 ' RET					; 
+150 ' ]
+```
+
+___
+## Page 68
+
+
+```basic
+20 FOR I=&H1C00 TO &H1C00+29
+30 READ A$: POKE I,VAL("&H"+A$): NEXT
+50 PRINT "EXEC &H1C00 pour démarrer ... "
+60 DATA 11,A4,E7,3E,00,06,47,DD,21,B0,04,FD,21,C5,02,CD
+70 DATA A8,E6,11,CS,02,CD,27,E8,CD,D4,E8,CD,DE,C1,C9
+```
+
+___
+## Page 81
+
+Concerne l'extension X-720.
+
+Figure 12
+
+Dans le code BASIC il y a un RET et pas dans les ASM, donc ajout.
+
+```
+10 ' [
+20 ' ORG $1C00
+30 ' * TEST DE LA PRESENCE DE LA X-720
+40 ' LD A,$80
+50 ' LD ($8000).A : * DEBUT VRAM
+60 ' LD A.($8000)
+70 ' CP $80
+80 ' JP NZ.$F1AA: * SAUT EN ERREUR
+90 ' RET
+100 ' ]
+```
+
+```asm
+1C00	3E 80			LD A,80
+1C02	32 00 80		LD (8000),A
+1C05	3A 00 80		LD A,(8000)
+1C08	FE 80			CP 80
+1C0A	C2 AA F1		JP NZ,F1AA
+1C0D	C9
+```
+
+```basic
+10 REM TEST DE LA X-720
+20 FOR I=&H1C00 TO &H1C0D
+30 READ A$: POKE I,VAL("&H"+A$)
+40 NEXT I
+50 DATA 3E,80,32,00,80,3A,00,80,FE,80
+60 DATA C2,AA,F1,C9
+```
+
+Figure 13
+
+```
+to do
+```
+
+```asm
+to do
+```
+
+```basic
+to do
+```
+
+___
+## Page 82
+
+Figure 14
+
+```
+to do
+```
+
+```asm
+to do
+```
+
+```basic
+to do
+```
+
+
+Figure 15
+
+```
+to do
+```
+
+```asm
+to do
+```
+
+```basic
+to do
+```
+
+
+
+___
+## Page 87
+
+Figure 16 : LMDATA
+
+```basic
+1 REM Ecriture automatique de codes LM en DATA
+10 CLEAR50,&H1F00:DEFINTA-Z:LL=16:CA=48:CLS
+20 INPUT"Adres. debut routine";DM:DD=DM
+30 INPUT"Adresse fin routine";FM:NC=FM-DM+1:JC=INT(NC/LL)
+40 RESTORE10000:AD=PEEK(&H328)+256*PEEK(&H329)+6
+50 LB=LL:FORJ=1TOJC
+55 PRINT"LIGNE";10000+10*J
+60 GOSUB200:AD=AD+5:NEXTJ
+70 LB=NC-JC*LL:IFLB=0THEN100
+80 GOSUB200
+90 PRINT"Effacer la fin de la ligne";10000+10*JC
+100 PRINT"Effacer les lignes";10000+10*(JC+1);"‰";10150;
+110 IFINKEY$=""THEN110
+120 END
+200 FORI=1TOLB:VC=PEEK(DM):DM=DM+1
+210 C=INT(VC*.01):D=INT((VC-100*C)/10):U=VC-10*D-100*C
+220 POKEAD,C+CA:POKEAD+1,D+CA:POKEAD+2,U+CA:AD=AD+4
+230 NEXT:RETURN
+10000 DATA...,...,...,...,...,...,...,...,...,...,...,...,...,...,...,...
+10010 DATA...,...,...,...,...,...,...,...,...,...,...,...,...,...,...,...
+10020 DATA...,...,...,...,...,...,...,...,...,...,...,...,...,...,...,...
+10030 DATA...,...,...,...,...,...,...,...,...,...,...,...,...,...,...,...
+10040 DATA...,...,...,...,...,...,...,...,...,...,...,...,...,...,...,...
+10050 DATA...,...,...,...,...,...,...,...,...,...,...,...,...,...,...,...
+10060 DATA...,...,...,...,...,...,...,...,...,...,...,...,...,...,...,...
+10070 DATA...,...,...,...,...,...,...,...,...,...,...,...,...,...,...,...
+10080 DATA...,...,...,...,...,...,...,...,...,...,...,...,...,...,...,...
+10090 DATA...,...,...,...,...,...,...,...,...,...,...,...,...,...,...,...
+10100 DATA...,...,...,...,...,...,...,...,...,...,...,...,...,...,...,...
+10110 DATA...,...,...,...,...,...,...,...,...,...,...,...,...,...,...,...
+10120 DATA...,...,...,...,...,...,...,...,...,...,...,...,...,...,...,...
+10130 DATA...,...,...,...,...,...,...,...,...,...,...,...,...,...,...,...
+10140 DATA...,...,...,...,...,...,...,...,...,...,...,...,...,...,...,...
+10150 DATA...,...,...,...,...,...,...,...,...,...,...,...,...,...,...,...
+```
+
+Figure 17 : EXEMPLE
+
+```basic
+1 REM Exemple de RESTORE CALCULE.
+2 REM Cree par LMDATA
+10 CLEAR50,&H1FFF:DEFINT A-Z
+20 RESTORE10000
+30 FORI=0TO17:READA:POKE&H2000+I,A:NEXT
+40 INPUT"N= (1..3)";N
+50 IFN<1 OR N>3 THEN 40
+60 J=N*100
+70 Z=USR(&H2000,J)
+80 READA$:PRINTA$:GOTO40
+100 DATA"lecture DATA 100"
+200 DATA"lecture DATA 200"
+300 DATA"lecture DATA 300"
+999 END
+10000 DATA035,035,094,035,086,205,013,243,096,105,210,056,246,043,034,040
+10010 DATA003,201
+```
+
+___
+## Page 88
+
+Figure 18 : Logo CANON
+
+```basic
+5 REM EXEMPLE DE GRAPHISME - DATA STOCKEES AVEC LMDATA
+10 CLEAR200:DEFINTA-Z
+20 X=23:CLS
+30 FORL=6TO25
+40 A1=1:F=1
+50 READA:A1=A1+A:IFF=1THEN70
+60 F=1:GOTO80
+70 FORI=A1-ATOA1-1:PSET(X+I,L):NEXT:F=0
+80 IFA1=<79THEN50
+90 NEXT
+100 END
+110 DATA79,9,4,66,8,6,65,6,10,63
+120 DATA5,12,7,4,9,3,3,2,7,7,6,3,3,2,6
+130 DATA4,6,6,2,5,6,7,5,1,4,5,9,4,5,1,4,5
+140 DATA4,5,6,4,2,9,4,13,3,2,3,6,1,13,4
+150 DATA3,6,6,2,10,3,6,5,2,5,2,3,2,6,3,5,2,5,3
+160 DATA3,5,6,1,12,4,5,5,2,5,1,4,3,6,2,5,2,5,3
+170 DATA3,5,15,8,5,5,2,5,1,4,3,6,2,5,2,5,3
+180 DATA3,5,14,10,4,5,2,5,1,5,3,5,2,5,2,5,3
+190 DATA3,5,13,5,2,4,4,5,2,5,1,5,3,5,2,5,2,5,3
+200 DATA3,6,11,5,4,4,3,5,2,5,1,6,3,4,2,5,2,5,3
+210 DATA4,5,9,1,1,5,4,4,3,5,2,5,1,6,3,4,2,5,2,5,3
+220 DATA4,6,6,2,2,6,2,6,2,5,2,5,2,6,2,3,3,5,2,5,3
+230 DATA5,12,4,8,1,4,2,5,2,5,2,6,3,2,3,5,2,5,3
+240 DATA6,10,6,6,2,5,1,5,2,5,3,9,4,5,2,5,3
+250 DATA8,6,9,4,3,5,1,5,2,5,4,7,5,5,2,5,3,79,79
+```
+
+Figure 19 : Copie rapide
+
+```basic
+1 REM Copie cran
+2 REM Mthode de la chaine
+3 REM DATA cres par LMDATA.
+10 CLEAR 100:DEFINT A-Z
+20 CH$=STRING$(53,"£")
+30 GOSUB 300
+40 FORI=0TO52:READA:POKEAD+I,A:NEXT
+100 PRINT" Copie rapide de l'"
+110 PRINT"     ecran sur"
+120 PRINT" l'imprimante X-710"
+130 PRINT"       +++";
+200 GOSUB300:EXEC AD
+210 END
+300 AD=VARPTR(CH$):AD=PEEK(AD+1)+256*PEEK(AD+2):RETURN
+10000 DATA006,000,033,020,002,197,229,001,019,000,009,126,254,032,032,004
+10010 DATA043,013,032,247,012,225,229,126,004,035,229,197,205,247,206,193
+10020 DATA225,120,185,032,242,205,176,207,225,001,020,000,009,193,004,120
+10030 DATA254,004,032,209,201
+```
+
+___
+## Page 90
+
+FIGURE 20 : Logogenese
+
+```basic
+1 'ATTENTION NE PAS RENUMEROTER
+10 DEFINTA-Z:CLS:PRINT"Logognse"
+20 RM$=STRING$(18,0):GOSUB90
+30 FORI=0TO17:READB$:POKEAD+I,VAL("&H"+B$):NEXT:Z=RND(0)
+40 DATA23,23,5E,23,56,CD,0D,F3,60,69,D2,38,F6,2B,22,28,03,C9
+45 J=INT(RND(1)*33)+100:GOSUB90
+50 Z=USR(AD,J):N=INT(RND(1)*4+1)
+55 FORI=1TON:READD$:NEXT
+60 K=INT(RND(1)*14)+200:GOSUB90
+65 Z=USR(AD,K):N=INT(RND(1)*4+1)
+70 FORI=1TON:READF$:NEXT
+75 PRINTD$;F$:IFINKEY$=""THEN45
+80 IFINKEY$=""THEN80ELSE45
+90 AD=VARPTR(RM$):AD=PEEK(AD+1)+256*PEEK(AD+2):RETURN
+95 END
+100 DATA AERO,AGRO,AMBI,ANDRO
+101 DATA ANTI,ASTRO,BIBLIO,BIO
+102 DATA CACO,CALLI,CLEPTO,CHIMIO
+103 DATA CHRONO,CINE,COPRO,COSMO
+104 DATA CRYO,CRYPTO,DECI,DECA
+105 DATA HEMI,DERMO,DEXTRO,DODECA
+106 DATA DROMO,DYNAMO,DYS,ECTO
+107 DATA ELECTRO,EMBRYO,ENTOMO
+108 DATA ERGO,EROTICO,GASTRO,GEO
+109 DATA GLOSSO,GONIO,GONO,GYMNO
+110 DATA HECTO,HELIO,HEMATO,HETERO
+111 DATA HIERO,HIPPO,HOLO,HOMEO
+112 DATA HOMO,HYDRO,HYPER,HYPO
+113 DATA ICONO,IDEO,INFRA,ISO
+114 DATA INTRA,LATERO,LIPO,LOGO
+115 DATA LOXO,MACRO,MEGALO,METEO
+116 DATA META,§ICRO,MKsO,MNEMO
+117 DATA MORPHO,MYTHO,NECRO,NEO
+118 DATA NOSO,NUGLEO,OCTO,OLEO
+119 DATA OMNI,ORTHO,PALEO,PAN
+120 DATA PARA,PAPYRO,PATHO,PEDO
+121 DATA PENTA,PERI,PETRO,PHAGO
+122 DATA PHALLO,PHANERO,PHILO,PHYTO
+123 DATA PHOBO,PHONO,PHOTO,PHRENO
+124 DATA PHYSIO,POLY,MONO,HEMI
+125 DATA PORNO,POST,PROTO,PSEUDO
+126 DATA PSYCHO,RADIO,RETRO,RHINO
+127 DATA SADO,STEREO,SCLERO,SEMI
+128 DATA SCHIZO,SIMILI,SPELEO,STENO
+129 DATA SUB,SUPRA,SUPER,TACHY
+130 DATA TECHNO,TELE,TELEO,THEO
+131 DATA THERMO,TRIBO,ULTRA,VIDEO
+132 DATA XENO,XYLO,ZOO,MINI
+200 DATA ALGIE,CARDE,CINESE,CEPHALE
+201 DATA CLASTE,COSMOS,CYCLE,DACTYLE
+202 DATA DERME,DIDACTE,DOXE,DROME
+203 DATA DYNE,FUGE,GAME,GASTRE
+204 DATA GLOTTE,GENESE,GENE,GRADE
+205 DATA GYNE,LATERE,LATRE,LOGIE
+206 DATA LOGUE,MANCIE,MANE,MANIE
+207 DATA MATIQUE,MEGALIE,METRIE,MNESIE
+208 DATA MORPHE,NAUTE,NEVROSE,NOMIE
+209 DATA PATHE,PHAGE,PHANIE,PHILE
+210 DATA PHOBE,PHONE,PNEE,PYGE
+211 DATA RRHEE,SCAPHE,SCOPE,SCOPIE
+212 DATA STASE,STENIE,THEISME,TONIQUE
+213 DATA TROPE,TYPE,VORE,TIQUE
+```
+
+___
+## Page 92
+
+LLIST
+
+```asm
+to do
+```
+
+___
+## Page 95
+
+Figure 22 : Chargeurs
+
+```basic
+```
+
+
+```basic
+```
+
+Figure 23 : Exemple
+
+```basic
+```
+
+___
+## Page 98
+
+Figure 24 : Labyrinthe 3D
+
+```
+to do
+```
+
+Figure 25 : Chargeurs
+
+Programme 1
+
+```basic
+```
+
+Programme 2
+
+```basic
+```
+
+___
+## Page 103
+
+Figure 26 : Solitaire
+
+```
+```
+
+Figure 27
+
+Programme 1
+
+```basic
+```
+
+Programme 2
+
+```basic
+5 REM *** ENTREUR DE CODES ***
+10 CLEAR 50,&H7FF:A=&H800
+20 PRINTHEX$(A);" : ";:INPUT C$
+30 V=VAL("&H"+C$):POKE A,V
+49 A=A+1:IF A>&H11D5 THEN PRINT"...":BEEP 2,3:END
+50 GOTO20
+```
+
+___
+## Page 109
+
+Figure 28 : Les Pentominos
+
+```
+```
+
+Figure 29
+
+```basic
+```
+
+```basic
+5 REM *** ENTREUR DE CODES ***
+10 CLEAR 50,&H7FF:A=&H800
+20 PRINTHEX$(A);" : ";:INPUT C$
+30 V=VAL("&H"+C$):POKE A,V
+49 A=A+1:IF A>&H159A THEN PRINT"...":BEEP 2,3:END
+50 GOTO20
+```
+
+___
+## Page 115
+
+Autonum
+
+```asm
+```
+
+```basic
+1 REM fonction AUTONUM pour X-07
+10 CLEAR50,&HFFF:DEFINTA-Z:CLS
+20 INPUT"Adr. fin ";A$:F=VAL("&H"+A$)
+30 D=F-215:PRINT"Adr. deb = ";HEX$(D)
+40 FORI=DTOF:READA:POKEI,A:NEXT
+50 EXECD:END
+10000 DATA033,209,213,034,000,003,062,201,050,002,003,205,000,003,033,014
+10010 DATA000,025,243,034,061,000,251,175,050,000,003,201,217,008,219,242
+10020 DATA230,001,202,193,200,219,240,230,192,040,008,230,128,202,053,200
+10030 DATA195,012,200,219,241,254,013,032,075,095,175,205,098,194,175,205
+10040 DATA170,194,058,000,003,183,202,189,200,062,001,211,245,217,008,197
+10050 DATA213,229,245,237,091,001,003,042,003,003,025,034,001,003,235,205
+10060 DATA156,187,035,205,110,213,205,004,215,205,059,202,010,197,213,095
+10070 DATA175,205,098,194,175,205,170,194,209,193,021,003,032,238,241,225
+10080 DATA209,193,251,201,254,026,032,027,062,001,211,245,217,008,197,213
+10090 DATA229,245,062,013,239,062,010,239,033,000,003,175,182,047,119,032
+10100 DATA221,024,176,254,014,032,041,062,001,211,245,217,008,197,213,229
+10110 DATA245,175,050,000,003,205,242,235,215,205,204,255,237,083,001,003
+10120 DATA207,044,205,204,255,237,083,003,003,175,061,050,000,003,024,131
+10130 DATA254,017,194,128,200,195,195,195
+```
+
+
+
+Suite en cours....
+
+
+___
