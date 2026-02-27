@@ -12,7 +12,7 @@ ___
 # Les Listings
 
 Certain listings ont pu être retrouvés chez l'association Silicium.\
-On peut les retrouver aussi dans les sources.
+On peut les retrouver aussi dans la bibliothèque "[sources]()".
 
 ___
 ## Page 22
@@ -23,9 +23,8 @@ Exemple 1
 10 GOTO 20
 15   REM01234567890123456789
 20 RESTORE 15 : AD% = PEEK (&H329) * 256 + PEEK (&H328) + 6
-30 FOR I% = 0 TO 19 : READ B$: POKE AD%+ I% , VAL ("&H" + B$): NEXT I%
-40 DATA 06 , 08 , El , 10 , FD , 2A , 15 ,03 , E5 , Dl , CD , OB , F3 , FD , 21 ,
-00 , 40 , C3 , 8 A , FE
+30 FOR I% = 0 TO 19 : READ B$: POKE AD%+I%,VAL("&H"+B$): NEXT I%
+40 DATA 06,08,E1,10,FD,2A,15,03,E5,D1,CD,0B,F3,FD,21,00,40,C3,8A,FE
 50 ON ERROR GOTO 65000
 60 ' DEBUT DU PROGRAMME
 100 A = 5 : B = 0 : C = A/B
@@ -34,14 +33,33 @@ Exemple 1
 65010 EXEC AD%
 ```
 
+NDR : Le programme est incorrect.
+
+Programme corrigé :
+
+```basic
+10 GOTO 20
+15 REM01234567890123456789
+20 RESTORE 15: AD%=PEEK(&H329)*256+PEEK(&H328)+6
+30 FOR I%=0 TO 19: READ B$: POKE AD%+I%,VAL("&H"+B$): NEXT I%
+40 DATA 06,08,E1,10,FD,2A,15,03,E5,D1,CD,0B,F3,FD,21,00,40,C3,8A,FE
+50 ON ERROR GOTO 65000
+60 ' DEBUT DU PROGRAMME
+100 A = 5 : B = 0 : C = A/B
+110 EXEC AD%
+64999 END
+65000 PRINT "Erreur"
+65010 END
+```
+
+
 Exemple 2
 
 ```basic
 10 A$ = STRING$ (20,"#")
 20 AD% = VARPTR (A$) : AD% = PEEK (AD% + 1) + 256 * PEEK (AD% + 2)
 30 FOR I% = 0 TO 19 : READ B$ : POKE AD% + I% , VAL (" &H" + B$): NEXT I%
-40 DATA 06 , 08 , El , 10 , FD , 2A , 15 , 03 , E5 , Dl , CD , OB , F3 , FD , 21 ,
-00 , 40 , C3 , 8 A , FE
+40 DATA 06,08,E1,10,FD,2A,15,03,E5,D1,CD,0B,F3,FD,21,00,40,C3,8A,FE
 50 ON ERROR GOTO 65000
 60 ' DEBUT DU PROGRAMME
 100 A = 5 : B = 0 : C = A/B
@@ -50,6 +68,8 @@ Exemple 2
 65005 AD% = VARPTR (A$) : AD% = PEEK (AD% + 1) + 256 * PEEK (AD% + 2)
 65010 EXEC AD%
 ```
+
+NDR: Même problème, coorectif à faire.
 
 ___
 ## Page 23
@@ -67,6 +87,7 @@ Exemple 3
 65010 EXEC VARPTR (U%(0))
 ```
 
+NDR: Même problème, coorectif à faire.
 
 Exemple 4
 
@@ -82,6 +103,8 @@ Exemple 4
 100 U(1) = VARPTR (A!(0)) : U(3) = VARPTR (A!(1)) U(5) = N*4
 110 EXEC VARPTR (U(0)) : RETURN
 ```
+
+NDR: Même problème, coorectif à faire.
 
 ___
 ## Page 24
@@ -99,6 +122,7 @@ Exemple 5
 70 END
 ```
 
+NDR: Même problème, coorectif à faire.
 
 ___
 ## Page 25
