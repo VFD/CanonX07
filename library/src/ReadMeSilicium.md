@@ -268,6 +268,8 @@ NDR :
 - Entre parenthèses le no de la cassette du info de silicium
 
 
+<p align="center">────────────────────</p>
+
 #### SON DU CANON NO 1 (K7-2)
 
 | Nom    | Face | Status | Fichier | Commentaire |
@@ -772,6 +774,7 @@ X-07CALC
 X-07PERT
 --------
  - XPERT
+
 
 
 
