@@ -8,28 +8,38 @@ COmpilation des codes sources publiés dans la revue Micro Systèmes.
 ___
 ## Les listings
 
-TO DO
+
+### Tableau de suivi
+
+| Icon | État |
+|------|-------|
+|  ✅  | Terminé et fonctionnel |
+|  ❌  | Echec |
+|  ❕  | À faire |
+|  📝  | En cours et à tester |
+
+
 
 | No | Date    | Programme              | Status | Commentaire |
 |----|---------|------------------------|--------|-------------|
-| 42 | 1984-05 | Moniteur-Desassembleur |        |             |
-| 44 | 1984-07 | Verouillage-Minuscule  |        |             |
-| 46 | 1984-10 | jeu MAZOG              |        |             |
-| 47 | 1984-10 | extention basic        |        |             |
-| 48 | 1984-12 | Course aux FONT$       |        |             |
-| 49 | 1985-01 | Password               |        |             |
-| 49 | 1985-01 | Assembleur 2 passes    |        |             |
-| 50 | 1985-02 | Dictator               |        |             |
-| 52 | 1985-04 | Extension basic        |        |             |
-| 56 | 1985-09 | Clavier AZERTY         |        |             |
-| 60 | 1986-01 | Extension basic        |        |             |
-| 61 | 1986-02 | Labyrinthe             |        |             |
+| 42 | 1984-05 | Moniteur-Desassembleur | ❕     |             |
+| 44 | 1984-07 | Verouillage-Minuscule  | 📝     |             |
+| 46 | 1984-10 | jeu MAZOG              | ❕     |             |
+| 47 | 1984-10 | extention basic        | ❕     |             |
+| 48 | 1984-12 | Course aux FONT$       | ❕     |             |
+| 49 | 1985-01 | Password               | ❕     |             |
+| 49 | 1985-01 | Assembleur 2 passes    | 📝     |             |
+| 50 | 1985-02 | Dictator               | ❕     |             |
+| 52 | 1985-04 | Extension basic        | ❕     |             |
+| 56 | 1985-09 | Clavier AZERTY         | ❕     |             |
+| 60 | 1986-01 | Extension basic        | ❕     |             |
+| 61 | 1986-02 | Labyrinthe             | ❕     |             |
 
 
 Pas d'autres listings trouvé.
 
 ___
-MS 44 1984-07
+## MS 44 1984-07
 Verouillage-Minuscule
 
 ```basic
