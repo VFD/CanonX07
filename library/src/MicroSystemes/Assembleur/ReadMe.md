@@ -3,17 +3,18 @@
 
 ## Introduction
 
-Assembleur 2 passes publié dans la revue Micro Système de janvier 1985.
+Assembleur 2 passes publié dans la revue Micro Systèmes de janvier 1985.
 
 
 ## Les listings
 
-
-- Chargeur Data         : Ajout non présent dans la revue
-- Chargeur Hexadecimal  : pour charger un à un les octets
-- Programme Chargement  : Loader de binaire sauvé par la programe de sauvegarde
-- Programme demo        : programme de démo pour comprendre le fonctionnement (lignes basic avec le code asm dedant)
-- Programme Sauvegarde  : Sauvegarde binaire du LM
+| Nom                   | Description |
+|-----------------------|-------------|
+| Chargeur Data         | Ajout non présent dans la revue |
+| Chargeur Hexadecimal  | Pour implémenter un à un les octets en mémoire |
+| Programme Chargement  | Chargeur de binaire sauvé par la programme de sauvegarde |
+| Programme demo        | Programme de démo pour comprendre le fonctionnement (lignes basic avec le code asm dedant) |
+| Programme Sauvegarde  | Sauvegarde du binaire du LM sur cassette, après le chargeur |
 
 
 Voir l'article de la revue dans la bibliothèque des articles de Micro Systèmes.
