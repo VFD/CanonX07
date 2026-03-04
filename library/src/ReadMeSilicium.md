@@ -69,7 +69,7 @@ ___
 
 Production de plusieurs logiciels.
 
-<hr style="width:66%"/>
+<div style="text-align:center;"><hr style="width:66%;"/></div>div>
 
 #### *** TEXTE ***
 
@@ -690,4 +690,5 @@ X-07CALC
 X-07PERT
 --------
  - XPERT
+
 
