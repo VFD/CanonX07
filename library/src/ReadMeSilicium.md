@@ -366,13 +366,13 @@ Autoprogrammation p17-19
 |--------|------|--------|---------|-------------|
 | POKER  | A?   |        |         | |
 | SAUTE  | A?   |        |         | Saute-moutons |
-| ALARME | A?   |        | |
-| CARAC  | A?   |        | |
-| MEMORY | A?   |        | |
-| LABY   | A?   |        | + codes speciaux asm ! |
-| UTIL   | B?   |        | + codes speciaux asm ! |
-| COURBE | B?   |        | |
-| NOTES  | B?   |        | |
+| ALARME | A?   |        |         |
+| CARAC  | A?   |        |         |
+| MEMORY | A?   |        |         |
+| LABY   | A?   |        |         | + codes speciaux asm ! |
+| UTIL   | B?   |        |         | + codes speciaux asm ! |
+| COURBE | B?   |        |         |
+| NOTES  | B?   |        |         |
 
 
 
@@ -382,13 +382,13 @@ Autoprogrammation p17-19
 
 | Nom    | Face | Status | Fichier | Commentaire |
 |--------|------|--------|---------|-------------|
-| POLYGO | A    | | |              |
-| AMORTL | A    | | |
-| AMORTD | A    | | |
-| ANEVID | A    | | |
-| SIMVID | A    | | |
-| BURGER | B    | | |
-| BLITZ  | B    | | |
+| POLYGO | A    |        |         |             |
+| AMORTL | A    |        |         |             |
+| AMORTD | A    |        |         |             |
+| ANEVID | A    |        |         |             |
+| SIMVID | A    |        |         |             |
+| BURGER | B    |        |         |             |
+| BLITZ  | B    |        |         |             |
 
 
 <p align="center">────────────────────</p>
@@ -519,33 +519,33 @@ Sur cassette BASF 60.
 | Nom    | Face | Status | Fichier | Commentaire |
 |--------|------|--------|---------|-------------|
 | SNAKE  | ?    |        |         |             |
-| MAZOG  | ?    |        |         |    |
-| TRI    | ?    |        |         |    |
-| ANAC   | ?    |        |         |    |
-| CARAC  | ?    |        |         |    |
-| X07CAR | ?    |        |         |    |
-| BENC   | ?    |        |         |    |
-| C.3D   | ?    |        |         |    |
-| 3D OI  | ?    |        |         |    |
-| POLAR  | ?    |        |         |    |
-| FACT   | ?    |        |         |    |
-| POLYG  | ?    |        |         |    |
-| TIC    | ?    |        |         |    |
-| INVER  | ?    |        |         |    |
-| PH     | ?    |        |         |    |
-| RENUM  | ?    |        |         |    |
-| DEUL   | ?    |        |         |    |
-| 3DOI2  | ?    |        |         |    |
-| FACTO  | ?    |        |         |    |
-| KEY    | ?    |        |         |    |
-| COURBE | ?    |        |         |    |
-| CALEND | ?    |        |         |    |
-| TIRAGE | ?    |        |         |    |
-| 3D RAP | ?    |        |         |    |
-| TEXTE  | ?    |        |         |    |
-| CERCLE | ?    |        |         |    |
-| MONT   | ?    |        |         |    |
-| MANDEL | ?    |        |         |    |
+| MAZOG  | ?    |        |         |             |
+| TRI    | ?    |        |         |             |
+| ANAC   | ?    |        |         |             |
+| CARAC  | ?    |        |         |             |
+| X07CAR | ?    |        |         |             |
+| BENC   | ?    |        |         |             |
+| C.3D   | ?    |        |         |             |
+| 3D OI  | ?    |        |         |             |
+| POLAR  | ?    |        |         |             |
+| FACT   | ?    |        |         |             |
+| POLYG  | ?    |        |         |             |
+| TIC    | ?    |        |         |             |
+| INVER  | ?    |        |         |             |
+| PH     | ?    |        |         |             |
+| RENUM  | ?    |        |         |             |
+| DEUL   | ?    |        |         |             |
+| 3DOI2  | ?    |        |         |             |
+| FACTO  | ?    |        |         |             |
+| KEY    | ?    |        |         |             |
+| COURBE | ?    |        |         |             |
+| CALEND | ?    |        |         |             |
+| TIRAGE | ?    |        |         |             |
+| 3D RAP | ?    |        |         |             |
+| TEXTE  | ?    |        |         |             |
+| CERCLE | ?    |        |         |             |
+| MONT   | ?    |        |         |             |
+| MANDEL | ?    |        |         |             |
 
 
 <p align="center">────────────────────</p>
@@ -588,7 +588,9 @@ Casette carrefour ?
 
 #### K7-13
 
-Cassette BASF LH 90.
+Cassette BASF LH 90.\
+Probables copies diverses.
+
 
 | Nom      | Face | Status | Fichier | Commentaire |
 |----------|------|--------|---------|-------------|
@@ -705,6 +707,8 @@ Face B ?
 | ?????? | B    |        |         | + données non reconnus |
 
 
+
+
 <p align="center">────────────────────</p>
 
 ### Le Son du CANON  n° 13
@@ -774,7 +778,6 @@ X-07CALC
 X-07PERT
 --------
  - XPERT
-
 
 
 
