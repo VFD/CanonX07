@@ -69,7 +69,7 @@ ___
 
 Production de plusieurs logiciels.
 
-<p align="center">----------</p>
+<p align="center">────────────────────</p>
 
 #### *** TEXTE ***
 
@@ -690,6 +690,7 @@ X-07CALC
 X-07PERT
 --------
  - XPERT
+
 
 
 
