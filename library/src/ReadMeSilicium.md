@@ -47,6 +47,11 @@ Sauf que certain caractères sont problématiques :
 Après conversion UTF8, faire les changements.\
 Refaire ensuite le CAS et éventuellement le WAV.
 
+Autre point, le langage machine dans les REM.\
+Cela pose de gros problème pour avoir le listing qui provoque des problèmes d'affichage.\
+Cette partie dois être extraite pour reconstituer le code source LM, sauf si on le trouve par ailleurs.
+
+
 Ressources :
 
 - [Silicium](https://oldskool.silicium.org/calc/x07/index.htm)
@@ -56,18 +61,22 @@ Ressources :
 ___
 ## Les Programmes des cassettes Silicium
 
-Reprise du fichier info.txt et mise en tableau.\
-Dispatch final quand complet.
+Reprise du fichier info.txt et mise en tableau.
+
 
 ___
 ### Neptune
 
-à faire.
+À faire.\
+Consulter aussi le fichier MD qui est avec les livres.\
+Les code sources pour une grande partie sont dedans.
 
 ___
 ### LOGI'STICK
 
-Production de plusieurs logiciels.
+Production de nombreux logiciels. État des lieux en tableau.\
+Il y a énormément de travail à faire.
+
 
 <p align="center">────────────────────</p>
 
@@ -82,11 +91,16 @@ Production de plusieurs logiciels.
 | V-TEXTE | B    |        |         |             | 
 | TEXTE   | B    |        |         |             |
 
+<p align="center">────────────────────</p>
+
 #### *** FONCTIONS - MATRICES ***
 
 | Nom     | Face | Status | Fichier | Commentaire |
 |---------|------|--------|---------|-------------|
+| ?       |      |        |         |             |
 
+
+<p align="center">────────────────────</p>
 
 #### *** AGENDA ***
 
@@ -103,14 +117,19 @@ NDR :\
 Le code transféré "foire" car il s'agit d'une ligne REM contenant le code assembleur.\
 Il faut reloader depuis un X-07 puis envois via liaison série.
 
+
+<p align="center">────────────────────</p>
+
 #### *** CALC ***
 
 | Nom     | Face | Status | Fichier | Commentaire |
 |---------|------|--------|---------|-------------|
 | CALC    | ?    |        |         |             |
 
-NDR : check dernière ligne erronée.
+NDR : check dernière ligne erronée. Sans doute du LM (à vérifier).
 
+
+<p align="center">────────────────────</p>
 
 #### *** GRAPHE ***
 
@@ -121,6 +140,9 @@ NDR : check dernière ligne erronée.
 | (LM ?) | A    |        |         |    |
 | GRAF2  | B    |        |         |    |
 | GRAF1  | B    |        |         |    |
+
+
+<p align="center">────────────────────</p>
 
 #### *** FICHIER ***
 
@@ -133,6 +155,8 @@ NDR : check dernière ligne erronée.
 
 Cassette de couleur orange et fichier au singulier.
 
+<p align="center">────────────────────</p>
+
 #### *** FICHIERS ***
 
 | Nom    | Face | Status | Fichier | Commentaire |
@@ -141,22 +165,34 @@ Cassette de couleur orange et fichier au singulier.
 
 Cassette grise, et fichier au pluriel.
 
+
+<p align="center">────────────────────</p>
+
 #### *** DIETETIQUE ***
 
 | Nom    | Face | Status | Fichier | Commentaire |
 |--------|------|--------|---------|-------------|
+| ?      |      |        |         |             |
 
+
+<p align="center">────────────────────</p>
 
 #### *** ASSEMBLEUR-DESASSEMBLEUR ***
 
 | Nom    | Face | Status | Fichier | Commentaire |
 |--------|------|--------|---------|-------------|
+| ?      |      |        |         |             |
 
+
+<p align="center">────────────────────</p>
 
 #### *** AIDE BASIC ***
 
 | Nom    | Face | Status | Fichier | Commentaire |
 |--------|------|--------|---------|-------------|
+| ?      |      |        |         |             |
+
+<p align="center">────────────────────</p>
 
 #### *** BANQUE ***
 
@@ -166,6 +202,7 @@ Cassette grise, et fichier au pluriel.
 | V-BANK  |      |        |         |             |
 
 
+<p align="center">────────────────────</p>
 
 #### *** ASTRO ***
 
@@ -176,6 +213,7 @@ Nécessite 24 Ko.
 | ASTRO  | B    |        |         ||
 
 
+<p align="center">────────────────────</p>
 
 #### *** JEUX 1 ***
 
@@ -194,26 +232,29 @@ Nécessite 24 Ko.
 
 NDR : Face A et B identique.
 
+<p align="center">────────────────────</p>
 
 #### *** JEUX 2 ***
 
 | Nom    | Face | Status | Fichier | Commentaire |
 |--------|------|--------|---------|-------------|
-| CARPAC | A    |        |         | (LM) defini les caracteres puis attends le suivant "cload" executé automatiquement ! |
+| CARPAC | A    |        |         | Défini les caractères puis attends le suivant via "cload" executé automatiquement ! |
 | CAPMAN | A    |        |         | 2 eme partie pacman |
 | SNAKE1 | A    |        |         | Anaconda |
 | SNAKE2 | A    |        |         | Anaconda X-720 |
 | SNAKE1 | B    |        |         | Anaconda |
 | SNAKE2 | B    |        |         | Anaconda X-720 |
-| CARPAC | B    |        |         | (LM) sert à lancer CAPMAN ! |
+| CARPAC | B    |        |         | Cf. ci-dessus |
 | CAPMAN | B    |        |         | 2 eme partie pacman |
 
+
+<p align="center">────────────────────</p>
 
 #### *** ALPHATRUC ***
 
 | Nom    | Face | Status | Fichier | Commentaire |
 |--------|------|--------|---------|-------------|
-
+| ?      |      |        |         |             |
 
 
 ___
@@ -243,12 +284,17 @@ NDR :
 - La face B est vierge, cf. p42.
 - Dactylo Folie se joue avec 2 X07 et le X-721.
 
+
+<p align="center">────────────────────</p>
+
 ### Le Son du CANON n°2 (K7 ?)
 
 TO DO.
 
 Autoprogrammation p17-19
 
+
+<p align="center">────────────────────</p>
 
 ### Le Son du CANON n°9 (K7 ?)
 
@@ -262,7 +308,7 @@ Autoprogrammation p17-19
 | RAYONZ | B    |        |         | jeu |
 
 
-
+<p align="center">────────────────────</p>
 
 #### K7-1
 
@@ -285,6 +331,7 @@ Autoprogrammation p17-19
 | AUTNUM | B?   |        |         | |
 
 
+<p align="center">────────────────────</p>
 
 #### K7-3 (4/5)
 
@@ -307,6 +354,9 @@ Autoprogrammation p17-19
 | C7TEXT | ?    |        |         | | + codes speciaux asm ! |
 
 
+
+<p align="center">────────────────────</p>
+
 #### K7-4 (6/7)
 
 
@@ -322,6 +372,10 @@ Autoprogrammation p17-19
 | COURBE | B?   |        | |
 | NOTES  | B?   |        | |
 
+
+
+<p align="center">────────────────────</p>
+
 #### K7-5 (8)
 
 | Nom    | Face | Status | Fichier | Commentaire |
@@ -334,6 +388,8 @@ Autoprogrammation p17-19
 | BURGER | B    | | |
 | BLITZ  | B    | | |
 
+
+<p align="center">────────────────────</p>
 
 #### K7-6 (Jeux Andre Tonic)
 
@@ -359,6 +415,9 @@ Autoprogrammation p17-19
 | JACK    | ?   |        |         | Jack Pot |
 | T-T-T   | ?   |        |         | Tic tac toe |
 
+
+<p align="center">────────────────────</p>
+
 #### K7-7 (divers)
 
 | Nom    | Face | Status | Fichier | Commentaire |
@@ -379,6 +438,9 @@ Autoprogrammation p17-19
 | K7     | ?    |        |         |  |
 
 
+
+<p align="center">────────────────────</p>
+
 #### K7-8 (MATRIC)
 
 | Nom    | Face | Status | Fichier | Commentaire |
@@ -397,6 +459,8 @@ Autoprogrammation p17-19
 | FICHES | B?   |        |         |    |
 | CALC   | B?   |        |         |    |
 
+
+<p align="center">────────────────────</p>
 
 #### K7-9
 
@@ -427,6 +491,9 @@ Sur Cassette C-60 SBL.
 | T.T (2)    | B?   |        |         | Traitement texte |
 
 
+
+<p align="center">────────────────────</p>
+
 #### K7-10
 
 | Nom    | Face | Status | Fichier | Commentaire |
@@ -440,6 +507,8 @@ Sur Cassette C-60 SBL.
 | OTHELL | ?    |        |         | Othello     |
 | GRAVIT | ?    |        |         | Gravitation |
 
+
+<p align="center">────────────────────</p>
 
 #### K7-11
 
@@ -477,6 +546,8 @@ Sur cassette BASF 60.
 | MANDEL | ?    |        |         |    |
 
 
+<p align="center">────────────────────</p>
+
 #### K7-12
 
 Casette carrefour ?
@@ -510,6 +581,8 @@ Casette carrefour ?
 | MOTEUR   | B    |        |         | |
 | COKE     | B    |        |         | | 
 
+
+<p align="center">────────────────────</p>
 
 #### K7-13
 
@@ -570,6 +643,8 @@ Cassette BASF LH 90.
 | GAMES2   | B    |        |         | Jeux Olympiques 
 
 
+<p align="center">────────────────────</p>
+
 #### K7-14
 
 Cassete TDK D46 ; MEMOREX 60 dBSI
@@ -594,6 +669,7 @@ Cassete TDK D46 ; MEMOREX 60 dBSI
 | SALUT  | ?    |        |         |  |
 
 
+<p align="center">────────────────────</p>
 
 ### Dossier speciaux informatiques 1-7 (Editions Neptune)
 
@@ -614,6 +690,9 @@ Cassete TDK D46 ; MEMOREX 60 dBSI
  
 Face B ?
 
+
+<p align="center">────────────────────</p>
+
 ### LE KIT'APPEL (Logi'stick) : gere appels telephoniques
 
 | Nom    | Face | Status | Fichier | Commentaire |
@@ -624,6 +703,8 @@ Face B ?
 | ?????? | B    |        |         | + données non reconnus |
 
 
+<p align="center">────────────────────</p>
+
 ### Le Son du CANON  n° 13
 
 | Nom    | Face | Status | Fichier | Commentaire |
@@ -633,6 +714,7 @@ Face B ?
 | CDT.1  | ?    |        |         | editeur d'icones |
 
 
+<p align="center">────────────────────</p>
 
  Jeux / Utilitaires
  - MUSIC 
@@ -645,7 +727,7 @@ Face B ?
  - VIE + codes
  - TERRE pb decodage
  
-------------------------------------------------------------------------
+<p align="center">────────────────────</p>
  
  Aide Basic
  - RDI nok
@@ -653,7 +735,7 @@ Face B ?
  - MONITE 
  - MONITE moniteur memoire Canon X-07
 
-------------------------------------------------------------------------
+<p align="center">────────────────────</p>
 
 
 NAUTILUS
@@ -670,7 +752,7 @@ NAUTILUS
 
 
 ------------------------------------------------------------------------
-POCKET SOFT
+# POCKET SOFT
 ------------------------------------------------------------------------
 X-07GRAPH
 ---------
@@ -694,5 +776,4 @@ X-07PERT
 
 
 
-
-
+___
