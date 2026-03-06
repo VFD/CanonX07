@@ -25,8 +25,8 @@ ___
 10 PRINT"   ***  MENU  ***"
 15 CONSOLE,,,1,1
 20 PRINT"1)Grapho  | 4) Piano"
-30 PRINT"2)FireFox | 5) Trace
-40 PRINT"3)Coureur | 6) Autre
+30 PRINT"2)FireFox | 5) Trace"
+40 PRINT"3)Coureur | 6) Autre"
 50 C$=INKEY$
 60 IF C$="" THEN 50
 70 Y=VAL(C$)
@@ -36,11 +36,16 @@ ___
 500 PRINT" ** COUREUR **"
 1000 PRINT" PIANO "
 2000 PRINT" FIREFOX"
+4000 PRINT""
+5000 PRINT""
+7000 PRINT""
 9000 PRINT" ** MENU SUITE **"
 ```
 
 Le principe donné est de fusionner les sources du livre ensemble.\
-Les lignes ont été remise dans l'odre crooissant.
+Le programme ci-dessus est une première version corrigé.\
+La barre | est en principe le caractère 233 redéfini.
+
 
 ___
 ### page 4 : BYORYTHMES
