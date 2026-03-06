@@ -3,15 +3,33 @@
 ___
 ## Introduction
 
-Reprise des listings ici.
+Reprise des listings ici.\
+Ils sont plutôt court.
 
+Il existe des coquilles dans le livre, elles sont aussi signalées.
+
+Page 24, la structure des lignes BASIC est expliquée.\
+La suite explique aussi la structure d'un fichier en RAM.
 
 ___
 ## Les listings
 
+Page 15, après la maniulation concernant la ligne 10, lire :
 
 ```basic
+10 INPUT A$  GOTO 60
 ```
+
+### page 16
+
+```basic
+10 FOR I=1 TO 20
+20 IF I MOD3=0 THEN LPRINT I,"/3" ELSE IF I MOD2=0 THEN LPRINT I,"/2" ELSE PRINT I
+30 NEXT
+```
+
+
+
 
 ___
 ### page 22 : INITIALISATON DES TOUCHES FONCTION
@@ -101,9 +119,172 @@ ___
 120 H=VAL(MID$(TIME$,1,2))
 130 HM=(H=0)
 140 H=H MOD 12: IF HM THEN H=12
+150 FOR I=1 TO H: GOSUB 70: BEEP 0,8: BEEP 35,6: NEXT I
+160 GOSUB 200: RETURN
+170 RESTORE 470
+180 FOR I=1 TO L: READ N,D
+190 GOSUB 70: BEEP N,D*5: NEXT I: RETURN
+200 IF NOT(HM AND F) THEN RETURN
+210 LOCATE 4,3: GOSUB 360: RETURN
+220 M=VAL(MID$(TIME$,4,2))
+230 IF F AND M MOD 15=0 THEN L=8: GOSUB 170
+240 IF M=0 AND F THEN RESTORE 480: L=48: GOSUB 180 GOSUB 120
+250 IF M MOD 15=0 THEN F=0 ELSE F=-1
+260 GOSUB 70: FOR I=1 TO 6
+270 IF INKEY$="" THEN NEXT I: ELSE Q$=INKEY$: GOTO 420
+280 GOTO 220
+290 ON ERROR GOTO 350
+300 CLS: PRINT "REVEIL";" [";MID$(ALM$,15,5)"]"
+310 LOCATE 0,1:PRINT "entrez l'heure sous laforme Hh:Mn svp"
+320 INPUT Q$
+330 ALM$-",,,,"+Q$
+340 GOTO 20
+350 BEEP 20,20: RESUME 290
+360 FOR J=1 TO 7
+370 IF MID$(DATE$,10,3)=MID$(D$(K$,J*3+1,3) THEN 390
+380 NEXT J
+390 LOCATE 2,3
+400 PRINT MID$(J$,J*3+1,3);",";MID$(DATE$,7,2);"/";
+410 PRINT MID$(DATE$,4,2);"/";MID$(DATE$,1,2);: RETURN
+420 IF Q$=CHR$(1) THEN AL=-1: CONSOLE@1
+430 IF Q$=CHR$(17) THEN AL=0: CONSOLE@0
+440 IF Q$=CHR$(18) THEN GOTO 290
+450 IF Q$=CHR$(15) THEN SLEEP: GOTO 20
+460  INIT#1,"KBD:": GOTO 220
+470 DATA 25,1,25,24,1,20,1,25,1,25,1,24,1,20,1
+480 DATA 22,1,22,1,24,1,24,1,25,2,25,2,25,1,25,1
+490 DATA 24,1,20,1,25,1,25,1,24,1,20,1,22,1,22,1,24,1,24,1
+500 DATA 25,2,25,2,25,1,17,1,17,1,20,1,20,1,18,1,15,1,17,1
+510 DATA 17,1,17,1,20,1,20,1,18,1,15,2,25,1,25,1,24,1,20,1
+520 DATA 25,1,25,1,24,1,20,1,22,1,22,1,24,1,24,1,25,2,25,2
 ```
 
-NDR : à finir, scan mediocre
+NDR : à vérifier et corriger car scan mediocre.
+
+
+___
+### page 51
+
+| ASCII | Touche curseur |
+|-------|----------------|
+| 30 | haut |
+| 31 | bas |
+| 28 | droite |
+| 29 | gauche |
+
+
+```basic
+5 CLS
+10 INIT#1,"KBD:"
+20 A$=INKEY$: IF A$="": THEN 20
+30 A=ASC(A$)
+40 IF A=29 THEN X=-X-1
+50 IF A=28 THEN X=X+1
+60 If A=31 THEN Y=Y+1
+70 IF A=30 THEN Y=Y-1
+80 IF X<0 THEN X=0
+90 IF X>119 THEN X=119
+100 IF Y<0 THEN Y=31
+110 IF Y<0 THEN Y=0
+200 PSET(X,Y): GOTO10
+```
+
+
+___
+### page 51 : FONCTIONS LOGIQUE
+
+Même programme de déplacement mais avec les fonctions logique.
+
+```basic
+5 CLS
+10 INIT#1,"KBD:"
+20 A$=INKEY$: IF A$="": THEN 20
+30 A=ASC(A$)
+40 X=X+(1 AND A=28 AND X<119)
+50 X=X-(1 AND A=29 AND X>0)
+100 Y=Y+(1 AND A=31 AND Y<31)
+150 Y=Y-(1 AND A=30 AND Y>0)
+200 PSET(X,Y): GOTO10
+```
+
+Le pixel se déplace de la même manière, code concis mais plus difficile à lire.
+
+
+
+___
+### page 55 : MUSIQUE
+
+```basic
+1 CLS: PRINT "      MUSIQUE"
+4 N$="   Do Do#Re MibMi Fa Fa#SolSo#La SibSi Do "
+5 CONSOLE0,4,0,0,1
+10 CONSOLE @,,0: I$=INKEY$
+30 IF I$="" THEN 10
+40 I=INSTR("ZSXDCVGBHNJM,",I$)
+50 BEEP 1,4: PRINT MID$(N$,1+I*3,3);":";
+60 GOTO 10
+```
+
+
+___
+### page 56 : JEUX INTERDITS
+
+```basic
+10 DATA10,10,10,10,8,6,6,5,3,3,6,10,15,15,15
+20 DATA15,13,11,11,10,8,8,10,11,10,11,10,14,11,10
+30 DATA10,8,6,6,5,3,5,5,5,5,6,5,3,3,3
+40 DATA3,3,3,7,7,7,7,5,3,3,2,2,2,1,2
+50 DATA12,12,12,12,14,12,12,10,10,10,12,14,15,15,15
+60 DATA15,14,13,12,12,12,12,10,8,7,7,7,7,8,5
+70 DATA3,3,3,3,3,3,3
+1000 FOR I=1 TO 96:READ N
+1010 IF I=46 THEN BEEP N,23:BEEP0,1:I=46:READN:READN:GOTO1040
+1020 IF I=94 THEN BEEP N,23:BEEP0,1:STOP
+1030 BEEP N,6:BEEP 0,1
+1040 NEXT I
+```
+
+___
+### page 58 : LE BEAU DANUBE BLEU
+
+```basic
+
+...
+
+130 DATA13,.5,1,13,1,1,13,1,1
+1000 READ N,D,P
+1010 BEEP(N+1),D*4:BEEP0,0+P
+1020 GOTO1000
+```
+
+à compléter
+
+
+
+___
+### page 60 : SERENADE DE SCHUBERT
+
+```basic
+```
+
+
+___
+### page 63 : ON THE TOP OF THE OLD SMOKY
+
+```basic
+5 CLS: ON ERROR GOTO 5000 :PRINT"ON TOP OF OLD SMOKY"
+10 DATA1,1,1,1,5,1,8,1,13,3,10,4,6,1,6,1,8,1,10,1
+20 DATA8,8,1,1,1,1,5,1,8,1,8,3
+30 DATA3,5,5,1,6,1,5,1,3,1,1,7
+40 DATA0,1,1,1,1,1,5,1,8,1,13,3,10,5,6,1
+50 DATA6,1,8,1,10,1,8,8,1,1,1,1,5,1,8,1
+60 DATA8,3,3,5,5,1,6,1,5,1,3,1,1,10
+1000 READ N,D
+1010 BEEPN,D+4 :BEEP0,1 :GOTO1000
+5000 CLS : PRINT"Tapez <RETURN>":INPUT A$:RUN
+```
+
+
 
 ___
 ### page 67 : MORSE
@@ -164,12 +345,108 @@ ___
 130 LOCATE 0,3: GOTO 10
 ```
 
+___
+### page 70 : HARD COPY D'ECRAN
+
+```basic
+TO DO
+```
+
+```basic
+TO DO
+```
+
+```basic
+TO DO
+```
 
 ___
 ### page 72 : DAO
 
 ```basic
-TO DO
+10 CLS
+20 DEFINT A-Y: Z=1: XD=Z: YD=Z: XF=Z: YF=Z
+30 B=Z: YM=0: XM=B: X=B: Y=0: GOTO 270
+40 COHSOLE@,,0: INIT#1,"KBD:"
+
+50 A$= I NKEY$; l F A$= 11I l THEN 50
+60 A=ASC(A$J
+70 IF A=30 THEN Y=Y-1: GOTO 250
+80 IF A=29 THEN X=X-1: GOTO 260
+90 IF A=28 THEN X=X+1: GOTO 230
+100 lF A=31 THEN Y=Y+1: GOTO 240
+110 IF A=l7 THEN GOSUB 500
+120 IF A=84 THEN B=l
+130 IF A=lS THEN 320
+140 lF A=69 THEN 8=2
+150 IF A=l THEN 350
+160 IF A=68 THEN XO=X; YO=Y: GOTO 270
+170 IF A=70 THEN XF=X: YF=Y: GOTO 270
+180 IF A=15 THEN 320
+190 IF A=12 THEN LINE CXD,YO)-CXF,YFJ
+200 IF A;18 THEN 210 ELSE 270
+210 LlNE CXD,YDJ-CXF,YO): LINE (XF,YOJ-(XF,YFJ
+220 LJNE (XF,YFJ-(XO,YFJ~ LINE CXD,YFJ-(XD,YDJ: GOTO 270
+230 JF X>l19 THEN X=l
+240 IF l)30 THEN Y=0
+250 IF Y<0 THEN Y=30
+260 IF X<l THEN X=119
+270 ON 8 GOTO 280,300
+280 PRESET(X,YJ.: PRESET(0,YMJ : PRESETCXM,3JJ: PSETC0,Y)
+290 PSET(X,31): PSET(Y,YJ; XM=X: YM~Y: GOTO 40
+300 PSET(X,Y): PRESET(0,YM) ! PRESETCXM,3lJ: PSETC0,Y)
+310 PSET(X,31): XM=X: YM=Y: PRESET(X,YJ:GOTO 40
+320 2=1NT(SQR(CXF-XDJ~2+CY F-Y □ J~2JJ
+330 CIRCLE (XD,YD),i
+340 GOTO 40
+
+350 IF X<6 THEN BEEP 20,5: BEEP 10,2! GOTQ 40
+360 BEEP 40>2: B~EP 0,1: PO:x,5: LOCATE~O,Y 8
+370 1N1T Ul,"KBO:''
+380 PRESETC ·0,31): PRESET(XN,31): XN=POt6: PSET(XN,31)
+390 A$=INKEY$: IF A$="" THEN 390
+400 A=ASC(A$): IF A=1 THEN ~50
+410 IF A=29 THE GCTO 460
+420 IF A<32 THEN 370
+43~ GOTO ~8'1
+4~0 PRINT A$ : GOTO ~70
+as0 ?RESE (~N,31): PSEï(YM,31): BEEP 40,\: GOTO '40
+460 1F PO= l THEN BEEP 20,S: BEEP 10,2: GOTO 3.,-0
+470 PC~Po-1: GOTO ~4P
+43e iF PQ=j9 T~!E.N' BEEP 20,5: BEEP 10,2:GOTO 370
+~90 PO=POtJ; GOTC ~Ci0
+500 F=-~: Tï'=-1?1: JM=0
+510 LPRINT HR9"(j8) ; .. L0•·
+520 LPRINT ''1 "
+530 FOR T~0 lü 31: Yl=T;u:
+540 FOR I=0 TO F- ~
+550 FOR U=0 TG 113
+560 IF TM<>T OR I~<,l THEN GOSUB .720
+570 IF POJNT CJ,TJ THEN GOSUB 620 ELSE G0SUB 6~1?1
+580 Î I =T : It1 - I
+600 NEY.T U,1,T
+610 LPRINT " A''; RETUR~J
+620 IF LJ:]19 THEN -660
+630 FO~ J~U~l TO 119
+640 IF POINT r J, îj THE I EtT J
+
+650 U=J-1
+660 LPRINT "D";STR$(U*F+5);",";STR$(-Y1-I)
+670 RETURN
+680 IF U=119 THEN 720
+690 FOR J=U+1 TO 119
+700 IF NOT(POINT (J,T)) THEN NEXT J
+710 U=J-1
+720 LPRINT "M";STR$(U*F+5);",";STR$(-Y1-I)
+730 RETURN
+```
+
+
+
+___
+### page 76 : DEPLACEMENT 8 DIRECTIONS
+
+```basic
 ```
 
 
@@ -352,7 +629,7 @@ ___
 ```
 
 ___
-### page 85
+### page 86
 
 ```basic
 10 P=3.141592654/180: R=200
@@ -383,6 +660,10 @@ ___
 
 
 ___
+à partir d'ici des "gros programmes"
+___
+
+___
 ### page 89 : Simulation d'atterissage
 
 ```basic
@@ -402,6 +683,29 @@ ___
 ```basic
 TO DO
 ```
+
+___
+### page 103 : Dessiner la France, suite
+
+```basic
+TO DO
+```
+
+___
+### page 104
+
+```basic
+TO DO
+```
+
+___
+### page 108
+
+```basic
+TO DO
+```
+
+
 
 ___
 ### page 110 : Calculette
