@@ -19,12 +19,13 @@ ___
 ___
 ### page 2 : MENU
 
+
 ```basic
 5 FONT$(233)="4,4,4,4,4,4,4,4"
 10 PRINT"   ***  MENU  ***"
 15 CONSOLE,,,1,1
 20 PRINT"1)Grapho  | 4) Piano"
-30 PRINT"2)FireIox | 5) Trace
+30 PRINT"2)FireFox | 5) Trace
 40 PRINT"3)Coureur | 6) Autre
 50 C$=INKEY$
 60 IF C$="" THEN 50
@@ -32,13 +33,14 @@ ___
 80 ON Y GOTO 100,2000,500,1000,4000,9000,7000,8000,5000
 90 GOTO 10
 100 PRINT" GRAPHO"
-2000 PRINT" FIREFOX"
 500 PRINT" ** COUREUR **"
 1000 PRINT" PIANO "
+2000 PRINT" FIREFOX"
 9000 PRINT" ** MENU SUITE **"
 ```
 
-Le principe donné est de fusionner les sources du livre ensemble.
+Le principe donné est de fusionner les sources du livre ensemble.\
+Les lignes ont été remise dans l'odre crooissant.
 
 ___
 ### page 4 : BYORYTHMES
@@ -166,9 +168,40 @@ ___
 ```basic
 8000 PRINT"TRACE D’UNE COURBE"
 8010 PRINT"Courbe: Y=AX^4+BX^3+CX^2+DX+E"
-
-...
-pb OCR, ...
+8020 INPUT"A=";A
+8030 INPUT"B=";B
+8040 INPUT"C=";C
+8050 INPUT"D=";D
+8060 INPUT"E=";E
+8061 INPUT"Echelle Y:Nombre de points/unite";U
+8062 INPUT"Echelle X:Nombre de points/unite";V
+8063 IF U*V=0 THEN 8061
+8064 CLS
+8066 U=1/U
+8067 V=1/V
+8068 LINE(0,24)-(120,24)
+8069 LINE(40,0)-(40,32)
+8070 FOR X=0 TO 119
+8075 Z=(X-40)/V
+8080 Y=A*Z^4+B*Z^3+C*Z^2+D*Z+E
+8085 Y=Y/U
+8090 Y=23-INT(Y)
+8110 IF Y>31 THEN 8160
+8120 IF Y<0 THEN 8160
+8125 IF X=0 THEN 8150
+8130 IF ABS(S-Y)<2 THEN 8150
+8135 ON ERRO GOTO 8150
+8137 IF ABS(S-Y)>9 THEN S=Y
+8140 LINE(X-1,S)-(X,Y)
+8150 PSET(X,Y)
+8155 S=Y
+8160 NEXT X
+8200 IF INKEY$="" THEN 8200
+8250 INPUT"Changement d'echelle (O/N)";C$
+8260 IF C$="O" THEN 8060
+8270 IF C$="N" THEN 8000
+8280 GOTO 8250
+8300 8000
 ```
 
 ___
@@ -193,10 +226,10 @@ ___
 600 GOTO 505
 ```
 
-- 505 : Utiliser GRAPH + E - chr$(153) redéfini
-- 550 : Utiliser GRAPH + A - chr$(136) redéfini
+505 : Utiliser GRAPH + E - chr$(153) redéfini
+550 : Utiliser GRAPH + A - chr$(136) redéfini
 
-Version alternative ?
+Version alternative avec CHR$:
 
 ```basic
 500 PRINT" ** COUREUR **"
@@ -216,7 +249,7 @@ Version alternative ?
 590 NEXT I
 600 GOTO 505
 ```
-NDR : Permet d'éviter des surprises avec les transformation BAS -> WAV (ou CAS), etc.
+
 
 ___
 ### page 19 : SYNTHETISEUR
@@ -266,8 +299,54 @@ ___
 ### page 23 : CINEMA MUSICAL
 
 ```basic
-TO DO
+100 PRINT" * CINEMA MUSICAL *"
+110 FOR I=0 TO 500:NEXT I
+130 CONSOLE,,,0
+140 FONT$(224)="0,16,28,16,16,16,40,72"
+150 FONT$(225)="0,40,240,32,32,32,88,64"
+160 FONT$(228)="0,84,56,16,16,16,104,8"
+170 FONT$(229)="0,160,112,40,32,32,80,72"
+180 FONT$(231)="4,8,4,4,4,4,8,8"
+190 FONT$(233)="128,104,48,160,32,32,144,80"
+195 C=5:A=0:D=1:E=1
+200 Z$=INKEY$
+205 IF Z$="^"THEND=-D
+210 IF Z$="1"THENC=C+1
+215 IF Z$="-"THEN E=-E
+220 IF Z$="2" THEN C=C-1
+225 IF C<1 THEN C=1
+230 B=B+1
+240 IF B=3 THEN A=5
+250 IF B=5 THEN A=0
+260 IF B=7 THEN A=7
+270 IF B=8 THEN A=5
+280 IF B=9 THEN B=1:A=0
+290 CLS
+295 IF D<0 THEN A=A+12
+300 LOCATE 8,1
+320 PRINT" **  ** ";
+330 IF E>0 THEN BEEP 1+A,C+2:BEEP A+5,C+4:BEEP A+8,C+2
+340 IF E<0 THEN BEEP1+A,C:BEEPA+5,C+4:BEEPA+8,C:BEEP1+A,C+3
+350 CLS
+360 LOCATE 8,1
+380 PRINT" ** ** "
+390 IF E<0 THEN BEEPA+5,C+1:BEEPA+8,C+1
+400 IF E>0 THEN BEEPA+10,C+2:BEEPA+11,C+2
+410 CLS
+420 LOCATE 8,1
+440 PRINT" ** ** "
+450 IF E>0 THEN BEEPA+10,C+2:BEEPA+8,C+2
+460 IF E<0 THEN BEEP1+A,C:BEEPA+5,C+1:BEEP0,2:BEEPA+8,C+5
+500 CLS
+510 LOCATE 8,1
+530 PRINT" ** ** "
+540 IF E>0 THEN BEEPA+5,C+3
+550 IF E<0 THEN BEEP1+A,C:BEEPA+5,C+1:BEEP0,2:BEEPA+8,C+8
+600 GOTO 200
 ```
+
+Faire une version [a] à cause des caractères graphiques.\
+Ou mettre les bons caractères avant transformation.
 
 ___
 ### page 27 : FACTORIELLES INFINIES
@@ -302,28 +381,174 @@ ___
 ### page 31 : AJUSTEMENT D’UNE COURBE
 
 ```basic
-TO DO
+10 PR INT"AJUSTEMENT D’UNE COURBE"
+20 INPUT "Nombre de points" ;N
+30 FOR 1=1 TO N
+40 INPUT "Abscisse";A
+50 INPUT "Ordonnée";O
+55 Z=LOGC103
+60 B=B+A
+70 C=C+0
+80 D=D+A-2
+80 E=E+0's2
+100 F=F+A*O
+120 H=H+0*A~2
+130 K=K+AZ'3
+150 ri=ri+A''4
+160 IF O<=0 THEN 200
+165 XA=XA+LOGCA3z?
+170 U=U+LOGCO3/Z
+175 XC=XC+CLOGCA3/Z3,"2
+180 S=S+AXLOGCO3/?
+180 XY=XY + LOGCA3XLOGCO3/Z-/S2
+200 frIEXTI
+210 PRINT "Type de courbe-"
+220 PRINT" - Droite C13, Courbe hyperbol i que C23," ;
+225 INPUT" Parabolique C33 ou exponentie lie C43";P
+230 ON P GOTO 235,400,600,800
+232 GOTO 210
+235 IF D-B^2=0 THEN 622
+240 U=CF-BXC/N3/CD-B*B/N3
+250 IaJ=C/N~U*B/N
+260 PRINT"Y=" ;ü;"*X+" ; LJ
+265 IF INKEY$="” THEN 265
+270 PRINT "Prevision C13, changement de courbe C23, " 1
+280 INPUT" ou fin C33" ;X
+
+ON X GOTO 310,210,1000
+GOTO 270
+ON P GOTO 315,500,750,900
+INPUT"Absc i s se :X=" ',8
+O=AXU + 14
+PRINT"Oi'donnee :Y=" ;□ IF INKEY$="" THEN 340 GOTO 270 IF D-B~2=0 THEN 622 XN=X8/N '■ TT1=U/N u=cxY-xn*u3/cxc-xn*XAi 14=U/N-U*XA/N 14= 1 0-14
+PRINT"Y=" ;ui; '*X-" ;U IF INKEY$="': THEN 460 GOTO 270
+INPUT "Absc i sse :X=" ;X
+Y=14*X-U
+PRINT "Ordonnes Y=";Y IF INKEY$="" THEN 525 GOTO 270
+U=I1* C DYN-B^ >-K* C K*N-D*B 3+D* ( KXB-D^
+IF UO0 THEN 630
+PRINT "Pas de solution IF INKEY$="” THEN 624 GOTO 210
+U=K*CB*C-F*N3-D*CD*C-F*B3+H*CD*N-B/'2
+14=14/0
+X=DXCFXD-K*C3-HXCBXD-KXN3 +!1*CB*C-F*N
+X=-X/U
+Y=HXCK*B-Dz'2 3-ri*CFXB-DXC]+KX(FXD-KXC
+Y=Y/U
+PRINT"Y="
+PRINT 14 , *X-2+‘ ,X ; XX + " ; Y
+
+
+210
+IF INKEY$=""
+THEN
+710
+720
+GOTO 270
+750
+INPUT "Ab s ci s
+se X:
+= " ;l
+760
+L=bJXL-2 + XXL + Y
+770
+PRINT i;0rdonn
+e e Y:
+= " JL
+775
+IF INKEY$=""
+THEN
+775
+780
+GOTO 270
+800
+EX--C S-BXU/N 3 /
+CD-BXB/N3
+810
+EB=(U-EX*B3/N
+820
+AX=10^EX
+830
+BX=10Z'EB
+840
+PRINT"Y=" ;BX ;
+;
+AX ~
+850
+IF INKEY$="”
+THEN
+850
+860
+GOTO 270
+900
+INPUT" Ab s c iss
+e X =
+" ;A
+910
+Y=BX*AX~A
+920
+PR INT'Or donne
+e Y =
+" ; Y
+950
+IF INKEY$=""
+THEN
+950
+980
+GOTO 270
+1000 END
+
 ```
 
+OCR KO, faut refaire.
 
 ___
 ### page 35 : CALCUL DE VOTRE IMPOT SUR LE REVENU
 
 ```basic
-TO DO
+100 PRINT"* CALCUL DE UOTRE * IMPOT SUR LE REVENU"
+150 IF INKEY$="" THEN 150
+200 INPUT"Nombre de personnes dans votre foyer fiscal";P
+300 IF P<=0 OR P<>INT(P) THEN 200
+400 IF P>2 THEN P=P/2+1
+450 PRINT"Cela fait";P;"parts"
+500 INPUT"Quel est votre revenu annuel ne global en Francs";R
+600 R=10*INT(R/10)
+650 Q=R/P
+700 IF Q<=12620 THEN I=0  GOTO 3000
+800 IF Q<=13190 THEN I=(R*.05)-(631*P) GOTO 3000
+900 IF Q<=15640 THEN I=(R*.1)-(1290*P) GOTO 3000
+1000 IF Q<=24740 THEN I=(R*.15)-(2072*P) GOTO 3000
+1100 IF Q<=31810 THEN I=(R*.2)-(3309*P) GOTO 3000
+1200 IF Q<=39970 THEN I=(R*.25)-(4900*P) GOTO 3000
+1300 IF Q<=48360 THEN I=(R*.3)-(6898.5*P) GOTO 3000
+1400 IF Q<=55790 THEN I=(R*.35)-(9316.5*P) GOTO 3000
+1500 IF Q<=92970 THEN I=(R*.4)-(12106*P) GOTO 3000
+1600 IF Q<=127860 THEN I=(R*.45)-(16754.5*P) GOTO 3000
+1700 IF Q<=151250 THEN I=(R*.5)-(23147.5*P) GOTO 3000
+1800 IF Q<=172040 THEN I=(R*.55)-(30710*P) GOTO 3000
+1900 IF Q<=195000 THEN I=(R*.6)-(39312*P) GOTO 3000
+2000 I=(R*.65)-(49062*P)
+3000 PRINT"Votre impot a payer:";I;"Francs"
+4000 IF INKEY="" THEN 4000
+4100 GOTO 100
+
+
 ```
 
-À faire pour la postérité.
+Pour la postérité.
 
 
 
 ___
-### page 35 : ETUDE DE MARCHE
+### page 41 : ETUDE DE MARCHE
 
 ```basic
 TO DO
 ```
 
+```basic
+TO DO
+```
 
 ___
 ### page 48 : FIREFOX
@@ -400,6 +625,5 @@ TO DO
 
 Serait à mettre à part.\
 Programme incomplet, n'affiche pas le plateau.
-
 
 ___
