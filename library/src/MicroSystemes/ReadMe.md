@@ -29,7 +29,7 @@ ___
 | 48 | 1984-12 | Course aux FONT$       | ❕     |             |
 | 49 | 1985-01 | Password               | ❕     |             |
 | 49 | 1985-01 | Assembleur 2 passes    | 📝     |             |
-| 50 | 1985-02 | Dictator               | ❕     |             |
+| 50 | 1985-02 | Dictator               | 📝     |             |
 | 52 | 1985-04 | Extension basic        | ❕     |             |
 | 56 | 1985-09 | Clavier AZERTY         | ❕     |             |
 | 60 | 1986-01 | Extension basic        | ❕     |             |
