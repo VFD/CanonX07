@@ -24,6 +24,7 @@ Tableau de suivi :
 |  ❕  | À trouver |
 |  📝  | En cours |
 
+<p align="center">────────────────────</p>
 
 Tableau de l'état d'avancement des restaurations :
 
@@ -51,7 +52,8 @@ Transformation en A4 300dpi.\
 Une fois les images correctes, mise en PDF et OCR.
 
 Le renommage des PNG cherche à correspondre aux no de page.\
-Des pages blanches peuvent être insérées afin de pouvoir imprimer correctement chaque fanzines en mode livret.
+Des pages blanches peuvent être insérées afin de pouvoir imprimer correctement chaque fanzines en mode livret.\
 Par exemple sur une imprimante A3.\
 Les originaux étaient semble t-il de simple recto assemblés.
+
 ___

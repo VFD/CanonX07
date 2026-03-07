@@ -7,12 +7,15 @@ Ce markdown à pour but de compiler les petits codes source de ce numéro.
 
 NDR : 2 page sont manquantes.
 
-## To DO
+___
+## Les listings
 
 
 ___
-Page 16\
+### Page 16
+
 Nombre Aléatoire
+
 ```basic
 5 REM "GENERATEUR ALEATOIRE"
 10 DATA 16,0,1E,0,ED,5F,6F,3A,6A,1F,AD,17,6F,ED,5F,AD,32,6A,1F,CD,48,1F,7C,3C
@@ -26,39 +29,45 @@ Nombre Aléatoire
 90 CLS:BEEP:9,5:END
 ```
 
+<p align="center">────────────────────</p>
+
 ```asm
 
 org 1F2C
 
-LD D,00
-LD E,00
-LD A,R
-LD L,A
-LD A,(1F6A)
-XORL
-RLA
-LD L,A
-LD A,R
-XORL
-LD(1F6A),A
-CALL 1F48
-LD A,H
-INC A
-NOP
-JP 1F56
-LD HL,0000
-ADD HL,HL
-SLA A
-JPNC 1F52
-ADD HL,DE
-JPNZ 1F48
-RET
-LD(1F26),A
-RET
+	LD D,00
+	LD E,00
+	LD A,R
+	LD L,A
+	LD A,(1F6A)
+	XOR L
+	RLA
+	LD L,A
+	LD A,R
+	XOR L
+	LD(1F6A),A
+	CALL 1F48
+	LD A,H
+	INC A
+	NOP
+	JP 1F56
+	LD HL,0000
+	ADD HL,HL
+	SLA A
+	JPNC 1F52
+	ADD HL,DE
+	JPNZ 1F48
+	RET
+	LD (1F26),A
+	RET
 ```
 
+
+
+
 ___
-Page 17\
+### Page 17
+
 Tirage Loto
 
 ```basic
@@ -73,8 +82,11 @@ Tirage Loto
 25 IF G$=CHR$(13) THEN 8 ELSE CLS:END
 ```
 
+
+
 ___
-Page 20\
+### Page 20
+
 Programme No1 :
 
 ```basic
