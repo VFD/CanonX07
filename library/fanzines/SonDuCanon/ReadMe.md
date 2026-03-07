@@ -15,7 +15,11 @@ Source : Abandonware Magazines et objet trouvés.
 Les numéros ont aussi leur cassette éponyme.\
 Recherche en cours pour les logiciels.\
 
-NDR : les cassettes contiennent les logiciels publiés, sauf certain petit code. Une restauration est en cours.
+NDR : Les cassettes contiennent les logiciels publiés, sauf certain petit code. Une restauration est en cours.
+
+NDR : Les PDF évoluent en fonction de l'état de leur restauration respective. Lire aussi le MarkDown associé.
+
+NDR : La restauration consiste aussi à réimplémenter les codes sources pour la lisibilité.
 
 ___
 # Tableau
@@ -73,19 +77,19 @@ Existe aussi :
 
 Autre feuille de promotion - validité 30 novembre 1986.\
 
-Feuilles volantes trouvées dans un classeur.
+NDR : Feuilles volantes trouvées dans un classeur.
 
 ___
 ## Note de restauration
 
-Les sources sont les scans qui se trouvent encore sur Abandonware Magazine.\
+Les sources sont les scans qui se trouvent encore sur Abandonware Magazine ainsi que des scans personnel d'élément trouvés.\
 Les JPG ont été transformé en PNG, puis en Grayscale. Traitements divers de corrections et retouches.\
 Transformation en A4 300dpi.\
 Une fois les images correctes, mise en PDF et OCR.
 
 Le renammage des PNG cherche à correspondre aux no de page.\
 Des pages blanches peuvent être insérées afin de pouvoir imprimer correctement chaque fanzines en mode livret.
-Par exemple sur une imprimante A3.
+Par exemple sur une imprimante A3. Puis assemblage des feuille.
 
 NDR : Ce qui sera fait une fois toutes les publication restaurées. Avant mars si possible pour la vidéo finale.
 

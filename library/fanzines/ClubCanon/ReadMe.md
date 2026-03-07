@@ -5,11 +5,22 @@ ___
 
 Fanzines édité par le CLub Canon XO7.\
 Les sources proviennent de Abandonware Magazines.\
-Les fichiers sont en cours de restauration complète. Ceci afin de pouvoir les imprimer comme si ils venaient de sortir.
+Les fichiers sont en cours de restauration complète.
+Ceci afin de pouvoir les imprimer comme si ils venaient de sortir.
 
 Pour les dessins, nous ne connaissons pas le ou les auteurs, si vous savez, laisser un message.
 
 Il nous manque les numéros 1 et 6.
+
+NDR : Restauration assez complexe.
+
+NDR : Les pages seront ajustées pour une impression A3 en livret. Malgrès le fait que ce n'était pas le cas à l'époque.
+En effet, c'était des A4 simple face.
+
+NDR : L'intention est aussi de refaire les pages manuscrites en page d'édition.
+
+
+Nous sommes aussi en recherche de tous les programmes qui étaient disponible via ce Club Canon, il y en a beaucoup.
 
 ___
 ## Tableau des publications
@@ -28,20 +39,23 @@ Tableau de suivi :
 
 Tableau de l'état d'avancement des restaurations :
 
-| No   | Dates | État |Commentaire |
-|------|-------|------|------------|
-| 01   | 198 | ❕ | Manquant |
-| 02   | 198 | 📝 |   |
-| 03   | 198 | 📝 |   |
-| 04   | 198 | 📝 |   |
-| 05   | 198 | 📝 | Incomplet |
-| 06   | 198 | ❕ | Manquant |
-| 07   | 1986-03 | 📝 |   |
-| 08   | 1986-06 | 📝 |   |
-| 09   | 198 | 📝 |   |
-| 10   | 198 | 📝 |   |
-| 11   | 198 | 📝 |   |
-| 12-13| 198 | 📝 | Numéro double |
+| No   | Dates   | État |Commentaire |
+|------|---------|------|------------|
+| 01   | 198x-mm | ❕    | Manquant |
+| 02   | 198x-mm | 📝   |   |
+| 03   | 198x-mm | 📝   |   |
+| 04   | 198x-mm | 📝   |   |
+| 05   | 198x-mm | 📝   | Incomplet |
+| 06   | 198x-mm | ❕    | Manquant |
+| 07   | 1986-03 | 📝   |   |
+| 08   | 1986-06 | 📝   |   |
+| 09   | 198x-mm | 📝   |   |
+| 10   | 198x-mm | 📝   |   |
+| 11   | 198x-mm | 📝   |   |
+| 12-13| 198x-mm | 📝   | Numéro double |
+
+
+Nous ignorons si il y a d'autres numéros.
 
 ___
 ## Note de restauration
@@ -55,5 +69,9 @@ Le renommage des PNG cherche à correspondre aux no de page.\
 Des pages blanches peuvent être insérées afin de pouvoir imprimer correctement chaque fanzines en mode livret.\
 Par exemple sur une imprimante A3.\
 Les originaux étaient semble t-il de simple recto assemblés.
+
+NDR : Les PDF à disposition évoluent en fonction de l'état de restauration. Consulter leur Markdown respectif.
+
+NDR : Les listings sont aussi en cours et seront réintroduit dans le fanzine pour lisibilité.
 
 ___

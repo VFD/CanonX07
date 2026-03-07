@@ -1,0 +1,296 @@
+
+5 REM DICTATOR
+7 PRINT"  ***DICTATOR***":FORA=1 TO 500:NEXT
+8 CLS:A=RND(0)
+10 REM***REDEFINITION DE CHR$***
+12 FONT$(129)="28,20,28,0,0,0,0,0"
+14 FONT$(128)="32,32,32,32,32,32,32,32"
+20 I=0:Z1=0:Z2=0:T=1
+22 M=70000+INT(RND(1)*2001):MQ=M
+24 H=490+INT(20*RND(1))
+26 SU=1990+INT(20*RND(1)):S=SU
+28 E1=0:P=0:P1=0:P9=0:M5=0:D1=INT(H/3)
+33 S0=95+INT(10*RND(1))
+34 S1=10+INT(5*RND(1))
+36 REM***AFFICHAGE DES PARAMETRES***
+38 CLS
+40 LOCATE0,0
+42 PRINTS"HA";
+44 LOCATE9,0
+46 PRINTCHR$(128);" ";
+48 PRINTM"$";
+50 LOCATE0,1
+52 PRINTH"Hab";
+54 LOCATE9,1
+56 PRINTCHR$(128);" ";
+58 IFI<0 THEN PRINT" 0 Imm";ELSE PRINTI"Imm";
+60 LOCATE0,2
+62 PRINTS0"$/HA";
+64 LOCATE9,2
+66 PRINTCHR$(128);" ";
+68 PRINTS1"$/HA";
+70 LOCATE0,3
+72 PRINT T;"AN";
+74 IF T>1 THEN PRINT"S";
+76 LOCATE9,3
+78 PRINTCHR$(128)" ";
+80 IFP1<0 THEN PRINT"0"CHR$(129);ELSE PRINT P1CHR$(129);
+90 LOCATE0,0
+92 POKE&H2B,4
+94 CLS
+95 REM***INTRODUCTION DES FACTEURS***
+96 PRINT"Combien d'HA desirez-vous vendre ?"
+98 LINEINPUT A$:S2=VAL(A$)
+99 IFS2<-100 THEN GOTO 94
+100 IF S2<(S-1000) THEN GOTO 108
+102 PRINT" 1000 HA sont recou-verts de forets , orles industriels n'en";
+104 PRINT"veulent pas .";
+106 GOSUB3000
+107 POKE &H2B,4:GOTO94
+108 M=M+INT(S2*S0)
+110 S=S-S2
+112 T3=INT((SU-S)*45)
+113 M2=0
+114 M3=0
+115 M4=0
+116 CLS
+118 PRINT" Quelle somme donnezvous a la populationde l'ile ?"
+120 LINE INPUT A$:M1=VAL(A$)
+121 IF M1<0 THEN GOTO 116
+122 IF M1<=M THEN GOTO 128
+124 PRINT" Mais votre budget  vous limite a la somme de"M"$";
+126 GOSUB3000
+127 POKE &H2B,4:GOTO116
+128 M=M-INT(M1)
+130 CLS
+132 PRINT" Quelle superficie  desirez-vous mettre en  culture ?"
+134 LINEINPUT A$:S3=VAL(A$)
+135 IFS3<0 THEN GOTO 130
+136 K(1)=H*2
+137 K(2)=S-1000
+138 K(3)=INT(M/S1)
+139 FOR W=1 TO 3
+140 IF S3<=K(W) THEN NEXT ELSE W=0
+142 IF W<>0 THEN GOTO 158
+144 IF(K(1)<=K(2))AND (K(1)<=K(3)) THEN  W$="la population":W=1
+146 IF K(2)<=K(1) AND K(2)<=K(3) THEN W$=" la foret":W=2
+148 IF K(3)<=K(1) AND K(3)<=K(2) THEN W$=" votre budget":W=3
+150 CLS
+151 PRINT W$
+152 PRINT"vous limite a la surface de"K(W)"HA"
+154 GOSUB3000
+156 POKE &H2B,4:GOTO 130
+158 M=M-INT(S3*S1)
+160 CLS
+162 PRINT"Quelle somme allouezvous a l'education ?";
+164 LINEINPUT A$:M2=VAL(A$)
+166 IF M2<0 THEN GOTO 160
+168 IF M2<=M THEN GOTO 174
+170 PRINT" Mais vous ne dispo-sez plus que de la somme de"M"$";
+172 GOSUB3000
+173 POKE &H2B,4:GOTO160
+174 M=M-INT(M2)
+176 IF S=SU THEN GOTO 194
+178 CLS
+180 PRINT"Quels credits accor-dez vous a la lutte contre la pollution?";
+182 LINEINPUT A$:M3=VAL(A$)
+184 IF M3<0 THEN GOTO 178
+186 IF M3<=M THEN GOTO192
+188 PRINT" Vos caisses ne con-tiennent plus que : "M"$";
+190 GOSUB3000
+191 POKE &H2B,4:GOTO 178
+192 M=M-INT(M3)
+193 REM***CALAUL DES NOUVELLES DONNEES**
+194 D0=0
+195 E2=M2/H
+196 D2=INT(H-M1/100)
+198 IF D2<=0 THEN GOTO 208
+200 D0=D2
+202 IF D2=1 THEN A$=" est mort"ELSE A$="ssont morts"
+204 PRINT D2"habitant";LEFT$(A$,1)
+206 PRINT RIGHT$(A$,LEN(A$)-1)" de misere";
+207 GOSUB3000
+208 D3=INT((P1/10000)*(0.1+4*RND(1))*H)
+210 IF D3<=0 THEN GOTO 220
+212 CLS
+214 PRINT"L'exces de pollutionest cause du deces  de"D3"habitant";
+216 IF D3>1 THEN PRINT"s";
+218 GOSUB3000
+220 D0=D0+D3
+221 IF D0<=0 THEN GOTO 242
+222 CLS
+224 PRINT" Vous devez payer lasomme de"D0*9"$"
+226 PRINT"pour les enterrer .";
+228 GOSUB3000
+230 F=D0*9
+232 IF F<=M THEN M=M-F:GOTO 242
+234 PRINT" L'exiguite de votre budget vous oblige avendre du terrain";
+235 GOSUB3000
+236 C0=INT((F-M)/S0)+1
+238 IFS-CO<1000 THENPRINT"Vous manquez de ter-rains .":GOSUB3000:GOTO500
+240 S=S-C0
+241 M=M-F+C0*S0
+242 IF D0>200 THEN GOTO 510
+244 H=H-D0
+246 D1=D1-D0:IF D1<0 THEN GOTO 540
+248 IF D2<=2 THEN GOTO 252
+250 IF M>500 THEN GOTO 272
+252 IF S2=0 THEN GOTO 272
+254 C0=INT(S2+2*S2*RND(1))
+256 C0=INT(C0+.1*I)
+258 IF C0=0 THEN GOTO 270
+260 IF C0<0 THEN B$="parti"ELSE B$="venu"
+261 ZK=C0:C0=ABS(C0)
+262 IF C0>1 THEN A$="s "ELSE A$=" "
+264 CLS:PRINTC0"travailleur"A$:PRINT"immigre"A$;
+266 IF C0>1 THEN PRINT "sont ";ELSE PRINT"est ";
+268 PRINT B$A$
+269 I=I+ZK
+270 GOSUB3000
+272 C0=INT(((500-H)/10-D3/3-D2/5)*.75*(1+RND(1)))
+274 IF C0=0 THEN GOTO 294
+276 CLS
+278 PRINT ABS(C0)"habitant";:IF ABS(C0)>1THEN PRINT"s"ELSEPRINT" "
+280 IF C0<0 THEN GOTO 288
+282 IF C0>1 THEN PRINT"se sont ";ELSE PRINT"s'est ";
+284 PRINT"installe";:IF C0>1 THEN PRINT"s";
+286 GOTO 292
+288 IF ABS(C0)>1 THEN PRINT"ont ";ELSEPRINT"a ";
+290 PRINT"quitte l'ile ";
+292 GOSUB3000
+294 H=H+C0
+296 IF I>H THEN GOTO 590
+298 CLS
+300 C0=INT((P1/100000)*S3)
+302 IF SU=S THEN C0=0
+304 IF C0>S3 THEN C0=S3
+305 IF S3=0 THEN GOTO 324
+306 IF C0=0 THEN GOTO 314
+308 PRINT"La pollution a renduincultivable";:IF C0>1 THEN PRINT"s"ELSEPRINT" "
+310 PRINTC0"ha cette annee"
+312 GOSUB3000
+314 PRINT"vous avez recolte :"S3-CO"ha qui vous":PRINT"rapporte";
+316 IF S3-C0>1 THEN PRINT"nt ";ELSE PRINT" ";
+317 C1=INT((39+RND(1)*20)*(1+.25*(E0-E1)/20))
+318 PRINT INT(C1*(S3-C0))"$"
+320 M=M+INT(C1*(S3-C0))
+322 FOR A=1 TO 350:NEXT
+324 E0=E1
+326 IF E2>10 THEN E2=10
+328 E1=E2
+330 C0=SU-S
+332 IF C0<2 THEN GOTO 368
+333 IF C0>40 THEN C0=40
+334 C0=INT(C0*500*(.52+.5*RND(1)))
+336 C1=P1/100000
+338 IF C1>1 THEN C1=1
+340 CLS
+342 PRINT" Le benefice relatifau tourisme est de :"INT(C0-C1*C0)"$"
+344 M=M+INT(C0-C1*C0)
+346 GOSUB3000
+348 IF INT(C0-C0*C1)<=M5 THEN GOTO 368
+350 PRINT" en forte baisse car";
+352 A$(1)=" Les emanations nau-seabondes ont decou-rage les touristes"
+354 A$="le taux de pollution effraye les vacan-ciers"
+356 A$(3)="La degradation de la faune sous-marine a decu les pecheurs"
+358 A$(4)="L'ile est envahie demoustiques porteurs de la malaria"
+360 A$(5)="L'etat delabre des batiments repousse les plaisanciers"
+362 A=INT((RND(1)*5)+1)
+364 PRINT A$(A);
+366 GOSUB3000
+367 POKE &H2B,4
+368 CLS
+370 M5=INT(C0-C0*C1)
+372 P9=P1
+374 P2=(SU-S)*(SU-S)*SGN(SU-S)-M3/.44:P1=P1+INT(P2/2)
+375 IF T3=0THEN GOTO384
+376 PRINT" Les taxes versees  par les industriels se montent a :"
+378 PRINTT3"$";
+379 GOSUB3000
+380 M=M+T3
+384 CLS:A=INT(RND(1)*6):IF A<2 THEN GOSUB700
+385 REM***ASSURANCE***
+386 PRINT"Initial";:LOCATE10,0
+388 PRINT USING"######";MQ;:PRINT" $"
+390 PRINT"Final"
+392 LOCATE10,1
+394 PRINT USING"######";M;:PRINT" $"
+396 PRINT"Prime"
+398 PR=INT(PI*ABS(M-MQ)/100)
+400 LOCATE10,2
+402 PRINT USING"######";PR;:PRINT" $"
+404 PRINT"Total";
+406 LOCATE10,3
+408 PRINTUSING"######";M+PR;:PRINT" $";
+410 MQ=M
+412 M=M+PR
+414 GOSUB3000
+415 POKE &H2B,4
+416 CLS
+418 PRINT" Augmentation de l' assurance?"
+420 LINEINPUT A$:II=VAL(A$)
+422 IF II<0 THEN GOTO 416
+424 IF II+PI>60 THEN PRINT"L'assurance ne peut couvrir que 60 %":II=60-PI
+426 PI=INT(PI+II)
+428 M=M+INT(II*300)
+430 T=T+1
+432 REM***UNE AUTRE ANNEE***
+433 GOSUB3000
+434 GOTO38
+498 REM***DIFFERENTS MESSAGES DE FIN***
+500 CLS
+502 PRINT"Vous avez ete renverse et finirez votre vie dans un cachot  humide "
+504 GOTO1000
+510 CLS
+512 PRINT"Votre gestion lamen-table est la cause  du deces de  :"
+514 PRINT D0"personne";
+516 IF D0>1 THEN PRINT"s";
+518 GOSUB3000
+520 A$(1)="Vous avez ete litte-ralement etripe "
+522 A$(2)=" On vous a creve les yeux puis decapite"
+524 A$(3)="Vous avezete duhaut de la grande  falaise"
+526 A=INT(RND(1)*2)+1
+528 PRINT:PRINT A$(A)
+530 GOTO 1000
+540 CLS
+542 PRINT"Depuis que vous etes au pouvoir ,plus dutiers de la popula-";
+544 PRINT" tion est decede ";
+546 GOSUB3000
+547 POKE &H2B,4
+548 PRINT:PRINT"Les malheureux survivants vous ont accu-le au suicide ."
+550 GOTO 1000
+590 CLS
+592 PRINT"Les travailleurs im-migres sont en majo-rite . Ils vous ont ";
+594 PRINT"renverse ."
+598 GOTO1000
+620 PRINT"Votre budget est ex-cedentaire,et malgrecela quelaues personnes";
+622 PRINT" sont mortes ";
+624 GOSUB3000
+625 POKE &H2B,4
+626 PRINT
+628 PRINT"Vous avez ete lynche"
+630 GOSUB3000
+632 GOTO1000
+698 REM**CATASTROPHES NATURELLES
+700 A$(1)="Un seisme"
+702 A$(2)="Une inondation"
+704 A$(3)="Une tornade"
+706 A=INT(RND(1)*3+1)
+708 PRINT A$(A)
+710 PRINT" a cause de nombreuxdegats qui vous cou-tent :";
+712 A=INT(RND(1)*4500)+5500
+714 PRINTA"$";
+716 M=M-A
+718 POKE &H2B,4
+720 CLS
+722 RETURN
+998 REM**UNE AUTRE PARTIE ?**
+1000 POKE &H2B,4
+1001 CLS
+1002 PRINT"Desirez-vous essayera nouveau?"
+1004 LINEINPUTA$
+1010 IF A$<>"NON"THEN RUN
+1012 CLS
+1014 PRINT"Tant pis..."
+1016 END
+3000 FORA=1 TO 800:NEXT:RETURN
