@@ -3,6 +3,8 @@
 ___
 ## Introduction
 
+<p align="center">────────────────────</p>
+
 ### À propos d’Info’Look et du Club C7.
 
 **Info’Look** est un fanzine consacré au **Canon X-07**, édité par le **Club C7**, probablement l’un des clubs les plus actifs en France autour de cette machine.  
@@ -19,7 +21,7 @@ Ces numéros se présentent sous la forme de **feuilles A3 imprimées recto-vers
 
 **Restauration en cours.**
 
-
+<p align="center">────────────────────</p>
 
 ### About Info’Look and the Club C7
 
@@ -49,12 +51,12 @@ Ci-après les sommaires des numéros.
 
 ### Info'Look 1
 
-#### 2, DIVERS
+#### 2 DIVERS
 
 - Abonennement à INFO'LOOK.
 - Sommaire du N°2 d'INFO'LOOK.
 
-#### 3, ÉDITORIAL
+#### 3 ÉDITORIAL
 
 - Éditorial du N°l.
 - L'équipe d'INFO'LOOK.
@@ -65,7 +67,7 @@ Ci-après les sommaires des numéros.
 
 - Les nouveaux matâiels PS/2.
 - L'archirecture des PS/2.
-- Les mites centrales.
+- Les unités centrales.
 - Le disque optique WORM.
 - Les nouveaux. 6crans.
 - Disponibilité effective.
@@ -93,7 +95,43 @@ Ci-après les sommaires des numéros.
 
 ### Info'Look 2
 
-To do
+#### DIVERS
+
+- Abmnement à INFO'LOOK.
+- Sommaire du N°3 d'INR)'LOOK.
+
+#### 3 EDITORIAL
+
+- Éditorial du N°2.
+- L'équipe d'INFO'LOOK.
+
+#### 4 INFONEWS
+
+- La carte KX-TEL de KORTEX.
+- Le package télématiqoe intégral.
+
+#### 6 LE COUP D􀆳 COEUR
+
+- Le11 DOUVl:aUX DOS IBM"
+- Inlrotluclion généra]c.
+- Le nouveau DOS OSfl.
+- Cooclusion gtntrale.
+
+#### 9 DOSSIER SPECIAL
+
+"Le phénomène ATARI"
+
+- Introduction et nouveautés.
+- Les offres logicielles.
+- La revue ST Magazine.
+- Logiciels spécifiques.
+- Le Club F.A.S.T.
+- Tarifs / Conclusion / Perspectives.
+
+#### 15 ANNONCES
+
+- Petites annonces.
+- Informations aux annonceurs.
 
 <p align="center">────────────────────</p>
 
