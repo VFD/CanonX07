@@ -10,6 +10,7 @@ Reprend les codes sources pour faciliter les copier/coller et la restauration.
 ___
 ## Sommaire
 
+<pre>
 - Editorial
 - Pour être pratique
 - Pause Cui Cui
@@ -25,7 +26,7 @@ ___
 - Petites annonces
 - Nouvelles brèves
 - Conclusion
-
+</pre>
 
 
 ___
