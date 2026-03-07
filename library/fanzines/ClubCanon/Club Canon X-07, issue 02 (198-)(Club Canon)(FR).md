@@ -3,20 +3,50 @@
 ___
 ## Introduction
 
-Reprend les codes sources pour faciliter les copier/coller.\
-2 codes ci-dessous.
+Reprend les codes sources pour faciliter les copier/coller et la restauration.
+
+
 
 ___
-## Page 3
+## Sommaire
 
-Pause CUI-CUI
+- Editorial
+- Pour être pratique
+- Pause Cui Cui
+- Des extensions pour votre CANON
+- Des logiciels pour votre CANON X-07
+- De la lecture pour votre X-07
+- Nouveau et intéressant
+- Les bévues de notre CANON
+- Vu dans la presse
+- Le coin du bidouilleur
+- Essai logiciel
+- Tribune libre
+- Petites annonces
+- Nouvelles brèves
+- Conclusion
+
+
+
+___
+## Les listings
+
+Les codes ci-dessous en fonction des pages.
+
+<p align="center">────────────────────</p>
+
+### Page 3
+
+Pause CUI-CUI.
 
 ```basic
-5 OUT 244,78:OUT 243,0
-10 X=RND(0)*15+30:Y=RND(I)*15+30
-20 S=SGN(Y-X):P=10*S:FOR A=X TO Y+P STEP S: OUT 142,A:NEXTA: OUT 242,0
-30 IFRND(0)\4 THEN 30 ELSE 10
+5 OUT 244,78: OUT 243,0
+10 X=RND(0)*15+30: Y=RND(I)*15+30
+20 S=SGN(Y-X): P=10*S: FOR A=X TO Y+P STEP S: OUT 142,A: NEXT A: OUT 242,0
+30 IF RND(0)\4 THEN 30 ELSE 10
 ```
+
+NDR : Espace ajouté ci-dessus pour une meilleurs lisibilité.
 
 NDR: Le programme est corrigé à la main dans le buletin scané. Laissé tel quel.
 
@@ -25,10 +55,11 @@ NDR: Le programme est corrigé à la main dans le buletin scané. Laissé tel qu
 - OUT 242, A donne la valeur A à l'octet de poids faible 242.
 - Le nombre obtenu par l'opération 256 * octet 243 + octet 242 donne un son d'autant plus grave qu'il est élevé.
 
-___
-## Page 13
+<p align="center">────────────────────</p>
 
-Renum programme basic.
+### Page 13
+
+Un RENUM en BASIC.
 
 ```basic
 5 CLS:PRINT"RENUM":PL=1363:DEFFNX(X)=PEEK(PL)+256*PEEK(PL+1):INPUT"PAS";I:LR=I
@@ -58,6 +89,9 @@ NDR: C'est compacté est difficile à lire. Donc à ajout d'une version plus lis
 100 POKE PL+2,LR MOD 256: POKE PL+3,LR*256: LR=LR+I: RETURN
 ```
 
+NDR : Bien lire le buletin, ce programme n'est pas efficace, le garder juste pour exemple.
+
+
 L'article indique aussi la structure d'une ligne basic.
 | Adresse | Octet | Commentaire |
 |---------|-------|-------------|
@@ -74,7 +108,6 @@ L'article indique aussi la structure d'une ligne basic.
 
 NDR :
 - Il apparaît que le 00 est plutôt un séparateur qu'un début de ligne, car il se retrouve aussi à la fin même si pas de nouvelle ligne.
-- 
 - Voir avec le programme RALP (ZX81) comment l'adapter au X07.
 
 ___
