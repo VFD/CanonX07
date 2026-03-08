@@ -1,5 +1,9 @@
 # Fanzine Info'Look
 
+<p align="center">
+## Test
+</p>
+
 ___
 ## Introduction
 
