@@ -7,13 +7,14 @@ ___
 Les listing du club C7, paru dans le fanzine "Le Son du Canon".\
 Les fanzines sont en cours de restauration.
 
-Les listings sont en cours (conversion utf8 et corrections)
+Les listings sont en cours (conversion UTF8 et corrections).\
+Ils seront répartis à terme dans des répertoire faisant référence aux cassettes produites.
 
 
 ___
 ## Les listings 
 
-Les programmes ci-dessous étaient vendu à part par le CLub C7. Il n'ont pas fait l'objet de publications da  ns les revues du Club. 
+Les programmes ci-dessous étaient vendu à part par le CLub C7. Il n'ont pas fait l'objet de publications da ns les revues du Club. 
 
 - 16 pions
 - 421
