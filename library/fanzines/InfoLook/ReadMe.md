@@ -1,5 +1,6 @@
 # Fanzine Info'Look
 
+
 ___
 ## Introduction
 
@@ -89,12 +90,12 @@ Ci-après les sommaires des numéros.
 
 #### 16 ANNONCES
 
-• Petites annonces.
-• lnformations aux annonceurs.
+- Petites annonces.
+- lnformations aux annonceurs.
 
 <p align="center">────────────────────</p>
 
-### Info'Look 2
+<h3 align="center"> Info'Look 2</h3>
 
 #### DIVERS
 
