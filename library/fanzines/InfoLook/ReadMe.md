@@ -19,7 +19,8 @@ Nous disposons aujourd’hui des numéros **1 (mai 1987)**, **2 (juin 1987)** et
 
 Ces numéros se présentent sous la forme de **feuilles A3 imprimées recto-verso**, pliées en livret.
 
-**Restauration en cours.**
+**Restauration en cours.**\
+Les PDF évoluent en fonction de l'état d'avancement des restaurations.
 
 <p align="center">────────────────────</p>
 
@@ -98,7 +99,7 @@ Ci-après les sommaires des numéros.
 #### DIVERS
 
 - Abmnement à INFO'LOOK.
-- Sommaire du N°3 d'INR)'LOOK.
+- Sommaire du N°3 d'INFO'LOOK.
 
 #### 3 EDITORIAL
 
@@ -112,8 +113,9 @@ Ci-après les sommaires des numéros.
 
 #### 6 LE COUP D􀆳 COEUR
 
-- Le11 DOUVl:aUX DOS IBM"
-- Inlrotluclion généra]c.
+"Les nouveaux DOS IBM"
+
+- Introduction générale.
 - Le nouveau DOS OSfl.
 - Cooclusion gtntrale.
 
@@ -137,6 +139,43 @@ Ci-après les sommaires des numéros.
 
 ### Info'Look 3
 
-To do
+#### 2 DIVERS
+
+- Abmnement à INFO'LOOK.
+- Sommaire du N°4 d'INFO'LOOK.
+
+#### 3 EDITORIAL
+
+- Éditorial du N°3.
+- L'équipe d'INFO'LOOK.
+
+#### 4 INFONEWS
+
+"Le X-07 : un standard"
+
+- Introduction générale
+- MTEL 07 V3.0 : le soft !
+- Les nouveaux matèriels.
+- Le lecteur DLX-1.
+- Le lecteur FCD-1.
+
+#### 8 DOSSIER SPECIAL
+
+"L'avènement de la P.A.O."
+
+- Introduction générale.
+- La P.A.O selon Apple.
+- Les concurrents directs.
+- Les nouveaux matériels HP.
+- Ventura de Xerox.
+- Etude d'un grand écran.
+- Un logiciel de création.
+- Conclusion générale.
+
+
+#### 15 ANNONCES
+
+- Petites annonces.
+- Informations aux annonceurs.
 
 ___
