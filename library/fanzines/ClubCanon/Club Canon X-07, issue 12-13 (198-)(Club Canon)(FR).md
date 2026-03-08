@@ -10,7 +10,7 @@ TO DO
 ___
 ## Sommaire
 
-
+<pre>
 EDITORIAL ..........................................  1
 LlSTlNG "BOMBER" RELOGEABLE ........................  2
 OTHELLO en L.M : COMMENT CA MARCHE (1ère partie) ...  4
@@ -23,7 +23,7 @@ CAN'ELL : LA NOUVELLE VERSION ...................... 21
 REDIRECTION DES ENTREES SORTIES : UNE APPLICATION .. 24
 ESSAI COMPLET DE "MILLE MILLIARDS" ................. 26
 LA LISTE DES PROGRAMMES DU CLUB .................... 29
-
+</pre>
 
 ___
 ## Les Listings

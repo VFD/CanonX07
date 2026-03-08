@@ -9,7 +9,8 @@ TO DO
 ___
 ## Sommaire
 
-DITOllAL ......................................  1
+<pre>
+EDITORIAL .....................................  1
 DAO : SUITE ET FIN ............................  2
 NOUVEAU et INTERESSAIT ........................  3
 EXTENSION 24 Ko POUR CANON X-07 ...............  5
@@ -19,6 +20,8 @@ ENCORE DES ADRESSES! ..........................  9
 RELOGEAGE : UN EXEMPLE CONCRET ................ 10
 ROBOT D'APPEL: DESASSEMBLAGE DE LA ROUTINE .... 14
 EN BREF ....................................... 15
+</pre>
+
 
 La page sommaire contient un errata : schéma de l'extension 24 Ko.
 

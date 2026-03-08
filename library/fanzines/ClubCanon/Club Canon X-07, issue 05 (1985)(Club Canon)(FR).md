@@ -14,13 +14,14 @@ report listing ici
 ___
 ## Sommaire
 
-Editorial ............................................ 1
-Des extensions pour votre X-07 ....................... 2
-Des logiciels pour votre CANON X-07 .................. 3
-De la lecture pour votre X-07 ........................ 4
-Nouveau et intéressant ............................... 5
-Dump hexa et ascii ................................... 7
-A la recherche des adresses des mots-clefs BASIC ..... 9
+<pre>
+Editorial ...........................................  1
+Des extensions pour votre X-07 ......................  2
+Des logiciels pour votre CANON X-07 .................  3
+De la lecture pour votre X-07 .......................  4
+Nouveau et intéressant ..............................  5
+Dump hexa et ascii ..................................  7
+A la recherche des adresses des mots-clefs BASIC ....  9
 Super program slide ................................. 12
 The SPY ............................................. 14
 Devenez serveur télématique (1ère partie) ........... 16
@@ -28,7 +29,7 @@ Essai logiciel ...................................... 18
 En bref ............................................. 19
 Le point sur les réductions ......................... 20
 Liste des programmes du club ........................ 21
-
+</pre>
 
 ___
 ## Listings

@@ -12,19 +12,20 @@ Le PDF est en l'état d'avancement de la restauration.
 ___
 ## Sommaire
 
-EDITORIAL ...................................... 1
-EXTENSIONS ET LOGICIELS POUR VOTRE X-07 ........ 2
-DE LA LECTURE POUR VOTRE X-07 .................. 3
-NOUVEAU ET INTERESSANT ......................... 3
-INITIATION A L'ASSEMBLEUR (Suite) .............. 
-LES MODES D'ADRESSAGE .......................... 4
-COMMENT RELOGER UN PROGRAMME EN LM ............. 6
+<pre>
+EDITORIAL .....................................  1
+EXTENSIONS ET LOGICIELS POUR VOTRE X-07 .......  2
+DE LA LECTURE POUR VOTRE X-07 .................  3
+NOUVEAU ET INTERESSANT ........................  3
+INITIATION A L'ASSEMBLEUR (Suite) ............. 
+LES MODES D'ADRESSAGE .........................  4
+COMMENT RELOGER UN PROGRAMME EN LM ............  6
 MIEUX PROGRAMMER EN BASIC ..................... 10
 FRENCH IS BEAUTIFUL (ALBERT) .................. 11
 ESSAI LOGICIEL ................................ 13
 PETITES ANNONCES .............................. 16
 LISTE DES PROGRAMMES DU CLUB .................. 17
-
+</pre>
 
 ___
 ## Les listings

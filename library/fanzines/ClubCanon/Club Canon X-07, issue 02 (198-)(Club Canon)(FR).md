@@ -11,21 +11,21 @@ ___
 ## Sommaire
 
 <pre>
-- Editorial
-- Pour être pratique
-- Pause Cui Cui
-- Des extensions pour votre CANON
-- Des logiciels pour votre CANON X-07
-- De la lecture pour votre X-07
-- Nouveau et intéressant
-- Les bévues de notre CANON
-- Vu dans la presse
-- Le coin du bidouilleur
-- Essai logiciel
-- Tribune libre
-- Petites annonces
-- Nouvelles brèves
-- Conclusion
+Editorial
+Pour être pratique
+Pause Cui Cui
+Des extensions pour votre CANON
+Des logiciels pour votre CANON X-07
+De la lecture pour votre X-07
+Nouveau et intéressant
+Les bévues de notre CANON
+Vu dans la presse
+Le coin du bidouilleur
+Essai logiciel
+Tribune libre
+Petites annonces
+Nouvelles brèves
+Conclusion
 </pre>
 
 

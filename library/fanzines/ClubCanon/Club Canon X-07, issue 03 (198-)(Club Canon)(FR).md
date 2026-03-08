@@ -10,22 +10,23 @@ Les listings sont aussi listés ici.
 ___
 ## Sommaire
 
-- Editorial .............................. Page 1
-- Des extensions pour votre X-07 .............. 2
-- Des logiciels pour votre CANON X-07 ......... 3
-- Nouveau et intéressant ...................... 4
-- De la lecture pour votre X-07 ............... 5
-- Le coin du bidouil1eur :
-	- Inversion de l'écran .................... 6
-	- Connection directe de deux X-07 ......... 7
-	- Intégration numérique .................. 10
-	- Bévues et matrice de clavier ........... 11
-	- Utilitaire de mise en datas ............ 12
-- Petites annonces ........................... 13
-- Tribune libre .............................. 14
-- Essai logiciel ............................. 15
-- Nouvelles brèves ........................... 17
-
+<pre>
+Editorial ..................................  1
+Des extensions pour votre X-07 .............  2
+Des logiciels pour votre CANON X-07 ........  3
+Nouveau et intéressant .....................  4
+De la lecture pour votre X-07 ..............  5
+Le coin du bidouil1eur :
+	Inversion de l'écran ...................  6
+	Connection directe de deux X-07 ........  7
+	Intégration numérique .................. 10
+	Bévues et matrice de clavier ........... 11
+	Utilitaire de mise en datas ............ 12
+Petites annonces ........................... 13
+Tribune libre .............................. 14
+Essai logiciel ............................. 15
+Nouvelles brèves ........................... 17
+</pre>
 ___
 ## Les listings
 

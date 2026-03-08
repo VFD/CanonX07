@@ -10,6 +10,7 @@ Semble complet.
 ___
 ## Sommaire
 
+<pre>
 Editorial .....................................  1
 Premiers mots FORTH ...........................  2
 Nouvelles fraiches ............................  3
@@ -19,6 +20,8 @@ Petites annonces .............................. 10
 Programmation de la ligne de calcul ........... 11
 Petites annonces (suite) ...................... 13
 Liste de la "ligne de calcul" Calorimétrie .... 14
+</pre>
+
 
 NDR : La page contient un errata de "Calorimétrie"
 

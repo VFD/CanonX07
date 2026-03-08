@@ -10,13 +10,14 @@ TODO
 ___
 ## Sommaire
 
-Editorial .................................. Page 1
-Des extensions pour votre x-07 .................. 2
-Des logiciels pour votre CANON X-07 ............. 3
-De la lecture pour votre X-07 ................... 4
-Nouveau et intéressant .......................... 5
-Inversion de l'écran (suite) .................... 6
-Reines sur l'échiquier .......................... 7
+<pre>
+Editorial ......................................  1
+Des extensions pour votre x-07 .................  2
+Des logiciels pour votre CANON X-07 ............  3
+De la lecture pour votre X-07 ..................  4
+Nouveau et intéressant .........................  5
+Inversion de l'écran (suite) ...................  6
+Reines sur l'échiquier .........................  7
 Communication entre deux X-07 .................. 10
 La parole au X-07 .............................. 11
 Le fichier 5 ................................... 13
@@ -24,7 +25,7 @@ Le coin des jivaros ............................ 15
 Essai logiciel : FOHTH de LOGI'STICK ........... 16
 En bref ........................................ 17
 Liste des programmes du club ................... 18
-
+</pre>
 
 ___
 ## Les Listings
