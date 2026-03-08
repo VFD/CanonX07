@@ -51,7 +51,7 @@ Ci-après les sommaires des numéros.
 <p align="center">────────────────────</p>
 
 
-### Info'Look 1
+<h1 align="center"> Info'Look 1</h1>
 
 #### 2 DIVERS
 
@@ -95,7 +95,7 @@ Ci-après les sommaires des numéros.
 
 <p align="center">────────────────────</p>
 
-<h3 align="center"> Info'Look 2</h3>
+<h1 align="center"> Info'Look 2</h1>
 
 #### DIVERS
 
@@ -138,7 +138,7 @@ Ci-après les sommaires des numéros.
 
 <p align="center">────────────────────</p>
 
-### Info'Look 3
+<h1 align="center"> Info'Look 3</h1>
 
 #### 2 DIVERS
 
