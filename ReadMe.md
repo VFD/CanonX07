@@ -37,6 +37,7 @@ Ressources :
   - [Abandonware magazines](https://abandonware-magazines.org/)
   - [Silicium.org](https://silicium.org/)
   - [Old School Silicium](https://oldskool.silicium.org/)
+  - [Internet Archive](https://archive.org/) - search for Canon X-07, X07 XO7... not efficient
 - Utilities 
   - Stéphane SIBUE - Canon X-O7 Studio
     - [Blog](https://coding4phone.com/?p=1044)
