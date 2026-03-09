@@ -42,6 +42,10 @@ Ressources :
 - [DskCenter](http://fetrmartin.free.fr/index.html) /!\ http
 - [CASsette IO Utilities](https://www.mvcsys.de/doc/casioutil.html)
 - [MAME CASTool](https://docs.mamedev.org/tools/castool.html)
+- [Canon X-07 RPG](https://github.com/pR-0000/Canon_X-07_RPG) - mini-RPG
+- [Adaptation J&S](https://github.com/JuvignyEnsta/CanonX07) - Jeux & Stratégie, adaptation programs
+- [Marat Fayzullin Canon X-07 emulator](https://github.com/fstark/x07) - Try about the Silicum.org emulator
+- [Canon X-07 Serial Fast Loader (GUI)](https://github.com/pR-0000/Canon-X-07-Serial-Fast-Loader)
 - ...
 
 [Olipix on You Tube](https://www.youtube.com/@Olipix)
