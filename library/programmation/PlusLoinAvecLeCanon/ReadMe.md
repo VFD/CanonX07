@@ -8,6 +8,8 @@ Il y a aussi quelques programmes.
 
 Les plus courts sont dans un markdown associé au PDF.
 
+Ceux présent ici sont ceux retrouvés sur des cassettes.
+
 ___
 ## Liste des programmes
 
@@ -26,14 +28,17 @@ Liste des programmes :
 |-------|------|-------------|
 | Loto  | 📝 | |
 | Courbes | 📝 | |
-| Horloge Musicale | ❕ | |
-| Morse | ❕ | |
-| Facteurs Premiers | ❕ | |
-| Hard Copy D'Ecran | ❕ | |
-| DAO | ❕ | |
+| Horloge Musicale | 📝 | |
+| Morse | 📝 | |
+| Facteurs Premiers | 📝 | |
+| Hard Copy D'Ecran | 📝 | |
+| DAO | 📝 | |
 | Simulation d'atterissage | ❕ | |
 | Mastermind | ❕ | |
 | Calculette | ❕ | |
+
+Veuillez aussi consulter le fichier markdown du livre dans la bibliothèque.\
+Il contient aussi du code source.\
 
 
 ___
