@@ -11,6 +11,8 @@ Il existe des coquilles dans le livre, elles sont aussi signalées.
 Page 24, la structure des lignes BASIC est expliquée.\
 La suite explique aussi la structure d'un fichier en RAM.
 
+NDR : L'idée est aussi de restaurer le scan du livre dans un états plus lisible.
+
 ___
 ## Les listings
 
@@ -24,30 +26,31 @@ Page 15, après la maniulation concernant la ligne 10, lire :
 
 ```basic
 10 FOR I=1 TO 20
-20 IF I MOD3=0 THEN LPRINT I,"/3" ELSE IF I MOD2=0 THEN LPRINT I,"/2" ELSE PRINT I
+20 IF I MOD 3=0 THEN LPRINT I,"/3" ELSE IF I MOD 2=0 THEN LPRINT I,"/2" ELSE PRINT I
 30 NEXT
 ```
 
-
+NDR : Ajout d'espace au listing pour meilleur lisibilité.
 
 
 ___
 ### page 22 : INITIALISATON DES TOUCHES FONCTION
 
 ```basic
-10 key$()="lisLIST"
-20 key$()="runRUN"
-30 key$()="gotGOTO"
-40 key$()="forFOR"
-50 key$()="nexNEXT"
-60 key$()="RO "+CHR$(8)
-70 key$()="tim?TIME$"+CHR$(13)
-80 key$()="chrCHR$"
-90 key$()="beeBEEP"
-100 KEy$()="gosGOSUB"
-110 KEY$()="retRETURN"
-120 KEY$()="conCONSOLE0,4,0,1,1"
+10 key$(1)="lisLIST"
+20 key$(2)="runRUN"
+30 key$(3)="gotGOTO"
+40 key$(4)="forFOR"
+50 key$(5)="nexNEXT"
+60 key$(6)="RO "+CHR$(8)
+70 key$(7)="tim?TIME$"+CHR$(13)
+80 key$(8)="chrCHR$"
+90 key$(9)="beeBEEP"
+100 KEy$(10)="gosGOSUB"
+110 KEY$(11)="retRETURN"
+120 KEY$(12)="conCONSOLE0,4,0,1,1"
 ```
+
 
 ___
 ### page 44 : LOTO
@@ -83,21 +86,21 @@ ___
 ### page 46 : COURBE
 
 ```basic
-l REM*COURBE*
+L REM*COURBE*
 2 CLS
 100 H=119:V=31
-120 X1=H/2:x2=X1*X1:Y1=V/2:Y2=V/4
+120 X1=H/2:X2=X1*X1:Y1=V/2:Y2=V/4
 130 FOR X=0 TO X1
-140 X4=X*X:L=-y1
+140 X4=X*X:L=-Y1
 150 A=SQR(X2-X4)
 160 FOR I=-A TO A STEP V/2
-170 R=SQR(X4+I*i)/X1
+170 R=SQR(X4+I*I)/X1
 180 F=(1-R)*COS(8*R)
-l90 Y=I/5+F*y2
-200 IF y<=L THEN 230
-210 L=Y:Y=y1-y
+L90 Y=I/5+F*Y2
+200 IF Y<=L THEN 230
+210 L=Y:Y=Y1-Y
 220 PSET(X1-X,Y):PSET(X1+X,Y)
-230 NEXT i :NeXT X
+230 NEXT I :NEXT X
 ```
 
 
@@ -165,13 +168,18 @@ NDR : à vérifier et corriger car scan mediocre.
 ___
 ### page 51
 
+Code des touches curseur.
+
 | ASCII | Touche curseur |
 |-------|----------------|
-| 30 | haut |
-| 31 | bas |
-| 28 | droite |
-| 29 | gauche |
+| 30    | haut           |
+| 31    | bas            |
+| 28    | droite         |
+| 29    | gauche         |
 
+Exemple :
+
+Par fonction IF...THEN
 
 ```basic
 5 CLS
@@ -189,11 +197,10 @@ ___
 200 PSET(X,Y): GOTO10
 ```
 
-
 ___
 ### page 51 : FONCTIONS LOGIQUE
 
-Même programme de déplacement mais avec les fonctions logique.
+Même programme de déplacement mais avec les fonctions logique.\
 
 ```basic
 5 CLS
@@ -209,7 +216,7 @@ Même programme de déplacement mais avec les fonctions logique.
 
 Le pixel se déplace de la même manière, code concis mais plus difficile à lire.
 
-
+NDR : Faire une explication plus explicite.
 
 ___
 ### page 55 : MUSIQUE
@@ -248,17 +255,26 @@ ___
 ### page 58 : LE BEAU DANUBE BLEU
 
 ```basic
-
-...
-
-130 DATA13,.5,1,13,1,1,13,1,1
+10 DATA 1,1,1,1,1,1,5,1,1,8,1,1,8,1,1,-1,1,1,20,1,1
+20 DATA20,1,1,-1,1,1,17,1,1,17,1,1,-1,1,1,1,1,1
+30 DATA 1,1,1,5,1,1,8,1,1,8,1,1,-1,1,1,20,1,1,20,1,1,-1,1,1
+40 DATA 18,1,1,18,1,1,-1,1,1,0,1,1,0,1,1,3,1,1,10,1,1
+50 DATA 10,1,1,-1,1,1,22,1,1,22,1,1,-1,1,1,18,1,1,18,1,1
+55 DATA -1,1,1,0,1,1
+60 DATA 0,1,1,3,1,1,10,1,1,10,1,1,-1,1,1,22,1,1
+70 DATA 22,1,1,-1,1,1,17,1,1,17,1,1,-1,1,1,1,1,1,1,1,1,5,1,1
+80 DATA 8,1,1,13,1,1,-1,1,1,25,1,1,25,1,1,-1,1,1,20,1,1
+90 DATA 20,1,1,-1,1,1,1,1,1,1,1,1,5,1,1,8,1,1,13,1,1,-1,1,1
+100 DATA 25,1,1,25,1,1,-1,1,1,22,1,1,22,l1,-1,1,1,3,1,l
+110 DATA 3,1,1,6,1,1,10,1,1,10,4,0,7,1,1,8,1,1,17,4,0,13,1,1
+120 DATA 5,1,1,5,2,1,3,1,1,10,2,1,8,1,1,1,1,1,-1,.5,1
+130 DATA 13,.5,1,13,1,1,13,1,1
 1000 READ N,D,P
 1010 BEEP(N+1),D*4:BEEP0,0+P
 1020 GOTO1000
 ```
 
-à compléter
-
+NDR : Ajout d'espaces pour la lisibilité.
 
 
 ___
@@ -285,7 +301,7 @@ ___
 1010 BEEP(N),D*6: BEEP0,1
 1020 IF I=59 THEN RESTORE 10
 1030 GOTO 1000
-5000 PRINT"Si vous aimez cette SERENADE,tapez","<RETURN>"
+5000 PRINT"Si vous aimez cette SERENADE, tapez","<RETURN>"
 5010 INPUT A$:RUN
 ```
 
@@ -295,15 +311,15 @@ ___
 
 ```basic
 5 CLS: ON ERROR GOTO 5000 :PRINT"ON TOP OF OLD SMOKY"
-10 DATA1,1,1,1,5,1,8,1,13,3,10,4,6,1,6,1,8,1,10,1
-20 DATA8,8,1,1,1,1,5,1,8,1,8,3
-30 DATA3,5,5,1,6,1,5,1,3,1,1,7
-40 DATA0,1,1,1,1,1,5,1,8,1,13,3,10,5,6,1
-50 DATA6,1,8,1,10,1,8,8,1,1,1,1,5,1,8,1
-60 DATA8,3,3,5,5,1,6,1,5,1,3,1,1,10
+10 DATA 1,1,1,1,5,1,8,1,13,3,10,4,6,1,6,1,8,1,10,1
+20 DATA 8,8,1,1,1,1,5,1,8,1,8,3
+30 DATA 3,5,5,1,6,1,5,1,3,1,1,7
+40 DATA 0,1,1,1,1,1,5,1,8,1,13,3,10,5,6,1
+50 DATA 6,1,8,1,10,1,8,8,1,1,1,1,5,1,8,1
+60 DATA 8,3,3,5,5,1,6,1,5,1,3,1,1,10
 1000 READ N,D
-1010 BEEPN,D+4 :BEEP0,1 :GOTO1000
-5000 CLS : PRINT"Tapez <RETURN>":INPUT A$:RUN
+1010 BEEP N,D+4: BEEP 0,1: GOTO 1000
+5000 CLS: PRINT"Tapez <RETURN>": INPUT A$: RUN
 ```
 
 
@@ -314,39 +330,39 @@ ___
 ```basic
 10 CLS: PR1NT"  ENTRAINEMENT AU DECODAGE DU MORSE"
 15 CONSOLE0,4,0,0,1
-20 CLEAR100: DIM M$(40):DIM C$(40)
-30 FOR I=0TO39: READ M$(I):NEXTI
-35 FOR I=0TO39: READ C$(I):NEXTI
+20 CLEAR100: DIM M$(40): DIM C$(40)
+30 FOR I=0 TO 39: READ M$(I): NEXT I
+35 FOR I=0 TO 39: READ C$(I): NEXT I
 40 PRINT:INPUT"Vitesse (1 A 10)";V:V=11-V
-50 D%=38:GOSUB 1000
-60 A$=INKEY$: IF A$=CHR$(13)THEN D%=39:GOSUB1000: GOTO 40
+50 D%=38: GOSUB 1000
+60 A$=INKEY$: IF A$=CHR$(13) THEN D%=39: GOSUB 1000: GOTO 40
 65 IF A$="" THEN 60
 70 C%=ASC(A$)
 72 IF C%=46 THEN D%=36: GOTO 510
 74 IF C%=101 THEN D%=37: A$="erreur": GOTO 510
-75 IF C%<48THEN60
-77 IF C%<58THEN D%=C%-48:GOTO510
+75 IF C%<48 THEN 60
+77 IF C%<58 THEN D%=C%-48: GOTO 510
 80 IF C%<65 OR C%>90 THEN 60
 90 D%=C%-55
-510 PRINTA$;: GOSLJB 1000
-520 GOTO60
-1000 A$=M$(D%):PRINTC$(D%);" ";
-1020 FORA=1TO LEN(A$)
-1030 BEEP34,(VAL(MID$(A$,A,1))+1)*V
-1035 BEEP0,1
-1040 NEXTA
+510 PRINT A$;: GOSUB 1000
+520 GOTO 60
+1000 A$=M$(D%): PRINT C$(D%);" ";
+1020 FOR A=1 TO LEN(A$)
+1030 BEEP 34,(VAL(MID$(A$,A,1))+1)*V
+1035 BEEP 0,1
+1040 NEXT A
 1050 RETURN
-2000 DATA11111,01111,00111
-2010 DATA00011,00001,00000,10000,11000,11100,11110
-2020 DATA01,1000,1010,100,0,0010,110,0000,00,0111,101,0100
-2030 DATA11,10,111,0110,1101,010,000,1,001,0001,011
-2040 DATA1001,1011,1100,010101,00000000,10101,01010
-4000 DATA-----,.----,..---
-4010 DATA...--,....-,.....,-....,--...,---..,----.
-4020 DATA.-,-...,-.-.,-..,.,..-.,--.,....,..,.---,-.-,.-..
-4030 DATA--,-.,---,.--.,--.-,.-.,...,-,..-,...-,.--
-4040 DATA-..-,-.--,--..,.-.-.-,........
-4050 DATA-.-.- DEBUT DE TRANSMISSION,.-.-. FIN DE TRANSMISSION
+2000 DATA 11111,01111,00111
+2010 DATA 00011,00001,00000,10000,11000,11100,11110
+2020 DATA 01,1000,1010,100,0,0010,110,0000,00,0111,101,0100
+2030 DATA 11,10,111,0110,1101,010,000,1,001,0001,011
+2040 DATA 1001,1011,1100,010101,00000000,10101,01010
+4000 DATA -----,.----,..---
+4010 DATA ...--,....-,.....,-....,--...,---..,----.
+4020 DATA .-,-...,-.-.,-..,.,..-.,--.,....,..,.---,-.-,.-..
+4030 DATA --,-.,---,.--.,--.-,.-.,...,-,..-,...-,.--
+4040 DATA -..-,-.--,--..,.-.-.-,........
+4050 DATA -.-.- debut de transmission,.-.-. fin de transmission
 ```
 
 
@@ -358,7 +374,7 @@ ___
 10 INPUT"NOMBRE"; A
 30 CLS
 40 AM=A
-50 PRiNT A;"=";
+50 PRINT A;"=";
 60 FOR N=2 TO A
 70 X=A/N-A\N
 80 IF X=0 THEN A=A/N; PRJNT "X";N;: GOTO 60
@@ -379,8 +395,8 @@ ___
 30 FOR Y=0 TO 31: Y1=Y*F
 40 FOR X=0 TO 119
 55 IF YM<>Y THEN BEEP40,1:GOSUB 300
-60 IF POINT (X,Y)=-1 THEN GOSUB 200
-70 IF POINT (X,Y)=0 THEN GOSUB 300
+60 IF POINT(X,Y)=-1 THEN GOSUB 200
+70 IF POINT(X,Y)=0 THEN GOSUB 300
 80 YM=Y
 90 NEXT X,Y
 200 FOR I=0 TO F-1
@@ -401,8 +417,8 @@ ___
 35 FOR I=0 TO F-1
 40 FOR X=0 TO 119
 55 IF YM<>Y THEN BEEP40,1:GOSUB 300
-60 IF POINT (X,Y)=-1 THEN GOSUB 200
-70 IF POINT (X,Y)=0 THEN GOSUB 300
+60 IF POINT(X,Y)=-1 THEN GOSUB 200
+70 IF POINT(X,Y)=0 THEN GOSUB 300
 80 YM=Y
 90 NEXT X,I,Y
 200 LPRINT "D";STR$(X&F);",";STR$(-Y1-I)
@@ -421,8 +437,8 @@ ___
 35 FOR I=0 TO F-1
 40 FOR X=0 TO 119
 55 IF YM<>Y OR IM<>I THEN BEEP40,1:GOSUB 300
-60 IF POINT (X,Y)=-1 THEN GOSUB 200
-70 IF POINT (X,Y)=0 THEN GOSUB 300
+60 IF POINT(X,Y)=-1 THEN GOSUB 200
+70 IF POINT(X,Y)=0 THEN GOSUB 300
 80 YM=Y: IM=I
 90 NEXT X,I,Y
 200 LPRINT "D";STR$(X&F);",";STR$(-Y1-I)
@@ -446,29 +462,29 @@ ___
 80 IF A=29 THEN X=X-1: GOTO 260
 90 IF A=28 THEN X=X+1: GOTO 230
 100 lF A=31 THEN Y=Y+1: GOTO 240
-110 IF A=l7 THEN GOSUB 500
-120 IF A=84 THEN B=l
+110 IF A=17 THEN GOSUB 500
+120 IF A=84 THEN B=1
 130 IF A=lS THEN 320
 140 lF A=69 THEN 8=2
-150 IF A=l THEN 350
+150 IF A=1 THEN 350
 160 IF A=68 THEN XO=X; YO=Y: GOTO 270
 170 IF A=70 THEN XF=X: YF=Y: GOTO 270
 180 IF A=15 THEN 320
-190 IF A=12 THEN LINE CXD,YO)-CXF,YFJ
-200 IF A;18 THEN 210 ELSE 270
-210 LlNE CXD,YDJ-CXF,YO): LINE (XF,YOJ-(XF,YFJ
-220 LJNE (XF,YFJ-(XO,YFJ~ LINE CXD,YFJ-(XD,YDJ: GOTO 270
-230 JF X>l19 THEN X=l
-240 IF l)30 THEN Y=0
+190 IF A=12 THEN LINE (XD,YO)-(XF,YF)
+200 IF A=18 THEN 210 ELSE 270
+210 LlNE (XD,YD)-(XF,YO): LINE (XF,YO)-(XF,YF)
+220 LINE (XF,YF)-(XO,YF): LINE (XD,YF)-(XD,YD): GOTO 270
+230 IF X>119 THEN X=1
+240 IF Y>30 THEN Y=0
 250 IF Y<0 THEN Y=30
-260 IF X<l THEN X=119
-270 ON 8 GOTO 280,300
-280 PRESET(X,YJ.: PRESET(0,YMJ : PRESETCXM,3JJ: PSETC0,Y)
-290 PSET(X,31): PSET(Y,YJ; XM=X: YM~Y: GOTO 40
-300 PSET(X,Y): PRESET(0,YM) ! PRESETCXM,3lJ: PSETC0,Y)
-310 PSET(X,31): XM=X: YM=Y: PRESET(X,YJ:GOTO 40
-320 2=1NT(SQR(CXF-XDJ~2+CY F-Y □ J~2JJ
-330 CIRCLE (XD,YD),i
+260 IF X<1 THEN X=119
+270 ON B GOTO 280,300
+280 PRESET(X,Y): PRESET(0,YM) : PRESET(XM,31): PSET(0,Y)
+290 PSET(X,31): PSET(X,Y); XM=X: YM=Y: GOTO 40
+300 PSET(X,Y): PRESET(0,YM): PRESET(XM,31): PSET(0,Y)
+310 PSET(X,31): XM=X: YM=Y: PRESET(X,Y): GOTO 40
+320 Z=INT(SQR((XF-XD)^2+(YF-YD)^2))
+330 CIRCLE (XD,YD),Z
 340 GOTO 40
 
 350 IF X<6 THEN BEEP 20,5: BEEP 10,2! GOTQ 40
@@ -479,13 +495,13 @@ ___
 400 A=ASC(A$): IF A=1 THEN ~50
 410 IF A=29 THE GCTO 460
 420 IF A<32 THEN 370
-43~ GOTO ~8'1
-4~0 PRINT A$ : GOTO ~70
-as0 ?RESE (~N,31): PSEï(YM,31): BEEP 40,\: GOTO '40
+430 GOTO ~8'1
+440 PRINT A$ : GOTO ~70
+450 ?RESE (~N,31): PSEï(YM,31): BEEP 40,\: GOTO '40
 460 1F PO= l THEN BEEP 20,S: BEEP 10,2: GOTO 3.,-0
 470 PC~Po-1: GOTO ~4P
-43e iF PQ=j9 T~!E.N' BEEP 20,5: BEEP 10,2:GOTO 370
-~90 PO=POtJ; GOTC ~Ci0
+480 iF PQ=j9 T~!E.N' BEEP 20,5: BEEP 10,2:GOTO 370
+490 PO=POtJ; GOTC ~Ci0
 500 F=-~: Tï'=-1?1: JM=0
 510 LPRINT HR9"(j8) ; .. L0•·
 520 LPRINT ''1 "
@@ -499,7 +515,7 @@ as0 ?RESE (~N,31): PSEï(YM,31): BEEP 40,\: GOTO '40
 610 LPRINT " A''; RETUR~J
 620 IF LJ:]19 THEN -660
 630 FO~ J~U~l TO 119
-640 IF POINT r J, îj THE I EtT J
+640 IF POINT r J,îj THE I EtT J
 
 650 U=J-1
 660 LPRINT "D";STR$(U*F+5);",";STR$(-Y1-I)
@@ -518,6 +534,21 @@ ___
 ### page 76 : DEPLACEMENT 8 DIRECTIONS
 
 ```basic
+40 CONSOLE@,,0: INIT#1,"KBD;"
+42 A=STICK(0): ON A GOTO 70,75,90,95,100,85,80,65
+50 A$=INKEY$ : IF A$="" THEN 50
+60 A=ASC(A$): GOTO 110
+65 Y=Y-1: X=X-1: GOTQ 230
+70 Y=Y-1: GOTO 230
+7S Y=Y-1: X=X+1: GOTO 230
+80 X=X-1: GOTO 230
+85 Y=Y+1: X=X-J: GOTO 230
+90 X=X+1: GOTO 230
+95 Y=Y+1: X=X+1: GOTO 230
+100 Y=Y+1: GOTO 230
+110 IF A=17 THEN GOSUB 500
+120 IF A=84 THEN B=l
+...
 ```
 
 
@@ -532,14 +563,14 @@ ___
 50 P=PI/180
 55 R=522
 60 FOR I=60 TO 110STEP1
-69 REM ORG CERCLE : 170,-522
+69 REM ORG cercle : 170,-522
 70 X=170+R*COS(I*P)
 80 Y=-522+R*SIN(I*P)
 82 IF I=60 THEN 85 ELSE 90
 85 LPRINT"M";STR$(INT(X));",";STR$(INT(Y))
 90 LPRINT"D";STR$(INT(X));",";STR$(INT(Y))
 110 NEXT I
-120 LPRLNT"A"
+120 LPRINT"A"
 ```
 
 
