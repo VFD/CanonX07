@@ -157,13 +157,13 @@ ___
 Trace de droite.
 
 ```asm
-DROITE PUSH BC		; Sauvegarde de BC (nombre de droites)
-	LD A , $14		; Chargement de A avec la commande 14h
-	LD BC, $400		; B contient le chiffre 4 (4 paramètres) et C contient 0 car il n'y a pas d'octet de réponse attendu
-	CALL $C92F		; Appel du sous-processeur
-	POP BC			; On récupère le nombre de droites ...
-	DJNZ DROITE		; ... afin de vérifier si l'on a terminé ...
-	RET				; ... si oui , on quitte la routine
+DROITE		PUSH BC			; Sauvegarde de BC (nombre de droites)
+			LD A,$14		; Chargement de A avec la commande 14h
+			LD BC,$400		; B contient le chiffre 4 (4 paramètres) et C contient 0 car il n'y a pas d'octet de réponse attendu
+			CALL $C92F		; Appel du sous-processeur
+			POP BC			; On récupère le nombre de droites ...
+			DJNZ DROITE		; ... afin de vérifier si l'on a terminé ...
+			RET				; ... si oui , on quitte la routine
 ```
 
 ___
@@ -174,15 +174,15 @@ Pour les codes ASCII 80 à 9F et E0 à FF.
 
 
 ```asm
-CRECAR	LD B nbre de car.	; Chargement de B avec le nombre de caractères à implanter
-		LD HL, TCAR			; Chargement de HL avec l'adresse de début de la table des codes
-CC		PUSH BC				; Sauvegarde du nombre de caractères
-		LD A, $1A			; Chargement de A avec le N° de la commande
-		LD BC, $900			; B contient le nombre de paramètres (9) et C le nombre d'octets attendus (0)
-		CALL $C92F			; Appel du sous-processeur
-		POP BC				; On récupère le nombre de caractères ...
-		DJNZCC				; ... afin de vérifier si l'on a terminé ...
-		RET					; ... si oui , on quitte le sous-programme
+CRECAR		LD B nbre de car.	; Chargement de B avec le nombre de caractères à implanter
+			LD HL,TCAR			; Chargement de HL avec l'adresse de début de la table des codes
+CC			PUSH BC				; Sauvegarde du nombre de caractères
+			LD A,$1A			; Chargement de A avec le N° de la commande
+			LD BC,$900			; B contient le nombre de paramètres (9) et C le nombre d'octets attendus (0)
+			CALL $C92F			; Appel du sous-processeur
+			POP BC				; On récupère le nombre de caractères ...
+			DJNZ CC				; ... afin de vérifier si l'on a terminé ...
+			RET					; ... si oui , on quitte le sous-programme
 ```
 
 ___
@@ -191,23 +191,23 @@ ___
 Test Curseur
 
 ```asm
-FLECHE	CALL $COBD			; Les tampons clavier et sous-processeur sont vidés
-		LD A , $82			; Commande N°2 du T6834 (STICK)
-		LD BC, $1			; Un paramètre est attendu en retour
-		PUSH DE				; Sauvegarde de DE (si nécessaire ... )
-		LO DE, BUF			; Le registre DE est chargé avec l'adresse d'un tampon utilisateur que vous devez définir . Ce tampon sert à sauvegarder la réponse du T6834
-		CALL $C92F			; Appel du T6834
-		LD A, (DE)			; On charge A avec la réponse contenue dans le BUFfer utilisateur
-		POP DE				; On récupère DE
-		CP $33				; Curseur droit pressé ? .
-		JR Z, DROITE		; si oui , saut à une routine de traitement
-		CP $37				; Curseur gauche pressé ?
-		JR Z, GAUCHE		; si oui , saut ...
-		CP $35				; Curseur bas pressé ?
-		JR Z, BAS			; si oui , saut ...
-		CP $31				; Curseur haut pressé ?
-		JR Z, HAUT			; si oui , saut ...
-		RET					; Le registre A contient la valeur $30 si aucun curseur n'a été pressé ...
+FLECHE		CALL $COBD			; Les tampons clavier et sous-processeur sont vidés
+			LD A,$82			; Commande N°2 du T6834 (STICK)
+			LD BC,$1			; Un paramètre est attendu en retour
+			PUSH DE				; Sauvegarde de DE (si nécessaire ... )
+			LO DE,BUF			; Le registre DE est chargé avec l'adresse d'un tampon utilisateur que vous devez définir . Ce tampon sert à sauvegarder la réponse du T6834
+			CALL $C92F			; Appel du T6834
+			LD A,(DE)			; On charge A avec la réponse contenue dans le BUFfer utilisateur
+			POP DE				; On récupère DE
+			CP $33				; Curseur droit pressé ? .
+			JR Z,DROITE			; si oui , saut à une routine de traitement
+			CP $37				; Curseur gauche pressé ?
+			JR Z,GAUCHE			; si oui , saut ...
+			CP $35				; Curseur bas pressé ?
+			JR Z,BAS			; si oui , saut ...
+			CP $31				; Curseur haut pressé ?
+			JR Z,HAUT			; si oui , saut ...
+			RET					; Le registre A contient la valeur $30 si aucun curseur n'a été pressé ...
 ```
 
 ___
@@ -216,25 +216,25 @@ ___
 Test d'une touche particulière.
 
 ```asm
-TOUCHE	LD HL , BUF + 4		; Le registre HL est chargé avec l'adresse du buffer utilisateur augmenté de 4
-		LD (HL), A			; Le contenu de A ( code de la touche à tester) est stocké dans le buffer
-		LD A, $28			; A est chargé avec la commande N°28
-		LD BC , $101		; B contient le nombre de paramètres (1) et C le nombre d'octets attendus (1)
-		LD DE, BUF + 2		; Le registre DE est chargé avec l'adresse du buffer augmenté de 2 unités
-		CALL $C92F			; Appel du T6834
-		LD A, (DE)			; A est chargé avec la réponse du T6834 stockée dans le buffer . Si A = 0 , la touche a été pressée sinon A = $FF
-		ORA					; Les indicateurs Z et S "ressortent" ...
-		RET					; Retour
+TOUCHE		LD HL,BUF+4			; Le registre HL est chargé avec l'adresse du buffer utilisateur augmenté de 4
+			LD (HL),A			; Le contenu de A ( code de la touche à tester) est stocké dans le buffer
+			LD A,$28			; A est chargé avec la commande N°28
+			LD BC,$101			; B contient le nombre de paramètres (1) et C le nombre d'octets attendus (1)
+			LD DE,BUF+2			; Le registre DE est chargé avec l'adresse du buffer augmenté de 2 unités
+			CALL $C92F			; Appel du T6834
+			LD A,(DE)			; A est chargé avec la réponse du T6834 stockée dans le buffer . Si A = 0 , la touche a été pressée sinon A = $FF
+			ORA					; Les indicateurs Z et S "ressortent" ...
+			RET					; Retour
 ```
 
 Temporisation
 
 ```asm
-DELAY	DEC B				; Décrémentation du registre B
-		LD A, B				; Chargement de A avec B pour effectuer une comparaison
-		OR C				; Test ...
-		JR NZ, DELAY		; S'il fait encore nuit , on continue à temporiser !!
-		RET					; Le jour se lève : fini de dormir !
+DELAY		DEC B				; Décrémentation du registre B
+			LD A,B				; Chargement de A avec B pour effectuer une comparaison
+			OR C				; Test ...
+			JR NZ,DELAY			; S'il fait encore nuit , on continue à temporiser !!
+			RET					; Le jour se lève : fini de dormir !
 ```
 
 ___
@@ -251,14 +251,14 @@ ___
 SET, RESET, POINT
 
 ```asm
-SET		LD A , $11			; Chargement de A avec la commande $11
-		JR SETI				; Saut à la routine de traitement
-POINT	LD A , $13			; Chargement de A avec la commande $13
-		JR SET1				; Saut ...
-RESET	LD A , $12			; Chargement de A avec la commande $12
-SET1	LD HL, BUF			; Chargement de HL avec l'adresse du buffer utilisateur
-		LD BC , $200		; B contient le nombre de paramètres envoyés (2) et C le nombre d'octets attendus (en l'occurence , 0)
-		JP $C92F			; Le traitement graphique se fait ...
+SET			LD A,$11			; Chargement de A avec la commande $11
+			JR SETI				; Saut à la routine de traitement
+POINT		LD A,$13			; Chargement de A avec la commande $13
+			JR SET1				; Saut ...
+RESET		LD A,$12			; Chargement de A avec la commande $12
+SET1		LD HL,BUF			; Chargement de HL avec l'adresse du buffer utilisateur
+			LD BC,$200			; B contient le nombre de paramètres envoyés (2) et C le nombre d'octets attendus (en l'occurence , 0)
+			JP $C92F			; Le traitement graphique se fait ...
 ```
 
 ___
@@ -267,27 +267,27 @@ ___
 Input
 
 ```asm
-ACQMES	LD HL , MESSAGE		; HL contient l'adresse du message qui doit être impérativement terminé par un O .
-		CALL $FEF7			; Le message est affiché ...
-		CALL $EBF2			; L'entrée clavier est obtenue .
-		INC HL				; On incrémente HL pour obtenir le début du tampon d'entrée étant donné que la routine $EBF2 fait pointer HL sur cette adresse - 1 .
-		LD DE, BUF			; DE est chargé avec l'adresse du tampon utilisateur
-		LD C, 0				; C = compteur
-ACQ		LD A, (HL)			; Transfert vers tampon interne
-		LD (DE), A			; suite du transfert
-		OR A				; Test du O situé en fin de "A$"
-		JR Z, ACQ2			; Saut à ACQ2 si réalisé
-		INC HL				; caractère suivant
-		INC DE				;         "
-		INC C				; incrémentation de C
-		LD A,C				; Longueur maximale atteinte ?
-		CP 20				; Test sur la longueur (ici 20)
-		JR C, ACQ			; Si la longueur est atteinte , on sort de la boucle ...
-ACQ2	LD A ,C				; 
-		CP 0				; Si la chaîne est vide , on recommence ...
-		JR Z, ACQMES		; 
-		LD(LONG),A			; Sauvegarde de la longueur
-		RET					; Retour
+ACQMES		LD HL,MESSAGE		; HL contient l'adresse du message qui doit être impérativement terminé par un O .
+			CALL $FEF7			; Le message est affiché ...
+			CALL $EBF2			; L'entrée clavier est obtenue .
+			INC HL				; On incrémente HL pour obtenir le début du tampon d'entrée étant donné que la routine $EBF2 fait pointer HL sur cette adresse - 1 .
+			LD DE,BUF			; DE est chargé avec l'adresse du tampon utilisateur
+			LD C,0				; C = compteur
+ACQ			LD A,(HL)			; Transfert vers tampon interne
+			LD (DE),A			; suite du transfert
+			OR A				; Test du O situé en fin de "A$"
+			JR Z,ACQ2			; Saut à ACQ2 si réalisé
+			INC HL				; caractère suivant
+			INC DE				;         "
+			INC C				; incrémentation de C
+			LD A,C				; Longueur maximale atteinte ?
+			CP 20				; Test sur la longueur (ici 20)
+			JR C,ACQ			; Si la longueur est atteinte , on sort de la boucle ...
+ACQ2		LD A,C				; 
+			CP 0				; Si la chaîne est vide , on recommence ...
+			JR Z,ACQMES			; 
+			LD(LONG),A			; Sauvegarde de la longueur
+			RET					; Retour
 ```
 
 ___
@@ -296,25 +296,25 @@ ___
 Entrée d'un nombre
 
 ```asm
-ACQNUM	LD HL , MESSAGE		; 
-		CALL $FEF7			; Affichage du message et entrée clavier
-		CALL $EBF2			; 
-		RST $10				; Teste si un nombre a bien été entré ...
-		CALL $F595			; Transfère le nombre dans le registre DE
+ACQNUM		LD HL,MESSAGE		; 
+			CALL $FEF7			; Affichage du message et entrée clavier
+			CALL $EBF2			; 
+			RST $10				; Teste si un nombre a bien été entré ...
+			CALL $F595			; Transfère le nombre dans le registre DE
 ```
 
 Utilisation X-710
 
 ```asm
-		LD HL , CHAINE		; HL est chargé avec l'adresse du début de la chaîne
-LPRINT	LD A , (HL)			; A est chargé avec l'un des codes de la chaîne
-		OR A				; Test afin de savoir si le dernier code a été
-		RETZ				; envoyé vers la X-710
-		PUSH HL				; Sauvegarde de l'adresse des codes
-		CALL $CEF7			; Transmission du code contenu dans A
-		POP HL				; On récupère l'adresse du prochain code
-		INC HL				; Incrémentation du registre HL
-		JR LPRINT			; On continue le cycle ...
+			LD HL,CHAINE		; HL est chargé avec l'adresse du début de la chaîne
+LPRINT		LD A,(HL)			; A est chargé avec l'un des codes de la chaîne
+			OR A				; Test afin de savoir si le dernier code a été
+			RETZ				; envoyé vers la X-710
+			PUSH HL				; Sauvegarde de l'adresse des codes
+			CALL $CEF7			; Transmission du code contenu dans A
+			POP HL				; On récupère l'adresse du prochain code
+			INC HL				; Incrémentation du registre HL
+			JR LPRINT			; On continue le cycle ...
 ```
 
 ___
@@ -323,10 +323,10 @@ ___
 ```basic
 10 REM LES 2
 20 FOR I=&H1A00 TO &H1A0B
-30 READ A$:POKE I,VAL("&H"+A$):NEXT
+30 READ A$: POKE I,VAL("&H"+A$): NEXT
 50 RESTORE 700
 60 FOR I=&H1800 TO &H184C
-70 READ A$:POKE I,VAL("&H"+A$):NEXT
+70 READ A$: POKE I,VAL("&H"+A$): NEXT
 90 EXEC &H1A00: EXEC &H1800
 500 DATA 3E,C3,32,66,00,21,20,1B,20
 501 DATA 67,0,C9
@@ -342,13 +342,14 @@ ___
 741 DATA 55,50,54,49,4F,4E,20,21
 750 DATA 21,21,2 1,0
 ```
-Code à revoir car scan tronqué.
+
+NDR : Code à revoir car scan tronqué.
 
 
 ___
 ## Page 56
 
-```asm
+```
 10  '[
 20  ' ORG $1800
 30  '***********************************
@@ -387,7 +388,7 @@ ___
 ## Page 60
 
 
-```asm
+```
 10 '[
 20 ' ORG $1C00				; 
 30 ' LD DE.$E987			; Adresse de tableau du dispositif CASO .
@@ -418,7 +419,6 @@ ___
 150 ' CALL $E88F
 160 ' LD A.$00
 170 ' CALL $E88F
-
 180 ' LD HL.#DD				; Les lignes 180 à 230 constituent la sortie
 190 ' #ST LD A.(HL)			; des données ...
 200 ' CP $00
@@ -473,7 +473,7 @@ NDR : Modifié pour être plus lisible
 ___
 ## Page 62
 
-```asm
+```
 10 ' [
 20 ' ORG $1C00
 30 ' * INIT#1,"CASI:"			; Les lignes 30 à 70 initialisent le dispositif 1
@@ -548,7 +548,7 @@ ___
 Fichiers GPR et KBD
 
 
-```asm
+```
 10  ' [
 20  ' ORG $1C00				; Les lignes 20 à 70 constituent l'initialisation
 30  ' * INIT #1,"GPR:"		; du dispositif 1 ...
@@ -594,7 +594,7 @@ ___
 Prise SERIE
 
 
-```asm
+```
 10  ' [
 20  ' ORG $1C00				; 
 30  ' LD DE.$E7A4			; Dispositif COM activé
@@ -638,7 +638,7 @@ NDR : Modifié pour être plus lisible
 Lecture Série
 
 
-```asm
+```
 20  ' [
 30  ' ORG $1C00				; 
 40  ' LD DE.$E7A4			; Les lignes 40 à 90 initialisent le 1er fichier
@@ -676,7 +676,7 @@ Figure 12
 
 Dans le code BASIC il y a un RET et pas dans les ASM, donc ajout.
 
-```asm
+```
 10 ' [
 20 ' ORG $1C00
 30 ' * TEST DE LA PRESENCE DE LA X-720
@@ -758,7 +758,7 @@ ___
 
 Figure 14
 
-```asm
+```
 10 ' [
 20 ' ORG $1C00
 30 ' *** SCREEN ***
@@ -1329,25 +1329,25 @@ Figure 30 : AUTONUM
 
 ```basic
 1 REM fonction AUTONUM pour X-07
-10 CLEAR50,&HFFF:DEFINTA-Z:CLS
-20 INPUT"Adr. fin ";A$:F=VAL("&H"+A$)
-30 D=F-215:PRINT"Adr. deb = ";HEX$(D)
-40 FORI=DTOF:READA:POKEI,A:NEXT
-50 EXECD:END
-10000 DATA033,209,213,034,000,003,062,201,050,002,003,205,000,003,033,014
-10010 DATA000,025,243,034,061,000,251,175,050,000,003,201,217,008,219,242
-10020 DATA230,001,202,193,200,219,240,230,192,040,008,230,128,202,053,200
-10030 DATA195,012,200,219,241,254,013,032,075,095,175,205,098,194,175,205
-10040 DATA170,194,058,000,003,183,202,189,200,062,001,211,245,217,008,197
-10050 DATA213,229,245,237,091,001,003,042,003,003,025,034,001,003,235,205
-10060 DATA156,187,035,205,110,213,205,004,215,205,059,202,010,197,213,095
-10070 DATA175,205,098,194,175,205,170,194,209,193,021,003,032,238,241,225
-10080 DATA209,193,251,201,254,026,032,027,062,001,211,245,217,008,197,213
-10090 DATA229,245,062,013,239,062,010,239,033,000,003,175,182,047,119,032
-10100 DATA221,024,176,254,014,032,041,062,001,211,245,217,008,197,213,229
-10110 DATA245,175,050,000,003,205,242,235,215,205,204,255,237,083,001,003
-10120 DATA207,044,205,204,255,237,083,003,003,175,061,050,000,003,024,131
-10130 DATA254,017,194,128,200,195,195,195
+10 CLEAR 50,&HFFF: DEFINT A-Z: CLS
+20 INPUT"Adr. fin ";A$: F=VAL("&H"+A$)
+30 D=F-215: PRINT"Adr. deb = ";HEX$(D)
+40 FOR I=D TO F: READ A: POKE I,A: NEXT
+50 EXEC D: END
+10000 DATA 033,209,213,034,000,003,062,201,050,002,003,205,000,003,033,014
+10010 DATA 000,025,243,034,061,000,251,175,050,000,003,201,217,008,219,242
+10020 DATA 230,001,202,193,200,219,240,230,192,040,008,230,128,202,053,200
+10030 DATA 195,012,200,219,241,254,013,032,075,095,175,205,098,194,175,205
+10040 DATA 170,194,058,000,003,183,202,189,200,062,001,211,245,217,008,197
+10050 DATA 213,229,245,237,091,001,003,042,003,003,025,034,001,003,235,205
+10060 DATA 156,187,035,205,110,213,205,004,215,205,059,202,010,197,213,095
+10070 DATA 175,205,098,194,175,205,170,194,209,193,021,003,032,238,241,225
+10080 DATA 209,193,251,201,254,026,032,027,062,001,211,245,217,008,197,213
+10090 DATA 229,245,062,013,239,062,010,239,033,000,003,175,182,047,119,032
+10100 DATA 221,024,176,254,014,032,041,062,001,211,245,217,008,197,213,229
+10110 DATA 245,175,050,000,003,205,242,235,215,205,204,255,237,083,001,003
+10120 DATA 207,044,205,204,255,237,083,003,003,175,061,050,000,003,024,131
+10130 DATA 254,017,194,128,200,195,195,195
 ```
 
 
@@ -1509,7 +1509,7 @@ Figure 37 : LE PIEGE (VIDEO)
 ```asm
 ```
 
-__
+___
 ## Page 137
 
 
@@ -1548,7 +1548,7 @@ Figure 38 : Chargeurs
 
 
 
-__
+___
 ## Page 140
 
 
@@ -1557,7 +1557,7 @@ Figure 39: OTHELLO
 ```asm
 ```
 
-__
+___
 ## Page 144
 
 ```basic
