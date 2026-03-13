@@ -11,7 +11,7 @@ Il existe des coquilles dans le livre, elles sont aussi signalées.
 Page 24, la structure des lignes BASIC est expliquée.\
 La suite explique aussi la structure d'un fichier en RAM.
 
-NDR : L'idée est aussi de restaurer le scan du livre dans un états plus lisible.
+NDR : L'idée est aussi de restaurer le scan du livre dans un état plus lisible.
 
 ___
 ## Les listings
@@ -843,4 +843,5 @@ ___
 
 
 EOF
+
 ___
