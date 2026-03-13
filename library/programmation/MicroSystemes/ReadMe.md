@@ -23,7 +23,7 @@ ___
 | No | Date    | Programme              | Status | Commentaire |
 |----|---------|------------------------|--------|-------------|
 | 42 | 1984-05 | Moniteur-Desassembleur | ❕     |             |
-| 44 | 1984-07 | Verouillage-Minuscule  | 📝     |             |
+| 44 | 1984-07 | Verouillage-Minuscule  | 📝     | Ci-dessous  |
 | 46 | 1984-10 | jeu MAZOG              | ❕     |             |
 | 47 | 1984-10 | extention basic        | ❕     |             |
 | 48 | 1984-12 | Course aux FONT$       | ❕     |             |
@@ -39,7 +39,7 @@ ___
 Pas d'autres listings trouvé.
 
 ___
-## MS 44 1984-07
+## Micro Systèmes No44 de 1984-07
 Verouillage-Minuscule
 
 ```basic
