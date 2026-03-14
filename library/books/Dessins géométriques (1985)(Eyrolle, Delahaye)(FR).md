@@ -12,6 +12,8 @@ ___
 Tous les listings du livre sont ci-dessous.\
 Ils sont complet contrairement au livre qui ne donne que les modifications à faire.
 
+L'idée est de valider le programme principale puis de construire toutes les dérivées.
+
 ___
 ### 1. Polygones réguliers, étoiles, etc.
 
@@ -853,10 +855,19 @@ Dessin 44 :
 ```basic
 10 'LION
 50 LPRINT CHR$(18): LPRINT"M0,-500": LPRINT"I": NP=480: PI=ATN(1)*4
-
-
-
-1200 DATA 2800
+1000 DATA 1000, -2.5,0, -2,1, -1,2, 0,7, 1,7, 2,8, 2,11, 3,14, 3,5, 13,5
+1010 DATA 2.5,11, 2.5,9
+1020 DATA 1000, 3.5,13.5, 4,13, 3,11, 3,9, 3,11, 4,13, 5,12, 3.5,11, 3.5,9
+1030 DATA 3.5,11, 5,12, 5,11, 4,10, 4,9, 8,9, 7,11, 8,13, 10,14, 12,13, 13,11
+1040 DATA 12,11, 11,10, 12,8, 13,7, 14,2, 15,2, 16,1, 16,0, 12,0, 12,2, 11,5
+1050 DATA 11.5,6, 11,5, 9,3, 9,2, 10,1, 10,0, 6,0, 7,2, 8,6, 7,2, 6,4, 4,5
+1060 DATA 5,7, 4,8, 5,7, 4,5, 2,4, 1,2, 2,2, 3,1, 2.5,0, -2.5,0
+1070 DATA 1000, 6,4, 7.5,3.5
+1080 DATA 1000, 12,11, 10,10.5, 9,10.5
+1090 DATA 1000, 12.5,12, 12,12, 11,11.5, 12,12, 12,12.5, 11.5,12.5, 10.5,13
+1100 DATA 10,13, 10,13.5, 10.5,13.5, 10.5,13, 11.5,12.5, 12,12.5, 12,13
+1110 DATA 1000, 7.5,12, 8.5,12, 8.5,11.5
+1200 DATA 2000
 2000 '
 2100 READ A
 2110 IF A=2000 THEN 2400
@@ -869,7 +880,6 @@ Dessin 44 :
 2320 GOTO 2100
 2400 REM
 3000 END
-
 ```
 
 <p align="center">────────────────────</p>
@@ -1232,6 +1242,20 @@ Dessin 86 :
 Dessin 87 :
 
 ```basic
+10 'COURBE TOURNANTES
+50 LPRINT CHR$(18): LPRINT"M0,-500": LPRINT"I": NP=480: PI=ATN(I)*4
+100 N=2000: T1=1: T2=100: K1=1: K2=1: H1=1: H2=1: R1=NP/6 :R2=NP/4
+200 FOR I=0 TO N
+210 S=COS(4*PI*I/N)*.4+.6
+220 AN=2*PI*I/N
+230 C1=COS(H1*AN*T1): S1=SIN(H2*AN*T1)
+240 C2=S*COS(K1*AN*T2): S2=S*SIN(K2*AN*T2)
+300 X=NP/2+R1*C1+R2*(C1*C2-S1*S2)
+310 Y=NP/2+R1*S1+R2*(S1*C2+C1*S2)
+400 IF I=0 THEN LPRINT'M";INT(X);",";INT(Y)
+410 IF I>0 THEN LPRINT'D";INT(X);",";INT(Y)
+500 NEXT I
+1000 END
 ```
 
 <p align="center">────────────────────</p>
@@ -1312,6 +1336,21 @@ Dessin 96 :
 Dessin 97 :
 
 ```basic
+10 'COURBE SPIRALES
+50 LPRINT CHR$(18): LPRINT"M0,-500": LPRINT"I": NP=480: PI=ATN(I)*4
+100 N=2000: T=40: R=.8: L=.1
+200 FOR I=0 TO N
+210 RR=L^(I/N)
+220 AN=2*PI*I/N
+230 X=RR*COS(T*AN): Y=RR*R*SIN(T*AN)
+240 CO=COS(AN): SI=SIN(AN)
+250 XX=X*CO-Y*SI: YY=X*SI+Y*CO
+260 X%=INT(NP/2*(1+XX))
+270 Y%=INT(NP/2*(1+YY))
+300 IF I=0 THEN LPRINT"M";X%;",";Y%
+310 IF Y>0 THEN LPRINT"D";X%;",";Y%
+400 NEXT I
+500 END
 ```
 
 <p align="center">────────────────────</p>
@@ -1344,7 +1383,7 @@ ___
 Dessin 101 :
 
 ```basic
-10 ' BIPARTI COMPLET
+10 'BIPARTI COMPLET
 50 LPRINT CHR$(18): LPRINT"M0,-500": LPRINT"I": NP=480: PI=ATN(I)*4
 100 N=10: XA=0: YA=0: XB=0: YB=NP: XC=NP: YC=0: XD=NP: YD=NP
 200 FOR I=0 TO N
@@ -1482,6 +1521,36 @@ ___
 Dessin 115 :
 
 ```basic
+10 'FRACTALES SIMPLES
+50 LPRINT CHR$(18): LPRINT"M0,-500": LPRINT"I": NP=480: PI=ATN(1)*4
+100 M=3: N=4: K=4
+110 DIM X(M),Y(M),L(N-1),A(N-1)
+120 X(0)=0: X(1)=NP: X(2)=NP*.5: X(3)=0
+130 Y(0)=SQR(3)/2*NP: Y(1)=Y(0): Y(2)=0: Y(3)=Y(0)
+140 L(0)=1/3: L(1)=L(0): L(2)=L(0): L(3)=L(0)
+150 A(0)=0: A(1)=PI/3: A(2)=-A(1): A(3)=0
+200 FOR II=0 TO M-1
+210 XD=X(II): YD=Y(II): XA=X(II+1): YA=(Y(II+1)
+250 X0=XD: Y0=YD
+260 X1=INT(X0): Y1=INT(Y0)
+270 LPRINT"M";X1;",";Y1
+280 IF XA<>XD THEN A0=ATN((YA-YD)/(XA-XD)) ELSE A0=PI/2*SGN(YA-YD)
+285 IF (XA-XD)<0 THEN A0=A0+PI
+290 L0=SQR((XA-XD)^2+(YA-YD)^2
+300 FOR I=0 TO N^K-1
+310 LL=L0: AA=A0: T1=I
+390 IF K=0 THEN 470
+400 FOR J=K-1 TO 0 STEP -1
+410 R=N^J: T2=INT(T1/R)
+430 AA=AA+A(T2): LL=LL*L(T2)
+440 T1=T1-T2*R
+450 NEXT J
+470 X0=X0+LL*COS(AA): X1=INT(X0)
+480 Y0=Y0+LL*SIN(AA): Y1=INT(Y0)
+490 LPRINT"D";X1;",";Y1
+500 NEXT I
+600 NEXT II
+1000 END
 ```
 
 <p align="center">────────────────────</p>
@@ -2496,5 +2565,5 @@ ___
 Elle est assez exhaustive.
 
 
-EOF
+
 ___
