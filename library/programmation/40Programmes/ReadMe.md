@@ -94,7 +94,7 @@ Ci-dessous les tableaux d'avancement des récupérations des logiciels.
 
 | Nom               | État | Commentaire |
 |-------------------|------|-------------|
-| Canon logo        | ❕ |  |
+| Canon logo        | 📝 |  |
 | Cercles colorés   | ❕ |  |
 | Cycloîdes         | ❕ |  |
 | Elipses           | ❕ |  |
