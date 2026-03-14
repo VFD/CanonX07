@@ -762,9 +762,9 @@ Dessin 34 :
 1220 DATA 1000, 22,19, 21,20
 1230 DATA 1000, 12,34, 15,35, 16,34, 16,33
 1240 DATA 1000, 15,35, 15,34, 16,34, 15,34, 15,35
-1258 DATA 1000, 24,12, 26,19, 19,5, 19,5
-1268 DATA 1000, 28,22, 25,22
-1528 DATA 2000
+1250 DATA 1000, 24,12, 26,19, 19,5, 19,5
+1260 DATA 1000, 28,22, 25,22
+1500 DATA 2000
 2000 '
 2100 READ A
 2110 IF A=2000 THEN 2400
@@ -851,7 +851,63 @@ Dessin 43 :
 Dessin 44 :
 
 ```basic
+10 'LION
+50 LPRINT CHR$(18): LPRINT"M0,-500": LPRINT"I": NP=480: PI=ATN(1)*4
+
+
+
+1200 DATA 2800
+2000 '
+2100 READ A
+2110 IF A=2000 THEN 2400
+2120 IF A=1000 THEN B1=0: READ A
+2130 READ B
+2200 X%=INT(NP*(A+5)/25)
+2210 Y%=INT(NP*(B+5)/25)
+2300 IF B1=0 THEN B1=1: LPRINT"M";X%;",";Y%
+2310 IF B1=1 THEN LPRINT"D";X%;",";Y%
+2320 GOTO 2100
+2400 REM
+3000 END
+
 ```
+
+<p align="center">────────────────────</p>
+
+Dessin 45 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 46 : Oiseaux-Poissons
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 47 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 48 : Smurf
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 49 :
+
+```basic
+```
+
+
 
 ___
 ### 3. Dragons de papiers pliés
@@ -861,7 +917,115 @@ ___
 Dessin 50 :
 
 ```basic
+10 'DRAGONS
+50 LPRINT CHR$(18): LPRINT"M0,-500": LPRINT"I": NP=480: PI=ATN(1)*4
+
+
+
+
+
 ```
+
+<p align="center">────────────────────</p>
+
+Dessin 51 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 52 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 53 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 54 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 55 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 56 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 57 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 58 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 59 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 60 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 61 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 62 :
+
+```basic
+```
+
+
+<p align="center">────────────────────</p>
+
+Dessin 63 :
+
+```basic
+```
+
+
+<p align="center">────────────────────</p>
+
+Dessin 64 :
+
+```basic
+```
+
 
 ___
 ### 4. Étoiles fractales
@@ -904,6 +1068,84 @@ Dessin 67 :
 ```basic
 ```
 
+<p align="center">────────────────────</p>
+
+Dessin 68 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 68 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 69 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 70 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 71 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 72 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 73 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 74 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 75 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 76 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 77 :
+
+```basic
+```
+
+
 
 ___
 #### 5. Courbes
@@ -927,6 +1169,63 @@ Dessin 78 :
 500 END
 ```
 
+<p align="center">────────────────────</p>
+
+Dessin 79 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 80 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 81 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 82 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 83 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 84 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 85 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 86 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
 
 #### Courbes tournantes
 
@@ -935,10 +1234,103 @@ Dessin 87 :
 ```basic
 ```
 
+<p align="center">────────────────────</p>
+
+Dessin 88 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 89 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 90 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 91 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 92 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 93 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 93 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 94 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 95 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 96 :
+
+```basic
+```
+
+
+<p align="center">────────────────────</p>
 
 #### Courbes spirales
 
 Dessin 97 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 98 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 99 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 100 :
 
 ```basic
 ```
@@ -969,6 +1361,29 @@ Dessin 101 :
 500 END
 ```
 
+<p align="center">────────────────────</p>
+
+Dessin 102 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 103 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 104 :
+
+```basic
+```
+
+
+<p align="center">────────────────────</p>
 
 #### Linéaires modulo
 
@@ -991,9 +1406,69 @@ Dessin 105 :
 500 END
 ```
 
+<p align="center">────────────────────</p>
+
+Dessin 106 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 107 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 108 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 109 :
+
+```basic
+```
+
+
+<p align="center">────────────────────</p>
 
 #### linéaires batons
 
+
+Dessin 110 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 111 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 112 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 113 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 114 :
 
 ```basic
 ```
@@ -1004,22 +1479,358 @@ ___
 
 #### Fractales simples 
 
+Dessin 115 :
 
 ```basic
 ```
 
 <p align="center">────────────────────</p>
 
-#### Fractales simples arrondies
-
+Dessin 116 :
 
 ```basic
 ```
+
+<p align="center">────────────────────</p>
+
+Dessin 117 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 118 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 119 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 120 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 121 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 122 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 123 :
+
+```basic
+```
+
+
+<p align="center">────────────────────</p>
+
+Dessin 124 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 125 :
+
+```basic
+```
+
+
+<p align="center">────────────────────</p>
+
+Dessin 126 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 127 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 128 :
+
+```basic
+```
+
+
+<p align="center">────────────────────</p>
+
+Dessin 129 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 130 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 131 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 132 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 133 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 134 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 135 :
+
+```basic
+```
+
+
+
+
+
+#### Fractales simples arrondies
+
+Dessin 136 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 137 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 138 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 139 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 140 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 141 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 142 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 143 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 144 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 145 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 146 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 147 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 148 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 149 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 150 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 151 :
+
+```basic
+```
+
+
 
 <p align="center">────────────────────</p>
 
 #### Fractales simples déformées
 
+
+Dessin 152 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 153 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 154 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 155 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 156 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 157 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 158 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 159 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 160 :
+
+```basic
+```
+
+
+<p align="center">────────────────────</p>
+
+Dessin 161 :
+
+```basic
+```
+
+
+<p align="center">────────────────────</p>
+
+Dessin 162 :
+
+```basic
+```
+
+
+<p align="center">────────────────────</p>
+
+Dessin 163 :
 
 ```basic
 ```
@@ -1028,6 +1839,95 @@ ___
 ___
 ### 8. Quadrillage classique
 
+
+Dessin 164 :
+
+```basic
+```
+
+
+<p align="center">────────────────────</p>
+
+Dessin 165 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 166 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 167 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 168 :
+
+```basic
+```
+
+
+<p align="center">────────────────────</p>
+
+Dessin 169 :
+
+```basic
+```
+
+
+<p align="center">────────────────────</p>
+
+Dessin 170 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 171 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 172 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 173 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 174 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 175 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 176 :
 
 ```basic
 ```
@@ -1038,6 +1938,174 @@ ___
 
 #### Surfaces
 
+Dessin 177 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 178 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 179 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 180 :
+
+```basic
+```
+
+
+<p align="center">────────────────────</p>
+
+Dessin 181 :
+
+```basic
+```
+
+
+<p align="center">────────────────────</p>
+
+Dessin 182 :
+
+```basic
+```
+
+
+<p align="center">────────────────────</p>
+
+Dessin 183 :
+
+```basic
+```
+
+
+<p align="center">────────────────────</p>
+
+Dessin 184 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 185 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 186 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 187 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 188 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 189 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 190 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 191 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 192 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 193 :
+
+```basic
+```
+
+
+<p align="center">────────────────────</p>
+
+Dessin 194 :
+
+```basic
+```
+
+
+<p align="center">────────────────────</p>
+
+Dessin 195 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 196 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 197 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 198 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 199 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 200 :
 
 ```basic
 ```
@@ -1048,24 +2116,384 @@ ___
 
 #### D3 data
 
+Dessin 201 :
 
 ```basic
 ```
 
+<p align="center">────────────────────</p>
+
+Dessin 202 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 203 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 204 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 205 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 206 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
 
 #### D3 cube
 
+Dessin 207 :
 
 ```basic
 ```
+
+<p align="center">────────────────────</p>
+
+Dessin 208 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 209 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 210 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 211 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 212 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 213 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 214 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 215 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 216 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 217 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 218 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 219 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 220 :
+
+```basic
+```
+
 
 
 #### D3 structure
 
+Dessin 221 :
 
 ```basic
 ```
 
+<p align="center">────────────────────</p>
+
+Dessin 221 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 222 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 223 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 224 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 225 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 226 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 227 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 228 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 229 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 230 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 231 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 232 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 234 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 235 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 236 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 237 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 238 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 239 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 240 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 241 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 242 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 243 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 244 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 245 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 246 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 247 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 248 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 249 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 250 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 251 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 252 :
+
+```basic
+```
+
+
+___
+## ANNEXE
+
+L'annexe contient quelques exemples pour faire des adaptations sur d'autres ordinateurs.
+
+
+___
+## Bibliographie
+
+À consulter si vous vous intéressez à ce type de dessins.\
+Elle est assez exhaustive.
 
 
 EOF
