@@ -1,6 +1,6 @@
 # Son du Canon - Club C7 - Numéro 1
 
-
+Novembre 1984.
 
 ___
 ## Introduction
@@ -10,7 +10,9 @@ TO DO
 ___
 ## Les Listings
 
-- Chargeur LM
+Ci-dessous ceux présent sur la cassette fournie.\
+Tous sur la face A. Face B, vierge.
+
 - Dactylofolie (A-B à vérifier)
 - Generateur aleatoire (1984-11)(Club C7)(FR).bas
 - Geometrie (1984-11)(Club C7)(FR).bas
@@ -18,6 +20,7 @@ ___
 - Magic Circus (1984-11)(Club C7)(FR).bas
 - Telecran (1984-11)(Club C7)(FR).bas
 
+Et ceux si dessous...
 
 #### page 20
 
@@ -39,6 +42,8 @@ Programme 1 :
 100 NEXT
 ```
 
+Programme 2 :
+
 ```basic
 10 DEFINT A-Z: N=242
 20 OUT 243,0: OUT 244,0
@@ -46,6 +51,21 @@ Programme 1 :
 40 OUT N,L: OUT N,255-L
 50 NEXT
 ```
+
+Programme surprise à taper ou trouver.
+
+
+#### page 21
+
+Hypocycloïde 1 : To do
+
+Hypocycloïde 2 : To do
+
+#### page 22
+
+2 listings à faire.
+
+
 
 
 ___
