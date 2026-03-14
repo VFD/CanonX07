@@ -779,6 +779,72 @@ Dessin 34 :
 5000 END
 ```
 
+<p align="center">────────────────────</p>
+
+Dessin 35 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 36 :
+
+```basic
+```
+
+
+<p align="center">────────────────────</p>
+
+Dessin 37 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 38 :
+
+```basic
+```
+
+
+<p align="center">────────────────────</p>
+
+Dessin 39 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 40 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 41 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 42 :
+
+```basic
+```
+
+<p align="center">────────────────────</p>
+
+Dessin 43 :
+
+```basic
+```
+
+
 
 #### Lion, oiseaux-poissons, smurf
 
