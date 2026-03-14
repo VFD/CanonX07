@@ -32,6 +32,8 @@ Dessin 1 :
 500 END
 ```
 
+<p align="center">────────────────────</p>
+
 Dessin 2 :
 
 ```basic
@@ -46,6 +48,7 @@ Dessin 2 :
 300 NEXT I
 500 END
 ```
+<p align="center">────────────────────</p>
 
 Dessin 3 :
 
@@ -62,6 +65,8 @@ Dessin 3 :
 500 END
 ```
 
+<p align="center">────────────────────</p>
+
 Dessin 4 :
 
 ```basic
@@ -76,6 +81,8 @@ Dessin 4 :
 300 NEXT I
 500 END
 ```
+
+<p align="center">────────────────────</p>
 
 Dessin 5 :
 
@@ -92,6 +99,9 @@ Dessin 5 :
 500 END
 ```
 
+<p align="center">────────────────────</p>
+
+
 Dessin 6 :
 
 ```basic
@@ -107,6 +117,7 @@ Dessin 6 :
 500 END
 ```
 
+<p align="center">────────────────────</p>
 
 #### Étoiles régulières
 
@@ -125,6 +136,8 @@ Dessin 7 :
 500 END
 ```
 
+<p align="center">────────────────────</p>
+
 Dessin 8 :
 
 ```basic
@@ -139,6 +152,8 @@ Dessin 8 :
 300 NEXT I
 500 END
 ```
+
+<p align="center">────────────────────</p>
 
 Dessin 9 :
 
@@ -155,6 +170,8 @@ Dessin 9 :
 500 END
 ```
 
+<p align="center">────────────────────</p>
+
 Dessin 10 :
 
 ```basic
@@ -169,6 +186,8 @@ Dessin 10 :
 300 NEXT I
 500 END
 ```
+
+<p align="center">────────────────────</p>
 
 Dessin 11 :
 
@@ -185,6 +204,7 @@ Dessin 11 :
 500 END
 ```
 
+<p align="center">────────────────────</p>
 
 Dessin 12 :
 
@@ -200,6 +220,8 @@ Dessin 12 :
 300 NEXT I
 500 END
 ```
+
+<p align="center">────────────────────</p>
 
 #### Composition 1
 
@@ -226,6 +248,7 @@ Dessin 13 :
 5500 RETURN
 ```
 
+<p align="center">────────────────────</p>
 
 Dessin 14 :
 
@@ -250,6 +273,7 @@ Dessin 14 :
 5500 RETURN
 ```
 
+<p align="center">────────────────────</p>
 
 Dessin 15 :
 
@@ -274,6 +298,7 @@ Dessin 15 :
 5500 RETURN
 ```
 
+<p align="center">────────────────────</p>
 
 Dessin 16 :
 
@@ -298,9 +323,9 @@ Dessin 16 :
 5500 RETURN
 ```
 
-NDR : PB ligne 100, A1 absent dans le livre.
+NDR : PB ligne 100, A1 absent dans le livre. En REM et donc à tester.
 
-
+<p align="center">────────────────────</p>
 
 Dessin 17 :
 
@@ -325,6 +350,7 @@ Dessin 17 :
 5500 RETURN
 ```
 
+<p align="center">────────────────────</p>
 
 Dessin 18 :
 
@@ -349,6 +375,7 @@ Dessin 18 :
 5500 RETURN
 ```
 
+<p align="center">────────────────────</p>
 
 Dessin 19 :
 
@@ -372,6 +399,8 @@ Dessin 19 :
 5300 NEXT I
 5500 RETURN
 ```
+
+<p align="center">────────────────────</p>
 
 #### Composition 2
 
@@ -401,6 +430,7 @@ Dessin 20 :
 5500 RETURN
 ```
 
+<p align="center">────────────────────</p>
 
 Dessin 21 :
 
@@ -427,6 +457,7 @@ Dessin 21 :
 5500 RETURN
 ```
 
+<p align="center">────────────────────</p>
 
 Dessin 22 :
 
@@ -453,6 +484,7 @@ Dessin 22 :
 5500 RETURN
 ```
 
+<p align="center">────────────────────</p>
 
 Dessin 23 :
 
@@ -479,6 +511,7 @@ Dessin 23 :
 5500 RETURN
 ```
 
+<p align="center">────────────────────</p>
 
 Dessin 24 :
 
@@ -505,6 +538,7 @@ Dessin 24 :
 5500 RETURN
 ```
 
+<p align="center">────────────────────</p>
 
 Dessin 25 :
 
@@ -531,6 +565,8 @@ Dessin 25 :
 5500 RETURN
 ```
 
+<p align="center">────────────────────</p>
+
 #### Joligone
 
 Dessin 26 :
@@ -551,6 +587,7 @@ Dessin 26 :
 500 END
 ```
 
+<p align="center">────────────────────</p>
 
 Dessin 27 :
 
@@ -570,7 +607,7 @@ Dessin 27 :
 500 END
 ```
 
-
+<p align="center">────────────────────</p>
 
 Dessin 28 :
 
@@ -590,6 +627,7 @@ Dessin 28 :
 500 END
 ```
 
+<p align="center">────────────────────</p>
 
 Dessin 29 :
 
@@ -609,6 +647,7 @@ Dessin 29 :
 500 END
 ```
 
+<p align="center">────────────────────</p>
 
 Dessin 30 :
 
@@ -628,6 +667,7 @@ Dessin 30 :
 500 END
 ```
 
+<p align="center">────────────────────</p>
 
 Dessin 31 :
 
@@ -647,6 +687,7 @@ Dessin 31 :
 500 END
 ```
 
+<p align="center">────────────────────</p>
 
 Dessin 32 :
 
@@ -666,6 +707,7 @@ Dessin 32 :
 500 END
 ```
 
+<p align="center">────────────────────</p>
 
 Dessin 33 :
 
@@ -782,10 +824,14 @@ Dessin 65 :
 1000 END
 ```
 
+<p align="center">────────────────────</p>
+
 Dessin 66 :
 
 ```basic
 ```
+
+<p align="center">────────────────────</p>
 
 Dessin 67 :
 
@@ -896,6 +942,7 @@ ___
 ```basic
 ```
 
+<p align="center">────────────────────</p>
 
 #### Fractales simples arrondies
 
@@ -903,6 +950,7 @@ ___
 ```basic
 ```
 
+<p align="center">────────────────────</p>
 
 #### Fractales simples déformées
 
