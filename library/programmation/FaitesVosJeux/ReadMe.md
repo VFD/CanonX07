@@ -8,12 +8,12 @@ ___
 
 Les codes sources des jeux du livre.
 
-Travail en cours.\
-OCR pas cool, demande vérification et réécriture.\
 TO DO : fichiers CAS et WAV pour tester que ça fonctionne bien.
 
 NDR : Laisser les bugs sur les VO, faire des version type Fix "\[f\]" pour les versions corrigées.\
 Il est possible d'améliorer les logiciels. mais il faut alors suffixer avec "\[a\]", pour alternate.
+
+Tout est là et à tester.
 
 ___
 ## Liste
@@ -26,7 +26,7 @@ ___
 |  ✅  | Terminé et fonctionnel |
 |  ❌  | Echec |
 |  ❕  | À faire |
-|  📝  | En cours |
+|  📝  | En cours, à tester |
 
 ### Travail en cours
 
