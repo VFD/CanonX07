@@ -29,8 +29,7 @@ ___
 
 Répartis sur 10 chapitres avec variantes.
 
-Ils sont pour le moment codés dans le fichier marckdown avec le livre en PDF.\
-
+Ils sont pour le moment codés dans le fichier marckdown avec le livre en PDF.
 Ils seront sans doute mis ici aussi en individuel lorsque les tests seront positifs.
 
 ___
