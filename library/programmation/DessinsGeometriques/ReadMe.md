@@ -25,8 +25,12 @@ Pour bien comprendre il faut aussi maîtriser un peut la X-710.
 NDR : La X-710 existe sous plusieurs noms et marques diverses, il faudrait en faire la liste.
 
 ___
-### Les Listings
+## Les Listings
 
 Répartis sur 10 chapitres avec variantes.
+
+Ils sont pour le moment codés dans le fichier marckdown avec le livre en PDF.\
+
+Ils seront sans doute mis ici aussi en individuel lorsque les tests seront positifs.
 
 ___
