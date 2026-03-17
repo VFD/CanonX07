@@ -17,11 +17,13 @@ NDR : [a] version "alternate" pour lisibilité.\
 Version éditeur à faire aussi.
 
 ___
-## Liste
+## Les Listings
 
-Ci-dessous les tableaux d'avancement des récupérations des logiciels.
+Ils souffrent de petites erreurs de conception et d'optimisation, à corriger et mettre [f].
 
 ### Tableau de suivi
+
+Ci-dessous les tableaux d'avancement de récupération des listings.
 
 | Icon | État |
 |------|-------|
@@ -44,17 +46,13 @@ Ci-dessous les tableaux d'avancement des récupérations des logiciels.
 | Graphic brain    | 📝 |  |
 | Jeu du pendu     | 📝 | Reprise de Logi'Stick Jeux 1 |
 | Jimbo            | 📝 |  |
-| Petit poucet     | ❕ |  |
-| Phenix           | ❕ |  |
+| Petit poucet     | 📝 |  |
+| Phenix           | 📝 |  |
 | Sentinelle       | ❕ |  |
 | Slot machine     | ❕ |  |
 | Super mind       | ❕ |  |
 | Tirage de cartes | ❕ |  |
 | Tirage de dés    | ❕ |  |
-
-
-NDR :
-- Big Mind : Souffre d'erreur de conception et d'optimisation, à corriger.
 
 
 
