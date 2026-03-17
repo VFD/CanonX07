@@ -36,14 +36,14 @@ Ci-dessous les tableaux d'avancement des récupérations des logiciels.
 
 | Nom              | État | Commentaire |
 |------------------|------|-------------|
-| Allumettes       | ❕ |  |
-| Big mind         | ❕ |  |
-| Chiffres mélangés| ❕ |  |
-| Dragoon          | ❕ |  |
-| Goal             | ❕ |  |
-| Graphic brain    | ❕ |  |
-| Jeu du pendu     | ❕ |  |
-| Jimbo            | ❕ |  |
+| Allumettes       | ❕ | OCR KO |
+| Big Mind         | 📝 |  |
+| Chiffres mélangés| 📝 |  |
+| Dragoon          | 📝 | Adaptation de Acey Ducey - David H; Ahl |
+| Goal             | 📝 |  |
+| Graphic brain    | 📝 |  |
+| Jeu du pendu     | 📝 | Reprise de Logi'Stick Jeux 1 |
+| Jimbo            | 📝 |  |
 | Petit poucet     | ❕ |  |
 | Phenix           | ❕ |  |
 | Sentinelle       | ❕ |  |
@@ -51,6 +51,12 @@ Ci-dessous les tableaux d'avancement des récupérations des logiciels.
 | Super mind       | ❕ |  |
 | Tirage de cartes | ❕ |  |
 | Tirage de dés    | ❕ |  |
+
+
+NDR :
+- Big Mind : Souffre d'erreur de conception et d'optimisation, à corriger.
+
+
 
 #### Apprentissage
 
