@@ -10,7 +10,7 @@ Les recherches et restaurations sont en cours.
 Dans le cadre des articles, seul le texte repris de la revue est conservé.
 
 Cette partie concerne également les logiciels publiés, par exemple dans **Hebdogiciel**.\
-Veuillez vous référer au répertoire ["src"](../src).\
+Veuillez vous référer au répertoire ["programmation"](programmation).\
 Nous recherchons en priorité les codes sources, pas forcément les fichiers WAV ou les fichiers d’émulateur.\
 L’objectif est de constituer une base de données de codes source.
 
