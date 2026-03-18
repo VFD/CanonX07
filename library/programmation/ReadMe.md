@@ -65,6 +65,9 @@ Ou encore ceux publiés dit multi-machines. Cas que l'on trouve dans la revue [J
 
 | Nom | État | Commentaire |
 |-----|------|-------------|
+| Arakis | | J&S [JuvignyEnsta](https://github.com/JuvignyEnsta/CanonX07) |
+| Nordal | | J&S [JuvignyEnsta](https://github.com/JuvignyEnsta/CanonX07) |
+| Samarcande | | J&S [JuvignyEnsta](https://github.com/JuvignyEnsta/CanonX07) |
 
 En recherche.
 ___
