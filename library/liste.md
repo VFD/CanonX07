@@ -338,7 +338,11 @@ Les numéros sont complets et disponible ici car pas d'autres ressources connues
 ___
 ### Jeux & Stratégie
 
-Mis ici car il y a de quoi faire des adaptations multi micro.
+Il y a des adaptations connues.
+
+| No | Date    | Réf.                                    | État | Commentaire                  |
+|----|---------|-----------------------------------------|------|------------------------------|
+
 
 
 ___
