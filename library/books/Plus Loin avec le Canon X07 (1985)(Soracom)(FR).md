@@ -802,11 +802,24 @@ TO DO
 ___
 ### page 108
 
+Calcul de ARC COSINUS.
+
 ```basic
-TO DO
+10 P=3.1415926535898: P1=P/180
+20 CLS: ON ERROR GOTO 200
+30 GOTO 100
+40 T=SQR((1-V*V)/(V*V))
+50 R=ATN(T): D=R/P1: RETURN
+100 BEEP 49,2:INPUT "cos ";V
+110 IF V=0 THEN R=P/2: D=90: GOTO 140
+120 GOSUB 40
+130 IF V<0 THEN R=P-R: D=180-D
+140 PRINT TAB(4);"Arccos(";USING "+#.##";v;: PRiNT ")"
+145 PRINT "vaut ";USiNG"#.#########";R;:PRINT " RAD";
+150 PR1NT "soit  ";: PRiNT USING"###.######";D;:PRINT " DEG";
+160 GOTO 100
+200 PR1NT "valeur hors gamme",,: BEEP 40,3: RESUME 100
 ```
-
-
 
 ___
 ### page 110 : Calculette
