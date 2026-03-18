@@ -55,7 +55,7 @@ ___
 NDR : no 109, erreur de frappe.
 
 ___
-### Atlantis
+### Atlantis (FRA)
 
 Édité par les éditions Neptune.
 
@@ -107,7 +107,7 @@ Recherche à compléter.
 
 
 ___
-### Hebdogiciel
+### Hebdogiciel (FRA)
 
 [Abandonware magazine](https://abandonware-magazines.org/affiche_mag.php?mag=7)
 
@@ -322,7 +322,7 @@ Hebdogiciel c'est arrêté au no 168, donc tous les listings non fini sont incom
 Le Beach Head existe, il faut le trouver.
 
 ___
-### Info'Look
+### Info'Look (FRA)
 
 Édité par les éditions Neptune.
 
@@ -336,7 +336,7 @@ Pas d'autres numéros connus.\
 Les numéros sont complets et disponible ici car pas d'autres ressources connues.
 
 ___
-### Jeux & Stratégie
+### Jeux & Stratégie (FRA)
 
 Il y a des adaptations connues.
 
@@ -353,7 +353,7 @@ ___
 [Archive.org](https://archive.org/details/kilobaudmagazine?sort=title)
 
 ___
-### Led Micro
+### Led Micro (FRA)
 
 [Abandonware Magazines](https://abandonware-magazines.org/affiche_mag.php?mag=61)
 
@@ -367,7 +367,7 @@ ___
 Restauration des pages à faire.
 
 ___
-### LIST
+### LIST (FRA)
 
 [Abandonware Magazines](https://abandonware-magazines.org/affiche_mag.php?mag=9)
 
@@ -404,7 +404,7 @@ Pas de no 13 et au-dela.\
 De plus beaucoup de numéros sont incomplets.
 
 ___
-### Micro 7
+### Micro 7 (FRA)
 
 Recherche à faire.
 
@@ -416,7 +416,7 @@ Voir si les BASIC générique sont adaptables.
 NDR : La revue fusionne avec Votre Ordinateur pour créer Micro V.O.
 
 ___
-### Micro Ordinateurs
+### Micro Ordinateurs (FRA)
 
 [Abandonware Magazines](https://abandonware-magazines.org/affiche_mag.php?mag=415)
 
@@ -433,7 +433,7 @@ Apparement seul numéro qui en parle.
 no 27, VG5000, à reporter. 29, Alice 90. 32, exl100. 33, Canon v20 (1985-05)
 
 ___
-### Micro Systèmes
+### Micro Systèmes (FRA)
 
 - [Abandonware Magazines](https://abandonware-magazines.org/affiche_mag.php?mag=64)
 - [ACPC.me]()
@@ -468,7 +468,7 @@ Compléter les recherches.\
 à confirmmer.
 
 ___
-### Micro V.O
+### Micro V.O (FRA)
 
 [Abandonware Magazines](https://abandonware-magazines.org/affiche_mag.php?mag=79)
 
@@ -481,7 +481,7 @@ Liste no incomplète. 4, 5 et 7 absents.
 Il semble qu'il n'y est pas de listing.
 
 ___
-### L'Ordinateur de Poche
+### L'Ordinateur de Poche (FRA)
 
 [Abandonware magazines](https://abandonware-magazines.org/affiche_mag.php?mag=15)
 
@@ -501,7 +501,7 @@ Pas de no 24 et au-delà trouvé.
 
 
 ___
-### L'Ordinateur Individuel
+### L'Ordinateur Individuel (FRA)
 
 [Abandonware magazines](https://www.abandonware-magazines.org/affiche_mag.php?mag=38)
 
@@ -523,7 +523,7 @@ Voir pour les BASIC standard.
 Fin de recherche juin 85.
 
 ___
-### Science & Vie
+### Science & Vie (FRA)
 
 Recherche à faire
 
@@ -532,7 +532,7 @@ Recherche à faire
 
 
 ___
-### Soft et Micro
+### Soft et Micro (FRA)
 
 Recherche à faire
 
@@ -543,7 +543,7 @@ Recherche à faire
 
 
 ___
-### SVM (Science et Vie Micro)
+### SVM (Science et Vie Micro) (FRA)
 
 [Abandonware magazines](https://abandonware-magazines.org/affiche_mag.php?mag=48)
 
@@ -577,7 +577,7 @@ Probablement rien au-delà du 26, stop de recherche.\
 Cepandant quelques programme peuvent s'avérer interessant à analyser, SVM étant lié à jeux & Stratégie.
 
 ___
-### Telesoft
+### Telesoft (FRA)
 
 Recherche à faire.
 
@@ -586,7 +586,7 @@ Recherche à faire.
 
 
 ___
-### Tilt
+### Tilt (FRA)
 
 - [Abandonware magazines](https://abandonware-magazines.org/affiche_mag.php?mag=28)
 - [Tilt Les Listings](http://abandonlistings.free.fr/tilt/CANONX07.htm)
@@ -613,7 +613,7 @@ En cours d'extraction.\
 Il faudra netoyer les PDF et refaire les plans de jeu.
 
 ___
-### Votre Ordinateur
+### Votre Ordinateur (FRA)
 
 | No | Date       | Réf.                         | État | Commentaire                  |
 |----|------------|------------------------------|------|------------------------------|
