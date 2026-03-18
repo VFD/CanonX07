@@ -47,15 +47,16 @@ Lorsque ✅, cela signifie que nous avons tout trouvé et que tout est disponibl
 | Nom | État | Commentaire |
 |-----|------|-------------|
 | 40 programmes pour Canon X07 | 📝 | |
+| Dessins géométriques | 📝 | |
 | Faites vos jeux avec Canon X07 | ❕ | |
 | Hebdogiciel | 📝 | |
-| List | ❕ | |
-| Logi'Stick | ❕ | |
-| Micro Systèmes | ❕ | |
+| List | 📝 | |
+| Logi'Stick | 📝 | |
+| Micro Systèmes | 📝 | |
 | Plus Loin avec Canon X07 | 📝 | |
 | Pocket Soft | 📝 | |
 | Power Soft | 📝 | |
-| Tilt | ❕ | 📝 |
+| Tilt | 📝 | Encart à revoir |
 
 #### Adaptations vers X07
 
