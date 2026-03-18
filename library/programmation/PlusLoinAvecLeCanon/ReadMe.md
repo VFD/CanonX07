@@ -6,9 +6,8 @@ ___
 Le livre contient des informations sur quelques méthodes de programmation.\
 Il y a aussi quelques programmes.
 
-Les plus courts sont dans un markdown associé au PDF.
-
-Ceux présent ici sont ceux retrouvés sur des cassettes.
+Les plus courts sont dans un markdown associé au PDF.\
+Après validation, ils pourraient être ici aussi. En analyse de pertinence.
 
 ___
 ## Liste des programmes
@@ -29,16 +28,15 @@ Liste des programmes :
 | Loto  | 📝 | |
 | Courbes | 📝 | |
 | Horloge Musicale | 📝 | |
-| Morse | 📝 | |
-| Facteurs Premiers | 📝 | |
+| Morse | ❕ | |
+| Facteurs Premiers | ❕ | |
 | Hard Copy D'Ecran | 📝 | |
 | DAO | 📝 | |
 | Simulation d'atterissage | ❕ | |
-| Mastermind | ❕ | |
-| Calculette | ❕ | |
+| Mastermind | 📝 | |
+| Calculette | 📝 | |
 
-Veuillez aussi consulter le fichier markdown du livre dans la bibliothèque.\
-Il contient aussi du code source.\
 
+À compléter.
 
 ___
