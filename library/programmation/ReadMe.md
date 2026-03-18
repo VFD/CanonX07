@@ -27,7 +27,7 @@ Les noms adoptent la notation [TOSEC](https://www.tosecdev.org/tosec-naming-conv
 ___
 ## Suivi
 
-Pour le détail voir dans [publications](../publications).
+
 
 ### Tableau de suivi
 
