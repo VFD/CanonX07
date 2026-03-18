@@ -774,9 +774,7 @@ TO DO
 ___
 ### page 97 : Master Mind
 
-```basic
-TO DO
-```
+Le listing est à part, voir répertoire programmes.
 
 ___
 ### page 101 : Dessiner la France
@@ -815,11 +813,14 @@ Calcul de ARC COSINUS.
 120 GOSUB 40
 130 IF V<0 THEN R=P-R: D=180-D
 140 PRINT TAB(4);"Arccos(";USING "+#.##";v;: PRiNT ")"
-145 PRINT "vaut ";USiNG"#.#########";R;:PRINT " RAD";
-150 PR1NT "soit  ";: PRiNT USING"###.######";D;:PRINT " DEG";
+145 PRINT "vaut ";USING"#.#########";R;:PRINT " RAD";
+150 PRINT "soit  ";: PRINT USING"###.######";D;:PRINT " DEG";
 160 GOTO 100
-200 PR1NT "valeur hors gamme",,: BEEP 40,3: RESUME 100
+200 PRINT "valeur hors gamme",,: BEEP 40,3: RESUME 100
 ```
+
+NDR : Il faut s'y coller pour toutes les autres fonctions :-).
+
 
 ___
 ### page 110 : Calculette
@@ -832,8 +833,8 @@ Retour à des petits codes.
 28 1F LEFT$(Z$,1)="-" THEN Z$=" "+Z$
 30 PRINT E$;" ";CHR$(13);A$;:IF LEFT$(RIGHT$(Z$,4),1)="E" THEN 50
 40 PRINT USING "&          &";Z$;: RETURN
-50 PRJNT USING "&          &";LEFT$(Z$,LEN(Z$)-4);
-60 PRJNT " E";RIGHT$(Z$,3);: RETURN
+50 PRINT USING "&          &";LEFT$(Z$,LEN(Z$)-4);
+60 PRINT " E";RIGHT$(Z$,3);: RETURN
 70 RETURN
 80 LOCATE 0,0:Z$=STR$(T): A$="t":GOSUB 28
 90 LOCATE 0,1:Z$=STR$(Z): A$="z":GOSUB 28
