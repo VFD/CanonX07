@@ -10,6 +10,8 @@ ___
 
 To DO
 
+La nomenclature utilise celle du **TOSEC**.
+
 Il existe une cassette contenant les programmes.\
 Distribuée par D.D.I.
 
@@ -19,7 +21,16 @@ Version éditeur à faire aussi.
 ___
 ## Les Listings
 
-Ils souffrent de petites erreurs de conception et d'optimisation, à corriger et mettre [f].
+Ils souffrent de petites erreurs de conception et d'optimisation.\
+C'est le cas notament des boucles qui utilisent des variables différentes,
+alors qu'il serait possible d'en utiliser pratiquement 1 ou 2.
+
+Il y avait sans doute un choix fait de condenser les programmes au détrimant de la lisibilité.\
+probable version [a2] pour décondenser ceux-ci.
+
+Certains éléments pourraient être utilisés comme sous routines.\
+C'est à étudier pour, par exemple, les utiliser dans **X07-Studio**.
+
 
 ### Tableau de suivi
 
@@ -32,7 +43,9 @@ Ci-dessous les tableaux d'avancement de récupération des listings.
 |  ❕  | À faire |
 |  📝  | En cours |
 
-### Travail en cours
+### Travail en cours - Recherche et/ou Saisie
+
+Dans l'ordre du livre.
 
 #### Jeux
 
