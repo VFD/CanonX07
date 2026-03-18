@@ -48,11 +48,11 @@ Ci-dessous les tableaux d'avancement de récupération des listings.
 | Jimbo            | 📝 |  |
 | Petit poucet     | 📝 |  |
 | Phenix           | 📝 |  |
-| Sentinelle       | ❕ |  |
-| Slot machine     | ❕ |  |
-| Super mind       | ❕ |  |
-| Tirage de cartes | ❕ |  |
-| Tirage de dés    | ❕ |  |
+| Sentinelle       | 📝 |  |
+| Slot machine     | 📝 |  |
+| Super mind       | 📝 |  |
+| Tirage de cartes | 📝 |  |
+| Tirage de dés    | 📝 |  |
 
 
 
@@ -60,7 +60,7 @@ Ci-dessous les tableaux d'avancement de récupération des listings.
 
 | Nom            | État | Commentaire |
 |----------------|------|-------------|
-| Dactylographie | ❕ |  |
+| Dactylographie | 📝 |  |
 | Mélodia        | ❕ |  |
 | Morse          | ❕ |  |
 | Signalisation  | ❕ |  |
