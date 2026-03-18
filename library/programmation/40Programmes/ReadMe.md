@@ -54,7 +54,7 @@ Dans l'ordre du livre.
 | Allumettes       | ❕ | OCR KO |
 | Big Mind         | 📝 |  |
 | Chiffres mélangés| 📝 |  |
-| Dragoon          | 📝 | Adaptation de Acey Ducey - David H; Ahl |
+| Dragoon          | 📝 | Adaptation de Acey Ducey - David H. Ahl |
 | Goal             | 📝 |  |
 | Graphic brain    | 📝 |  |
 | Jeu du pendu     | 📝 | Reprise de Logi'Stick Jeux 1 |
@@ -99,8 +99,8 @@ Dans l'ordre du livre.
 | Biorythme               | ❕ |  |
 | Canon script            | ❕ |  |
 | Compteur téléphonique   | ❕ |  |
-| Conversion acre-hectare | ❕ |  |
-| Conversion arabe-romain | ❕ |  |
+| Conversion acre-hectare | 📝 |  |
+| Conversion arabe-romain | 📝 |  |
 | Conversion de capacités | ❕ |  |
 | Conversion de forces    | ❕ |  |
 | Conversion de longueurs | ❕ |  |
