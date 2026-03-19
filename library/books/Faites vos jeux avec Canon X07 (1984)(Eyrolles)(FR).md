@@ -1,17 +1,19 @@
-# Faites vos jeux avec Canon X07 (198-)(Eyrolles)(FR)
+# Faites vos jeux avec Canon X07 (1984)(Eyrolles)(FR)
+
+Eyrolles
+Philippe IFRAH
+1984
+
 
 ___
 ## Introduction
 
-Reprise des codes sources ci-après.\
-Peu d'intérêt dans l'utilisation.
-
-NDR: Code source lisible ici.\
-Techniquement, Copilot sait lire le Markdown, donc il apprendra du code ici.
-
-```basic
-
-```
+Un résumé par IA :\
+Cet ouvrage publié par Eyrolles en 1984 est un guide complet de programmation ludique sur l'ordinateur Canon X07.
+À travers une collection variée de jeux pratiques, graphiques, musicaux, mathématiques, économiques, d'adresse,
+de réflexion et de société, vous découvrirez des techniques de programmation innovantes et des astuces pratiques.
+Les programmes, de complexité croissante, sont amplement expliqués pour permettre une progression à votre rythme,
+du débutant au programmeur confirmé.
 
 ___
 ## Les Listings
@@ -33,18 +35,17 @@ ___
 80 ON Y GOTO 100,2000,500,1000,4000,9000,7000,8000,5000
 90 GOTO 10
 100 PRINT" GRAPHO"
+2000 PRINT"       FIREFOX"
 500 PRINT" ** COUREUR **"
 1000 PRINT" PIANO "
-2000 PRINT" FIREFOX"
-4000 PRINT""
-5000 PRINT""
-7000 PRINT""
 9000 PRINT" ** MENU SUITE **"
 ```
 
-Le principe donné est de fusionner les sources du livre ensemble.\
-Le programme ci-dessus est une première version corrigé.\
-La barre | est en principe le caractère 233 redéfini.
+NDR :
+- Le principe donné est de fusionner les sources du livre ensemble.
+- Le programme ci-dessus est très mauvais, exemple à ne pas suivre.
+- Sans compter l'ordre des lignes incorrect.
+- La barre | est en principe le caractère 233 redéfini.
 
 
 ___
@@ -99,7 +100,7 @@ ___
 1520 GOTO 1210
 ```
 
-Typique de l'époque.
+Programme typique de l'époque.
 
 ___
 ### page 12 : ESPERANCE DE VIE
@@ -134,8 +135,9 @@ ___
 
 Courbes et droites ajustées à l'aide des statistiques de l'INSEE et du programme ajustements.
 
-NDR : Quand on connaît un peut le fonctionnement de l'INSEE, ...\
-De plus très péjoratif, mais reflète aussi l'époque.
+NDR :
+- Quand on connaît un peut le fonctionnement de l'INSEE, ...
+- De plus très péjoratif, mais reflète aussi l'époque.
 
 ___
 ### page 12 : GRAPHO
@@ -171,7 +173,7 @@ ___
 ### page 12 : TRACE D’UNE COURBE
 
 ```basic
-8000 PRINT"TRACE D’UNE COURBE"
+8000 PRINT"TRACE D'UNE COURBE"
 8010 PRINT"Courbe: Y=AX^4+BX^3+CX^2+DX+E"
 8020 INPUT"A=";A
 8030 INPUT"B=";B

@@ -258,7 +258,7 @@ ___
 
 ```basic
 10 DATA 1,1,1,1,1,1,5,1,1,8,1,1,8,1,1,-1,1,1,20,1,1
-20 DATA20,1,1,-1,1,1,17,1,1,17,1,1,-1,1,1,1,1,1
+20 DATA 20,1,1,-1,1,1,17,1,1,17,1,1,-1,1,1,1,1,1
 30 DATA 1,1,1,5,1,1,8,1,1,8,1,1,-1,1,1,20,1,1,20,1,1,-1,1,1
 40 DATA 18,1,1,18,1,1,-1,1,1,0,1,1,0,1,1,3,1,1,10,1,1
 50 DATA 10,1,1,-1,1,1,22,1,1,22,1,1,-1,1,1,18,1,1,18,1,1
@@ -761,7 +761,7 @@ ___
 
 
 ___
-à partir d'ici des "gros programmes"
+À partir d'ici des "gros programmes"
 ___
 
 ___
@@ -812,7 +812,7 @@ Calcul de ARC COSINUS.
 110 IF V=0 THEN R=P/2: D=90: GOTO 140
 120 GOSUB 40
 130 IF V<0 THEN R=P-R: D=180-D
-140 PRINT TAB(4);"Arccos(";USING "+#.##";v;: PRiNT ")"
+140 PRINT TAB(4);"Arccos(";USING "+#.##";v;: PRINT ")"
 145 PRINT "vaut ";USING"#.#########";R;:PRINT " RAD";
 150 PRINT "soit  ";: PRINT USING"###.######";D;:PRINT " DEG";
 160 GOTO 100
