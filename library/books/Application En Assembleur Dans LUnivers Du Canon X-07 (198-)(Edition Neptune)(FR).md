@@ -6,6 +6,8 @@ ___
 Report ici des codes sources du livre.\
 Les programmes étant court, les espaces sont ajoutés pour rendre le code plus lisible.
 
+Utilisation d'IA pour rechercher les erreurs.
+
 ___
 # Les Listings
 
@@ -14,6 +16,9 @@ On peut les retrouver aussi dans la bibliothèque "[sources]()".
 
 Les codes L.M qui sont entre les crochets [ et ] sont pour l'assembleur 2 passes de la revue Micro Systèmes.
 
+
+Si besoin [ASM80.com](https://www.asm80.com/onepage/asmz80.html).\
+L'idée est de regénérer les Datas.
 
 ___
 ## Page 22
@@ -144,7 +149,7 @@ Exemple 6
 70 FOR I = 1 TO N : READ F$ : NEXT
 75 PRINT D$ ; F$ : IF INKEY$ = "" TREN 45
 80 IF INKEY$ = "" THEN 80 ELSE 45
-90 AD = V ARPTR (RM$) : AD = PEEK (AD + 1) + 256 * PEEK (AD + 2) : RETURN
+90 AD = VARPTR (RM$) : AD = PEEK (AD + 1) + 256 * PEEK (AD + 2) : RETURN
 95 END
 ```
 
@@ -320,6 +325,11 @@ LPRINT		LD A,(HL)			; A est chargé avec l'un des codes de la chaîne
 ___
 ## Page 55
 
+```
+To do ASM
+```
+
+
 ```basic
 10 REM LES 2
 20 FOR I=&H1A00 TO &H1A0B
@@ -348,6 +358,9 @@ NDR : Code à revoir car scan tronqué.
 
 ___
 ## Page 56
+
+
+Figure 7 : Le Beep !!
 
 ```
 10  '[
@@ -387,6 +400,7 @@ ___
 ___
 ## Page 60
 
+Fichiers CASO & CASI.
 
 ```
 10 '[
@@ -522,7 +536,7 @@ ___
 460 ']
 ```
 
-NDR : ajout de la ligne 460.
+NDR : ajout de la ligne 460, qui ferme la notation assembleur.
 
 ___
 ## Page 64
@@ -591,7 +605,7 @@ NDR : Modifié pour être plus lisible
 ___
 ## Page 66
 
-Prise SERIE
+Prise SERIE.
 
 
 ```
@@ -622,6 +636,7 @@ Prise SERIE
 ___
 ## Page 67
 
+Prise Série, le BASIC.
 
 ```basic
 10 FOR I=&H1C00 TO &H1C00+63
@@ -635,7 +650,7 @@ ___
 
 NDR : Modifié pour être plus lisible
 
-Lecture Série
+Lecture Série.
 
 
 ```
@@ -672,7 +687,7 @@ ___
 
 Concerne l'extension X-720.
 
-Figure 12
+Figure 12 : Test.
 
 Dans le code BASIC il y a un RET et pas dans les ASM, donc ajout.
 
@@ -707,14 +722,14 @@ Dans le code BASIC il y a un RET et pas dans les ASM, donc ajout.
 60 DATA C2,AA,F1,C9
 ```
 
-Figure 13
+Figure 13 : Effacement.
 
 ```
 10 ' [
 20 ' ORG $1C00
-30 ' * EFFACEMENT PARTIEL DE L' ECRA
+30 ' * EFFACEMENT PARTIEL DE L' ECRAN
 40 ' CALL #SC : * EFFACEMENT DE LA
-50 ' CALL $CE9E : * 8 ème LIGNE à LA FI
+50 ' CALL $CE9E : * 8 ème LIGNE à LA FIN
 60 ' LD HL.$108
 70 ' LD ($B8).HL : * CURSEUR (Cl , L8 )
 80 ' RET
@@ -740,7 +755,7 @@ Figure 13
 1C17 3A 10 00			LD A,(0010)
 1C14 32 BC 00			LD (00BC),A
 1C1A 32 BD 00			LD (00BD),A
-1C1D C9 RET
+1C1D C9 				RET
 ```
 
 ```basic
@@ -756,7 +771,7 @@ Figure 13
 ___
 ## Page 82
 
-Figure 14
+Figure 14 : Screen.
 
 ```
 10 ' [
@@ -792,7 +807,7 @@ Figure 14
 ```
 
 
-Figure 15
+Figure 15 : Color.
 
 ```
 10 ' [
@@ -988,7 +1003,7 @@ FIGURE 20 : Logogenese
 113 DATA ICONO,IDEO,INFRA,ISO
 114 DATA INTRA,LATERO,LIPO,LOGO
 115 DATA LOXO,MACRO,MEGALO,METEO
-116 DATA META,§ICRO,MKsO,MNEMO
+116 DATA META,§ICRO,MKsO,MNEMO
 117 DATA MORPHO,MYTHO,NECRO,NEO
 118 DATA NOSO,NUGLEO,OCTO,OLEO
 119 DATA OMNI,ORTHO,PALEO,PAN
@@ -1024,9 +1039,11 @@ FIGURE 20 : Logogenese
 ___
 ## Page 92
 
-LLIST
+LLIST, relogeable.
 
 ```asm
+			ORG $800				; NDR : ajout 
+
 DEB			LD HL,($212)			; HL contient l'adresse du fond de la mémoire
 			DEC HL					; 
 			LD BC,fin-début			; Longueur à déplacer
@@ -1036,17 +1053,17 @@ DEB			LD HL,($212)			; HL contient l'adresse du fond de la mémoire
 			PUSH HL					; Empilages pour usages ultérieurs
 			PUSH HL					; 
 			CALL $CE9E				; Effacement de l'écran
-			LO HL,MSG1				; Affichage sur l'écran LCD du message :
+			LD HL,MSG1				; Affichage sur l'écran LCD du message :
 			CALL $FEF7				; "NOTEZ AD=....."
 			POP HL					; 
 			CALL $BB98				; Affichage de AD en décimal
-			LO HL,MSG2				; Affichage sur l'écran LCD du message :
+			LD HL,MSG2				; Affichage sur l'écran LCD du message :
 			CALL $FEF7				; "Pressez une touche"
 KEY			XOR A					; 
 			CALL $C90A				; Attente de la pression d'une touche
 			JR Z,KEY				; 
 			POP HL					; HL contient le début après transfert
-			LO DE,début				; DE contient le début après transfert
+			LD DE,début				; DE contient le début après transfert
 			XOR A					; 
 			SBC HL,DE				; HL = offset
 			PUSH HL					; 
@@ -1101,9 +1118,327 @@ FIN			EQU $					; Fin du logiciel à reloger
 
 Figure 21 : LLIST
 
-```asm
-to do
+
+
 ```
+0800 : 2A 12 02 28 01 6C 01 AF
+0808 : E0 42 E5 E5 E5 CD 9E CE
+0810 : 21 67 08 CD F7 FE E1 CD
+0818 : 98 BB 21 71 08 CD F7 FE
+0820 : AF CD 0A C9 28 FA E1 11
+0828 : BD 08 AF ED 52 E5 C1 DD
+0830 : 21 88 08 DD 6E 00 DD 66
+0838 : 01 5E 23 56 2B E5 EB 09
+0840 : EB E1 73 23 72 DD 23 DD
+0848 : 23 DD 7E 00 FE 00 20 E3
+0850 : 01 21 B0 08 01 6C 01 ED
+0858 : B0 21 00 08 3E C3 06 14
+0860 : 77 23 10 FC C3 C3 C3 4E
+0868 : 6F 74 65 7A 20 41 44 3D
+0870 : 00 0D 0A 0A 50 72 65 73
+0878 : 73 65 7A 20 75 6E 65 20
+0880 : 74 6F 75 63 68 65 2E 00
+0888 : C1 08 D3 08 D6 08 E0 08
+0890 : E3 08 ED 08 FC 08 20 09
+0898 : 32 09 37 09 3F 09 44 09
+08A0 : 49 09 4D 09 53 09 58 09
+08A8 : 5B 09 5E 09 61 09 66 09
+08B0 : 6B 09 6F 09 72 09 7C 09
+08B8 : BC 09 C1 09 00 CD 9E CE
+08C0 : 21 C5 09 C0 F7 FE AF CD
+08C8 : 0A C9 28 FA C0 9E CE CD
+08D0 : B7 CF 21 04 0A 11 0F 09
+08D8 : 01 25 00 ED B0 3E 31 32
+08E0 : 87 09 21 05 09 C0 F7 FE
+08E8 : CD F2 EB 23 11 0F 09 06
+08F0 : 14 7E FE 00 28 05 12 23
+08F8 : 13 10 F6 CD 56 09 DD 2A
+0900 : B2 00 AF DD BE 01 CA C3
+0908 : C3 DD E5 DD 6E 00 DD 66
+0910 : 01 DD 5E 02 DD 56 03 E5
+0918 : DD E1 E1 01 04 00 09 CD
+0920 : 90 09 06 06 C5 CD FE FE
+0928 : C1 21 D5 00 7E FE 00 20
+0930 : 05 CD 43 09 18 CC CD 93
+0938 : 09 23 04 3E 27 B8 CC 43
+0940 : 09 18 E9 CD 89 09 06 00
+0948 : 3A 88 09 3C 32 88 09 FE
+0950 : 38 C0 CD 56 09 C9 E5 21
+0958 : 81 09 CD 77 09 21 DF 09
+0960 : CD 77 09 3E 02 32 88 09
+0968 : AF 47 3A 87 09 3C 32 87
+0970 : 09 21 FE 09 77 E1 C9 7E
+0978 : FE 00 C8 CD 93 09 23 18
+0980 : F6 0D 0A 0A 0A 0A 00 31
+0988 : 02 E5 D5 C5 CD B0 CF C1
+0990 : D1 E1 C9 E5 D5 C5 CD F7
+0998 : CE C1 D1 E1 C9 E5 E8 22
+09A0 : 50 04 01 07 07 21 D5 00
+09A8 : CD 5F BE 21 D5 00 3E 30
+09B0 : BE 20 05 36 20 23 18 F6
+09B8 : 21 D5 00 CD 77 09 3E 20
+09C0 : CD 93 09 E1 C9 49 6D 70
+09C8 : 72 69 6D 61 6E 74 65 20
+09D0 : 4F 4B 20 3F 00 54 69 74
+09D8 : 72 65 20 3A 0A 0D 00 20
+09E0 : 20 20 20 20 20 20 20 20
+09E8 : 20 20 20 20 20 20 20 20
+09F0 : 20 20 20 20 20 20 20 20
+09F8 : 20 20 20 20 20 20 20 20
+0A00 : 20 20 20 20 20 20 20 20
+0A08 : 20 20 20 20 20 20 20 20
+0A10 : 20 20 20 20 20 20 20 20
+0A18 : 20 20 20 20 20 50 61 67
+0A20 : 65 3A 20 31 20 0D 0A 0A
+0A28 : 00 A5 2E 2E 2C 2E 2E 2E
+```
+
+Passage par analyse IA pour vérifier le code.\
+Puis l'IA fait la conversion LM en rapport aussi avec le premier LM ci-dessus :
+
+Cela reste encore à vérifier.
+
+```
+; LLIST - Relocateur pour Canon X07
+; Adresse de chargement : $0800
+
+			ORG $0800
+
+0800		LD HL,($0212)			; LD HL contient l'adresse du fond de la mémoire
+0803		DEC HL					; 
+0804		LD BC,$016C				; Longueur à déplacer (fin-début)
+0807		XOR A					; Mise du drapeau CARRY à 0
+0808		SBC HL,BC				; HL contient l'adresse du début du programme
+080A		PUSH HL					; 
+080B		PUSH HL					; Empilages pour usages ultérieurs
+080C		PUSH HL					; 
+080D		CALL $CE9E				; Effacement de l'écran
+0810		LD HL,$0867				; Affichage sur l'écran LCD du message :
+0813		CALL $FEF7				; "NOTEZ AD=....."
+0816		POP HL					; 
+0817		CALL $BB98				; Affichage de AD en décimal
+081A		LD HL,$0871				; Affichage sur l'écran LCD du message :
+081D		CALL $FEF7				; "Pressez une touche"
+
+0820		XOR A					; KEY:
+0821		CALL $C90A				; Attente de la pression d'une touche
+0824		JR Z,$0820				; 
+0826		POP HL					; HL contient le début après transfert
+0827		LD DE,$08BD				; DE contient le début après transfert
+082A		XOR A					; 
+082B		SBC HL,DE				; HL = offset
+082D		PUSH HL					; 
+082E		POP BC					; BC = offset
+082F		LD IX,$0888				; Table des adresses à modifier
+
+0833		LD L,(IX+0)				; DEB0:
+0836		LD H,(IX+1)				; HL = adresse à modifier
+0839		LD E,(HL)				; 
+083A		INC HL					; 
+083B		LD D,(HL)				; DE = contenu à modifier
+083C		DEC HL					; Réajustement de HL
+083D		PUSH HL					; Sauvegarde de l'adresse à modifier
+083E		EX DE,HL				; HL = contenu à modifier
+083F		ADD HL,BC				; HL = HL + offset
+0840		EX DE,HL				; DE = valeur modifiée
+0841		POP HL					; Récupération de l'adresse à modifier
+0842		LD (HL),E				; 
+0843		INC HL					; Modification effectuée
+0844		LD (HL),D				; 
+0845		INC IX					; Adresse suivante de la table
+0847		INC IX					; Adresse suivante de la table
+0849		LD A,(IX+0)				; 
+084C		CP 0					; Fini ?
+084E		JR NZ,$0833				; Si ce n'est pas terminé, on boucle...
+0850		POP DE					; ... Sinon DE = adresse début (MEM haute)
+0851		LD HL,$08B0				; HL = adresse début (MEM basse)
+0854		LD BC,$016C				; Longueur à transférer
+0857		LDIR					; Transfert du programme modifié
+0859		LD HL,$0800				; 
+085C		LD A,$C3				; On écrit à la place de DEB les codes
+085E		LD B,3					; "C3C3C3" afin de rendre le relocateur
+0860		LD (HL),A				; DEB1: inutilisable
+0861		INC HL					; 
+0862		DJNZ $0860				; 
+0864		JP $C3C3				; Retour au BASIC
+
+0867		DB 'Notez AD=',0			; MSG1: Terminateur pour la routine FEF7
+086F		DB $0D,$0A,$0A				; CR + LF + LF
+
+0872		DB 'Pressez une touche.',0	; MSG2: Message "Pressez une touche"
+
+0888		DW $08C1, $08D3, $08D6, $08E0	; TABLE: Adresses à modifier
+088C		DW $08E3, $08ED, $08FC, $0920
+0890		DW $0932, $0937, $093F, $0944
+0894		DW $0949, $094D, $0953, $0958
+0898		DW $095B, $095E, $0961, $0966
+089C		DW $096B, $096F, $0972, $097C
+08A0		DW $09BC, $09C1
+08A4		DB 0						; Fin de la table
+
+; ============================================================================
+; PROGRAMME RELOCALISÉ (à partir de $08B0)
+; Ce programme sera copié en mémoire basse après relocalisation
+; ============================================================================
+
+08B0		CALL $CFB7				; DEBUT:
+08B3		LD HL,$0A04				; 
+08B6		LD DE,$090F				; 
+08B9		LD BC,$0025				; 
+08BC		LDIR					; 
+08BE		LD A,$31				; 
+08C0		LD (HL),$32				; 
+08C2		LD (HL),$87				; 
+08C4		LD HL,$0905				; 
+08C7		CALL $FEF7				; 
+08CA		LD A,$C0				; 
+08CC		CALL $FEF7				; 
+08CE		CALL $CE9E				; 
+08D1		CALL $CFB7				; 
+08D4		LD HL,$0A04				; 
+08D7		LD DE,$090F				; 
+08DA		LD BC,$0025				; 
+08DD		LDIR					; 
+08DF		LD A,$31				; 
+08E1		LD (HL),$32				; 
+08E3		LD (HL),$87				; 
+08E5		LD HL,$0905				; 
+08E8		CALL $FEF7				; 
+08EB		CALL $F2CD				; 
+08EE		INC HL					; 
+08EF		LD DE,$090F				; 
+08F2		LD B,$14				; 
+08F4		LD A,(HL)				; 
+08F5		CP 0					; 
+08F7		JR Z,$08FA				; 
+08F9		LD (DE),A				; 
+08FA		INC HL					; 
+08FB		INC DE					; 
+08FC		DJNZ $08F4				; 
+08FE		CALL $0956				; 
+0901		LD IX,$0982				; 
+0905		LD A,(IX+0)				; 
+0907		LD H,(IX+1)				; 
+0909		LD L,(IX+0)				; 
+090B		LD E,(HL)				; 
+090C		INC HL					; 
+090D		LD D,(HL)				; 
+090E		PUSH HL					; 
+090F		EX DE,HL				; 
+0910		ADD HL,BC				; 
+0911		EX DE,HL				; 
+0912		POP HL					; 
+0913		LD (HL),E				; 
+0914		INC HL					; 
+0915		LD (HL),D				; 
+0916		INC IX					; 
+0917		INC IX					; 
+0918		LD A,(IX+0)				; 
+0919		CP 0					; 
+091B		JR NZ,$0905				; 
+091D		LD A,(HL)				; 
+091E		CP 0					; 
+0920		RET Z					; 
+0921		CALL $0993				; 
+0924		INC HL					; 
+0925		JR $091D				; 
+0927		CALL $0989				; 
+0929		LD B,0					; 
+092B		LD A,($0988)			; 
+092D		INC A					; 
+092E		LD ($0988),A			; 
+0930		CP $38					; 
+0932		RET NC					; 
+0933		CALL $0956				; 
+0936		RET						; 
+0937		PUSH HL					; 
+0938		LD HL,$0981				; 
+093B		CALL $0977				; 
+093E		LD HL,$09DF				; 
+0941		CALL $0977				; 
+0944		LD A,$02				; 
+0946		LD ($0988),A			; 
+0948		XOR A					; 
+0949		LD B,A					; 
+094A		LD A,($0987)			; 
+094C		INC A					; 
+094D		LD ($0987),A			; 
+094F		LD HL,$09FE				; 
+0951		LD (HL),A				; 
+0952		POP HL					; 
+0953		RET						; 
+0954		LD A,(HL)				; 
+0955		CP 0					; 
+0957		RET Z					; 
+0958		CALL $0993				; 
+095B		INC HL					; 
+095C		JR $0954				; 
+095E		DB $0D,$0A,$0A,$0A,$0A,0	; 
+0964		DB $31,$02				; 
+0966		PUSH HL					; 
+0967		PUSH DE					; 
+0968		PUSH BC					; 
+0969		CALL $CFB0				; 
+096C		POP BC					; 
+096D		POP DE					; 
+096E		POP HL					; 
+096F		RET						; 
+0970		PUSH HL					; 
+0971		PUSH DE					; 
+0972		PUSH BC					; 
+0973		CALL $CEF7				; 
+0976		POP BC					; 
+0977		POP DE					; 
+0978		POP HL					; 
+0979		RET						; 
+097A		PUSH HL					; 
+097B		LD HL,$04E8				; 
+097E		LD DE,$0450				; 
+0981		LD BC,$0107				; 
+0984		LD HL,$00D5				; 
+0987		CALL $BE5F				; 
+098A		LD HL,$00D5				; 
+098D		LD A,$30				; 
+098F		CP (HL)					; 
+0991		JR NZ,$0996				; 
+0993		LD (HL),$20				; 
+0995		INC HL					; 
+0996		JR $098A				; 
+0998		LD HL,$00D5				; 
+099B		CALL $0977				; 
+099E		LD A,$20				; 
+09A0		CALL $0993				; 
+09A3		POP HL					; 
+09A4		RET						; 
+09A5		CALL $0993				; 
+09A8		POP HL					; 
+09A9		RET						; 
+
+09AA		DB 'Imprimante OK ?',0		; Message imprimante
+09BA		DB 'Titre :',0D,0A,0		; Message titre
+
+09C0		CALL $0993				; Appel routine affichage
+09C3		POP HL					; Récupération de HL
+09C4		RET						; Retour
+
+09C5		DB 'Imprimante OK ?',0		; Message à 09C5
+09D5		DB 'Titre :',0D,0A,0		; Message à 09D5
+
+09DD		DB '        '			; 8 espaces
+09E5		DB '        '			; 8 espaces
+09ED		DB '        '			; 8 espaces
+09F5		DB '        '			; 8 espaces
+09FD		DB '        '			; 8 espaces
+0A05		DB '        '			; 8 espaces
+0A0D		DB '        '			; 8 espaces
+0A15		DB '        '			; 8 espaces
+0A1D		DB 'Page: 1 ',0D,0A,0A,0	; En-tête de page
+0A28		DB $A5,$2E,$2E,$2C,$2E,$2E,$2E	; Données finales
+
+0A2F		END
+```
+
+
 
 ___
 ## Page 95
