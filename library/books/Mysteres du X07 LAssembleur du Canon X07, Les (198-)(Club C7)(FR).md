@@ -8,8 +8,21 @@ L'objectif est de reprendre les codes sources ici.
 ___
 ## Listings
 
+"Code pour l'assembleur Canon X07 - MS."
+
+Signifie que vous avez l'assembleur 2 passes de la revue Micro Systèmes.\
+La notation est assez spécifique.\
+En effet le LM est dans un fichier BASIC avec une structure propre.
+
+Il y a ausi un constat de listings incomplet dans le livre.\
+Dans la mesure du possible tout devrait être corrigé ici.
+
+Une fois tout vérifié (c'est très long), les codes seront aussi dans le répertoire "programs".
+
 
 ### page 59 - Tri à bulle
+
+Code pour l'assembleur Canon X07 - MS.
 
 ```asm
 0 '** TRI DE NOMBRES COMPRIS ENTRE 0 ET 255 **
@@ -40,7 +53,7 @@ ___
 240 ']
 ```
 
-Le programme désassemblé est en page 61, ça n'a pas forcément d'intérêt de le reporter ici.
+
 
 
 ### page 62
@@ -54,7 +67,7 @@ Le programme désassemblé est en page 61, ça n'a pas forcément d'intérêt de
 55 CLS : CLEAR 50,4050 : INPUT "Nombre de donnees";N: POKE &H1025,N
 60 FOR I=&H1026 TO &H1025+N : BEEP 9,2 : PRINT "Donnee";i-&H1025;: INPUT A
 70 POKE I,A : NEXT I
-80 CLS : EXEC &H1000 : PRINT "(C)roisnnt ou ..... (D)ecroissant ... ?"
+80 CLS : EXEC &H1000 : PRINT "(C)roisant ou ..... (D)ecroissant ... ?"
 90 G$=INKEY$ : IF G$="D" THEN 120
 100 IF GS<>"C" THEN 90
 110 CLS : FOR I=&H1026 TO &H1025+N : PRINT PEEK(I); : NEXT I :BEEP 9,2 :END
@@ -218,6 +231,8 @@ C145 : 00             NOP
 
 N66
 
+Code pour l'assembleur Canon X07 - MS.
+
 ```basic
 10 '[
 20 '*COPYRIGHT
@@ -236,6 +251,8 @@ N66
 150 'DEFB #00
 160 ']
 ```
+
+Le LM :
 
 ```asm
 2000 : 6C            DEFB 6Ch           ; 'l'
@@ -273,7 +290,7 @@ N66
 
 ```
 
-Le dump :
+Le bon dump :
 
 ```
 2000 : 6C 6F 76 65 0A 20 19 20   love. . 
@@ -283,6 +300,7 @@ Le dump :
 2020 : 20 6C 65 20 58 30 37 00    le X07.
 ```
 
+Le chargeur BASIC :
 
 ```basic
 10 CLS: PRINT"un instant"
@@ -297,6 +315,8 @@ Le dump :
 ### page 130 - Écriture sur X-710
 
 N67
+
+Code pour l'assembleur Canon X07 - MS.
 
 ```basic
 10 '[
@@ -322,6 +342,8 @@ N67
 210 'DEFB $00
 220 ']
 ```
+
+Le LM :
 
 ```asm
 1C00		CD B7 CF		CALL CFB7
@@ -361,6 +383,8 @@ N67
 1C26		00				DEFB 00h		; fin de chaîne
 ```
 
+Le chargeur BASIC :
+
 ```basic
 10 CLS: PRINT"un instant !"
 20 FOR I=&H1C00 TO &H1C26
@@ -373,6 +397,7 @@ N67
 
 ### page 132 - Bruitage
 
+Code pour l'assembleur Canon X07 - MS.
 
 ```basic
 10 '[
@@ -415,6 +440,9 @@ N67
 
 NDR : asm à faire.
 
+
+Le chargeur BASIC :
+
 ```basic
 10 PRINT "un instant !"
 20 FOR I=&H1C00 TO &H1C2B
@@ -429,6 +457,8 @@ NDR : asm à faire.
 ### page 134 - Redefinition de touche
 
 Figure 38
+
+Code pour l'assembleur Canon X07 - MS.
 
 ```basic
 10 '[
@@ -457,6 +487,8 @@ Figure 38
 240 ']
 ```
 
+Le LM :
+
 ```asm
 1C00	21 07 1C		LD HL,1C07
 1C03	22 A0 00		LD (00A0),HL
@@ -479,7 +511,7 @@ Figure 38
 1C20	00				DEFB 00h           ; fin de chaîne
 ```
 
-NDR : Ci-dessus l'ASM complet après correctif.
+Le chargeur BASIC :
 
 ```basic
 10 PRINT "un instant"
@@ -491,6 +523,6 @@ NDR : Ci-dessus l'ASM complet après correctif.
 70 DATA E1,F1,C3,3D,F2,20,5B,30,37,00
 ```
 
-NDR : à vérifier.
 
+EOF
 ___
