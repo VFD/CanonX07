@@ -9,14 +9,21 @@ ___
 ## Introduction
 
 Un résumé par IA :\
-Cet ouvrage publié par Eyrolles en 1984 est un guide complet de programmation ludique sur l'ordinateur Canon X07.
+Cet ouvrage publié par Eyrolles en 1984 est un guide complet de programmation ludique sur l'ordinateur Canon X07.\
 À travers une collection variée de jeux pratiques, graphiques, musicaux, mathématiques, économiques, d'adresse,
 de réflexion et de société, vous découvrirez des techniques de programmation innovantes et des astuces pratiques.
 Les programmes, de complexité croissante, sont amplement expliqués pour permettre une progression à votre rythme,
 du débutant au programmeur confirmé.
 
+NDR :
+- Le résumé est correcte placé dans le contexte de l'époque (1984).
+- Les outils modernes du 21ème siècle permettent d'aller plus loin.
+
 ___
 ## Les Listings
+
+Tous les listing devront être testés.\
+Une fois fait, ils seront extrait et mis dans le répertoire des programmes.
 
 ___
 ### page 2 : MENU
@@ -233,10 +240,11 @@ ___
 600 GOTO 505
 ```
 
-505 : Utiliser GRAPH + E - chr$(153) redéfini
-550 : Utiliser GRAPH + A - chr$(136) redéfini
+NDR :
+- 505 : Utiliser GRAPH + E - chr$(153) redéfini
+- 550 : Utiliser GRAPH + A - chr$(136) redéfini
 
-Version alternative avec CHR$:
+Version alternative avec CHR$ :
 
 ```basic
 500 PRINT" ** COUREUR **"
@@ -388,125 +396,96 @@ ___
 ### page 31 : AJUSTEMENT D’UNE COURBE
 
 ```basic
-10 PR INT"AJUSTEMENT D’UNE COURBE"
+10 PRINT"AJUSTEMENT D'UNE COURBE"
 20 INPUT "Nombre de points" ;N
-30 FOR 1=1 TO N
+30 FOR i=1 TO N
 40 INPUT "Abscisse";A
 50 INPUT "Ordonnée";O
-55 Z=LOGC103
+55 Z=LOG(10)
 60 B=B+A
 70 C=C+0
-80 D=D+A-2
-80 E=E+0's2
+80 D=D+A^2
+80 E=E+O^2
 100 F=F+A*O
-120 H=H+0*A~2
-130 K=K+AZ'3
-150 ri=ri+A''4
+120 H=H+O*A^2
+130 K=K+A^3
+150 M=M+A^4
 160 IF O<=0 THEN 200
-165 XA=XA+LOGCA3z?
-170 U=U+LOGCO3/Z
-175 XC=XC+CLOGCA3/Z3,"2
-180 S=S+AXLOGCO3/?
-180 XY=XY + LOGCA3XLOGCO3/Z-/S2
-200 frIEXTI
-210 PRINT "Type de courbe-"
-220 PRINT" - Droite C13, Courbe hyperbol i que C23," ;
-225 INPUT" Parabolique C33 ou exponentie lie C43";P
+165 XA=XA+LOG(A)/Z
+170 U=U+LOG(O)/Z
+175 XC=XC+(LOG(A)/Z)^2
+180 S=S+A*LOG(O)/Z
+190 XY=XY+LOG(A)*LOG(O)/Z^2
+200 NEXTI
+210 PRINT "Type de courbe :"
+220 PRINT" - Droite (1), Courbe hyperbolique (2)," ;
+225 INPUT" Parabolique (3) ou exponentieile (4)";P
 230 ON P GOTO 235,400,600,800
 232 GOTO 210
 235 IF D-B^2=0 THEN 622
-240 U=CF-BXC/N3/CD-B*B/N3
-250 IaJ=C/N~U*B/N
-260 PRINT"Y=" ;ü;"*X+" ; LJ
-265 IF INKEY$="” THEN 265
-270 PRINT "Prevision C13, changement de courbe C23, " 1
-280 INPUT" ou fin C33" ;X
-
-ON X GOTO 310,210,1000
-GOTO 270
-ON P GOTO 315,500,750,900
-INPUT"Absc i s se :X=" ',8
-O=AXU + 14
-PRINT"Oi'donnee :Y=" ;□ IF INKEY$="" THEN 340 GOTO 270 IF D-B~2=0 THEN 622 XN=X8/N '■ TT1=U/N u=cxY-xn*u3/cxc-xn*XAi 14=U/N-U*XA/N 14= 1 0-14
-PRINT"Y=" ;ui; '*X-" ;U IF INKEY$="': THEN 460 GOTO 270
-INPUT "Absc i sse :X=" ;X
-Y=14*X-U
-PRINT "Ordonnes Y=";Y IF INKEY$="" THEN 525 GOTO 270
-U=I1* C DYN-B^ >-K* C K*N-D*B 3+D* ( KXB-D^
-IF UO0 THEN 630
-PRINT "Pas de solution IF INKEY$="” THEN 624 GOTO 210
-U=K*CB*C-F*N3-D*CD*C-F*B3+H*CD*N-B/'2
-14=14/0
-X=DXCFXD-K*C3-HXCBXD-KXN3 +!1*CB*C-F*N
-X=-X/U
-Y=HXCK*B-Dz'2 3-ri*CFXB-DXC]+KX(FXD-KXC
-Y=Y/U
-PRINT"Y="
-PRINT 14 , *X-2+‘ ,X ; XX + " ; Y
-
-
-210
-IF INKEY$=""
-THEN
-710
-720
-GOTO 270
-750
-INPUT "Ab s ci s
-se X:
-= " ;l
-760
-L=bJXL-2 + XXL + Y
-770
-PRINT i;0rdonn
-e e Y:
-= " JL
-775
-IF INKEY$=""
-THEN
-775
-780
-GOTO 270
-800
-EX--C S-BXU/N 3 /
-CD-BXB/N3
-810
-EB=(U-EX*B3/N
-820
-AX=10^EX
-830
-BX=10Z'EB
-840
-PRINT"Y=" ;BX ;
-;
-AX ~
-850
-IF INKEY$="”
-THEN
-850
-860
-GOTO 270
-900
-INPUT" Ab s c iss
-e X =
-" ;A
-910
-Y=BX*AX~A
-920
-PR INT'Or donne
-e Y =
-" ; Y
-950
-IF INKEY$=""
-THEN
-950
-980
-GOTO 270
+240 U=(F-B*C/N)/(D-B*B/N)
+250 W=C/N-V*B/N
+260 PRINT"Y=";V;"*X+";W
+265 IF INKEY$="" THEN 265
+270 PRINT "Prevision (1), changement de courbe (2),";
+280 INPUT" ou fin (3)";X
+290 ON X GOTO 310,210,1000
+300 GOTO 270
+310 ON P GOTO 315,500,750,900
+315 INPUT"Abscisse:X=";A
+320 O=A*V+W
+330 PRINT"Ordonnee :Y=";O
+340 IF INKEY$="" THEN 340
+350 GOTO 270
+400 IF D-B^2=0 THEN 622
+405 XM=XA/N:YM=U/N
+410 V=(XY-XM*U)/(XC-XM*XA)
+420 W=U/N-V*XA/N
+430 W=10^W
+450 PRINT"Y=";W;"*X^";V
+460 IF INKEY$="" THEN 460
+470 GOTO 270
+500 INPUT "Abscisse:X=" ;X
+510 Y=W*X^V
+520 PRINT "Ordonnee Y=";Y
+525 IF INKEY$="" THEN 525
+530 GOTO 270
+600 V=M*(D*N-B^2)-K*(K*N-D*B)+D*(K*B-D^2)
+620 IF V<>0 THEN 630
+622 PRINT "Pas de solution ;"
+624 IF INKEY$="" THEN 624
+626 GOTO 210
+630 W=K*(B*C-F*N)-D*(D*C-F*B)+H*(D*N-B^2)
+640 W=W/V
+650 X=D*(F*D-K*C)-H*(B*D-K*N)+M*(B*C-F*N)
+660 X=-X/V
+670 Y=H*(K*B-D^2)-M*(F*B-D*C)+K*(F*D-K*C)
+680 Y=Y/V
+690 PRINT"Y="
+700 PRINT W,"*X^2+";X;"*X+";Y
+710 IF INKEY$="" THEN 710
+720 GOTO 270
+750 INPUT "Abscisse X=";L
+760 L=W*L^2+X*L+Y
+770 PRINT "Ordonnee Y=";L
+775 IF INKEY$="" THEN 775
+780 GOTO 270
+800 EX=(S-B*U/N)/(D-B*B/N)
+810 EB=(U-EX*B)/N
+820 AX=10^EX
+830 BX=10^EB
+840 PRINT"Y=";BX;"*";AX;"^X"
+850 IF INKEY$="" THEN 850
+860 GOTO 270
+900 INPUT"Abscisse X=";A
+910 Y=BX*AX^A
+920 PRINT"Ordonnee Y=";Y
+950 IF INKEY$="" THEN 950
+980 GOTO 270
 1000 END
-
 ```
 
-OCR KO, faut refaire.
+
 
 ___
 ### page 35 : CALCUL DE VOTRE IMPOT SUR LE REVENU
@@ -538,8 +517,6 @@ ___
 3000 PRINT"Votre impot a payer:";I;"Francs"
 4000 IF INKEY="" THEN 4000
 4100 GOTO 100
-
-
 ```
 
 Pour la postérité.
@@ -550,21 +527,192 @@ ___
 ### page 41 : ETUDE DE MARCHE
 
 ```basic
-TO DO
+5000 PRINT" * ETUDE DE NARCHE *"
+5010 DIM A(100)
+5020 INPUT"Nombre de societes";N
+5030 FOR I=0 TO N-1
+5040 PRINT"Nom de la societe numero ";I+1;
+5050 INPUT A$(I)
+5060 A(I+N)=60000
+5070 NEXT I
+5080 FOR I=0 TO N-1
+5090 A=A(I+N)
+5100 PRINT"Societe ";A$(I)
+5110 F=15000+1000*(INT(A(I+8*N)/499))
+5115 IF INKEY$="" THEN 5115
+5120 PRINT"Frais fixes=";F
+5130 A=A-F
+5140 IFA<0THENPR1NT" * FAILLITE !!! *":A(I+N)=-2:GOTO 5260
+5150 K=K+1
+5160 IF K=26 THEN 5120
+5180 PRINT"Reste:";A;"F - Stock:";U;
+5190 INPUT"- Vous fabriquez(10F/unite)";Y
+5195 A(I+8*N)=Y
+5200 A(I+3*N)=A(I+3*N)+Y
+5210 A=A-Y*10
+5220 X=X+A(I+3*N)
+5230 PRINT"Reste :";A
+5240 INPUT"Supplement qualite/Cout fabrication";Q
+5245 A(I+7*N)=Q
+5250 A=A-A(I+3*N)*Q
+5260 PRINT"Reste :";A
+5400 INPUT"Nombre de points de ventes (Cout:100F)";P
+5420 A=A-P*100
+5430 PRINT'Reste:";A
+5440 M=M*.2
+5500 INPUT"Budget marketing-publicité";Z
+5510 M=M+Z
+5520 A=A-Z
+5530 PRINT"Reste:";A
+5540 INPUT"Prix de vente public";V
+5550 A(I+4*N)=V
+5560 K=(M^2)/10^8+1
+5520 IF M>17000 THEN K=3.89+M/10^5
+5580 L=(Q+1)^.3-.5
+5590 IF V>100 THEN R=0:GOTO 5650
+5600 IF V>39.9 THEN R=.28/(V-39):GOTO 5650
+5620 R=(1600-V^2)-.5/10
+5650 T=40*P-.5*K*L*R*4
+5660 IF T>8000 THEN T=2200+T*.1
+5620 A(I+2*N)=T
+5680 IF A>=0 THEN 5250
+5200 PRINT"Decouvert a 20% de";-A;
+5210 PRINT" Soit:";-A*.2;"F d'interet"
+5220 A=A*1.2
+5250 A(I+N)=A
+5260 IF INKEY$="" THEN 5260
+5263 A(I+5*N)=Z
+5265 PRINT
+5268 PRINT
+5220 A(I+6*N)=P
+5280 NEXT I
+5800 X=ABS(1.1-X/100000)
+5810 FOR I=0 TO N-1
+5820 FOR J=0 TO N-1
+5830 IF A(I+2*N)>A(J+2*N) THEN A(J+2*N)=A(J+2*N)*X
+5840 NEXT J
+5850 NEXT I
+5900 FOR I=0 TO N-1
+5910 IF A(I+N)=-2 THEN 6050
+5920 PRINT"Societe " ;A$(I)
+5925 IF INKEY$="" THEN 5925
+5930 U=A(I+3*N)
+5940 IF A(I+2*N)>U THEN C=U:GOTO 5960
+5950 C=INT(A(I+2*N))
+5960 PRINT"Ventes :";C;"unites a ";A(I+4*N);"F"
+5965 IF INKEY$="" THEN 5965
+5920 D=A(I+4*N)*C
+5980 A(I+N)=A(I+N)+D
+5990 U=U-C
+6000 PRINT"Reste stock:";U;"Cout 4F/unite"
+6010 A(N+I)=A(N+I)-U*4
+6020 PRINT" Caisse :";A(I+N)
+6030 A(I+3*N)=U
+6040 IF INKEY$="" THEN 6040
+6042 PRINT
+6044 PRINT
+6050 NEXT I
+6060 INPUT"Fait-on une pause (O/N)";ZX$
+6020 IF ZX$="O" THEN STOP
+6080 IF ZX$="N" THEN6100
+6090 GOTO 6060
+6100 ON ERROR GOTO 5080
+6110 LPRINT[3,3]" *** RESULTATS ***"
+6120 FOR I=0 TO N-1
+6130 LPRINT[2,2]" Societe " ;A$(I)
+6140 LPRINT[2,0]"Prix de vente:";A(I+4*N);"F"
+6150 Z=100*INT((A(I+5*N)*(.5+RND(0)))*.01)
+6160 LPRINT[2,0]" Budget approx. marketing-pub";Z;"F"
+6120 LPRINT[2,0]"Nombre de points de ventes:";A(I+6*N)
+6180 LPRINT[2,0]"Qualite en valeur ajoutee:";A(I+7*N)
+6300 NEXT I
+6400 GOTO 5080
 ```
 
 ```basic
-TO DO
+TO DO, version sans X-710
 ```
 
 ___
 ### page 48 : FIREFOX
 
 ```basic
-TO DO
+2000 PRINT" FIREFOX"
+2002 FONT$(225)="136,248,248,112,112,32,32,32"
+2004 FONTS(149)="252,252,4,252,128,252,4,252"
+2005 GOSUB 3900
+2010 Q=7:W=2:E=2:R=1000:T=0
+2020 IF C$="1" THEN R=R+400
+2030 IF C$="2" THEN R=R-400
+2040 IF R<0 THEN R=0
+2050 T=T+INT(2000/(R+50))
+2090 BEEP 20,1
+2100 I=0
+2110 IF I>=Q THEN 2200
+2120 PRINT" ";
+2140 I=I+1:GOTO 2110
+2200 PRINT"*";: REM GRAPH V GRAPH (149)
+2240 I=0
+2250 IF I>=W THEN 2300
+2260 PRINT" ";
+2270 I=I+1:GOTO 2250
+2300 PRINT"I";: REM GRAPH Z GRAPH (225)
+2340 I=0
+2350 IF I>=E THEN 2400
+2360 PRINT" ";
+2370 I=I+1:GOTO 2350
+2400 PRINT"*": REM GRAPH V GRAPH (149)
+2500 A=RND(0)
+2510 IF A>.4 THEN Q=Q+1:W=W-1
+2520 IF A<=.4 THEN Q=Q-1:W=W+1
+2600 B=RND(1)
+2610 IF B>.4 THEN E=E-1
+2620 IF B<=.4 THEN E=E+1
+2780 IF E+W+Q>16 AND Q>11 THEN Q=Q-1:W=W+1
+2790 IF E+W+Q>16 THEN E=E-1
+2295 IF Q<0 THEN Q=Q+1:W=W-1
+2800 IF E+W<2 AND E<1 THEN E=E+1
+2810 IF E+W<2 THEN W=W+1:Q=Q-1
+2812 BEEP 25,1
+2815 FOR I=0 TO R:NEXT I
+2820 C$=INKEY$
+2830 IF C$="-" THEN W=W-1:E=E+1
+2840 IF C$="^" THEN W=W+1:E=E-1
+2850 IF W<0 THEN 3000
+2860 IF E<0 THEN 3200
+2900 GOTO 2020
+3000 FOR I=1 TO Q
+3020 PRINT" ";
+3040 NEXT I
+3100 PRINT"*" ;
+3120 FOR I=1 TO E
+3140 PRINT" ";
+3150 NEXT I
+3170 PRINT""
+3180 GOTO 3500
+3200 FOR I=1 TO Q
+3220 PRINT" " ;
+3240 NEXT I
+3260 PRINT"" ;
+3270 FOR I=1 TO W
+3280 PRINT" ";
+3290 NEXT I
+3300 PRINT"*"
+3310 GOTO 3500
+3500 PRINT"CRAACK! Score :";T
+3600 GOSUB 3900
+3650 IF INKEY$=" " THEN 2000
+3700 GOTO 3650
+3900 BEEP 30,3:BEEP 28,3:BEEP 27,5
+3910 BEEP 30,3:BEEP 35,5:BEEP 30,3=BEEP 35,9
+3920 RETURN
 ```
 
-Serait à mettre à part.
+NDR :
+- Ligne 2200, serait à changer par un PRINT CHR$(149)
+- Ligne 2300, serait à changer par un PRINT CHR$(225)
+- Ligne 2400, serait à changer par un PRINT CHR$(149)
+- Correction après tests de fonctionnement.
 
 
 
