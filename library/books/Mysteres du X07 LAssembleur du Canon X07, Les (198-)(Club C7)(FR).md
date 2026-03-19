@@ -216,14 +216,82 @@ C145 : 00             NOP
 
 ### page 128
 
+N66
 
 ```basic
+10 '[
+20 '*COPYRIGHT
+30 'ORG #2000
+40 'DEFM love
+50 'DEFB #0A,20:*1ER SOUS PROG.
+60 'DEFB #19,20:*2EME SOUS PROG.
+70 'DEFB #19,20:*SOUS PROG DE SLEEP
+80 'CALL #CE9E:*EFFACE L'ECRAN
+90 'LD HL.#0302
+100 'LD (#00BB).HL:*POSITION DE CURSEUR
+110 'LD HL.#ME
+120 'CALL #FEF7
+130 'JP F23D:*ATTENTE CURSEUR
+140 '#ME DEFM vive le X07
+150 'DEFB #00
+160 ']
 ```
 
 ```asm
+2000 : 6C            DEFB 6Ch           ; 'l'
+2001 : 6F            DEFB 6Fh           ; 'o'
+2002 : 76            DEFB 76h           ; 'v'
+2003 : 65            DEFB 65h           ; 'e'
+2004 : 0A            DEFB 0Ah           ; LF
+2005 : 20            DEFB 20h           ; ' '
+2006 : 19            DEFB 19h
+2007 : 20            DEFB 20h
+2008 : 19            DEFB 19h
+2009 : 20            DEFB 20h
+
+200A : CD 9E CE      CALL CE9Eh         ; efface écran
+200D : 21 02 03      LD   HL,0302h
+2010 : 22 BB 00      LD   (00BBh),HL    ; position curseur
+2013 : 21 18 20      LD   HL,2018h      ; adresse du texte
+2016 : CD F7 FE      CALL FEF7h         ; impression
+2019 : C3 3D F2      JP   F23Dh         ; attente curseur
+
+; ---- Texte : "vive le X07",00 ----
+
+201C : 76            DEFB 76h           ; v
+201D : 69            DEFB 69h           ; i
+201E : 76            DEFB 76h           ; v
+201F : 65            DEFB 65h           ; e
+2020 : 20            DEFB 20h           ; ' '
+2021 : 6C            DEFB 6Ch           ; l
+2022 : 65            DEFB 65h           ; e
+2023 : 20            DEFB 20h           ; ' '
+2024 : 58            DEFB 58h           ; X
+2025 : 30            DEFB 30h           ; 0
+2026 : 37            DEFB 37h           ; 7
+2027 : 00            DEFB 00h           ; fin de chaîne
+
 ```
 
+Le dump :
+
+```
+2000 : 6C 6F 76 65 0A 20 19 20   love. . 
+2008 : 19 20 CD 9E CE 21 02 03   . ....!.
+2010 : 22 BB 00 21 1C 20 CD F7   "..!. .. 
+2018 : FE C3 3D F2 76 69 76 65   ..=.vive
+2020 : 20 6C 65 20 58 30 37 00    le X07.
+```
+
+
 ```basic
+10 CLS: PRINT"un instant"
+20 FOR I=&H2000 TO &H2027
+30 READ A$: POKE I,VAL("&H"+A$)
+40 NEXT
+50 OFF
+60 DATA 6C,6F,76,65,0A,20,19,20,19,20,CD,9E,CE,21,02,03,22,BB,00,21,1C,20
+70 DATA CD,F7,FE,C3,3D,F2,76,69,76,65,20,6C,65,20,58,30,37,00
 ```
 
 ### page 130 - Écriture sur X-710
