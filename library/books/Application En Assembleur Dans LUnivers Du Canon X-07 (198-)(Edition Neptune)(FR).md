@@ -326,7 +326,61 @@ ___
 ## Page 55
 
 ```
-To do ASM
+5 REM 2 PRG EN LM
+10 '[
+20 ' ORG $1A00
+30 '**
+40 '** ???
+50 '**
+60 'LD A.$C3
+70 'LD ($66).A
+80 'LD HL.#DB : Debut du 2eme prog
+90 'LD($67).HL
+100 'RET
+110 '****************
+120 '** 1er programme
+130 '****************
+140 'ORG $1B00
+150 'LD A.$00
+160 '#B1 INC A
+170 'LD HL.$0502
+180 'LD ($B8).HL
+190 'CALL $C1BE
+200 'CALL #TP
+210 'JR #B1
+215 ' ** TEMPO **
+220 '#TP PUSH AF
+230 'PUSH BC:
+240 'LD A.$7F
+2s0 '#B2 LD B,$FF
+260 '#B3 DEC B
+270 'JR NZ.#B3
+280 'DEC A
+290 'JR NZ.#B2
+300 'POP BC
+310 'POP AF
+320 'RET
+330 '*****************
+340 '** 2eme programme
+350 '*****************
+360 '#DB PUSH AF
+370 'PUSH BC
+380 'PUSH DE
+390 'PUSH HL
+400 'LD HL.$0101
+410 'LD ($88).HL
+420 'LD HL.#ME
+430 'CALL $FEF7
+440 'CALL #TP
+450 'CALL $CE9E
+460 'POP HL
+470 'POP DE
+480 'POP BC
+490 'POP AF
+500 'RETI
+510 '#ME DEFM INTERRUPTION !!!!
+520 'DEFB $00
+530 ']
 ```
 
 
@@ -339,21 +393,105 @@ To do ASM
 70 READ A$: POKE I,VAL("&H"+A$): NEXT
 90 EXEC &H1A00: EXEC &H1800
 500 DATA 3E,C3,32,66,00,21,20,1B,20
-501 DATA 67,0,C9
-700 DATA 3E,0,3C,21,2,5,22,B8,0
-701 DATA C0,BE,C1,C1,11,1B
-710 DATA 18,F1,F5,C5,3E,7F,6,FF,5
-711 DATA 20,F0,30,20,F8
+501 DATA 67,00,C9
+700 DATA 3E,00,3C,21,02,05,22,B8,00
+701 DATA CD,BE,C1,C1,11,1B
+710 DATA 18,F1,F5,C5,3E,7F,6,FF,05
+711 DATA 20,FD,3D,20,F8
 720 DATA C1,F1,C9,F5,C5,D5,E5,21,1
-721 DATA 1,22,B8,0,21
-730 DATA 3C,18,CD,F7,FE,CD,J1,18,C1
-731 DATA 9E,CE,El,D1
-740 DATA C1,F1,ED,40,49,4E,54,45,5
+721 DATA 01,22,B8,00,21
+730 DATA 3C,1B,CD,F7,FE,CD,11,1B,Cx
+731 DATA 9E,CE,E1,D1
+740 DATA C1,F1,ED,4D,49,4E,54,45,5x
 741 DATA 55,50,54,49,4F,4E,20,21
-750 DATA 21,21,2 1,0
+750 DATA 21,21,21,00
 ```
 
-NDR : Code à revoir car scan tronqué.
+NDR : Code à revoir car scan tronqué et LM illisible.
+
+Ci-après revision des codes.
+
+```basic
+10 REM LES 2
+15 RESTORE 500
+20 FOR I=&H1A00 TO &H1A0B
+30 READ A$: POKE I,VAL("&H"+A$): NEXT
+50 RESTORE 700
+60 FOR I=&H1B00 TO &H1B1F
+70 READ A$: POKE I,VAL("&H"+A$): NEXT
+80 RESTORE 800
+90 FOR I=&H1800 TO &H182E
+100 READ A$: POKE I,VAL("&H"+A$): NEXT
+110 EXEC &H1A00: EXEC &H1800
+500 DATA 3E,C3,32,66,00,21,00,18
+501 DATA 22,67,00,C9
+502 REM P1
+700 DATA 3E,00,3C,21,02,05,22,B8
+701 DATA 00,CD,BE,C1,CD,11,1B,18
+702 DATA F1,F5,C5,3E,7F,06,FF,05
+703 DATA 20,FD,3D,20,F8,C1,F1,C9
+704 REM P2
+800 DATA F5,C5,D5,E5,21,01,01,22,B8,00
+801 DATA 21,1C,18,CD,F7,FE,CD,11,1B,CD
+802 DATA 9E,CE,E1,D1,C1,F1,ED,4D
+803 REM Message 
+804 DATA 49,4E,54,45,52,55,50,54,49,4F
+805 DATA 4E,20,21,21,21,21,00
+```
+
+```asm
+; Routine d'installation ($1A00)
+$1A00: 3E C3          LD A,$C3
+$1A02: 32 66 00       LD ($66),A
+$1A05: 21 00 18       LD HL,$1800
+$1A08: 22 67 00       LD ($67),HL
+$1A0B: C9             RET
+
+; Programme 1 - Boucle principale ($1B00)
+$1B00: 3E 00          LD A,$00
+$1B02: 3C             #B1: INC A
+$1B03: 21 02 05       LD HL,$0502
+$1B06: 22 B8 00       LD ($B8),HL
+$1B09: CD BE C1       CALL $C1BE
+$1B0C: CD 11 1B       CALL #TP
+$1B0F: 18 F1          JR #B1
+
+; Sous-routine Tempo ($1B11)
+$1B11: F5             #TP: PUSH AF
+$1B12: C5             PUSH BC
+$1B13: 3E 7F          LD A,$7F
+$1B15: 06 FF          #B2: LD B,$FF
+$1B17: 05             #B3: DEC B
+$1B18: 20 FD          JR NZ,#B3
+$1B1A: 3D             DEC A
+$1B1B: 20 F8          JR NZ,#B2
+$1B1D: C1             POP BC
+$1B1E: F1             POP AF
+$1B1F: C9             RET
+
+; Programme 2 - Gestionnaire d'interruption ($1800)
+$1800: F5             #DB: PUSH AF
+$1801: C5             PUSH BC
+$1802: D5             PUSH DE
+$1803: E5             PUSH HL
+$1804: 21 01 01       LD HL,$0101
+$1807: 22 B8 00       LD ($B8),HL
+$180A: 21 1C 18       LD HL,#ME
+$180D: CD F7 FE       CALL $FEF7
+$1810: CD 11 1B       CALL #TP
+$1813: CD 9E CE       CALL $CE9E
+$1816: E1             POP HL
+$1817: D1             POP DE
+$1818: C1             POP BC
+$1819: F1             POP AF
+$181A: ED 4D          RETI
+$181C: 4D 49 4E 54    #ME: DEFM "INTERRUPTION !!!!"
+$1820: 45 52 55 50
+$1824: 54 49 4F 4E
+$1828: 20 21 21 21
+$182C: 21
+$182D: 00             DEFB $00
+```
 
 
 ___
