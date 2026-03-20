@@ -440,7 +440,7 @@ ___
 - Micro Systèmes Les Listings
 
 - 14 programmes
-- 1 article
+- 2 article
 - n pubs
 
 | No  | Date    | Réf.                      | État | Commentaire                  |
@@ -461,6 +461,7 @@ ___
 | 056 | 1985-09 | Interface centronics peritel | 📝   |  |
 | 060 | 1986-01 | Basic étendu              | 📝   | p139, Listing |
 | 061 | 1986-02 | Labyrinthe                | 📝   | p153, Listing |
+| 064 | 1986-05 | Micro Digest              |      | p9x, annonce DDI : "Acordeur", "La leçon de musique" |
 
 - Electronique R. Paulmier distribue la carte Centronic/Peritel (1100Fr en kit, 1750Fr. montée).
 
