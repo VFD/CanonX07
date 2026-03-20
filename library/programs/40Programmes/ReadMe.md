@@ -21,12 +21,13 @@ Version éditeur à faire aussi.
 ___
 ## Les Listings
 
-Ils souffrent de petites erreurs de conception et d'optimisation.\
+Beaucoup souffrent d'erreurs de conception et d'optimisation.\
 C'est le cas notament des boucles qui utilisent des variables différentes,
 alors qu'il serait possible d'en utiliser pratiquement 1 ou 2.
 
 Il y avait sans doute un choix fait de condenser les programmes au détrimant de la lisibilité.\
-probable version [a2] pour décondenser ceux-ci.
+Probable version [a2] à faire pour décondenser ceux-ci et effectuer des corrections.
+
 
 Certains éléments pourraient être utilisés comme sous routines.\
 C'est à étudier pour, par exemple, les utiliser dans **X07-Studio**.
@@ -74,9 +75,13 @@ Dans l'ordre du livre.
 | Nom            | État | Commentaire |
 |----------------|------|-------------|
 | Dactylographie | 📝 |  |
-| Mélodia        | ❕ |  |
-| Morse          | ❕ |  |
-| Signalisation  | ❕ |  |
+| Mélodia        | 📝 |  |
+| Morse          | 📝 | problème de cohérence sur le morse |
+| Signalisation  | 📝 |  |
+
+Morse :
+- les data doivent correspondre à la chaîne H$ 
+
 
 
 #### Mathématiques
