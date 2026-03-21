@@ -4,16 +4,19 @@ ___
 ## Introduction
 
 Compilation d'articles trouvés.\
+Contient les pages de listings.
+
+Ce ne sont que des extraits des revues.
 
 Sources :
-- Abandonware Magazine
-- Acpc.me
-- Archive.org
+- [Abandonware Magazine](https://abandonware-magazines.org/)
+- [Acpc.me](https://acpc.me/)
+- [Archive.org](https://archive.org/)
 
 ___
 ## Liste des articles
 
-La liste de référence des recherches est dans le fichier "liste.md".
+La liste de référence des recherches est dans le fichier [liste.md](../liste.md).
 
 
 ___

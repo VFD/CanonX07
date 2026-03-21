@@ -10,12 +10,13 @@ Les recherches et restaurations sont en cours.
 Dans le cadre des articles, seul le texte repris de la revue est conservé.
 
 Cette partie concerne également les logiciels publiés dans les magazines, par exemple dans **Hebdogiciel**, **Micro Systèmes**, etc.\
-Veuillez vous référer au répertoire ["programmation"](programmation).\
+Veuillez vous référer au répertoire **["programs"](programs)**.\
 Nous recherchons en priorité les codes sources, pas forcément les fichiers WAV ou les fichiers d’émulateur.\
 L’objectif est de constituer une base de données de codes source.
 
 Le fichier [Liste.md](liste.md) a pour but de référencer l’ensemble des ressources.
 
+___
 ___
 ___
 
@@ -30,8 +31,8 @@ Research and restoration efforts are ongoing.
 
 For articles, only the text reproduced from the original magazine is retained.
 
-This section also covers software that was published, for example in **Hebdogiciel**.\
-Please refer to the ["src"](../src) directory.\
+This section also covers software that was published, for example in **Hebdogiciel**, **Micro Systèmes**, etc.\
+Please refer to the **["programs"](programs)** directory.\
 We are primarily interested in source code, not necessarily WAV files or emulator binaries.\
 The goal is to build a database of source code.
 

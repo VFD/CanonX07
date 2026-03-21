@@ -32,7 +32,6 @@ DIVERS ............... 16
 - Petites annonces
 - Abonnement à Atlantis
 - Information aux annonceurs
-
 </pre>
 
 ___

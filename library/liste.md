@@ -275,48 +275,48 @@ Les article sont référencés. L'ensemble des listings est dans la partie "src"
 
 | No  | Date       | Réf.                     | État | Commentaire                  |
 |-----|------------|--------------------------|------|------------------------------|
-| 116 | 1986-01-03 | Strip X07                | ❕  |  |
-| 116 | 1986-01-03 | Moteur à explosion       | ❕  |  |
-| 117 | 1986-01-10 | Moniteur désassembleur   | ❕  |  |
+| 116 | 1986-01-03 | Strip X07                | ❕  | Listing |
+| 116 | 1986-01-03 | Moteur à explosion       | ❕  | Listing |
+| 117 | 1986-01-10 | Moniteur désassembleur   | ❕  | Listing |
 | 119 | 1986-01-24 | Pin-up                   | ❕  | Imprimante X-710 |
-| 121 | 1986-02-07 | Mines                    | ❕  |  |
-| 122 | 1986-02-14 | Glaçon                   | ❕  |  |
-| 123 | 1986-02-21 | Labyrinthe 3D            | ❕  |  |
-| 124 | 1986-02-28 | Tracé de courbe          | ❕  |  |
-| 125 | 1986-03-07 | Aventurier               | ❕  |  |
-| 126 | 1986-03-14 | Golf miniature           | ❕  |  |
-| 127 | 1986-03-21 | Catch-mean               | ❕  |  |
-| 128 | 1986-03-28 | Judoka                   | ❕  |  |
-| 129 | 1986-04-04 | Formule 1                | ❕  |  |
-| 132 | 1986-04-25 | Jeu de Ponts             | ❕  |  |
-| 133 | 1986-05-02 | Jeu d'hivers             | ❕  |  |
-| 134 | 1986-05-09 | Key programmer           | ❕  |  |
-| 135 | 1986-05-16 | Canon burger             | ❕  |  |
-| 136 | 1986-05-23 | Canon-calc               | ❕  |  |
-| 137 | 1986-05-30 | Boat                     | ❕  |  |
-| 138 | 1986-06-06 | Canon writer             | ❕  |  |
-| 141 | 1986-06-27 | Music maker              | ❕  |  |
-| 142 | 1986-07-04 | LabyXo VII               | ❕  |  |
-| 146 | 1986-08-01 | 3D Munch                 | ❕  |  |
-| 146 | 1986-08-01 | 3D turbo                 | ❕  |  |
-| 146 | 1986-08-01 | Bataille dans la galaxie | ❕  |  |
-| 146 | 1986-08-01 | Rendez-vous              | ❕  |  |
-| 150 | 1986-08-29 | Temple                   | ❕  |  |
-| 152 | 1986-09-12 | Dames                    | ❕  |  |
-| 154 | 1986-09-26 | Renum auto/comkill       | ❕  |  |
-| 155 | 1986-10-03 | Texto 7                  | ❕  |  |
-| 156 | 1986-10-10 | Basic étendu             | ❕  |  |
-| 158 | 1986-10-24 | Jumper                   | ❕  |  |
-| 160 | 1986-11-07 | Le sorcier maudit        | ❕  |  |
-| 162 | 1986-11-21 | Desass-ASM               | ❕  |  |
-| 165 | 1986-12-12 | Sea war -2-              | ❕  |  |
+| 121 | 1986-02-07 | Mines                    | ❕  | Listing |
+| 122 | 1986-02-14 | Glaçon                   | ❕  | Listing |
+| 123 | 1986-02-21 | Labyrinthe 3D            | ❕  | Listing |
+| 124 | 1986-02-28 | Tracé de courbe          | ❕  | Listing |
+| 125 | 1986-03-07 | Aventurier               | ❕  | Listing |
+| 126 | 1986-03-14 | Golf miniature           | ❕  | Listing |
+| 127 | 1986-03-21 | Catch-mean               | ❕  | Listing |
+| 128 | 1986-03-28 | Judoka                   | ❕  | Listing |
+| 129 | 1986-04-04 | Formule 1                | ❕  | Listing |
+| 132 | 1986-04-25 | Jeu de Ponts             | ❕  | Listing |
+| 133 | 1986-05-02 | Jeu d'hivers             | ❕  | Listing |
+| 134 | 1986-05-09 | Key programmer           | ❕  | Listing |
+| 135 | 1986-05-16 | Canon burger             | ❕  | Listing |
+| 136 | 1986-05-23 | Canon-calc               | ❕  | Listing |
+| 137 | 1986-05-30 | Boat                     | ❕  | Listing |
+| 138 | 1986-06-06 | Canon writer             | ❕  | Listing |
+| 141 | 1986-06-27 | Music maker              | ❕  | Listing |
+| 142 | 1986-07-04 | LabyXo VII               | ❕  | Listing |
+| 146 | 1986-08-01 | 3D Munch                 | ❕  | Listing |
+| 146 | 1986-08-01 | 3D turbo                 | ❕  | Listing |
+| 146 | 1986-08-01 | Bataille dans la galaxie | ❕  | Listing |
+| 146 | 1986-08-01 | Rendez-vous              | ❕  | Listing |
+| 150 | 1986-08-29 | Temple                   | ❕  | Listing |
+| 152 | 1986-09-12 | Dames                    | ❕  | Listing |
+| 154 | 1986-09-26 | Renum auto/comkill       | ❕  | Listing |
+| 155 | 1986-10-03 | Texto 7                  | ❕  | Listing |
+| 156 | 1986-10-10 | Basic étendu             | ❕  | Listing |
+| 158 | 1986-10-24 | Jumper                   | ❕  | Listing |
+| 160 | 1986-11-07 | Le sorcier maudit        | ❕  | Listing |
+| 162 | 1986-11-21 | Desass-ASM               | ❕  | Listing |
+| 165 | 1986-12-12 | Sea war -2-              | ❕  | Listing |
 
 
 #### 1987
 
 | No  | Date       | Réf.       | État | Commentaire                  |
 |-----|------------|------------|------|------------------------------|
-| 168 | 1987-01-02 | Beach head | ❌  |  |
+| 168 | 1987-01-02 | Beach head | ❌  | Listing |
 
 Hebdogiciel c'est arrêté au no 168, donc tous les listings non fini sont incomplet.\
 Le Beach Head existe, il faut le trouver.
@@ -328,12 +328,13 @@ ___
 
 | No | Date    | Réf.                                    | État | Commentaire                  |
 |----|---------|-----------------------------------------|------|------------------------------|
-| 1  | 1987-05 |                                         | 📝   |                              |
-| 2  | 1985-06 |                                         | 📝   |                              |
-| 3  | 1985-10 | Le Canon X-07 : Le portatif Heureux !   | 📝   |                              |
+| 1  | 1987-05 |                                         | 📝   | Rien                         |
+| 2  | 1985-06 |                                         | 📝   | Rien                         |
+| 3  | 1985-10 | Le Canon X-07 : Le portatif Heureux !   | 📝   | Article de fond              |
 
 Pas d'autres numéros connus.\
-Les numéros sont complets et disponible ici car pas d'autres ressources connues.
+Les numéros sont complets et disponible ici car pas d'autres ressources connues.\
+Seul le no3 à un article sur le Canon X-07.
 
 ___
 ### Jeux & Stratégie (FRA)
@@ -361,7 +362,7 @@ ___
 
 | No | Date    | Réf.         | État | Commentaire                  |
 |----|---------|--------------|------|------------------------------|
-| 03 | 1983-10 | 34 eme SICOB | 📝   | p66,... |
+| 03 | 1983-10 | 34 eme SICOB | 📝   | p66, paragraphe ... |
 | 05 | 1983-12 | Produits     | 📝   | Présentation, p60 |
 
 Restauration des pages à faire.
@@ -389,10 +390,10 @@ ___
 | 08 | 1985-04    | Un mouchard dans le Canon                   | 📝   | Listing - p73 |
 | 09 | 1985-05    | Assembleur désassembleur X-07               | 📝   | Cassette Logi'Stick - p46-47 |
 | 09 | 1985-05    | Le Basic du Canon X-07                      | 📝   | Test - p68-70 |
-| 10 | 1985-06    | à vos clavier                               | 📝   | p10 ; Question List No 6 p20 |
+| 10 | 1985-06    | À vos clavier                               | 📝   | p10 ; Question List No 6 p20 |
 | 10 | 1985-06    | Assembleur du X-07                          | 📝   | Cherchez la chaîne ; p24-25 |
 | 10 | 1985-06    | Inversion vidéo                             | 📝   | Listings ; p76 |
-| 11 | 1985-07/08 | à vos clavier                               | 📝   | p9 ; Question List mémoire écran, ref no 7 p71 |
+| 11 | 1985-07/08 | À vos clavier                               | 📝   | p9 ; Question List mémoire écran, ref no 7 p71 |
 | 11 | 1985-07/08 | Le langage machine du Canon X-07 s'implante | 📝   | p35-37 |
 | 12 | 1985-09/10 | La gazette de List - Can'ell                | 📝   | Un Minitel Moniteur X-07 ; p11 |
 | 12 | 1985-09/10 | La gazette de List - Carte moniteur XP-140  | 📝   | p14 |
@@ -400,8 +401,10 @@ ___
 | 12 | 1985-09/10 | Mesurer le temps d'utilisation              | 📝   | Listings p63-64 |
 | 12 | 1985-09/10 | Interdire l'accès...                        | 📝   | Listings p68-69 |
 
-Pas de no 13 et au-dela.\
-De plus beaucoup de numéros sont incomplets.
+NDR :
+- Pas de no 13 et au-dela.
+- De plus beaucoup de numéros sont incomplets.
+- Listing à comparer avec d'autres publié ailleurs (probablement les mêmes).
 
 ___
 ### Micro 7 (FRA)
@@ -411,9 +414,9 @@ Recherche à faire.
 | No | Date    | Réf.                      | État | Commentaire                  |
 |----|---------|---------------------------|------|------------------------------|
 
-Voir si les BASIC générique sont adaptables.
-
-NDR : La revue fusionne avec Votre Ordinateur pour créer Micro V.O.
+NDR :
+- Voir si les BASIC générique sont adaptables.
+- La revue fusionne avec Votre Ordinateur pour créer Micro V.O.
 
 ___
 ### Micro Ordinateurs (FRA)
@@ -430,7 +433,11 @@ Recherche à faire.
 
 Apparement seul numéro qui en parle.
 
-no 27, VG5000, à reporter. 29, Alice 90. 32, exl100. 33, Canon v20 (1985-05)
+NDR, pour report sur les autres Obscure Systems :
+- 27, VG5000
+- 29, Alice 90
+- 32, exl100
+- 33, Canon v20 (1985-05)
 
 ___
 ### Micro Systèmes (FRA)
@@ -466,14 +473,14 @@ ___
 - Electronique R. Paulmier distribue la carte Centronic/Peritel (1100Fr en kit, 1750Fr. montée).
 
 Compléter les recherches.\
-à confirmmer.
+Et à confirmmer.
 
 ___
 ### Micro V.O (FRA)
 
 [Abandonware Magazines](https://abandonware-magazines.org/affiche_mag.php?mag=79)
 
-Liste no incomplète. 4, 5 et 7 absents.
+Liste des numéros incomplètes. 4, 5 et 7 absents.
 
 | No | Date    | Réf.                                   | État | Commentaire      |
 |----|---------|----------------------------------------|------|------------------|
@@ -498,7 +505,8 @@ ___
 | 23 | 1984-05 06 | Publicité                               | ❕   | p16 |
 | 23 | 1984-05 06 | Un canon (X-07) face à un mur de brique | 📝   | Listing casse-briques p42-43 |
 
-Pas de no 24 et au-delà trouvé.
+NDR :
+- Pas de no 24 et au-delà trouvé.
 
 
 ___
