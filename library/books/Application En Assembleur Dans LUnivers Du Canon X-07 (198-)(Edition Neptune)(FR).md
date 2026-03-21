@@ -58,6 +58,7 @@ Programme corrigé :
 65010 END
 ```
 
+<p align="center">────────────────────</p>
 
 Exemple 2
 
@@ -94,6 +95,8 @@ Exemple 3
 ```
 
 NDR: Même problème, coorectif à faire.
+
+<p align="center">────────────────────</p>
 
 Exemple 4
 
@@ -383,6 +386,7 @@ ___
 530 ']
 ```
 
+<p align="center">────────────────────</p>
 
 ```basic
 10 REM LES 2
@@ -408,6 +412,8 @@ ___
 ```
 
 NDR : Code à revoir car scan tronqué et LM illisible.
+
+<p align="center">────────────────────</p>
 
 Ci-après revision des codes.
 
@@ -438,6 +444,7 @@ Ci-après revision des codes.
 804 DATA 49,4E,54,45,52,55,50,54,49,4F
 805 DATA 4E,20,21,21,21,21,00
 ```
+<p align="center">────────────────────</p>
 
 ```asm
 ; Routine d'installation ($1A00)
@@ -520,6 +527,8 @@ Figure 7 : Le Beep !!
 170 ']
 ```
 
+<p align="center">────────────────────</p>
+
 ```basic
 5 REM LE BEEP
 10 FOR I=&H1B00 TO &H1B12
@@ -550,6 +559,8 @@ Fichiers CASO & CASI.
 70 ' RET					; 
 80 ']
 ```
+
+<p align="center">────────────────────</p>
 
 ```
 10 ' [
@@ -728,6 +739,7 @@ Fichiers GPR et KBD
 230 ' ]
 ```
 
+<p align="center">────────────────────</p>
 
 ```basic
 10 FOR I=&H1C00 TO &H1C00+48
@@ -788,6 +800,8 @@ Prise Série, le BASIC.
 
 NDR : Modifié pour être plus lisible
 
+<p align="center">────────────────────</p>
+
 Lecture Série.
 
 
@@ -842,6 +856,8 @@ Dans le code BASIC il y a un RET et pas dans les ASM, donc ajout.
 100 ' ]
 ```
 
+<p align="center">────────────────────</p>
+
 ```asm
 1C00	3E 80			LD A,80
 1C02	32 00 80		LD (8000),A
@@ -851,6 +867,8 @@ Dans le code BASIC il y a un RET et pas dans les ASM, donc ajout.
 1C0D	C9
 ```
 
+<p align="center">────────────────────</p>
+
 ```basic
 10 REM TEST DE LA X-720
 20 FOR I=&H1C00 TO &H1C0D
@@ -859,6 +877,8 @@ Dans le code BASIC il y a un RET et pas dans les ASM, donc ajout.
 50 DATA 3E,80,32,00,80,3A,00,80,FE,80
 60 DATA C2,AA,F1,C9
 ```
+
+<p align="center">────────────────────</p>
 
 Figure 13 : Effacement.
 
@@ -881,6 +901,8 @@ Figure 13 : Effacement.
 160 ' ]
 ```
 
+<p align="center">────────────────────</p>
+
 ```asm
 1C00 CD 0D 1C			CALL 1C0D
 1C03 CD 9E CE			CALL CE9E
@@ -895,6 +917,8 @@ Figure 13 : Effacement.
 1C1A 32 BD 00			LD (00BD),A
 1C1D C9 				RET
 ```
+
+<p align="center">────────────────────</p>
 
 ```basic
 0 REM EFFACEMENT PARTIEL
@@ -925,6 +949,8 @@ Figure 14 : Screen.
 110 ' ]
 ```
 
+<p align="center">────────────────────</p>
+
 ```asm
 1C00 3E 00			LD A,00
 1C02 32 D1 00		LD (00D1),A
@@ -935,6 +961,8 @@ Figure 14 : Screen.
 1C0A C3 09 AB		JP AB09
 ```
 
+<p align="center">────────────────────</p>
+
 ```basic
 10 REM *** SCREEN ***
 20 FOR I=&H1C00 TO &H1C0C
@@ -944,6 +972,7 @@ Figure 14 : Screen.
 60 DATA 5F,C3,09,AB
 ```
 
+<p align="center">────────────────────</p>
 
 Figure 15 : Color.
 
@@ -961,6 +990,8 @@ Figure 15 : Color.
 110 ' ]
 ```
 
+<p align="center">────────────────────</p>
+
 ```asm
 1C00 3E 01			LD A,01
 1C02 32 E5 04		LD (04E5),A
@@ -970,6 +1001,8 @@ Figure 15 : Color.
 1C0C 32 E7 04		LD (04E7),A
 1C0F C9				RET
 ```
+
+<p align="center">────────────────────</p>
 
 ```basic
 10 REM *** COLOR ***
@@ -1025,6 +1058,7 @@ Figure 16 : LMDATA
 ```
 NDR : version avec ajout d'espaces pour la lisibilité.
 
+<p align="center">────────────────────</p>
 
 Figure 17 : EXEMPLE
 
@@ -1080,6 +1114,8 @@ Figure 18 : Logo CANON
 240 DATA 6,10,6,6,2,5,1,5,2,5,3,9,4,5,2,5,3
 250 DATA 8,6,9,4,3,5,1,5,2,5,4,7,5,5,2,5,3,79,79
 ```
+
+<p align="center">────────────────────</p>
 
 Figure 19 : Copie rapide
 
@@ -1141,7 +1177,7 @@ FIGURE 20 : Logogenese
 113 DATA ICONO,IDEO,INFRA,ISO
 114 DATA INTRA,LATERO,LIPO,LOGO
 115 DATA LOXO,MACRO,MEGALO,METEO
-116 DATA META,§ICRO,MKsO,MNEMO
+116 DATA META,§ICRO,MKsO,MNEMO
 117 DATA MORPHO,MYTHO,NECRO,NEO
 118 DATA NOSO,NUGLEO,OCTO,OLEO
 119 DATA OMNI,ORTHO,PALEO,PAN
@@ -1244,6 +1280,8 @@ TABLE		DW A1+1 , .....
 			DB 0					; Fin de la table
 ```
 
+<p align="center">────────────────────</p>
+
 Exemple de programme à reloger :
 
 ```asm
@@ -1254,8 +1292,9 @@ A1			LD HL,MSIMP				;Première adresse à modifier
 FIN			EQU $					; Fin du logiciel à reloger
 ```
 
-Figure 21 : LLIST
+<p align="center">────────────────────</p>
 
+Figure 21 : LLIST
 
 
 ```
@@ -1335,6 +1374,8 @@ Passage par analyse IA pour vérifier le code.\
 Puis l'IA fait la conversion LM en rapport aussi avec le premier LM ci-dessus :
 
 Cela reste encore à vérifier.
+
+<p align="center">────────────────────</p>
 
 ```
 ; LLIST - Relocateur pour Canon X07
@@ -1576,7 +1617,7 @@ Cela reste encore à vérifier.
 0A2F		END
 ```
 
-
+NDR : Il faudrait faire les commentaires.
 
 ___
 ## Page 95
@@ -1604,6 +1645,8 @@ Figure 22 : Chargeurs
 180 END
 ```
 
+<p align="center">────────────────────</p>
+
 ```basic
 5 ' *** ENTREUR DE CODES ***
 10 CLEAR 50,&H7FF: A=&H800
@@ -1612,6 +1655,8 @@ Figure 22 : Chargeurs
 49 A=A+1: IF A>&HA29 THEN PRINT "...": BEEP 2,3: END
 50 GOTO 20
 ```
+
+<p align="center">────────────────────</p>
 
 Figure 23 : Exemple
 
@@ -1645,6 +1690,8 @@ Listing logo Canon
 250 DATA 8,6,9,4,3,5,1,5,2,5,4,7,5,5,2,5,3,79,79
 ```
 
+NDR : 2 fois ? à vérifier.
+
 ___
 ## Page 98
 
@@ -1653,6 +1700,8 @@ Figure 24 : Labyrinthe 3D
 ```
 to do
 ```
+
+<p align="center">────────────────────</p>
 
 Figure 25 : Chargeurs
 
@@ -1681,6 +1730,8 @@ Programme 1
 180 END
 ```
 
+<p align="center">────────────────────</p>
+
 Programme 2
 
 ```basic
@@ -1700,6 +1751,8 @@ Figure 26 : Solitaire
 
 ```
 ```
+
+<p align="center">────────────────────</p>
 
 Figure 27
 
@@ -1725,6 +1778,8 @@ Programme 1
 170 NEXT: MOTOR: END
 ```
 
+<p align="center">────────────────────</p>
+
 Programme 2
 
 ```basic
@@ -1743,6 +1798,8 @@ Figure 28 : Les Pentominos
 
 ```
 ```
+
+<p align="center">────────────────────</p>
 
 Figure 29
 
@@ -1763,6 +1820,8 @@ Figure 29
 160 FOR I=D TO F: OUT#1,PEEK(I)
 170 NEXT: MOTOR: END
 ```
+
+<p align="center">────────────────────</p>
 
 ```basic
 5 REM *** ENTREUR DE CODES ***
@@ -1872,6 +1931,8 @@ Figure 32: Exemple+Chargeurs
 180 END
 ```
 
+<p align="center">────────────────────</p>
+
 ```basic
 5 REM *** ENTREUR DE CODES ***
 10 CLEAR 50,&H9FF:A=&H3C10
@@ -1916,6 +1977,8 @@ Figure 34: Chargeurs
 170 NEXT: MOTOR
 180 END
 ```
+
+<p align="center">────────────────────</p>
 
 ```basic
 5 REM *** ENTREUR DE CODES ***
@@ -1964,6 +2027,8 @@ Figure 36 : Chargeurs
 180 END
 ```
 
+<p align="center">────────────────────</p>
+
 ```basic
 5 REM *** ENTREUR DE CODES - LCD ***
 10 CLEAR 50,&H7FF:A=&H800
@@ -2009,6 +2074,8 @@ Figure 38 : Chargeurs
 170 NEXT: MOTOR
 180 END
 ```
+
+<p align="center">────────────────────</p>
 
 ```basic
 5 REM *** ENTREUR DE CODES - VIDEO ***
@@ -2057,6 +2124,7 @@ ___
 
 NDR : Ligne 120 corrigée pour le nom.
 
+<p align="center">────────────────────</p>
 
 ```basic
 5 REM *** ENTREUR DE CODES - VIDEO ***

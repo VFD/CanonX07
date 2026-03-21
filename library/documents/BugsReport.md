@@ -1,10 +1,11 @@
-# Rapport de BUG sur le X-07
+# Rapport des BUGs sur le X-07
 
 
 ___
 ### Introduction
 
-Report ici des bug trouvé sur le canon X-07 au fil des lectures.
+Report ici des bug trouvé sur le canon X-07 au fil des lectures.\
+Si vous en connaissez, nous le signaler.
 
 
 ___
@@ -33,6 +34,8 @@ Tester sur les machines et prendre note.
 
 Voir Club Canon no 3; Problème lié à la matrice de gestion du clavier.
 
+<p align="center">────────────────────</p>
+
 ### Boucle infinie
 
 Cf. Club Canon no 3.
@@ -47,11 +50,15 @@ Cf. Club Canon no 3.
 
 Tester sur les machines et prendre note.
 
+<p align="center">────────────────────</p>
+
 ### élévation à la puissance
 
 ```basic
 2 PRINT 2^31 : GOTO 2
 ```
+
+<p align="center">────────────────────</p>
 
 ### sur fonctions LOG et EXP
 

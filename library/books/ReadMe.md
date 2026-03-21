@@ -1,35 +1,37 @@
-# Books
+# Books for the Canon X07
 
 ___
 ## Introduction
 
 Récupération et mise en forme des livres publiés pour le Canon X-07.\
-Il y en a peu.
+Il y en a peu, nous en avons :
+- 7 en Français
+- Autre langue à trouver
 
-Temp contient les images retravaillées.\
+Le dossier "temp" contient les images retravaillées et travaux en cours.\
 Gros travail aussi pour ensuite réinsérer proprement les codes sources.
 
 ___
 ## BASIC
 
-- 40 Programmes pour Canon X07.
+- 40 Programmes pour Canon X07 (1985-01)(ETSF, Micro Systemes)(FR)
+- Dessins géométriques (1985)(Eyrolle, Delahaye)(FR)
 - Faites vos jeux avec Canon X07 (1984)(Eyrolles)(FR)
-- Plus Loin avec Canon X07
+- Nouveaux dessins géométriques (1985)(Eyrolle, Delahaye)(FR)
+- Plus Loin avec le Canon X07 (1985)(Soracom)(FR)
 
 ___
 ## Assembler
 
 Les 2 bibles.
 
-[Les Mysteres du X07 LAssembleur du Canon X07](Les%20Mysteres%20du%20X07%20LAssembleur%20du%20Canon%20X07%20%28198-%29%28Club%20C7%29%28FR%29%5BOCR%5D.pdf)\
-André Tonic, Adward Arevian et Philippe MILLET\
+- Application En Assembleur Dans LUnivers Du Canon X-07 (198-)(Edition Neptune)(FR)
+- Mysteres du X07 LAssembleur du Canon X07, Les (198-)(Club C7)(FR)
+
+André Tonic, Adward Arevian et Philippe MILLET et Jean-Jacques ROUSSEAU\
 Club C7\
-Cleanup and OCR by myself. Purpose, extract code.
+Edition NEPTUNE
 
-Applications en Assembleur dans l'univers du Canon X-07.\
-André Tonic, Adward Arevian, Philippe MILLET et Jean-Jacques ROUSSEAU\
-Same work as above in progress. Purpose, extract code.
 
-Pour les Fanzines du C7, voir le dossier correspondant.
 
 ___

@@ -14,11 +14,14 @@ De plus, nous ignorons le nombre exact de publication pour chacun d'eux.
   - Atlantis
   - Info'Look
 
+Recherche en cours de tous les listings afin de reconstruire les pages proprement.
+
 ___
 ## Un livre ?
 
 Fusion de tous les fanzines en format livre ?\
 Suppression des PA, Pubs et autres ?\
+Il serait interessant de fusionner tout ça.\
 ...
 
 

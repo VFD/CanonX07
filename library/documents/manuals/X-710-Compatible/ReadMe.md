@@ -7,26 +7,37 @@ Le but ici est de donner un tableau des imprimantes équivalante à la X-710.\
 En effet il s'agit d'imprimante issue de ALPS en marque blanche.
 
 La mécanique et le fonctionnement est le même.\
-La différences peut être dans les mots clés pour faire les tracés et surtout l'initialisation.
+La différences peut être dans les mots clés pour faire les tracés et surtout l'initialisation.\
+En croisant les notices il est possible de découvrire des fonctions cachées.
 
 Il y aurait une ROM interne.\
-Un dump serait bienvenu.
+Un dump serait bienvenu si c'est le cas.
 
-### Problème de batteires
+Autre projet, un emulateur de ce type d'imprimante.
+
+___
+## /!\ Problème de batteires /!\
+
+Il est impératif d'enlever la batterie de votre imprimante X-710.\
+De toute manière elle est KO.
 
 Voir https://oldskool.silicium.org/calc/x07/bidx710.htm
 
+Il semblerait que ce ne soit pas efficace.\
+Autre solution à trouver.
+
 ___
-## Tableau
+## Tableaux des notices
 
-| Nom     | Marque | Année | Commentaire |
-|---------|--------|-------|-------------|
-| X-710   | Canon  | 1983  |             |
-| FP-1000 | Casio  |       |             |
+Modèles dont nous avons la notice.
 
-Tandy, commodore, ...
+| Nom       | Marque | Année | Commentaire |
+|-----------|--------|-------|-------------|
+| X-710     | Canon  | 1983  |             |
+| FP-1011PL | Casio  |       |             |
 
-Liste à vérifier.
+
+Liste à vérifier/trouver.
 
 | Modèle                  | Marque          |
 |-------------------------|-----------------|
@@ -49,10 +60,6 @@ Liste à vérifier.
 | Microprinter WP-100     | Convergent      |
 | MCP-40X                 | Astron          |
 
-
-
-
-
 Quand on les trouve, les notices sont jointes dans ce répertoire.
 
 ___
@@ -64,6 +71,8 @@ Attention, ici pour la Canon X-710.
 TO DO.
 
 Tous passe par LPRINT. 
+
+<p align="center">────────────────────</p>
 
 ### Mode TEXTE
 
@@ -85,25 +94,27 @@ J : Couleur [0:noir, 1:bleu, 2:vert, 3:rouge] - sauf si vous avez mis les stylot
 
 Par défaut : 2,0
 
+<p align="center">────────────────────</p>
+
 ### Mode GRAPHIQUE
 
 LPRINT CHR$(18)
 
 | Commande | Action | Paramètre |
 |----------|--------|-----------|
-| L        |        |
-| A        |        |
-| H        |        |
-| I        |        |
-| D        |        |
-| J        |        |
-| M        |        |
-| R        |        |
-| C        |        |
-| S        |        |
-| Q        |        |
-| P        |        |
-| F        |        |
+| L        |        | |
+| A        |        | |
+| H        |        | |
+| I        |        | |
+| D        |        | |
+| J        |        | |
+| M        |        | |
+| R        |        | |
+| C        |        | |
+| S        |        | |
+| Q        |        | |
+| P        |        | |
+| F        |        | |
 
 TO DO
 

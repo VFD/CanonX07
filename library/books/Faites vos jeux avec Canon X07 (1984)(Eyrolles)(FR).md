@@ -241,27 +241,31 @@ ___
 ```
 
 NDR :
+- Problème NEXT pour ligne 560 ou 580, il est où.
 - 505 : Utiliser GRAPH + E - chr$(153) redéfini
 - 550 : Utiliser GRAPH + A - chr$(136) redéfini
 
-Version alternative avec CHR$ :
+<p align="center">────────────────────</p>
+
+Version alternative avec CHR$ et correction NEXT (non testée) :
 
 ```basic
 500 PRINT" ** COUREUR **"
 501 FONT$(153)="0,40,112,160,32,208,16,0"
 502 FONT$(136)="0,4,4,4,4,12,4,0"
-505 PRINTCHR$(153);
+505 PRINT CHR$(153);
 510 J=J+1
 515 IF J>19 THEN J=0
-520 FOR I=1 TO 100:NEXT I
-530 PRINTCHR$(&H0C)
-540 FOR I=1 TO J-1:PRINT" ";
-545 NEXT I
-550 PRINTCHR$(136);
-560 FOR I=1 TO J:PRINT" ";
-570 PRINTCHR$(&H0C)
-580 FOR I=1 TO J:RRINT" ";
-590 NEXT I
+520 FOR I=1 TO 100: NEXT
+530 PRINT CHR$(&H0C)
+540 FOR I=1 TO J-1: PRINT" ";
+545 NEXT
+550 PRINT CHR$(136);
+560 FOR I=1 TO J: PRINT" ";
+570 PRINT CHR$(&H0C)
+575 NEXT
+580 FOR I=1 TO J: PRINT" ";
+590 NEXT
 600 GOTO 505
 ```
 
@@ -897,7 +901,7 @@ ___
 120 PRINTC;D
 130 INPUT"Horizontal";H
 150 PRINTC+H;D
-160 INPUT"Uertical";V
+160 INPUT"Vertical";V
 170 C=C+H
 180 IF C>=0 THEN 220
 190 PRINT"Hors tableau"
@@ -944,9 +948,9 @@ ___
 TO DO
 ```
 
-
-Programme incomplet, ne gère pas la dame.
-
+NDR :
+- Programme incomplet, ne gère pas la dame.
+- À faire pour l'intérêt du code.
 
 ___
 ### page 83 : BACKGAMMON
@@ -955,7 +959,8 @@ ___
 TO DO
 ```
 
-
-Programme incomplet, n'affiche pas le plateau.
+NDR :
+- Programme incomplet, n'affiche pas le plateau.
+- À faire pour l'intérêt du code.
 
 ___

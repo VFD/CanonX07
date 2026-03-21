@@ -82,7 +82,7 @@ ___
 ```
 
 NDR:
-- 110 et 120 : génère un RANDOMIZE. RND(-x).
+- 110 et 120 : génère un RANDOMIZE pour le X07. RND(-x).
 
 ___
 ### page 46 : COURBE
@@ -409,6 +409,8 @@ ___
 320 NEXT I: RETURN
 ```
 
+<p align="center">────────────────────</p>
+
 ```basic
 1 DEFINT A,Z
 5 INPUT"facteur";F: CLS
@@ -428,6 +430,8 @@ ___
 300 LPRINT "M";STR$(X*F);",";STR$(-Y1-I)
 320 RETURN
 ```
+
+<p align="center">────────────────────</p>
 
 ```basic
 1 DEFINT A,Z
@@ -667,7 +671,7 @@ ___
 100 Y=(X^3)/36500+10
 ```
 
-NDR : On fait quoi de la ligne ?
+NDR : On fait quoi de la ligne ? Ce serait plutôt la ligne 70.
 
 ___
 ### page 83,84
@@ -904,6 +908,8 @@ ___
 130 F=0:LPRINT"    ";M$:M$=""
 140 RETURN
 ```
+
+<p align="center">────────────────────</p>
 
 Version alternative :
 
