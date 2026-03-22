@@ -14,11 +14,10 @@ Il nous manque les numéros 1 et 6.
 
 NDR : Restauration assez complexe.
 
-NDR : Les pages seront ajustées pour une impression A3 en livret. Malgrès le fait que ce n'était pas le cas à l'époque.
-En effet, c'était des A4 simple face.
+NDR : Les pages seront ajustées pour une impression A3 en livret. Malgrès le fait que ce n'était pas le cas à l'époque.\
+En effet, d'après nos informations, c'était des feuille A4 simple face.
 
 NDR : L'intention est aussi de refaire les pages manuscrites en page d'édition.
-
 
 Nous sommes aussi en recherche de tous les programmes qui étaient disponible via ce Club Canon, il y en a beaucoup.
 
@@ -54,8 +53,9 @@ Tableau de l'état d'avancement des restaurations :
 | 11   | 198x-mm | 📝   |   |
 | 12-13| 198x-mm | 📝   | Numéro double |
 
-
-Nous ignorons si il y a d'autres numéros.
+NDR :
+- Les dates sont incertaines
+- Nous ignorons si il y a d'autres numéros.
 
 ___
 ## Note de restauration
@@ -70,8 +70,9 @@ Des pages blanches peuvent être insérées afin de pouvoir imprimer correctemen
 Par exemple sur une imprimante A3.\
 Les originaux étaient semble t-il de simple recto assemblés.
 
-NDR : Les PDF à disposition évoluent en fonction de l'état de restauration. Consulter leur Markdown respectif.
-
-NDR : Les listings sont aussi en cours et seront réintroduit dans le fanzine pour lisibilité.
+NDR :
+- Les PDF à disposition évoluent en fonction de l'état de restauration.
+- Consulter leur Markdown respectif.
+- Les listings sont aussi en cours et seront réintroduit dans le fanzine pour lisibilité.
 
 ___

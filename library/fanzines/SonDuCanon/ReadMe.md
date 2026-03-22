@@ -10,16 +10,16 @@ Les petits programmes seront dans des markdown éponymes pour faciliter la lectu
 Prévision de les incruster ensuite pour une meilleurs restoration.\
 Certain numéro avaient des pub couleurs. Elles ne seront pas ajoutées après restauration, elles sont à part.
 
-Source : Abandonware Magazines et objet trouvés.
+Source : **[Abandonware Magazines](https://abandonware-magazines.org/affiche_mag.php?mag=213)** et **objet trouvés**.
 
-Les numéros ont aussi leur cassette éponyme.\
-Recherche en cours pour les logiciels.\
+Les numéros ont eu aussi leur cassette éponyme, puis des doubles numéros.\
+Recherche toujours en cours pour retrouver tous les logiciels.\
 
-NDR : Les cassettes contiennent les logiciels publiés, sauf certain petit code. Une restauration est en cours.
-
-NDR : Les PDF évoluent en fonction de l'état de leur restauration respective. Lire aussi le MarkDown associé.
-
-NDR : La restauration consiste aussi à réimplémenter les codes sources pour la lisibilité.
+NDR :
+- Les cassettes contiennent les logiciels publiés, sauf certain petit code. Une restauration est en cours.
+- Les PDF évoluent en fonction de l'état de leur restauration respective. Lire aussi le MarkDown associé.
+- La restauration consiste aussi à réimplémenter les codes sources pour la lisibilité.
+- Les MarkDown contiennent le sommaire des gazettes.
 
 ___
 # Tableau
@@ -82,16 +82,16 @@ NDR : Feuilles volantes trouvées dans un classeur.
 ___
 ## Note de restauration
 
-Les sources sont les scans qui se trouvent encore sur Abandonware Magazine ainsi que des scans personnel d'élément trouvés.\
+Les sources sont les scans qui se trouvent encore sur [Abandonware Magazine](https://abandonware-magazines.org/affiche_mag.php?mag=213) ainsi que des scans personnel d'élément trouvés.\
 Les JPG ont été transformé en PNG, puis en Grayscale. Traitements divers de corrections et retouches.\
 Transformation en A4 300dpi.\
 Une fois les images correctes, mise en PDF et OCR.
 
-Le renammage des PNG cherche à correspondre aux no de page.\
-Des pages blanches peuvent être insérées afin de pouvoir imprimer correctement chaque fanzines en mode livret.
+Le renommage des PNG cherche à correspondre aux numéros des pages.\
+Des pages blanches peuvent être insérées afin de pouvoir imprimer correctement chaque fanzines en mode livret.\
 Par exemple sur une imprimante A3. Puis assemblage des feuille.
 
-NDR : Ce qui sera fait une fois toutes les publication restaurées. Avant mars si possible pour la vidéo finale.
+NDR : Ce qui sera fait une fois toutes les publication restaurées.
 
 
 ___

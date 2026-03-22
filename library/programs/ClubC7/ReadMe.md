@@ -4,20 +4,33 @@
 ___
 ## Introduction
 
-Les listing du club C7, paru dans le fanzine "Le Son du Canon".\
-Les fanzines sont en cours de restauration.
+Les programmes du club C7, paru dans les gazettes "Le Son du Canon".
+
+Les gazettes sont en cours de restauration, format PDF A4, 300dpi.\
+Pour impression A3 en mode livret.
 
 Les listings sont en cours (conversion UTF8 et corrections).\
-Ils seront répartis à terme dans des répertoire faisant référence aux cassettes produites.
+Ils sont répartis dans les répertoire faisant référence aux gazettes.\
+Après vérification, ils seront réintégrés dans les gazettes pour la lisibilité.
 
 Il est possible d'avoir des doubles du fait de la présence du même programme sur les cassettes.\
 L'idée est aussi de pouvoir cas échéant reproduire la cassette originale.
 
+Les Logi'Stick sont dans le répertoire **[LogiStick](../LogiStick)**.\
+C'est la même équipe que le CLub C7.
 
 ___
-## Les listings du fanzine "Son du Canon" édité par le CLub C7.
+## Les listings
 
-NDR : il nous manques des numéros. Si vous en possédez nous contacter.
+NDR :
+- Il nous manques des numéros
+	- 1 (2 pages)
+	- 9
+	- 10
+	- 11/12
+	- 13
+
+Si vous les possédez nous contacter.
 
 
 
