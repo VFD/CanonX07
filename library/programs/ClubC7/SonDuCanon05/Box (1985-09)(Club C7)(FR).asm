@@ -1,6 +1,5 @@
 ;
 ; Fait via decodage des lignes data
-; Le source du fanzine est different
 ;
         ORG  &6000
 

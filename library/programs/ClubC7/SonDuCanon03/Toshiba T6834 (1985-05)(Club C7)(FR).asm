@@ -1,60 +1,3 @@
-# Son du Canon Le, issue 03 (198-)(Club C7)(FR)
-
-
-___
-## Introduction
-
-TO DO
-
-
-___
-## Les Listings
-
-
-### Page 24 - TOSHIBA T6834
-
-Exemple : 
-
-```asm
-		PUSH AF				; 
-		PUSH DE				; 
-		PUSH BC				; 
-		LD C,$F1			; 
-		CALL $C0C9			; 
-		LD A,($026C)		; 
-		OR $80				; 
-		OUT ($F0),A			; 
-		OUT (C),E			; 
-		LD A,$02			; 
-		OUT ($F5),A			; 
-		POP BC				; 
-		POP DE				; 
-		POP AF				; 
-		RET					; 
-```
-
-Le programme Basic de démo :
-
-```basic
-5 REM programme BASIC implantant une routine en LANGAGE MACHINE contenant une démonstration .
-10 CLS:PRINT"je charge les codes ..."
-20 FOR X=&H1C00 TO &H1C3E
-30 READ A$:POKE X,VAL("&H"+A$)
-40 NEIT X
-45 REM données de la routine LANGAGE MACHINE
-50 DATA CD,9E,CE,1E,15,CD,25,1C
-60 DATA 1E,3C,CD,25,1C,1E,0F,CD
-70 DATA 25,1C,1E,0A,CD,25,1C,06
-80 DATA FF,1E,2B,CD,25,1C,1E,2C
-90 DATA CD,25,1C,10,F4,F5,C5,D5
-92 DATA 0E,F1,CD,C0,C9,3A,6C,02
-95 DATA F6,80,D3,F0,ED,59,3E,02
-98 DATA D3,F5,D1,C1,F1,C9,00,00
-```
-
-L'ASM de démo :
-
-```asm
 ; Désassemblage du code machine Z80 pour Canon X07
 ; Chargé à l'adresse &H1C00
 
@@ -109,8 +52,3 @@ graph_call:         ; Adresse 1C25h
     C9             ret                  ; Retourne
     
     00 00          db      00h, 00h     ; Octets de données ou espace réservé
-```
-
-
-
-___
