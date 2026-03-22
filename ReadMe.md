@@ -47,6 +47,7 @@ Ressources :
   - [Old Machinery](https://oldmachinery.blogspot.com/2013/09/canon-x-07.html)
   - [poket](http://pocket.free.fr/html/canon/x-07_e.html) - /!\ http, old
   - [Dessins géométriques](https://github.com/v3ga/dessins_geometriques_et_artistiques?tab=readme-ov-file)
+  - [ACPC.ME](https://acpc.me/) - dédié AMSTRAD mais on y trouve plein de choses
   - ...
 - Vidéos
   - [You Tube](https://www.youtube.com/results?search_query=canon+X-07) - query "canon X-07"
