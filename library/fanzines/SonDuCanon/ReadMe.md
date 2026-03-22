@@ -94,6 +94,23 @@ Par exemple sur une imprimante A3. Puis assemblage des feuille.
 NDR : Ce qui sera fait une fois toutes les publication restaurées. Avant mars si possible pour la vidéo finale.
 
 
+___
+### Les K7
+
+D'après nos recherche sur les documents :
+
+
+| No    | Date    | Etat | Commentaire              |
+|-------|---------|------|--------------------------|
+| 1/2   |         | ❕    |                          |
+| 4/5   |         | ❕    |                          |
+| 6/7   |         | ❕    |                          |
+| 8     |         | ❕    |                          |
+| 9     |         | ❕    |                          |
+| 10    |         | ❕    |                          |
+| 11/12 |         | ❕    |                          |
+| D     |         | ❕    |                          |
+
 
 
 ___
