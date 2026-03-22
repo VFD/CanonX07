@@ -6,6 +6,30 @@ ___
 Ce markdown à pour but de compiler les petits codes source de ce numéro.
 
 
+
+___
+### Sommaire
+
+- EDITORIAL .................................. PAGE  1
+- LA LETTRE DE CANON ......................... PAGE  3
+- LES BO ADRESSES ............................ PAGE  4
+- LE COURRIER DES LECTEURS ................... PAGE  6
+- UTILITAIRE "REFBAS" ........................ PAGE  8
+- UTILITAIRE "EXABAS" ........................ PAGE 11
+- ESSAI DE FORTH (LOGl'STICK) ................ PAGE 14
+- STAGE "ASSEMBLEUR II" ...................... PAGE 16
+- INSTRUCTION GRAPHIQUE "BOX" ................ PAGE 18
+- DOSSIERS TOUS AZIMUTS ...................... PAGE 21
+- UTILITAIRES "LMDATA" ET "RESTORE" .......... PAGE 22
+- PETITES ANNONCES ........................... PAGE 26
+- LA DERNIERE BOMBE DE POWER SOFT ............ PAGE 27
+- LA PROGRAMMATHEQUE DU CLUB C7 .............. PAGE 30
+- TRAITEMENT DE TEXTES ....................... PAGE 34
+- COOPERATIVE DU CLUB C7 ..................... PAGE 40
+- VOTRE AVIS VAUT DE L'OR .................... PAGE 41
+- C7 ANNONCE ................................. PAGE 42
+
+
 ___
 ## Les listings
 

@@ -8,6 +8,28 @@ TO DO
 
 
 ___
+## Sommaire
+
+- EDITORIAL ................................  1
+- LES BONNES ADRESSES DE C7 ................  3
+- LA LETTRE DE CANON FRANCE ................  5
+- COPYRIGHTS EN FOLIE ......................  6
+- CALC LOGI'STICK (BANC D'ESSAI) ...........  8
+- LES BOOLEENS DU CANON X-07 ............... 11
+- C7 INFORME ............................... 15
+- COURRIER DES LECTEURS .................... 18
+- GRAPHE (BANC D'ESSAI) .................... 20
+- LE SOUS PROCESSEUR 16834 ................. 23
+- LA PROGRAMMATHEQUE ....................... 26
+- LES SYMPATHISANTS DU X-07 ................ 28
+- NAUTILUS LOOGI'STICK (BANC D'ESSAI) ...... 35
+- COOPERATIVE C7 ........................... 38
+- VOTRE AVIS VAUT DE L'OR .................. 39
+- TRUCS EN VRAC ............................ 40
+- PETITES ANNONCES ......................... 41
+- C7 ANNONCE ............................... 42
+
+___
 ## Les Listings
 
 
