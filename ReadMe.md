@@ -62,7 +62,7 @@ Ressources :
   - [Marcus Von Cube CASsette IO Utilities](https://www.mvcsys.de/doc/casioutil.html) - /!\ old
   - [MAME CASTool](https://docs.mamedev.org/tools/castool.html)
   - [Marat Fayzullin Canon X-07 emulator](https://github.com/fstark/x07) - Try about the Silicum.org emulator
-  - [Canon X-07 Serial Fast Loader (GUI)](https://github.com/pR-0000/Canon-X-07-Serial-Fast-Loader)
+  - [Canon X-07 Serial Fast Loader (GUI)](https://github.com/pR-0000/Canon-X-07-Serial-Fast-Loader) - PC USB <-> X-07 Serial RS232 - transfert
   - ...
 - Hardware
   - [Canon X07 - Trip in the past](https://xtase.over-blog.com/2016/10/canon-x07-trip-in-the-past.html)
@@ -75,7 +75,6 @@ Ressources :
     - [Micro Systèmes](http://abandonlistings.free.fr/microsystemes/index.htm) - /!\ http
   - [Canon X-07 RPG](https://github.com/pR-0000/Canon_X-07_RPG) - mini-RPG
   - [Adaptation J&S](https://github.com/JuvignyEnsta/CanonX07) - Jeux & Stratégie, adaptation de programmes
-  - [Serial Fast Loader](https://github.com/pR-0000/Canon-X-07-Serial-Fast-Loader) - PC USB <-> X-07 Serial RS232 - transfert
   - ...
 - ...
 
