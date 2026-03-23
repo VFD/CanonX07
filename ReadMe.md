@@ -74,8 +74,8 @@ Ressources :
     - [Hebdogiciel](http://www.hebdogiciel.free.fr/) - /!\ http
     - [Micro Systèmes](http://abandonlistings.free.fr/microsystemes/index.htm) - /!\ http
   - [Canon X-07 RPG](https://github.com/pR-0000/Canon_X-07_RPG) - mini-RPG
-  - [Adaptation J&S](https://github.com/JuvignyEnsta/CanonX07) - Jeux & Stratégie, adaptation programs
-  - [Serial Fast Loader](https://github.com/pR-0000/Canon-X-07-Serial-Fast-Loader)
+  - [Adaptation J&S](https://github.com/JuvignyEnsta/CanonX07) - Jeux & Stratégie, adaptation de programmes
+  - [Serial Fast Loader](https://github.com/pR-0000/Canon-X-07-Serial-Fast-Loader) - PC USB <-> X-07 Serial RS232 - transfert
   - ...
 - ...
 
