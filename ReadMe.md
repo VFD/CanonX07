@@ -70,6 +70,9 @@ Ressources :
     - [ ... next is serial port](https://xtase.over-blog.com/2016/11/canon-x-07.next-is-serial-port.html)
     - ...
 - Software
+  - [Abandonware Listings](http://abandonlistings.free.fr/) - /!\ http
+    - [Hebdogiciel](http://www.hebdogiciel.free.fr/) - /!\ http
+    - [Micro Systèmes](http://abandonlistings.free.fr/microsystemes/index.htm) - /!\ http
   - [Canon X-07 RPG](https://github.com/pR-0000/Canon_X-07_RPG) - mini-RPG
   - [Adaptation J&S](https://github.com/JuvignyEnsta/CanonX07) - Jeux & Stratégie, adaptation programs
   - [Serial Fast Loader](https://github.com/pR-0000/Canon-X-07-Serial-Fast-Loader)
