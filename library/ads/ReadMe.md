@@ -52,6 +52,7 @@ Centre Micro informatique
 Fiche partenariat et tarif Canon.
 
 <p align="center">────────────────────</p>
+
 ### DDI
 
 Grille tarifaire Logi'Stick.
