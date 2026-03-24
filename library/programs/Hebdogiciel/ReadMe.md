@@ -13,6 +13,11 @@ Tout simplement hors-norme, inégalé.
 Présentation du magazine réalisée par del63\
 [Abandonware Magazine](https://abandonware-magazines.org/affiche_mag.php?mag=7)
 
+Il existe 168 numéros d'Hebdogiciel.\
+Et X hors série.
+
+À ceci s'ajoute des cassettes pour divers ordinateurs de l'époque.
+
 ___
 ## Codes Sources de références
 
@@ -20,11 +25,19 @@ ___
 
 [Cassette Hebdogiciel](http://www.hebdogiciel.free.fr/CANONX07_software)
 
-Report des sources dans ce GIT.\
-Travaux en cours.
 
 ___
-## Liste
+## Travail en cours
+
+- Report des sources dans ce GIT
+- Renommage TOSEC
+- Vérification des sources mise en [a] si non conforme
+
+
+L'idée est d'avoir les codes sources originaux tel que publiés.\
+Même si ils sont buggé, donc on remet les bug et on suffixe par [b].\
+Les autres en [a] ou [f] pour les fixes.
+
 
 Tableau de suivi :
 
@@ -37,7 +50,6 @@ Tableau de suivi :
 
 Travail en cours.
 
-| Nom | État | Commentaire |
-|-----|------|-------------|
+Report de la table à faire ici.
 
 ___
