@@ -158,7 +158,22 @@ Bon c'est illisible donc rework :
 100 IF POINT(W,Y) THEN PRINT X ELSE 10: REM 
 ```
 
-Explications : to do
+Explications :
+
+- Ligne 10 : lit l'état du joystick et stocke la valeur dans A. Cette valeur indique la direction pressée (1=haut, 5=bas, 3=gauche, 7=droite, etc.).
+- Ligne 20 : met à jour la coordonnée Y du joueur. Si A=5 (bas), Y diminue de 1. Si A=1 (haut), Y augmente de 1. Si Y atteint 0, Y est forcé à 4 (rebond ou limite). C'est le contrôle vertical du joueur.
+- Ligne 30 : incrémente X à chaque itération, ce qui fait avancer le jeu horizontalement (comme un jeu de type "Flappy Bird" ou "Helicopter").
+- Ligne 40 : efface le point précédent du joueur en le redessinant (ou l'efface selon le mode graphique).
+- Ligne 50 : calcule la position X modulo 118, ce qui crée un effet de boucle : quand X dépasse 118, il revient à 0.
+- Ligne 60 : efface l'écran chaque fois que W revient à 1, créant un effet de réinitialisation périodique.
+- Ligne 70 : génère un obstacle aléatoire. H augmente de 1, puis une valeur aléatoire entre 0 et 2 est soustraite. Si H devient négatif, il est ramené à 0. Si H dépasse 23, il est ramené à 23. C'est la position verticale de l'obstacle.
+- Ligne 80 : affiche l'obstacle à la position (W,H).
+- Ligne 90 : affiche un deuxième obstacle 8 pixels plus bas, créant un passage entre deux obstacles (comme dans Flappy Bird).
+- Ligne 100 : vérifie si le joueur à la position (W,Y) a touché un obstacle. Si oui, le programme affiche le score X (la distance parcourue). Sinon, il boucle à la ligne 10 pour continuer le jeu.
+
+C'est un jeu de type "Flappy Bird" où vous contrôlez verticalement un point avec le joystick, tandis que des obstacles défilent horizontalement.
+Le but est d'éviter les obstacles et de parcourir la plus grande distance possible.
+
 
 
 ___
