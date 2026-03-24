@@ -18,7 +18,14 @@ L'accroche du n°1 était « L'officiel du traitement de l'information et de ses
 Présentation du magazine réalisée par [Press-0-Tech, Le Guide/Musée de la presse high-tech francophone](http://www.pressotech.com/fiches/fiche_mag.php3?id=7)
 
 
+NDR - évolution :
+- 01 Business & Technologies
+- 01 Business
+- IT for Business
+
 Source :
 - [Abandonware Magazine](https://www.abandonware-magazines.org/affiche_mag.php?mag=248)
+
+Nous cherchons d'autres articles de cette revue sur le Coanon X-07.
 
 ___
