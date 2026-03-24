@@ -1,5 +1,0 @@
-
-##Programme HHMMSS ( 126 pas de programme ) :
-0 CLS:DEFINT A-Z:INPUT "Heures,Minutes,Secondes...";H,M,S:CLS:TIME$="H:M:S"
-10 LOCATE 5,1:T$=TIME$:PRINT T$":";:PRESET@0,96,4
-20 IF T$=TIME$ THEN 20 ESLE 10

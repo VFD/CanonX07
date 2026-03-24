@@ -17,6 +17,8 @@ Ceci afin de pouvoir restaurer si nécessaire des cassettes identiques à ce qui
 
 Le nom du fichier final utilise la nomenclature [TOSEC](https://www.tosecdev.org/tosec-naming-convention).
 
+Pour le moment c'est un ZIP, la date donne les dernières modifs faites sur l'ensemble.
+
 ### Source : Silicium
 
 - 14 cassettes connues minimum

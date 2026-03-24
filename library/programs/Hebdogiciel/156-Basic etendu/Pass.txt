@@ -1,5 +1,0 @@
-
-##Programme Pass ( 164 pas de programme ) :
-0 CLS:LINEINPUT "Nouveau mot de passe ";P$:IF LEN(P$)<>4 THEN RUN
-10 KEY$(1)="pssCOLOR"+CHR$(34)+P$+CHR$(34)+CHR$(13)
-20 CLS:PRINT CHR$(7)"Appuyez sur F1 pour déclencher le mot de passe."
