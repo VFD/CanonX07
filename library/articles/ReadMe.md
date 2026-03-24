@@ -20,3 +20,8 @@ La liste de référence des recherches est dans le fichier [liste.md](../liste.m
 
 
 ___
+## Listes des programmes
+
+Les programmes sont dans le répertoire ["programs"](../programs).
+
+___
