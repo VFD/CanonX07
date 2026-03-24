@@ -10,7 +10,7 @@ ___
 - Paraît le vendredi.
 - En fait, le prix est variable selon les semaines : 15, 18 ou 22 F. - Les annonces d'emploi sont consultables sur Cadres On Line.
 
-[histoire]
+[histoire]\
 Créé en mai 1966 par Maurice Réfrégier, 01 Informatique est le tout premier hebdomadaire au monde consacré à ce domaine (1 an avant les américains !).
 A cette époque, l'"ordinateur" était une bête curieuse, énorme, rare. Si rare que les entreprises travaillaient encore et surtout avec des "tabulatrices", machines de traitement mécanographique.
 L'accroche du n°1 était « L'officiel du traitement de l'information et de ses applications. Machines comptables, mécanographie, ordinateurs, systèmes. »
