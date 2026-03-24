@@ -3,11 +3,12 @@
 ___
 ## Introduction
 
-En très mauvais état. Donc aussi en recherche d'un exemplaire en bon état.\
+En très très mauvais état. Donc aussi en recherche d'un exemplaire en bon état.\
 Restauration en cours.
 
 Le PDF est en l'état d'avancement de la restauration.
 
+Le bulletin du BLUTH était avec, il est toujours la, mais devrait être mis à part.
 
 ___
 ## Sommaire
