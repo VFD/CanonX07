@@ -22,7 +22,7 @@ ___
 - Le coin du bidouilleur
 - Essai logiciel
 - Tribune libre
-- - Petites annonces
+- Petites annonces
 - Nouvelles brèves
 - Conclusion
 
