@@ -139,26 +139,26 @@ TO DO
 Un 2 lignes
 
 ```basic
-2 a=stick(0):y=y-(a=5)+(A=1)-4*(y=0):x=x+1:pset(w,y):w=xmod118:ifw=1thencls
-3 h=h+1-rnd(0)*2-(h<0)+(H>23):pset(w,h):pset(w,h+8):ifpoint(w,y)thenprintxelse2
+2 A=STICK(0):Y=Y-(A=5)+(A=1)-4*(Y=0):X=X+1:PSET(W,Y):W=XMOD118:IFW=1THENCLS
+3 H=H+1-RND(0)*2-(H<0)+(H>23):PSET(W,H):PSET(W,H+8):IFPOINT(W,Y)THENPRINTXELSE2
 ```
 
 Bon c'est illisible donc rework :
 
 ```basic
-10 A=STICK(0):                          REM 
-20 Y=Y-(A=5)+(A=1)-4*(Y=0):             REM 
-30 X=X+1:                               REM incremente X
-40 PSET(W,Y):                           REM 
-50 W=X MOD 118:                         REM 
-60 IF W=1 THEN CLS:                     REM si W=1 efface l'ecran
-70 H=H+1-RND(0)*2-(H<0)+(H>23):         REM 
-80 PSET(W,H):                           REM Affiche le point de coordonnee W,H
-90 PSET(W,H+8):                         REM Affiche le point de coordonnee W,H+8
-100 IF POINT(W,Y) THEN PRINT X ELSE 10: REM 
+10 A=STICK(0)
+20 Y=Y-(A=5)+(A=1)-4*(Y=0)
+30 X=X+1
+40 PSET(W,Y)
+50 W=X MOD 118
+60 IF W=1 THEN CLS
+70 H=H+1-RND(0)*2-(H<0)+(H>23)
+80 PSET(W,H)
+90 PSET(W,H+8)
+100 IF POINT(W,Y) THEN PRINT X ELSE 10
 ```
 
-Explications :
+Et les explications :
 
 - Ligne 10 : lit l'état du joystick et stocke la valeur dans A. Cette valeur indique la direction pressée (1=haut, 5=bas, 3=gauche, 7=droite, etc.).
 - Ligne 20 : met à jour la coordonnée Y du joueur. Si A=5 (bas), Y diminue de 1. Si A=1 (haut), Y augmente de 1. Si Y atteint 0, Y est forcé à 4 (rebond ou limite). C'est le contrôle vertical du joueur.
