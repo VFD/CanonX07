@@ -110,6 +110,6 @@ Déclencheur photo
 500 OFF2
 ```
 
-NDR : Programe pour le 19ème siècle.
+NDR : Programe pour le 19ème siècle. cf. ligne 300 "19".
 
 ___
