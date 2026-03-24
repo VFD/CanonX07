@@ -11,7 +11,7 @@ Il y en a peu, nous en avons :
 Le dossier "temp" contient les images retravaillées et travaux en cours.\
 Gros travail aussi pour ensuite réinsérer proprement les codes sources.
 
-Si vous êtes un des auteurs et que vous ne voulez pas que le livre apparaisse ici, merci de nous le faire savoir via "Issues".
+**Si vous êtes un des auteurs et que vous ne voulez pas que le livre apparaisse ici, merci de nous le faire savoir via "Issues".**
 
 ___
 ## BASIC
