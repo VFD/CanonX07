@@ -26,6 +26,6 @@ NDR - évolution :
 Source :
 - [Abandonware Magazine](https://www.abandonware-magazines.org/affiche_mag.php?mag=248)
 
-Nous cherchons d'autres articles de cette revue sur le Coanon X-07.
+Nous cherchons d'autres articles de cette revue sur le Canon X-07.
 
 ___
