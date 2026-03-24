@@ -4,11 +4,15 @@
 ___
 ## Introduction
 
-Incomplet. Page 17 absente. Probablement d'autres pages à la fin.
-
-Refaire la page 11 qui est manuscrite.
-
-report listing ici
+Incomplet. Page 17 absente. Probablement d'autres pages à la fin.\
+Refaire la page 11 qui est manuscrite.\
+Report listing ici.\
+Page 21, liste de programmes disponibles, trouver les bonnes ref de la dernière colonne :
+- HG : Hebdogiciel
+- MS : Micro Systèmes ?
+- O :
+- P :
+- LI : List ?
 
 
 ___
