@@ -7,6 +7,8 @@ Certaines pages sont manuscrites (2 et 3).
 
 Semble complet.
 
+Il faudrait refaire les pages manuscrites.
+
 ___
 ## Sommaire
 
@@ -37,6 +39,29 @@ Programme de transfert X-07 --> GRID via RS232
 to do
 ```
 
+<p align="center">────────────────────</p>
+
+### Page 12
+
+Figure 2 :
+
+```basic
+10010 Z=4
+10014 P=1
+10020 NF=2
+10032 SY$="HGTV"
+```
+
+Figure 3 :
+
+```basic
+7050 H=T(0):G=T(1):T=T(2):V=T(3)
+7130 ON L GOSUB 8010,8020,8030,80,40
+7135 IF L<5 THEN 7500 ELSE L=L-4
+7140 ON L GOSUB 8050,8060,8070,8080
+```
+
+<p align="center">────────────────────</p>
 
 ### Page 13
 
@@ -55,9 +80,13 @@ to do
 10036 DATA 6, 10, 5, 12, 3, 10, 6, 3
 ```
 
+<p align="center">────────────────────</p>
+
 ### Page 14
 
 Calorimétrie
+
+Version corrigée.
 
 ```basic
 to do
