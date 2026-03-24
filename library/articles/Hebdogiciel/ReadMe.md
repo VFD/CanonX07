@@ -19,7 +19,10 @@ Source :
 
 Nous avons tous les numéros de cette revue. Malheureusement certain ont des problèmes.\
 Nous cherchons :
+- 093
 - 100
+- 112
+- 113
 - ...
 
 ___

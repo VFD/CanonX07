@@ -17,7 +17,9 @@ Ceci afin de pouvoir restaurer si nécessaire des cassettes identiques à ce qui
 
 Le nom du fichier final utilise la nomenclature [TOSEC](https://www.tosecdev.org/tosec-naming-convention).
 
-Pour le moment c'est un ZIP, la date donne les dernières modifs faites sur l'ensemble.
+Pour le moment c'est un ZIP, la date donne les dernières modifs faites sur l'ensemble.\
+ça permet entre autre de remplacer au bon endroit les logiciels découverts.\
+Par ailleurs, il est nécessaire de les reprendre car certain caractères sont erroné dans les fichiers sources.
 
 ### Source : Silicium
 

@@ -38,6 +38,8 @@ L'idée est d'avoir les codes sources originaux tel que publiés.\
 Même si ils sont buggé, donc on remet les bug et on suffixe par [b].\
 Les autres en [a] ou [f] pour les fixes.
 
+L'ensemble est dans un ZIP horodaté, plus simple pour le moment pour mettre à dispo les avancées.
+
 
 Tableau de suivi :
 
