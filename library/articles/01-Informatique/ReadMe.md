@@ -17,4 +17,8 @@ L'accroche du n°1 était « L'officiel du traitement de l'information et de ses
 
 Présentation du magazine réalisée par [Press-0-Tech, Le Guide/Musée de la presse high-tech francophone](http://www.pressotech.com/fiches/fiche_mag.php3?id=7)
 
+
+Source :
+- [Abandonware Magazine](https://www.abandonware-magazines.org/affiche_mag.php?mag=248)
+
 ___
