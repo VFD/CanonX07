@@ -17,7 +17,7 @@ EDITORIAL .....................................  1
 EXTENSIONS ET LOGICIELS POUR VOTRE X-07 .......  2
 DE LA LECTURE POUR VOTRE X-07 .................  3
 NOUVEAU ET INTERESSANT ........................  3
-INITIATION A L'ASSEMBLEUR (Suite) ............. 
+INITIATION A L'ASSEMBLEUR (Suite)
 LES MODES D'ADRESSAGE .........................  4
 COMMENT RELOGER UN PROGRAMME EN LM ............  6
 MIEUX PROGRAMMER EN BASIC ..................... 10
@@ -48,7 +48,15 @@ Halte au Squat
 INPUT
 
 ```basic
-
+10 CLS
+20 LOCATE 0,0: PRINT"Voulez-vous quitter le programme ? N    "
+30 LOCATE 13,1: INPUT A$
+40 ON INSTR("NO",A$) GOTO 60, 90
+50 BEEP 10,5: GOTO 20
+60 LOCATE 0,0: PRINT"Alors appuyez sur une touche          "
+70 LOCATE 10,1: EXEC &HC6C5
+80 GOTO 10
+90 END
 ```
 
 
