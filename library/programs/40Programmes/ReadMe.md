@@ -52,7 +52,7 @@ Dans l'ordre du livre.
 
 | Nom              | État | Commentaire |
 |------------------|------|-------------|
-| Allumettes       | ❕ | OCR KO |
+| Allumettes       | 📝 |  |
 | Big Mind         | 📝 |  |
 | Chiffres mélangés| 📝 |  |
 | Dragoon          | 📝 | Adaptation de Acey Ducey - David H. Ahl |
@@ -77,7 +77,7 @@ Dans l'ordre du livre.
 | Dactylographie | 📝 |  |
 | Mélodia        | 📝 |  |
 | Morse          | 📝 | problème de cohérence sur le morse |
-| Signalisation  | 📝 |  |
+| Signalisation  | 📝 | Ohio ? - Oscar |
 
 Morse :
 - les data doivent correspondre à la chaîne H$ 
@@ -88,7 +88,7 @@ Morse :
 
 | Nom                   | État | Commentaire |
 |-----------------------|------|-------------|
-| Calculs sur fractions | ❕ |  |
+| Calculs sur fractions | 📝 |  |
 | Cinématique           | ❕ |  |
 | Discriminant          | ❕ |  |
 | Factorielles          | ❕ |  |
