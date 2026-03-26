@@ -158,9 +158,26 @@ LPRINT"D0,0,100,0,100,100,100,0,0,0"
 NDR :
 - Déterminer la corespondance de "S" en points.
 
+D'après les docs, 5 à 80 caractères par ligne.
 
-
-
+| Sn | Nbr car. |
+|----|----------|
+|  0 | 80       |
+|  1 | |
+|  2 | |
+|  3 | |
+|  4 | |
+|  5 | |
+|  6 | |
+|  7 | |
+|  8 | |
+|  9 | |
+| 10 | |
+| 11 | |
+| 12 | |
+| 13 | |
+| 14 | |
+| 15 | 5       |
 
 
 ___
