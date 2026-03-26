@@ -74,6 +74,12 @@ Tous passe via l'instruction LPRINT.
 
 ### Mode TEXTE
 
+NDR :
+- Le jeu de caractères est inférieur à celui du Canon.
+	- &hA0 à &hDF ne sont pas imprimable
+- Il n'est donc pas possible de tout imprimer.
+
+
 Valeur décimale.
 
 | Commande | Action |
@@ -82,6 +88,8 @@ Valeur décimale.
 | CHR$(10) | Passe à la ligne |
 | CHR$(11) | Ligne précédente |
 | CHR$(13) | Revient tout à gauche |
+| CHR$(17) | Mode Texte |
+| CHR$(18) | Mode Graphique |
 
 Taille et couleur des caractères :
 
@@ -92,7 +100,7 @@ LPRINT [I,J],"Hello World!"
 I : Taille du caractère [1,16]\
 J : Couleur [0:noir, 1:bleu, 2:vert, 3:rouge] - sauf si vous avez mis les stylots ailleurs.
 
-Par défaut : 2,0
+Par défaut : [2,0].
 
 <p align="center">────────────────────</p>
 
@@ -100,31 +108,34 @@ Par défaut : 2,0
 
 Résolution de l'imprimante X-710.
 
-- 480 points de large.
-- -999 à +999 sur la hauteur.
+- 480 pas de large.
+- -999 à +999 pas sur la hauteur.
+- 1 pas = 0,2mm
 
+Tableau de références.
 
-
-
-| Commande | Action        | Paramètre | Exemple         |
-|----------|---------------|-----------|-----------------|
-| CHR$(18) | Mode Graph.   | Aucun     | LPRINT CHR$(18) |
-| CHR$(17) | Mode Texte    | Aucun     | LPRINT CHR$(17) |
-| A        | Retour        | Aucun     | LPRINT"A"       |
-| C        | Fixe Couleur  | [0-3]     | LPRINT"C0"      |
-| D        | Trace         | x,y       | LPRINT"D0,100"  |
-| F        |               |           |                 |
-| H        |               |           |                 |
-| I        | Origine       |           | LPRINT"I"       |
-| J        |               |           |                 |
-| L        | Type de trait | [0-15]    | LPRINT"L0"      |
-| M        | Move          | x,y       | LPRINT"M0,100"  |
-| P        | Print Car.    | ""        | LPRINT"PCANON"  |
-| Q        | Angle Car.    | [0-3]     | LPRINT"Q0"      |
-| R        |               |           |                 |
-| S        | Taille Car.   | [0-15]    | LPRINT"S2"      |
+| Commande | Action         | Paramètre | Exemple         |
+|----------|----------------|-----------|-----------------|
+| CHR$(18) | Mode Graph.    | Aucun     | LPRINT CHR$(18) |
+| CHR$(17) | Mode Texte     | Aucun     | LPRINT CHR$(17) |
+| A        | Retour         | Aucun     | LPRINT"A"       |
+| C        | Fixe Couleur   | [0-3]     | LPRINT"C0"      |
+| D        | Trace          | x,y       | LPRINT"D0,100"  |
+| F        | Interligne     | Aucun     | LPRINT"F"       |
+| H        | Retour Origine | Aucun     | LPRINT"H"       |
+| I        | Origine        | Aucun     | LPRINT"I"       |
+| J        | Tracé relatif  | x,y       | LPRINT"J200,0"  |
+| L        | Type de trait  | [0-15]    | LPRINT"L0"      |
+| M        | Move           | x,y       | LPRINT"M0,100"  |
+| P        | Print Car.     | ""        | LPRINT"PCANON"  |
+| Q        | Angle Car.     | [0-3]     | LPRINT"Q0"      |
+| R        | Move Relatif   | x,y       | LPRINT"R0,100"  |
+| S        | Taille Car.    | [0-15]    | LPRINT"S2"      |
 
 Détail :
+- A :
+	- Lève le stylet et revient à gauche
+	- Passe en mode texte
 - C : [0] Noir; [1] Bleu; [2] Vert; [3] Rouge
 - L :
 	- [0] pas d'espace, trait droit
@@ -136,7 +147,16 @@ Détail :
 	- [3] 90° (vers le haut)
 - ...
 
+Pour "D", "J" et "M".\
+Il est possible de chaîner les coordonnées.
 
+```basic
+LPRINT"D0,0,100,0,100,100,100,0,0,0"
+```
+
+
+NDR :
+- Déterminer la corespondance de "S" en points.
 
 
 
