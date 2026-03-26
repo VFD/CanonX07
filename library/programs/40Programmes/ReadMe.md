@@ -126,10 +126,10 @@ Morse :
 
 | Nom               | État | Commentaire |
 |-------------------|------|-------------|
-| Canon logo        | 📝 | X-710 |
-| Cercles colorés   | ❕ | X-710 |
-| Cycloîdes         | ❕ | X-710 |
-| Elipses           | ❕ | X-710 |
+| Canon LOGO        | 📝 | Pseudo langage LOGO sur X-710 |
+| Cercles colorés   | 📝 | X-710 |
+| Cycloîdes         | 📝 | X-710 |
+| Ellipses          | 📝 | X-710 |
 | Graphismes divers | ❕ |  |
 | Inversion vidéo   | 📝 |  |
 | Télécran          | 📝 |  |
