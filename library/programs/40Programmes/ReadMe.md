@@ -10,13 +10,13 @@ ___
 
 To DO
 
-La nomenclature utilise celle du **TOSEC**.
-
 Il existe une cassette contenant les programmes.\
 Distribuée par D.D.I.
 
-NDR : [a] version "alternate" pour lisibilité.\
-Version éditeur à faire aussi.
+NDR :
+- [a] version "alternate" pour lisibilité.
+- Version éditeur à faire aussi.
+- [X710] indique qu'il faut cette imprimante
 
 ___
 ## Les Listings
@@ -126,10 +126,10 @@ Morse :
 
 | Nom               | État | Commentaire |
 |-------------------|------|-------------|
-| Canon logo        | 📝 |  |
-| Cercles colorés   | ❕ |  |
-| Cycloîdes         | ❕ |  |
-| Elipses           | ❕ |  |
+| Canon logo        | 📝 | X-710 |
+| Cercles colorés   | ❕ | X-710 |
+| Cycloîdes         | ❕ | X-710 |
+| Elipses           | ❕ | X-710 |
 | Graphismes divers | ❕ |  |
 | Inversion vidéo   | 📝 |  |
 | Télécran          | 📝 |  |
