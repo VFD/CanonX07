@@ -42,7 +42,7 @@ Manuels, livres, fanzines, etc.\
 Périphériques, logiciels etc.
 
 ___
-### Canon X‑07, Publications
+### Canon X-07, Publications
 
 | Titre                                                   | Publication         | Année      | État | Commentaire |
 |---------------------------------------------------------|---------------------|------------|------|-------------|
@@ -75,7 +75,7 @@ NDR :
 
 
 ___
-### Canon X‑07, Périphériques
+### Canon X-07, Périphériques
 
 Documentations des périphériques Canon.
 
@@ -113,7 +113,7 @@ NDR :
   - Oric Atmos MCP40
 
 ___
-### Canon X‑07, Logiciels
+### Canon X-07, Logiciels
 
 #### Documentations des logiciels sur carte Canon.
 
@@ -196,7 +196,7 @@ NDR :
 
 
 ___
-### Canon X‑07, Autres Périphériques
+### Canon X-07, Autres Périphériques
 
 | Ref.    | Périphérique / Accessoire     | Constructeur | Status | Commentaire |
 |---------|-------------------------------|--------------|--------|-------------|
@@ -227,7 +227,7 @@ NDR :
 - Un lecteur de code barre, un système multiple de POLYTEL.
 
 ___
-### Canon X‑07, Périphériques DIY
+### Canon X-07, Périphériques DIY
 
 | Ref.    | Périphérique / Accessoire     | Constructeur | Status | Commentaire |
 |---------|-------------------------------|--------------|--------|-------------|

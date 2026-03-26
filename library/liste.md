@@ -12,6 +12,19 @@ Le Canon X07 ayant été montré au SICOB '83.
 
 Pour les 2 Fanzines connus se référer à leur propre répertoire, ce sont des publications dédiées.
 
+<p align="center">────────────────────</p>
+
+Il n'existe quasiment rien aux USA.\
+Les recherches localise :
+- Japon (pas de PDF disponible - copyright)
+- France
+- Allemagne
+- Espagne
+- UK (1)
+
+
+<p align="center">────────────────────</p>
+
 Note :\
 PHC-25 : Tilt 08; led micro 1  \
 Squal : Tilt 21. led micro 14  \
@@ -44,6 +57,7 @@ Si vous avez des choses que nous n'avons pas, merci de nous le signaler.
 |  📝  | En cours de restauration / scans |
 
 
+
 ___
 ### [01 Informatique](https://abandonware-magazines.org/affiche_mag.php?mag=248)
 
@@ -66,32 +80,6 @@ ___
 Pas d'autre numéro connu de cette revue. Elle est ici complète car nul par ailleurs.\
 70 Fr. pour l'abonnement.
 
-
-___
-### BYTE Magazine (USA)
-
-[Archive.org](https://archive.org/details/byte-magazine?sort=title)
-
-TO DO.
-
-___
-### Compute! Magazine (USA)
-
-[Archive.org](https://archive.org/details/compute-magazine)
-
-TO DO
-
-| No | Date    | Réf.                          | État | Commentaire                  |
-|----|---------|-------------------------------|------|------------------------------|
-
-
-___
-### Computer Gamming World (USA)
-
-TO DO
-
-| No | Date    | Réf.                          | État | Commentaire                  |
-|----|---------|-------------------------------|------|------------------------------|
 
 ___
 ### Creative Computing (USA)
@@ -132,6 +120,7 @@ Les article sont référencés. L'ensemble des listings est dans la partie "src"
 | 012 | 1983-12-30 | Casino la boule     | ❕  | Listing |
 | 012 | 1983-12-30 | Publicité Duriez    | ❕  | p16, tarifs  |
 
+<p align="center">────────────────────</p>
 
 #### 1984
 
@@ -216,6 +205,8 @@ Les article sont référencés. L'ensemble des listings est dans la partie "src"
 | 063 | 1984-12-28 | Rase mottes              | ❕  | Listing |
 
 
+<p align="center">────────────────────</p>
+
 #### 1985
 
 | No  | Date       | Réf.                        | État | Commentaire                  |
@@ -271,6 +262,9 @@ Les article sont référencés. L'ensemble des listings est dans la partie "src"
 | 114 | 1985-12-20 | Dragon                      | ❕  | Listing |
 | 115 | 1985-12-27 | Serpentine                  | ❕  | Listing |
 
+
+<p align="center">────────────────────</p>
+
 #### 1986
 
 | No  | Date       | Réf.                     | État | Commentaire                  |
@@ -311,6 +305,8 @@ Les article sont référencés. L'ensemble des listings est dans la partie "src"
 | 162 | 1986-11-21 | Desass-ASM               | ❕  | Listing |
 | 165 | 1986-12-12 | Sea war -2-              | ❕  | Listing |
 
+
+<p align="center">────────────────────</p>
 
 #### 1987
 
@@ -530,6 +526,13 @@ ___
 Voir pour les BASIC standard.
 
 Fin de recherche juin 85.
+
+___
+### Personnal Computer World (UK)
+
+| No      | Date    | Réf.                 | État | Commentaire                  |
+|---------|---------|----------------------|------|------------------------------|
+| Vol7No3 | 1984-03 | Benchtests & Reviews | ❕    | Couverture et article        |
 
 ___
 ### Science & Vie (FRA)
