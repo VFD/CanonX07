@@ -28,10 +28,10 @@ alors qu'il serait possible d'en utiliser pratiquement 1 ou 2.
 Il y avait sans doute un choix fait de condenser les programmes au détrimant de la lisibilité.\
 Probable version [a2] à faire pour décondenser ceux-ci et effectuer des corrections.
 
-
 Certains éléments pourraient être utilisés comme sous routines.\
 C'est à étudier pour, par exemple, les utiliser dans **X07-Studio**.
 
+<p align="center">────────────────────</p>
 
 ### Tableau de suivi
 
@@ -47,6 +47,8 @@ Ci-dessous les tableaux d'avancement de récupération des listings.
 ### Travail en cours - Recherche et/ou Saisie
 
 Dans l'ordre du livre.
+
+<p align="center">────────────────────</p>
 
 #### Jeux
 
@@ -69,6 +71,7 @@ Dans l'ordre du livre.
 | Tirage de dés    | 📝 |  |
 
 
+<p align="center">────────────────────</p>
 
 #### Apprentissage
 
@@ -83,19 +86,23 @@ Morse :
 - les data doivent correspondre à la chaîne H$ 
 
 
+<p align="center">────────────────────</p>
 
 #### Mathématiques
 
 | Nom                   | État | Commentaire |
 |-----------------------|------|-------------|
 | Calculs sur fractions | 📝 |  |
-| Cinématique           | ❕ |  |
-| Discriminant          | ❕ |  |
-| Factorielles          | ❕ |  |
-| Nombres premiers      | ❕ |  |
-| PGCD - PPCM           | ❕ |  |
-| Statistiques          | ❕ |  |
-| Surfaces diverse      | ❕ |  |
+| Cinématique           | 📝 |  |
+| Discriminant          | 📝 | a*x^2 + b*x + c = 0|
+| Factorielles          | 📝 |  |
+| Nombres premiers      | 📝 |  |
+| PGCD - PPCM           | 📝 |  |
+| Statistiques          | 📝 |  |
+| Surfaces diverse      | 📝 |  |
+
+
+<p align="center">────────────────────</p>
 
 #### Vie pratique
 
@@ -111,6 +118,9 @@ Morse :
 | Conversion de longueurs | ❕ |  |
 | Conversion de poids     | ❕ |  |
 | Dates                   | ❕ |  |
+
+
+<p align="center">────────────────────</p>
 
 #### Graphisme
 
