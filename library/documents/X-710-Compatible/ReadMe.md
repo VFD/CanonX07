@@ -68,9 +68,7 @@ ___
 L'idée est de donner un résumé efficace des commandes pour ce type de traceur.\
 Attention, ici pour la Canon X-710.
 
-TO DO.
-
-Tous passe par LPRINT. 
+Tous passe via l'instruction LPRINT. 
 
 <p align="center">────────────────────</p>
 
@@ -87,7 +85,9 @@ Valeur décimale.
 
 Taille et couleur des caractères :
 
+```basic
 LPRINT [I,J],"Hello World!"
+```
 
 I : Taille du caractère [1,16]\
 J : Couleur [0:noir, 1:bleu, 2:vert, 3:rouge] - sauf si vous avez mis les stylots ailleurs.
@@ -98,25 +98,45 @@ Par défaut : 2,0
 
 ### Mode GRAPHIQUE
 
-LPRINT CHR$(18)
+Résolution de l'imprimante X-710.
 
-| Commande | Action | Paramètre |
-|----------|--------|-----------|
-| L        |        | |
-| A        |        | |
-| H        |        | |
-| I        |        | |
-| D        |        | |
-| J        |        | |
-| M        |        | |
-| R        |        | |
-| C        |        | |
-| S        |        | |
-| Q        |        | |
-| P        |        | |
-| F        |        | |
+- 480 points de large.
+- -999 à +999 sur la hauteur.
 
-TO DO
+
+
+
+| Commande | Action        | Paramètre | Exemple         |
+|----------|---------------|-----------|-----------------|
+| CHR$(18) | Mode Graph.   | Aucun     | LPRINT CHR$(18) |
+| CHR$(17) | Mode Texte    | Aucun     | LPRINT CHR$(17) |
+| A        | Retour        | Aucun     | LPRINT"A"       |
+| C        | Fixe Couleur  | [0-3]     | LPRINT"C0"      |
+| D        | Trace         | x,y       | LPRINT"D0,100"  |
+| F        |               |           |                 |
+| H        |               |           |                 |
+| I        | Origine       |           | LPRINT"I"       |
+| J        |               |           |                 |
+| L        | Type de trait | [0-15]    | LPRINT"L0"      |
+| M        | Move          | x,y       | LPRINT"M0,100"  |
+| P        | Print Car.    | ""        | LPRINT"PCANON"  |
+| Q        | Angle Car.    | [0-3]     | LPRINT"Q0"      |
+| R        |               |           |                 |
+| S        | Taille Car.   | [0-15]    | LPRINT"S2"      |
+
+Détail :
+- C : [0] Noir; [1] Bleu; [2] Vert; [3] Rouge
+- L :
+	- [0] pas d'espace, trait droit
+	- [1-15] largeur de l'espace entre les pointillés
+- Q : 
+	- [0] 0° (vers la droite, mode normal);
+	- [1] -90° (270°) (vers le bas);
+	- [2] 180° (à l'envers, vers la gauche);
+	- [3] 90° (vers le haut)
+- ...
+
+
 
 
 
