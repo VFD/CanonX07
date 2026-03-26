@@ -1697,9 +1697,7 @@ ___
 
 Figure 24 : Labyrinthe 3D
 
-```
-to do
-```
+Le fichier DATA sera externe.
 
 <p align="center">────────────────────</p>
 
@@ -1993,7 +1991,7 @@ Figure 34: Chargeurs
 ___
 ## Page 126
 
-Figure 35: LE PIEGE
+Figure 35: LE PIEGE (LCD)
 
 ```asm
 to do
@@ -2094,11 +2092,13 @@ ___
 
 Figure 39: OTHELLO
 
-```asm
-```
+Dans un fichier externe. Othello.txt
+
 
 ___
 ## Page 144
+
+Figure 40:
 
 ```basic
 5 REM *** OTHELLO - REVERSI ***
@@ -2124,16 +2124,17 @@ ___
 
 NDR : Ligne 120 corrigée pour le nom.
 
-<p align="center">────────────────────</p>
 
 ```basic
-5 REM *** ENTREUR DE CODES - VIDEO ***
-10 CLEAR 50,&H7FF:A=&H800
-20 PRINTHEX$(A);" : ";:INPUT C$
-30 V=VAL("&H"+C$):POKE A,V
-49 A=A+1:IF A>&H1400 THEN PRINT"...":BEEP 2,3:END
-50 GOTO20
+5 REM *** CHARGEUR DE CODES
+10 CLEAR,&H7FF: A = &H800
+20 PRINT HEX$(A);" : ";: INPUT C$
+30 V=VAL("&H"+C$): POKE A, V
+40 A=A+1: IF A>&H1400 THEN PRINT "...": BEEP 2,3: END
+50 GOTO 20
 ```
+
+
 
 
 

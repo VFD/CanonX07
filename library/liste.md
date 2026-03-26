@@ -532,7 +532,7 @@ ___
 
 | No      | Date    | Réf.                 | État | Commentaire                  |
 |---------|---------|----------------------|------|------------------------------|
-| Vol7No3 | 1984-03 | Benchtests & Reviews | ❕    | Couverture et article        |
+| Vol7No3 | 1984-03 | Benchtests & Reviews | 📝    | Couverture et article        |
 
 ___
 ### Science & Vie (FRA)
