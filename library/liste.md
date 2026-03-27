@@ -21,6 +21,7 @@ Les recherches localise :
 - Allemagne
 - Espagne
 - UK (1)
+- USA (1)
 
 
 <p align="center">────────────────────</p>
@@ -457,6 +458,7 @@ ___
 | 046 | 1984-10 | Bomber                    | 📝   | p229, Listing |
 | 047 | 1984-11 | Basic étendu              | 📝   | p221, Listing |
 | 048 | 1984-12 | Graphisme assité par ordinateur | 📝   | p213, Listing |
+| 048 | 1984-12 |                           |       | Club C7 |
 | 049 | 1985-01 | Password                  | 📝   | p147, Assembleur, ref. au no 42 |
 | 049 | 1985-01 | Assembleur 2 passes       | 📝   | p151, carte 4k nécessaire, Listing |
 | 050 | 1985-02 | Dictator                  | 📝   | p199, jeu simulation, Listing |
@@ -523,6 +525,7 @@ ___
 | 63 | 1984-10    | Publicité                               | ❕   | p16                          |
 | 69 | 1985-04    | Des rosaces de toutes les couleurs      | ❕   | p155, à adapter (CGP-115)    |
 | 71 | 1985-06    | Attention, Prêt ? Paramétrer !          | ❕   | p157-162 (X-710)             |
+|    | 1985-12    |                                         | ❕   | Club C7             |
 
 Voir pour les BASIC standard.
 
