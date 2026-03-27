@@ -20,7 +20,10 @@ ___
 - INVERSION VIDÉO RAPIDE
 </pre>
 
-
+Inversion rapide :\
+Le programme BASIC est un chargeur en REM.\
+En principe une fois fait, on efface les ligne inutile et on sauve le nouveau BASIC.\
+Problème : ce nouveau BASIC n'est pas imprimable à cause des caractères (octets) dans les REMs.
 
 TO DO
 
