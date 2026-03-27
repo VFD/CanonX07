@@ -15,7 +15,8 @@ TO DO
 
 ### page 7
 
-Solitaire.
+Solitaire.\
+Repris dans "Application..."; check des codes.
 
 Data et 2 listings.
 
