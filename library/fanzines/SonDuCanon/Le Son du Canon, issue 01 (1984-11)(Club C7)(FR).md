@@ -70,7 +70,7 @@ Nombre Aléatoire
 90 CLS:BEEP 9,5:END
 ```
 
-Le programme est aussi dans le répertoire [programs](../../../programs)
+Le programme est aussi dans le répertoire [programs](/library/programs/ClubC7/SonDuCanon01)
 
 <p align="center">────────────────────</p>
 
@@ -125,7 +125,7 @@ Tirage Loto
 25 IF G$=CHR$(13) THEN 8 ELSE CLS:END
 ```
 
-Le programme est aussi dans le répertoire [programs](../../../programs)
+Le programme est aussi dans le répertoire [programs](/library/programs/ClubC7/SonDuCanon01)
 
 ___
 ### Page 20
@@ -206,7 +206,7 @@ ___
 
 Télécran :
 
-Le programme est dans le répertoire [programs](../../../programs)
+Le programme est dans le répertoire [programs](/library/programs/ClubC7/SonDuCanon01)
 
 
 ___
@@ -214,7 +214,7 @@ ___
 
 Géométrie :
 
-Le programme est dans le répertoire [programs](../../../programs)
+Le programme est dans le répertoire [programs](/library/programs/ClubC7/SonDuCanon01)
 
 
 ___
