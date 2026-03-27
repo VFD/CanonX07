@@ -1,4 +1,4 @@
-# Son du Canon Le, issue 02 (198-)(Club C7)(FR)
+# Son du Canon Le, issue 02 (1985-03)(Club C7)(FR)
 
 ___
 ## Introduction
