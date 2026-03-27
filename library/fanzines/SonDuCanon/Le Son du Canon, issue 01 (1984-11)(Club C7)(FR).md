@@ -42,7 +42,7 @@ ___
 
 Magic Circus :
 
-Le programme est dans le répertoire [programs](/library/programs)
+Le programme est dans le répertoire [programs](/library/programs/ClubC7/SonDuCanon01)
 
 
 ___
@@ -50,7 +50,7 @@ ___
 
 Dactylo Folie :
 
-Les programmes sont dans le répertoire [programs](../../../programs)
+Les programmes sont dans le répertoire [programs](/library/programs/ClubC7/SonDuCanon01)
 
 ___
 ### Page 16
