@@ -10,15 +10,15 @@ TO DO
 ___
 ## Les Listings
 
-
+<pre>
 - POKER
 - SAUTE-MOUTONS
 - ALARME
 - CARACTERES
 - MEMORY
-- LABYRINTHE
+- LABYRINTHE (à trouver ou saisir, LM)
 - INVERSION VIDÉO RAPIDE
-
+</pre>
 
 
 
