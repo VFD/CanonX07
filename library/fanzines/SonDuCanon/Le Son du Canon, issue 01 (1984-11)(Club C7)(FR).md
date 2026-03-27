@@ -50,7 +50,7 @@ ___
 
 Dactylo Folie :
 
-Les programmes sont dans le répertoire [programs](../../programs)
+Les programmes sont dans le répertoire [programs](../../../programs)
 
 ___
 ### Page 16
@@ -70,7 +70,7 @@ Nombre Aléatoire
 90 CLS:BEEP 9,5:END
 ```
 
-Le programme est aussi dans le répertoire [programs](../../programs)
+Le programme est aussi dans le répertoire [programs](../../../programs)
 
 <p align="center">────────────────────</p>
 
@@ -125,7 +125,7 @@ Tirage Loto
 25 IF G$=CHR$(13) THEN 8 ELSE CLS:END
 ```
 
-Le programme est aussi dans le répertoire [programs](../programs)
+Le programme est aussi dans le répertoire [programs](../../../programs)
 
 ___
 ### Page 20
@@ -206,7 +206,7 @@ ___
 
 Télécran :
 
-Le programme est dans le répertoire [programs](../../programs)
+Le programme est dans le répertoire [programs](../../../programs)
 
 
 ___
@@ -214,7 +214,7 @@ ___
 
 Géométrie :
 
-Le programme est dans le répertoire [programs](../../programs)
+Le programme est dans le répertoire [programs](../../../programs)
 
 
 ___
