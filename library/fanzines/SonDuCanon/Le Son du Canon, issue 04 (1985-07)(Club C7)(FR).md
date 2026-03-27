@@ -11,26 +11,26 @@ Pour des raisons de lisibilité, des espaces sont ajouté dans les programmes.
 ___
 ## Sommaire
 
-
-- EDITORIAL ....................................... PAGE  1
-- LETTRE DE CANON FRANCE .......................... PAGE  3
-- LE SOLITAIRE .................................... PAGE  4
-- ESSAI D'AGENDA (LOGI'STICK) ..................... PAGE 10
-- LES BONNES ADRESSES DE C7 ....................... PAGE 14
-- LE COURRIER DES LECTEURS ........................ PAGE 16
-- LA PROGRAMMATHEQUE C7 ........................... PAGE 18
-- C7 INFORME ...................................... PAGE 20
-- LES PETITES ANNONCES ............................ PAGE 21
-- ESSAI DE CALC (POWER SOFT) ...................... PAGE 22
-- TRI ET CAMEMBERTS STATISTIQUES .................. PAGE 24
-- TRUCS EN VRAC.................................... PAGE 27
-- LES PENTOMINOS .................................. PAGE 28
-- LES INTERRUPTIONS DU X-07 ....................... PAGE 34
-- LA COOPERATIVE C7 ............................... PAGE 36
-- VOTRE AVIS VAUT DE L'OR ......................... PAGE 37
-- LA NAISSANCE D'OUTI ............................. PAGE 39
-- C7 ANNONCE ...................................... PAGE 42
-
+<pre>
+EDITORIAL ....................................... PAGE  1
+LETTRE DE CANON FRANCE .......................... PAGE  3
+LE SOLITAIRE .................................... PAGE  4
+ESSAI D'AGENDA (LOGI'STICK) ..................... PAGE 10
+LES BONNES ADRESSES DE C7 ....................... PAGE 14
+LE COURRIER DES LECTEURS ........................ PAGE 16
+LA PROGRAMMATHEQUE C7 ........................... PAGE 18
+C7 INFORME ...................................... PAGE 20
+LES PETITES ANNONCES ............................ PAGE 21
+ESSAI DE CALC (POWER SOFT) ...................... PAGE 22
+TRI ET CAMEMBERTS STATISTIQUES .................. PAGE 24
+TRUCS EN VRAC.................................... PAGE 27
+LES PENTOMINOS .................................. PAGE 28
+LES INTERRUPTIONS DU X-07 ....................... PAGE 34
+LA COOPERATIVE C7 ............................... PAGE 36
+VOTRE AVIS VAUT DE L'OR ......................... PAGE 37
+LA NAISSANCE D'OUTI ............................. PAGE 39
+C7 ANNONCE ...................................... PAGE 42
+</pre>
 
 ___
 ## Les listings
