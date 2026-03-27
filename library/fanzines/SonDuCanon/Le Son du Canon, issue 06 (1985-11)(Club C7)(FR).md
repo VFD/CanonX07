@@ -25,9 +25,9 @@ PROGRAMMES DIVERS ....................... PAGE 22
 LABYRINTHE 3D ........................... PAGE 25
 INVERSE VIDEO RAPIDE .................... PAGE 27
 PUBLICATIONS C7 ......................... PAGE 30
-L'EVENEMENT DE L'AINNEE ................. PAGE 31
+L'EVENEMENT DE L'ANNEE .................. PAGE 31
 DOSSIERS TOUS AZIMUTS ................... PAGE 33
-JEUX 2 DE LOOI'STICK .................... PAGE 34
+JEUX 2 DE LOGI'STICK .................... PAGE 34
 PROGRAMMATHEQUE ......................... PAGE 36
 R.D.I. DE LOGI'STICK .................... PAGE 38
 COOPERATIVE C7 .......................... PAGE 40
