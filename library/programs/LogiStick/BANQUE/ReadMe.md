@@ -12,8 +12,10 @@ TO DO
 
 Récupération du WAVE en cours.
 
+Listing :
 
-
+- L-BANK : LCD ?
+- V-BANK : X720 ?
 
 
 
