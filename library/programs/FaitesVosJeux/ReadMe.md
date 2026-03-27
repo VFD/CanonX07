@@ -28,6 +28,8 @@ ___
 |  ❕  | À faire |
 |  📝  | En cours, à tester |
 
+<p align="center">────────────────────</p>
+
 ### Travail en cours
 
 | Nom                     | État | Commentaire |
