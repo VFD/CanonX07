@@ -29,7 +29,7 @@ Liste non exhaustive, il en manque.
 | Nom                | État | Commentaire |
 |--------------------|------|-------------|
 | Agenda             | ❕ | |
-| Aide               | ❕ | |
+| Aide BASIC         | ❕ | RDI; MATRIX; MONITEUR |
 | Alphatruc          | ❕ | |
 | Anaconda (LCD)     | 📝 | Cassette jeux 2 |
 | Anaconda (PERITEL) | 📝 | Cassette jeux 2 |
