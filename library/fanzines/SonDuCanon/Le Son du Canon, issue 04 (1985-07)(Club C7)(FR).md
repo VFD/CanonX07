@@ -38,6 +38,8 @@ ___
 
 ### page 7 - Le Solitaire
 
+Même que dans "Application...", à vérifier.
+
 Les Datas :
 
 ```
@@ -101,6 +103,9 @@ LM :
 ```
 
 ### page 31 - Pentomino
+
+Même que dans "Applications...", à vérifier.
+
 
 Les DATA :
 
