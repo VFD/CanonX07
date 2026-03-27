@@ -17,6 +17,8 @@ ___
 |  ❕  | À faire |
 |  📝  | En cours |
 
+<p align="center">────────────────────</p>
+
 ### Travail en cours
 
 | Nom          | État | Commentaire |
@@ -40,12 +42,16 @@ ___
 Dimension (HxL) : x mm.\
 Pour être insérée dans la boite VHS.
 
+<p align="center">────────────────────</p>
+
 ### Jacquettes
 
 Format VHS.\
 Dimensions (HxL) : 21x29mm.
 
+<p align="center">────────────────────</p>
 
+___
 ## Pour toutes les boites
 
 Format dédié des boites de type VHS ((NDR: pour celles trouvées).\
@@ -53,4 +59,5 @@ Le boitier de la cassette est transparent, il est coller au moyen d'un sctotch d
 
 
 
+EOF
 ___
