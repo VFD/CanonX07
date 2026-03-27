@@ -25,14 +25,14 @@ ___
 
 ### Travail en cours
 
-| Nom        | État | Commentaire |
-|------------|------|-------------|
-| Astrostorm | 📝  |  |
-| Briques    | 📝  |  |
-| Destroyer  | 📝  |  |
-| Morpion    | 📝  |  |
-| Space Trek | 📝  |  |
-| Squash     | 📝  |  |
+| Nom        | État | Nom K7  | Commentaire |
+|------------|------|---------|-------------|
+| Astrostorm | 📝  | ASTRO   |  |
+| Briques    | 📝  | BRIQUES |  |
+| Destroyer  | 📝  | DESTRO  |  |
+| Morpion    | 📝  | MORP    |  |
+| Space Trek | 📝  | SPACE   |  |
+| Squash     | 📝  | SQUASH  |  |
 
 NDR : Pas d'autres logiciels connus.\
 Les 6 logiciels publiés sur cassette "JEUX VOLUME UN".\
@@ -58,31 +58,31 @@ Une bonne dimension plus correcte pour la boite serait 110x170mm.
 
 #### Astrostorm
 
-Votre mission est de passer a travers 4 tunnels.
-Attention la difficulté est qu'ils vont en diminuant.
-Pour vous déplacer utilisez les STICKS.
-Suivez la séquénce CLOAD "ASTRO", puis RETURN.
-Une fois le chargement effectué appuyez su RUN,
+Votre mission est de passer a travers 4 tunnels.\
+Attention la difficulté est qu'ils vont en diminuant.\
+Pour vous déplacer utilisez les STICKS.\
+Suivez la séquénce CLOAD "ASTRO", puis RETURN.\
+Une fois le chargement effectué appuyez su RUN.
 
 <p align="center">────────────────────</p>
 
 #### Briques
 
-Detruisez le mur de briques qui se trouve devant vous.
-La raquette se déplace grace au touches des STICKS (flêches).
-Suivez la séquence CLOAD "BRIQUES", puis RETURN.
+Detruisez le mur de briques qui se trouve devant vous.\
+La raquette se déplace grace au touches des STICKS (flêches).\
+Suivez la séquence CLOAD "BRIQUES", puis RETURN.\
 Une fois le chargement effectué appuyez sur RUN.
 
 <p align="center">────────────────────</p>
 
 #### Destroyer
 
-Vous partez a la chasse au sous marin.
-Pour manoeuvrer utilisez les STICKS.
-Pour tire r utilisez la touche "F".
-Pour faire surface utilisez la touche "+".
-Pour plonger, utilisez la touche "-".
-Suivez la séquence CLOAD "DESTRO" puis RETURN.
+Vous partez a la chasse au sous marin.\
+Pour manoeuvrer utilisez les STICKS.\
+Pour tire r utilisez la touche "F".\
+Pour faire surface utilisez la touche "+".\
+Pour plonger, utilisez la touche "-".\
+Suivez la séquence CLOAD "DESTRO" puis RETURN.\
 Une fois le chargement effectué appuyez sur RUN.
 
 <p align="center">────────────────────</p>
@@ -97,18 +97,18 @@ Une fois le chargement effectué appuyez sur RUN.
 
 #### Space Trek
 
-Vous devez passer par un champs de mines avant de rejoindre votre base.
-Utilisez les STICKS pour les detruire.
-Suivez la séquence CLOAD "SPACE", puis RETURN.
+Vous devez passer par un champs de mines avant de rejoindre votre base.\
+Utilisez les STICKS pour les detruire.\
+Suivez la séquence CLOAD "SPACE", puis RETURN.\
 Une fois le chargement effectué appuyez sur RUN.
 
 <p align="center">────────────────────</p>
 
 #### Squash
 
-Evitez que la balle sorte du terrain.
-Pour cela utilisez les touches STICK.
-Suivez la séquénce CLOAD "SQUASH", puis RETURN.
+Evitez que la balle sorte du terrain.\
+Pour cela utilisez les touches STICK.\
+Suivez la séquénce CLOAD "SQUASH", puis RETURN.\
 Une fois le chargement effectué appuyez sur RUN.
 
 <p align="center">────────────────────</p>
