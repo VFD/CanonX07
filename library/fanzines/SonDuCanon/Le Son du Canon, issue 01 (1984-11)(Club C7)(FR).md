@@ -42,7 +42,7 @@ ___
 
 Magic Circus :
 
-Le programme est dans le répertoire [programs](../programs)
+Le programme est dans le répertoire [programs](/library/programs)
 
 
 ___
