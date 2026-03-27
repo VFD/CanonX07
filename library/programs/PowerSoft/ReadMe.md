@@ -21,6 +21,8 @@ ___
 |  ❕  | À faire |
 |  📝  | En cours |
 
+<p align="center">────────────────────</p>
+
 ### Travail en cours
 
 | Nom        | État | Commentaire |
@@ -43,12 +45,16 @@ ___
 
 Boite spéciale avec un emplacement pour une cassette audio.
 
+<p align="center">────────────────────</p>
+
 ### Notice
 
 La notice est dans la boite.\
 Dimensions (HxL) : 148x121mmm.
 
 Une bonne dimension plus correcte pour la boite serait 110x170mm.
+
+<p align="center">────────────────────</p>
 
 #### Astrostorm
 
@@ -58,12 +64,16 @@ Pour vous déplacer utilisez les STICKS.
 Suivez la séquénce CLOAD "ASTRO", puis RETURN.
 Une fois le chargement effectué appuyez su RUN,
 
+<p align="center">────────────────────</p>
+
 #### Briques
 
 Detruisez le mur de briques qui se trouve devant vous.
 La raquette se déplace grace au touches des STICKS (flêches).
 Suivez la séquence CLOAD "BRIQUES", puis RETURN.
 Une fois le chargement effectué appuyez sur RUN.
+
+<p align="center">────────────────────</p>
 
 #### Destroyer
 
@@ -75,11 +85,15 @@ Pour plonger, utilisez la touche "-".
 Suivez la séquence CLOAD "DESTRO" puis RETURN.
 Une fois le chargement effectué appuyez sur RUN.
 
+<p align="center">────────────────────</p>
+
 #### Morpion
 
 Empechez votre adversaire d'aligner troi$ pions sur un damier.
 Suivez la séquence CLOAD "MORP", puis RETURN.
 Une fois le chargement effectué appuyez sur RUN.
+
+<p align="center">────────────────────</p>
 
 #### Space Trek
 
@@ -88,6 +102,8 @@ Utilisez les STICKS pour les detruire.
 Suivez la séquence CLOAD "SPACE", puis RETURN.
 Une fois le chargement effectué appuyez sur RUN.
 
+<p align="center">────────────────────</p>
+
 #### Squash
 
 Evitez que la balle sorte du terrain.
@@ -95,14 +111,15 @@ Pour cela utilisez les touches STICK.
 Suivez la séquénce CLOAD "SQUASH", puis RETURN.
 Une fois le chargement effectué appuyez sur RUN.
 
+<p align="center">────────────────────</p>
+
 ### Jacquette
 
 Dimension (HxL) : 172x267.
-
 
 Format dédié de la boite.
 
 
 
-
+EOF
 ___
