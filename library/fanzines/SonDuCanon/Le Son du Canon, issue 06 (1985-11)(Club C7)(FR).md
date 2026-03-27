@@ -9,29 +9,31 @@ Ce markdown à pour but de compiler les petits codes source de ce numéro.
 ___
 ### Sommaire
 
-- EDITORIAL ............................... PAGE  1
-- LETTRE DE CANON ......................... PAGE  3
-- C7 INFORME .............................. PAGE  5
-- POKER ................................... PAGE  6
-- PETITES ANNONCES ........................ PAGE  9
-- MICROBOX ................................ PAGE 10
-- 40 PROORAMMES POUR X-07 ................. PAGE 14
-- SAUTE MOUTONS ........................... PAGE 16
-- LES "3 SOFTS" DE POWER SOFT ............. PAGE 17
-- LES BONNES ADRESSES DE C7 ............... PAGE 19
-- LES "SOFTS" DE LOGI'SIICK ............... PAGE 21
-- PROGRAMMES DIVERS ....................... PAGE 22
-- LABYRINTHE 3D ........................... PAGE 25
-- INVERSE VIDEO RAPIDE .................... PAGE 27
-- PUBLICATIONS C7 ......................... PAGE 30
-- L'EVENEMENT DE L'AINNEE ................. PAGE 31
-- DOSSIERS TOUS AZIMUTS ................... PAGE 33
-- JEUX 2 DE LOOI'STICK .................... PAGE 34
-- PROGRAMMATHEQUE ......................... PAGE 36
-- R.D.I. DE LOGI'STICK .................... PAGE 38
-- COOPERATIVE C7 .......................... PAGE 40
-- VOTRE AVIS VAUT DE L'OR ................. PAGE 41
-- C7 ANNONCE .............................. PAGE 42
+<pre>
+EDITORIAL ............................... PAGE  1
+LETTRE DE CANON ......................... PAGE  3
+C7 INFORME .............................. PAGE  5
+POKER ................................... PAGE  6
+PETITES ANNONCES ........................ PAGE  9
+MICROBOX ................................ PAGE 10
+40 PROORAMMES POUR X-07 ................. PAGE 14
+SAUTE MOUTONS ........................... PAGE 16
+LES "3 SOFTS" DE POWER SOFT ............. PAGE 17
+LES BONNES ADRESSES DE C7 ............... PAGE 19
+LES "SOFTS" DE LOGI'SIICK ............... PAGE 21
+PROGRAMMES DIVERS ....................... PAGE 22
+LABYRINTHE 3D ........................... PAGE 25
+INVERSE VIDEO RAPIDE .................... PAGE 27
+PUBLICATIONS C7 ......................... PAGE 30
+L'EVENEMENT DE L'AINNEE ................. PAGE 31
+DOSSIERS TOUS AZIMUTS ................... PAGE 33
+JEUX 2 DE LOOI'STICK .................... PAGE 34
+PROGRAMMATHEQUE ......................... PAGE 36
+R.D.I. DE LOGI'STICK .................... PAGE 38
+COOPERATIVE C7 .......................... PAGE 40
+VOTRE AVIS VAUT DE L'OR ................. PAGE 41
+C7 ANNONCE .............................. PAGE 42
+</pre>
 
 ___
 ## La K7
