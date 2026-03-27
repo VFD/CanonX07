@@ -376,6 +376,7 @@ ___
 |----|------------|---------------------------------------------|------|------------------------------|
 | 01 | 1984-07/08 | Table des matières                          | 📝   | Listing - p78 |
 | 03 | 1984-10    | Publicité double page                       | 📝   | pub |
+| 04 | 1984-      |                                             | ❕   | Carnet, Club C7 |
 | 06 | 1985-01/02 | La gazette de List - Carte Minitel          | 📝   | Tout petit encart - p16 |
 | 06 | 1985-01/02 | La gazette de List - Logi'Stick             | 📝   | 3 cassettes - p18 |
 | 06 | 1985-01/02 | La guerre des trois                         | 📝   | Listing ; p20-21  |
@@ -527,6 +528,14 @@ Voir pour les BASIC standard.
 
 Fin de recherche juin 85.
 
+
+___
+### L'Ordinateur Personnel (FRA)
+
+| No | Date       | Réf.                                    | État | Commentaire                  |
+|----|------------|-----------------------------------------|------|------------------------------|
+| 10 |            |                                         | ❕  | Club C7  |
+
 ___
 ### Personnal Computer World (UK)
 
@@ -629,7 +638,8 @@ ___
 
 | No | Date       | Réf.                         | État | Commentaire                  |
 |----|------------|------------------------------|------|------------------------------|
-|    | 1985-05    | 
+| 09 | 198    | || Nouveau CLub Canon X07 |
+|    | 1985-05    | |||
 
 NDR : La revue fusionne avec Micro 7 pour créer Micro V.O.
 
