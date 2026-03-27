@@ -1,4 +1,4 @@
-# Son du Canon Le, issue 03 (198-)(Club C7)(FR)
+# Son du Canon Le, issue 03 (1985-05)(Club C7)(FR)
 
 
 ___
@@ -10,24 +10,26 @@ TO DO
 ___
 ## Sommaire
 
-- EDITORIAL ................................  1
-- LES BONNES ADRESSES DE C7 ................  3
-- LA LETTRE DE CANON FRANCE ................  5
-- COPYRIGHTS EN FOLIE ......................  6
-- CALC LOGI'STICK (BANC D'ESSAI) ...........  8
-- LES BOOLEENS DU CANON X-07 ............... 11
-- C7 INFORME ............................... 15
-- COURRIER DES LECTEURS .................... 18
-- GRAPHE (BANC D'ESSAI) .................... 20
-- LE SOUS PROCESSEUR 16834 ................. 23
-- LA PROGRAMMATHEQUE ....................... 26
-- LES SYMPATHISANTS DU X-07 ................ 28
-- NAUTILUS LOOGI'STICK (BANC D'ESSAI) ...... 35
-- COOPERATIVE C7 ........................... 38
-- VOTRE AVIS VAUT DE L'OR .................. 39
-- TRUCS EN VRAC ............................ 40
-- PETITES ANNONCES ......................... 41
-- C7 ANNONCE ............................... 42
+<pre>
+EDITORIAL ................................  1
+LES BONNES ADRESSES DE C7 ................  3
+LA LETTRE DE CANON FRANCE ................  5
+COPYRIGHTS EN FOLIE ......................  6
+CALC LOGI'STICK (BANC D'ESSAI) ...........  8
+LES BOOLEENS DU CANON X-07 ............... 11
+C7 INFORME ............................... 15
+COURRIER DES LECTEURS .................... 18
+GRAPHE (BANC D'ESSAI) .................... 20
+LE SOUS PROCESSEUR 16834 ................. 23
+LA PROGRAMMATHEQUE ....................... 26
+LES SYMPATHISANTS DU X-07 ................ 28
+NAUTILUS LOOGI'STICK (BANC D'ESSAI) ...... 35
+COOPERATIVE C7 ........................... 38
+VOTRE AVIS VAUT DE L'OR .................. 39
+TRUCS EN VRAC ............................ 40
+PETITES ANNONCES ......................... 41
+C7 ANNONCE ............................... 42
+</pre>
 
 ___
 ## Les Listings
@@ -55,6 +57,8 @@ Exemple :
 		RET					; 
 ```
 
+<p align="center">────────────────────</p>
+
 Le programme Basic de démo :
 
 ```basic
@@ -73,6 +77,8 @@ Le programme Basic de démo :
 95 DATA F6,80,D3,F0,ED,59,3E,02
 98 DATA D3,F5,D1,C1,F1,C9,00,00
 ```
+
+<p align="center">────────────────────</p>
 
 L'ASM de démo :
 
@@ -135,4 +141,6 @@ graph_call:         ; Adresse 1C25h
 
 
 
+
+EOF
 ___
