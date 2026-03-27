@@ -1,4 +1,4 @@
-# Son du Canon - Club C7 - 
+# Son du Canon - Club C7 - Numéro 2
 
 Mars Avril 1985.
 
