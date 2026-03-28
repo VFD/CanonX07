@@ -27,7 +27,7 @@ ___
 
 | Nom        | État | Nom K7  | Commentaire |
 |------------|------|---------|-------------|
-| Astrostorm | 📝  | ASTRO   |  |
+| Astrostorm | 📝  | ASTRO   | bug ligne 56  |
 | Briques    | 📝  | BRIQUES |  |
 | Destroyer  | 📝  | DESTRO  |  |
 | Morpion    | 📝  | MORP    |  |
@@ -40,6 +40,17 @@ Boitier spécifique.
 
 ___
 ## Ressources
+
+### La Cassette
+
+Ordre des jeux sur la Cassette :
+- Astrostorm
+- Squash
+- ..
+- Destroyer
+- ..
+- Space Trek
+
 
 ### Boite
 
