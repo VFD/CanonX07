@@ -13,7 +13,8 @@ En croisant les notices il est possible de découvrire des fonctions cachées.
 Il y aurait une ROM interne.\
 Un dump serait bienvenu si c'est le cas.
 
-Autre projet, un emulateur de ce type d'imprimante.
+Autre projet, un emulateur de ce type d'imprimante.\
+Projet en mode beta (JavaScript, HTML, CSS).
 
 ___
 ## /!\ Problème de batteires /!\
