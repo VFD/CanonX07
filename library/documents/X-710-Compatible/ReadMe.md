@@ -17,7 +17,7 @@ Autre projet, un emulateur de ce type d'imprimante.\
 Projet en mode beta (JavaScript, HTML, CSS).
 
 ___
-## /!\ Problème de batteires /!\
+## /!\ Problème de batteries /!\
 
 Il est impératif d'enlever la batterie de votre imprimante X-710.\
 De toute manière elle est KO.
