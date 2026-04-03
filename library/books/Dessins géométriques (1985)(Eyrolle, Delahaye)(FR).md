@@ -383,7 +383,7 @@ Dessin 19 :
 
 ```basic
 10 'COMPOSITION 1
-50 LPRINT CHR$(18): LPRINT"M0,-500": LPRINT"I": NP=480: PI=ATN(1)*4
+50 LPRINT CHR$(18): LPRINT"M0,-800": LPRINT"I": NP=480: PI=ATN(1)*4
 100 K1=99: DX=NP/2: DY=NP/2: R1=NP*.25: A1=0
 110 K=7: H=3: R=NP*.25: AD=PI/2
 200 FOR I1=0 TO K1-1
@@ -401,6 +401,9 @@ Dessin 19 :
 5300 NEXT I
 5500 RETURN
 ```
+
+NDR :
+- M0,-800, en ligne 50 corrigé, sinon le dessin déborde du papier en haut.
 
 <p align="center">────────────────────</p>
 
@@ -715,7 +718,7 @@ Dessin 33 :
 
 ```basic
 10 ' JOLIGONES
-50 LPRINT CHR$(18): LPRINT"M0,-500": LPRINT"I": NP=480: PI=ATN(1)*4
+50 LPRINT CHR$(18): LPRINT"M0,-800": LPRINT"I": NP=480: PI=ATN(1)*4
 100 K=400: AN=19*PI/60: RA=.996
 110 AA=0: RR=.40*NP
 120 X=(NP-RR)/2: Y=0: X%=INT(X): Y%=INT(Y)
@@ -728,6 +731,9 @@ Dessin 33 :
 300 NEXT I1
 500 END
 ```
+
+NDR :
+- M0,-800, en ligne 50 corrigé, sinon le dessin déborde du papier en haut.
 
 ___
 ### 2. Dessins à partir de données
