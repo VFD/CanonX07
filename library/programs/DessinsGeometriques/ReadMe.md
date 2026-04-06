@@ -25,7 +25,7 @@ ___
 
 Répartis sur 10 chapitres avec variantes.
 
-Ils sont pour le moment codés dans le fichier markdown avec le livre en PDF.
+Ils sont pour le moment codés dans le fichier markdown avec le livre en PDF.\
 Ils seront sans doute mis ici aussi en individuel lorsque les tests seront positifs.
 
 
@@ -33,6 +33,6 @@ ___
 ## Le rework
 
 Les programmes sont en cours d'adaptations au format PowerShell.\
-Ils génèrent tous les points nécessaire aux tracès. Fichier ".plt".
+Ils génèrent tous les points nécessaires aux tracès. Fichier ".plt".\
 Utiliser ensuite le ".plt" dans [le simulateur X-710](https://vfd.github.io/RPUFOS-Tools/X710.html) (en cours de dev).\
 ___
