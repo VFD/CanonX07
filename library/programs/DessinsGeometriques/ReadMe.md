@@ -16,13 +16,9 @@ Disponible :
 Apparement les pages blanches ont été suprimées.\
 Rebuild à faire du PDF mais avant les codes sources.
 
+Pour bien comprendre il faut aussi maîtriser la X-710.
 
-### Reproche
-
-C'est du rentre dedans direct sans vraiemment de précaution.\
-Pour bien comprendre il faut aussi maîtriser un peut la X-710.
-
-NDR : La X-710 existe sous plusieurs noms et marques diverses, il faudrait en faire la liste.
+NDR : La X-710 existe sous plusieurs noms et marques diverses, liste en cours.
 
 ___
 ## Les Listings
@@ -32,4 +28,11 @@ Répartis sur 10 chapitres avec variantes.
 Ils sont pour le moment codés dans le fichier markdown avec le livre en PDF.
 Ils seront sans doute mis ici aussi en individuel lorsque les tests seront positifs.
 
+
+___
+## Le rework
+
+Les programmes sont en cours d'adaptations au format PowerShell.\
+Ils génèrent tous les points nécessaire aux tracès. Fichier ".plt".
+Utiliser ensuite le ".plt" dans [le simulateur X-710](https://vfd.github.io/RPUFOS-Tools/X710.html) (en cours de dev).\
 ___
