@@ -9,5 +9,5 @@ Rework in PowerShell ISE.\
 For Windows.\
 Use PowerShell for ISE and open the PS1 files.\
 Adjuste parameters and launch.\
-Use the .plt file in the X-710 simulator.
+Use the .plt file in [the X-710 simulator](https://vfd.github.io/RPUFOS-Tools/X710.html).
 
