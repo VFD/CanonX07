@@ -1,11 +1,13 @@
-# Try to build a X710 emulateur
+# Try to build a X-710 Simulator
 
 ___
-## TO DO
+## Introduction
 
-JavaScript, CSS, HTML.
+Build with JavaScript, CSS, HTML.\
+Try to implement // port later.\
+May be serial port (for X-711).\
 
-Work in progress.
 
-
+[X-710 Simulator](https://vfd.github.io/RPUFOS-Tools/X710.html)\
+This is a work in progress.
 ___
