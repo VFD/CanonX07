@@ -1,17 +1,28 @@
 # Dessins géométriques (1985)(Eyrolle, Delahaye)(FR)
 
+Jean-Paul DELAHAYE
+EYROLLES
+1985-01
 
+___
 ## Introduction
 
-To do
+C'est un très gros travail.\
+Pour certain dessin, il faut des heures pour avoir le résultat.
 
+Les listings sont ci-après.\
+Il y a un rework en PowerShell 5.1 pour obtenir tous les point et les utiliser dans un simulateur de X-710.\
+L'idée étant d'interfacer le simulateur sur le port // du canon.
+
+Il est parfaitement possible de convertir tous les programme vers n'importe quel autre ordinateur de l'époque.\
+La condition étant les 480 pts de large.\
+Ce n'est pas évident à trouver.
 
 ___
 ## Les Listings
 
 Tous les listings du livre sont ci-dessous.\
-Ils sont complet contrairement au livre qui ne donne que les modifications à faire.
-
+Ils sont complet contrairement au livre qui ne donne que les modifications à faire.\
 L'idée est de valider le programme principale puis de construire toutes les dérivées.
 
 ___
@@ -853,7 +864,7 @@ Dessin 43 :
 ```
 
 
-
+___
 #### Lion, oiseaux-poissons, smurf
 
 Dessin 44 :
@@ -1241,8 +1252,8 @@ Dessin 86 :
 ```basic
 ```
 
-<p align="center">────────────────────</p>
 
+___
 #### Courbes tournantes
 
 Dessin 87 :
@@ -1335,8 +1346,8 @@ Dessin 96 :
 ```
 
 
-<p align="center">────────────────────</p>
 
+___
 #### Courbes spirales
 
 Dessin 97 :
@@ -1705,7 +1716,7 @@ Dessin 135 :
 
 
 
-
+___
 #### Fractales simples arrondies
 
 Dessin 136 :
@@ -2332,7 +2343,7 @@ Dessin 220 :
 ```
 
 
-
+___
 #### D3 structure
 
 Dessin 221 :
