@@ -937,6 +937,11 @@ Dessin 46 : Oiseaux-Poissons
 3000 END
 ```
 
+Old Data - y=y-0.1 line 1070 of basic programme (adjust bird eye)
+- "M -4,2.5",
+- "D -4,2.8, -4.3,2.8, -4.3,2.5, -4,2.5",
+
+
 <p align="center">────────────────────</p>
 
 Dessin 47 :
