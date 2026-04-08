@@ -50,9 +50,9 @@ NDR : Espace ajouté ci-dessus pour une meilleurs lisibilité.
 
 NDR: Le programme est corrigé à la main dans le buletin scané. Laissé tel quel.
 
-- OUT 244, 78 active le haut parleur·
-- OUT 24 3,0 met a zero l'octet de poids fort (celui que l'on multiplie par 256 pour coder un nombre supérieur à 255).
-- OUT 242, A donne la valeur A à l'octet de poids faible 242.
+- OUT 244,78 active le haut parleur·
+- OUT 243,0 met a zero l'octet de poids fort (celui que l'on multiplie par 256 pour coder un nombre supérieur à 255).
+- OUT 242,A donne la valeur A à l'octet de poids faible 242.
 - Le nombre obtenu par l'opération 256 * octet 243 + octet 242 donne un son d'autant plus grave qu'il est élevé.
 
 <p align="center">────────────────────</p>
@@ -74,6 +74,8 @@ Un RENUM en BASIC.
 100 POKEPL+2,LRMOD256:POKEPL+3,LR*256:LR=LR+I:RETURN
 ```
 
+<p align="center">────────────────────</p>
+
 NDR: C'est compacté est difficile à lire. Donc à ajout d'une version plus lisible.
 
 ```basic
@@ -91,8 +93,11 @@ NDR: C'est compacté est difficile à lire. Donc à ajout d'une version plus lis
 
 NDR : Bien lire le buletin, ce programme n'est pas efficace, le garder juste pour exemple.
 
+<p align="center">────────────────────</p>
 
 L'article indique aussi la structure d'une ligne basic.
+
+
 | Adresse | Octet | Commentaire |
 |---------|-------|-------------|
 | &H0552  | 1     | 00 ; séparateur de ligne ; 1ère ligne en &H0552 | 
@@ -110,4 +115,6 @@ NDR :
 - Il apparaît que le 00 est plutôt un séparateur qu'un début de ligne, car il se retrouve aussi à la fin même si pas de nouvelle ligne.
 - Voir avec le programme RALP (ZX81) comment l'adapter au X07.
 
+
+___
 ___
