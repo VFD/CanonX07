@@ -20,7 +20,7 @@ LES BOOLEENS DU CANON X-07 ............... 11
 C7 INFORME ............................... 15
 COURRIER DES LECTEURS .................... 18
 GRAPHE (BANC D'ESSAI) .................... 20
-LE SOUS PROCESSEUR 16834 ................. 23
+LE SOUS PROCESSEUR T6834 ................. 23
 LA PROGRAMMATHEQUE ....................... 26
 LES SYMPATHISANTS DU X-07 ................ 28
 NAUTILUS LOOGI'STICK (BANC D'ESSAI) ...... 35
@@ -112,7 +112,8 @@ Le programme Basic de démo :
 
 <p align="center">────────────────────</p>
 
-L'ASM de démo :
+L'ASM de démo :\
+Décodage par IA.
 
 ```asm
 ; Désassemblage du code machine Z80 pour Canon X07
