@@ -377,7 +377,8 @@ ___
 |----|------------|---------------------------------------------|------|------------------------------|
 | 01 | 1984-07/08 | Table des matières                          | 📝   | Listing - p78 |
 | 03 | 1984-10    | Publicité double page                       | 📝   | pub |
-| 04 | 1984-      |                                             | ❕   | Carnet, Club C7 |
+| 04 | 1984-11    | À vos clavier                               | ❕   | Courrier NSC 800 = Z80 |
+| 04 | 1984-11    | Du côté des Clubs                           | ❕   | Carnet, Club C7 |
 | 06 | 1985-01/02 | La gazette de List - Carte Minitel          | 📝   | Tout petit encart - p16 |
 | 06 | 1985-01/02 | La gazette de List - Logi'Stick             | 📝   | 3 cassettes - p18 |
 | 06 | 1985-01/02 | La guerre des trois                         | 📝   | Listing ; p20-21  |
