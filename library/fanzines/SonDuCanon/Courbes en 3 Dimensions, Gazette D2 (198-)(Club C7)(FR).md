@@ -16,7 +16,7 @@ débordements.
 ___
 # Listing
 
-le listing est dans le répertoire [programs](../../programs).
+le listing est dans le répertoire [programs](../../programs/ClubC7/GazetteD2).
 
 
 
