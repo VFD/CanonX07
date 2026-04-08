@@ -34,6 +34,38 @@ C7 ANNONCE ............................... 42
 ___
 ## Les Listings
 
+### Page 14 - Amélioration
+
+#### Magic Circus (Gazette 1)
+
+Proposition d'amélioration :\
+La ligne 145 est optionnelle.
+
+```basic
+...
+145 B=-B*(B>=0)
+...
+400 FOR V = 1 TO 4096 : BEEP V, 1 : IF NOT TKEY(CHR$(13)) THEN NEXT V : GOTO 400 ELSE RETURN
+...
+500 FOR M=1 TO 2 : E=F : F=F+TKEY("l")-TKEY("3"): IF F>19 THEN F=19
+510 F=-F*(F>=O)
+...
+```
+
+<p align="center">────────────────────</p>
+
+#### Télécran
+
+```basic
+...
+40 B=STICK (0)
+50 Y=Y+(B=l)+(B=2)+(B=ô)-(B=4)-(B=5)-(B=6)
+60 X=X+(B=6 )+(B=7)+(B=ô)-(B=2)-(B=3)-(B=4)
+...
+```
+
+<p align="center">────────────────────</p>
+
 
 ### Page 24 - TOSHIBA T6834
 
