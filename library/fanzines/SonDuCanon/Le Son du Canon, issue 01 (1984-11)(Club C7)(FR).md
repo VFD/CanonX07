@@ -74,6 +74,8 @@ Le programme est aussi dans le répertoire [programs](/library/programs/ClubC7/S
 
 <p align="center">────────────────────</p>
 
+Routine assembleur de Nombre Aléatoire.
+
 ```asm
 
 org 1F2C
