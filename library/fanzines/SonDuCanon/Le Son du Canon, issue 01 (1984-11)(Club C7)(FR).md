@@ -57,7 +57,7 @@ ___
 60006 IF G$=" " THEN A=Z : E=1 : GOTO 60002
 60007 IF G$="I" THEN 60009 ELSE 60005
 60008 CLS : PRINT " Ad Depart =";Y,"Ad Fin= ";N-1," Nb octets =";N-Y:END
-60009 LPRINT " ADRESSE DE dEPORT = ";Y : LPRINT " AD T E S S E D E F ; N =" ; N- J : LFR ] N T
+60009 LPRINT " Adresse de depart = ";Y : LPRINT "Adresse de fin =";N-1 : LPRINT
 60010 LPRINT " ADRESSE : Dec & Hexa / CODE: Dec & Hexa" : FOR I=Y TO N-1
 60011 LPRINT I;"     &H";HEX$(I);TAB(21);"/  ";PEEK(I);TAB(33);"&H";HEX$(PEEK(I))
 60012 NEXT : LPRINT : LPRINT " Nb d'octets =";N-Y : LPRINT : GOTO 60005
