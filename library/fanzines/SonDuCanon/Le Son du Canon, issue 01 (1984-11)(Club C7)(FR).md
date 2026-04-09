@@ -49,8 +49,21 @@ ___
 ### Page 9
 
 ```basic
-to do
+60000 CLS: BEEP 1,1: INPUT"Adresse de Depart ",A:Z=A:Y=A:CLS
+60002 N$="":BEEP5,2 : PRINT"AD = ";A;" /Code ";: INPUT N$ : IF N$="" THEN N=A : GOTO 60004
+60003 POKE A,VAL(N$) : IF E=1 THEN 60004 ELSE A=A+1 : GOTO 60002
+60004 E=0 : BEEP 7,2 : PRINT"AD = ";Z;" /Code = &H";HEX$(PEEK(Z));" OU";PEEK(Z)
+60005 G$=INKEY$ : IF G$=CHR$(J3) THEN Z=Z+1 : IF Z=N THEN 60008 ELSE 60004
+60006 IF G$=" " THEN A=Z : E=1 : GOTO 60002
+60007 IF G$="I" THEN 60009 ELSE 60005
+60008 CLS : PRINT " Ad Depart =";Y,"Ad Fin= ";N-1," Nb octets =";N-Y:END
+60009 LPRINT " ADRESSE DE dEPORT = ";Y : LPRINT " AD T E S S E D E F ; N =" ; N- J : LFR ] N T
+60010 LPRINT " ADRESSE : Dec & Hexa / CODE: Dec & Hexa" : FOR I=Y TO N-1
+60011 LPRINT I;"     &H";HEX$(I);TAB(21);"/  ";PEEK(I);TAB(33);"&H";HEX$(PEEK(I))
+60012 NEXT : LPRINT : LPRINT " Nb d'octets =";N-Y : LPRINT : GOTO 60005
 ```
+
+NDR : code à vérifier.
 
 ___
 ### Page 10 et 11
