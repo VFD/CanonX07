@@ -46,6 +46,13 @@ Le programme est dans le répertoire [programs](/library/programs/ClubC7/SonDuCa
 
 
 ___
+### Page 9
+
+```basic
+to do
+```
+
+___
 ### Page 10 et 11
 
 Dactylo Folie :
