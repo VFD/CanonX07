@@ -80,31 +80,31 @@ Routine assembleur de Nombre Aléatoire.
 
 org 1F2C
 
-	LD D,00
-	LD E,00
-	LD A,R
-	LD L,A
-	LD A,(1F6A)
-	XOR L
-	RLA
-	LD L,A
-	LD A,R
-	XOR L
-	LD(1F6A),A
-	CALL 1F48
-	LD A,H
-	INC A
-	NOP
-	JP 1F56
-	LD HL,0000
-	ADD HL,HL
-	SLA A
-	JPNC 1F52
-	ADD HL,DE
-	JPNZ 1F48
-	RET
-	LD (1F26),A
-	RET
+1F2C: 16 00        LD D,00              ; D = 0
+1F2E: 1E 00        LD E,00              ; E = 0
+1F30: ED 5F        LD A,R               ; A = registre R (refresh)
+1F32: 6F           LD L,A               ; L = A
+1F33: 3A 6A 1F     LD A,(1F6A)          ; A = valeur à l'adresse 1F6A
+1F36: AE           XOR L                ; A = A XOR L
+1F37: 07           RLA                  ; Rotation A à gauche avec carry
+1F38: 6F           LD L,A               ; L = A
+1F39: ED 5F        LD A,R               ; A = registre R
+1F3B: AE           XOR L                ; A = A XOR L
+1F3C: 32 6A 1F     LD (1F6A),A          ; Stocke A à l'adresse 1F6A
+1F3F: CD 48 1F     CALL 1F48            ; Appel sous-routine à 1F48
+1F42: 7C           LD A,H               ; A = H
+1F43: 3C           INC A                ; A = A + 1
+1F44: 00           NOP                  ; Pas d'opération
+1F45: C3 56 1F     JP 1F56              ; Saut à 1F56
+1F48: 21 00 00     LD HL,0000           ; HL = 0
+1F4B: 29           ADD HL,HL            ; HL = HL + HL (décalage gauche)
+1F4C: CB 27        SLA A                ; Décalage A à gauche
+1F4E: D2 52 1F     JPNC 1F52            ; Saut si pas de carry à 1F52
+1F51: 19           ADD HL,DE            ; HL = HL + DE
+1F52: C2 48 1F     JPNZ 1F48            ; Saut si non-zéro à 1F48
+1F55: C9           RET                  ; Retour
+1F56: 32 26 1F     LD (1F26),A          ; Stocke A à l'adresse 1F26
+1F59: C9           RET                  ; Retour
 ```
 
 
