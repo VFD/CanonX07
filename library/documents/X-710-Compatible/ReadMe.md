@@ -16,6 +16,12 @@ Un dump serait bienvenu si c'est le cas.
 Autre projet, un emulateur de ce type d'imprimante.\
 Projet en mode beta (JavaScript, HTML, CSS).
 
+__
+## Variantes de X-710
+
+Selon la version (ancienne, plus récente).\
+Il est possible ou non d'imprimer les caractères accentués.
+
 ___
 ## /!\ Problème de batteries /!\
 
