@@ -225,13 +225,30 @@ ___
 Hypocycloïde :
 
 ```basic
+5 REM HYPOCYCLOIDE
+10 CLS:PI=3,14159265358979:BEEP5,5
+20 FOR I=0 TO 2*PI STEP .25
+30 X=COS(I)^3*8+12:Y=SIN(I)^3*8+16:PSET(X,Y)
+40 X=COS(I)^3*12+52:Y=SIN(I)^3*12+16:PSET(X,Y)
+50 X=COS(I)^3*15+100:Y=SIN(I)^3*15+16:PSET(X,Y)
+60 NEXT:BEEP 5,5:END
 ```
+
+NDR : valeur de PI corrigé.
 
 <p align="center">────────────────────</p>
 
 Hypocycloïde (inversion vidéo) :
 
 ```basic
+5 REM "HYPOCYCLOIDE"
+10 CLS:PI=3,14159265358979:BEEP5,5
+15 FOR J=0 TO 31:LINE (0,J)-(119,J):NEXT
+20 FOR I=0 TO 2*PI STEP .25
+30 X=COS(I)^3*8+12:Y=SIN(I)^3*8+16:PRESET(X,Y)
+40 X=COS(I)^3*12+52:Y=SIN(I)^3*12+16:PRESET(X,Y)
+50 X=COS(I)^3*15+100:Y=SIN(I)^3*15+16:PRESET(X,Y)
+60 NEXT:BEEP 5,5:END
 ```
 
 <p align="center">────────────────────</p>
