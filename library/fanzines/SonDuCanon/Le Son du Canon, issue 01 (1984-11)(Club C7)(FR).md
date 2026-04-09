@@ -129,6 +129,50 @@ Tirage Loto
 
 Le programme est aussi dans le répertoire [programs](/library/programs/ClubC7/SonDuCanon01)
 
+L'assembleur :
+
+```asm
+1F07: 01 AF 02     LD BC,02AF           ; BC = 0x02AF
+1F0A: 0D           DEC C                ; C = C - 1
+1F0B: C2 1C 1F     JP NZ,1F1C           ; Saut si non-zéro à 1F1C
+1F0E: 01 07 1F     LD BC,1F07           ; BC = 0x1F07
+1F11: C3 2C 1F     JP 1F2C              ; Saut à 1F2C
+1F14: 0D           DEC C                ; C = C - 1
+1F15: C2 24 1F     JP NZ,1F24           ; Saut si non-zéro à 1F24
+1F18: C9           RET                  ; Retour
+1F19: 16 00        LD D,00              ; D = 0 (initialisation)
+1F1B: 1E 31        LD E,31              ; E = 0x31 (49 en décimal)
+1F1D: ED 5F        LD A,R               ; A = registre R (refresh)
+1F1F: 6F           LD L,A               ; L = A
+1F20: 3A 6A 1F     LD A,(1F6A)          ; A = valeur stockée à 1F6A
+1F23: AD           XOR L                ; A = A XOR L
+1F24: 17           RLA                  ; Rotation A à gauche avec carry
+1F25: 6F           LD L,A               ; L = A
+1F26: ED 5F        LD A,R               ; A = registre R
+1F28: AD           XOR L                ; A = A XOR L
+1F29: 32 6A 1F     LD (1F6A),A          ; Stocke A à 1F6A
+1F2C: CD 48 1F     CALL 1F48            ; Appel sous-routine à 1F48
+1F2F: 7C           LD A,H               ; A = H
+1F30: 3C           INC A                ; A = A + 1
+1F31: 00           NOP                  ; Pas d'opération
+1F32: C2 56 1F     JP NZ,1F56           ; Saut si non-zéro à 1F56
+1F35: 21 00 00     LD HL,0000           ; HL = 0 (initialisation boucle)
+1F38: 29           ADD HL,HL            ; HL = HL + HL (décalage gauche)
+1F39: CB 27        SLA A                ; Décalage A à gauche
+1F3B: D2 52 1F     JP NC,1F52           ; Saut si pas de carry à 1F52
+1F3E: 19           ADD HL,DE            ; HL = HL + DE
+1F3F: C2 4B 1F     JP NZ,1F4B           ; Saut si non-zéro à 1F4B
+1F42: C9           RET                  ; Retour
+1F43: 21 07 1F     LD HL,1F07           ; HL = adresse 1F07
+1F46: BE           CP (HL)              ; Compare A avec (HL)
+1F47: CA 2C 1F     JP Z,1F2C            ; Saut si égal à 1F2C
+1F4A: 2D           DEC L                ; L = L - 1
+1F4B: C2 59 1F     JP NZ,1F59           ; Saut si non-zéro à 1F59
+1F4E: 02           LD (BC),A            ; Stocke A à (BC)
+1F4F: C3 27 1F     JP 1F27              ; Saut à 1F27
+```
+
+
 ___
 ### Page 20
 
