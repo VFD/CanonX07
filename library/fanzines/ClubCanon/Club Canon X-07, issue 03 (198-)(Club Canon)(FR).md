@@ -91,17 +91,21 @@ La version BASIC DATA :
 20 READ A$: POKE I,VAL("&H"+A$)
 30 NEXT
 40 DATA F5,C5,D5,E5,DD,21,8D,1B
-50 DATA 
-60 DATA 
-70 DATA 20,D8,B1,D1,C1,F1,C9
+50 DATA DD,36,00,00,DD,36,01,00
+60 DATA JE,13,06,02,0E,00,DD,21
+70 DATA BD,1B,CD,2F,C9,DD,21,8D
+80 DATA 1B,DD,34,00,3E,78,DD,BE
+90 DATA 00,20,E6,DD,36,00,00,DD
+100 DATA 34,01,3E,20,DD,BE,01,20
+110 DATA D8,B1,D1,C1,F1,C9
 ```
 
-NDR : à compléter.
+NDR : Version complétée car non complète dans le fanzine.
 
 
 <p align="center">────────────────────</p>
 
-### page 10
+### page 10 - Calcul d'intgrale
 
 
 ```basic
@@ -127,7 +131,7 @@ TO DO
 
 <p align="center">────────────────────</p>
 
-### page 12
+### page 12 - Utilitaire de mise en Data
 
 ```basic
 5 CLEAR 2000: CLS: ON ERROR GOTO 100
