@@ -26,6 +26,7 @@ PAINT
 
 ### jeu de la vie
 
+Le fichier "Jeu de la vie (1985-03)(Club C7)(FR).txt" correspond aux datas qui doivent être enttrées via le programme ci-dessous.
 
 ```basic
 10 CLEAR 50,&H9F0: A=&HA00
@@ -42,6 +43,8 @@ PAINT
 120 BEEP 20,2: PRINT "ERREUR"
 130 A=A-8: GOTO 20
 ```
+
+Lecture et écriture des datas sur une cassette.
 
 ```basic
 10 CLEAR 50,&H9FE
