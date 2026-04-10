@@ -3,7 +3,9 @@
 ___
 ## Introduction
 
-TO DO
+Son du canon no 2.\
+Les points interressants :
+- encodage du BASIC en mémoire, p14
 
 ___
 ## Sommaire
@@ -36,7 +38,8 @@ C7 ANNONCE ................................................. 42
 ___
 ## Les Listings
 
-TO DO
+Certain listings ont été retrouvé sur des cassettes et sont dans le répertoire programs.\
+Il nous manque le jeu de la vie.
 
 
 EOF
