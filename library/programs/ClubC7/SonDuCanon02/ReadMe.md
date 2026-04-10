@@ -26,7 +26,9 @@ PAINT
 
 ### jeu de la vie
 
-Le fichier "Jeu de la vie (1985-03)(Club C7)(FR).txt" correspond aux datas qui doivent être enttrées via le programme ci-dessous.
+Le fichier "Jeu de la vie (1985-03)(Club C7)(FR).txt" correspond aux datas qui doivent être enttrées via le programme ci-dessous.\
+Le fichier "Jeu de la vie (1985-03)(Club C7)(FR).asm" a été généré par l'IA CLAUDE, mais c'est bof). Prévu de refaire.\
+Le BIN sera fait prochainement.
 
 ```basic
 10 CLEAR 50,&H9F0: A=&HA00
