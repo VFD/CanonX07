@@ -109,11 +109,32 @@ NDR : Version complétée car non complète dans le fanzine.
 
 
 ```basic
-
-TO DO
-
+10 CLEAR 300: INIT #1,"KBD:"
+15 FONT$(128)="0,0,0,36,116,36,0,0": FONT$(129)="0,0,216,36,36,36,216,0"
+20 CLS
+35 I$=CHR$(128)+CHRS(129)
+40 PRINT"Intégrale de f(x)"
+41 PRINT"1. sur [a,b]"
+42 PRINT"2. sur [a,"I$"["
+50 PRINT"3. autre fonction";
+60 R=INP(#1)-48: D=0
+70 IF R=J THEN 200
+80 CLS: INPUT "a";A: RESTORE 150: FOR I=0 TO 5: READ Z(I),W(I): NEXT: IF R=2 TREN 110
+90 INPUT "b";B: C=(B-A)/2: B$=STR$(B)+" ]": FOR I=0 TO 5
+100 D=D+W(I)*(FNF(C*Z(I)+C+A) +FNF(C+A-C*Z(I))): NEXT : D=D*C: GOTO 130
+110 B$=I$+" [": FOR I=0 TO 5: D=D+W(I)/(1+Z(I))^2*FNF(2/(1+Z(I))+A-1)
+120 D=D+W(I)/(1-Z(I))^2*FNF(2/(1-Z(I))+A-1): NEXT: D=2*D
+130 PRINT" Intégrale de f(x)","sur ["A","B$: PRINT
+140 PRINT D;: R=INP(#1): GOTO 20
+150 DATA .9815606342, .04717533639, .9041172564, .106939326, .7699026742, .1600783285
+160 DATA .5873179543, .2031674267, .367831499, .2334925365, .1252334085, .2491470458
+200 CLS: INIT #1,"KBD:": LINE INPUT "f(x) = ";F$
+210 IF LEN(F$))>66 THEN CLS: PRINT" Définition trop longue": R=INP(#1): GOTO 200
+220 KEY$(6)="fnx 30 DEFFNF(X)="+F$+CHR$(13)+"GOTO 30"+CHR$(13)
+230 PRINT"Pressez la touche F6": R=INP(#1)
 ```
 
+NDR : Ligne 40 splitée en 40, 41 et 42
 
 <p align="center">────────────────────</p>
 
