@@ -121,7 +121,7 @@ NDR : Version complétée car non complète dans le fanzine.
 70 IF R=J THEN 200
 80 CLS: INPUT "a";A: RESTORE 150: FOR I=0 TO 5: READ Z(I),W(I): NEXT: IF R=2 TREN 110
 90 INPUT "b";B: C=(B-A)/2: B$=STR$(B)+" ]": FOR I=0 TO 5
-100 D=D+W(I)*(FNF(C*Z(I)+C+A) +FNF(C+A-C*Z(I))): NEXT : D=D*C: GOTO 130
+100 D=D+W(I)*(FNF(C*Z(I)+C+A)+FNF(C+A-C*Z(I))): NEXT: D=D*C: GOTO 130
 110 B$=I$+" [": FOR I=0 TO 5: D=D+W(I)/(1+Z(I))^2*FNF(2/(1+Z(I))+A-1)
 120 D=D+W(I)/(1-Z(I))^2*FNF(2/(1-Z(I))+A-1): NEXT: D=2*D
 130 PRINT" Intégrale de f(x)","sur ["A","B$: PRINT
