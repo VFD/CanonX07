@@ -113,6 +113,7 @@ L'article indique aussi la structure d'une ligne basic.
 
 NDR :
 - Il apparaît que le 00 est plutôt un séparateur qu'un début de ligne, car il se retrouve aussi à la fin même si pas de nouvelle ligne.
+- Voir aussi le Club C7 sur sa gazette no 2 où c'est aussi indiqué, mais le &h00 est une fin de ligne.
 - Voir avec le programme RALP (ZX81) comment l'adapter au X07.
 
 
