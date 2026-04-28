@@ -6,18 +6,19 @@ ___
 Report ici des codes sources du livre.\
 Les programmes étant court, les espaces sont ajoutés pour rendre le code plus lisible.
 
-Utilisation d'IA pour rechercher les erreurs.
+Utilisation d'IA diverses pour rechercher les erreurs dans les codes sources,
+en particulier celles des OCRs qui ont des difficultés à cause de scans pas assez fin.
 
 ___
 # Les Listings
 
 Certain listings ont pu être retrouvés chez l'association Silicium.\
-On peut les retrouver aussi dans la bibliothèque "[sources]()".
+On peut les retrouver aussi dans la bibliothèque des programmes :
+- "[sources](../programs/LogiStick)".
+- "[sources](../programs/ClubC7)".
 
-Les codes L.M qui sont entre les crochets [ et ] sont pour l'assembleur 2 passes de la revue Micro Systèmes.
-
-
-Si besoin [ASM80.com](https://www.asm80.com/onepage/asmz80.html).\
+Les codes L.M qui sont entre les crochets [ et ] sont pour l'assembleur 2 passes de la revue Micro Systèmes.\
+Au besoin utilisation de [ASM80.com](https://www.asm80.com/onepage/asmz80.html).\
 L'idée est de regénérer les Datas.
 
 ___
@@ -25,23 +26,7 @@ ___
 
 Exemple 1
 
-```basic
-10 GOTO 20
-15   REM01234567890123456789
-20 RESTORE 15 : AD% = PEEK (&H329) * 256 + PEEK (&H328) + 6
-30 FOR I% = 0 TO 19 : READ B$: POKE AD%+I%,VAL("&H"+B$): NEXT I%
-40 DATA 06,08,E1,10,FD,2A,15,03,E5,D1,CD,0B,F3,FD,21,00,40,C3,8A,FE
-50 ON ERROR GOTO 65000
-60 ' DEBUT DU PROGRAMME
-100 A = 5 : B = 0 : C = A/B
-64999 END
-65000 PRINT "Erreur"
-65010 EXEC AD%
-```
-
-NDR : Le programme est incorrect.
-
-Programme corrigé :
+NDR : Le programme est incorrect pour l'EXEC, ci-dessous une version corrigée :
 
 ```basic
 10 GOTO 20
@@ -76,7 +61,7 @@ Exemple 2
 65010 EXEC AD%
 ```
 
-NDR: Même problème, coorectif à faire.
+NDR: Même problème, correctif à faire.
 
 ___
 ## Page 23
@@ -156,7 +141,7 @@ Exemple 6
 95 END
 ```
 
-NDR : Consulter la gazette No 5 du Club C7.
+NDR : Consulter la gazette [Son du Canon No 5](../fanzines/SonDuCanon) du Club C7.
 
 
 ___
@@ -235,6 +220,8 @@ TOUCHE		LD HL,BUF+4			; Le registre HL est chargé avec l'adresse du buffer util
 			RET					; Retour
 ```
 
+<p align="center">────────────────────</p>
+
 Temporisation
 
 ```asm
@@ -310,6 +297,8 @@ ACQNUM		LD HL,MESSAGE		;
 			RST $10				; Teste si un nombre a bien été entré ...
 			CALL $F595			; Transfère le nombre dans le registre DE
 ```
+
+<p align="center">────────────────────</p>
 
 Utilisation X-710
 
@@ -444,6 +433,7 @@ Ci-après revision des codes.
 804 DATA 49,4E,54,45,52,55,50,54,49,4F
 805 DATA 4E,20,21,21,21,21,00
 ```
+
 <p align="center">────────────────────</p>
 
 ```asm
@@ -543,7 +533,6 @@ Figure 7 : Le Beep !!
 102 DATA 3E,7,CD,BE,C1,ED,40
 ```
 
-
 ___
 ## Page 60
 
@@ -552,10 +541,10 @@ Fichiers CASO & CASI.
 ```
 10 '[
 20 ' ORG $1C00				; 
-30 ' LD DE.$E987			; Adresse de tableau du dispositif CASO .
-40 ' LD IY.$02C5			; Adresse de la partie spécialisée de la RAM .
-50 ' LD A.$00				; Mise à 0 du registre A .
-60 ' CALL $E6A8				; Appel d'ouverture du dispositif .
+30 ' LD DE.$E987			; Adresse de tableau du dispositif CASO.
+40 ' LD IY.$02C5			; Adresse de la partie spécialisée de la RAM.
+50 ' LD A.$00				; Mise à 0 du registre A.
+60 ' CALL $E6A8				; Appel d'ouverture du dispositif.
 70 ' RET					; 
 80 ']
 ```
@@ -572,7 +561,7 @@ Fichiers CASO & CASI.
 65 ' IN A.($F4)				;  Le démarrage du magnétophone nécessite la
 66 ' SET 0.A				; mise à 1 du bit D0 du port F4 (lignes 65 à
 70 ' OUT ($F4).A			; 70).
-80 ' CALL #TP				; Temporisation ...
+80 ' CALL #TP				; Temporisation...
 90 ' CALL #TP
 100 ' LD DE.$02C5
 110 ' CALL $E827			; On assigne la sortie CASO
@@ -583,25 +572,25 @@ Fichiers CASO & CASI.
 160 ' LD A.$00
 170 ' CALL $E88F
 180 ' LD HL.#DD				; Les lignes 180 à 230 constituent la sortie
-190 ' #ST LD A.(HL)			; des données ...
+190 ' #ST LD A.(HL)			; des données...
 200 ' CP $00
 210 ' JR Z.#TE
 220 ' CALL $E88F
 225 ' INC HL
 230 ' JR #ST
 240 ' #TE LD A.$FF			; Les lignes 240 à 290 signalent la fin des
-250 ' CALL $E88F			; données par un triple 255 ...
+250 ' CALL $E88F			; données par un triple 255...
 260 ' LD A.$FF
 270 ' C ALL $E88F
 280 ' LD A.$FF
 290 ' CALL $E88F
 291 ' CALL #TP				; Les lignes 291 à 294 constituent l'arrêt du
-292 ' IN A.($F4)			; magnétophone ...
+292 ' IN A.($F4)			; magnétophone...
 293 ' RES 0.A
 294 ' OUT ($F4).A
 300 ' RET
 310 ' #TP PUSH BC			; Les lignes 310 à 390 signalent constituent la boucle
-320 ' LD B.$00				; de temporisation .
+320 ' LD B.$00				; de temporisation.
 330 ' #E1 LD C.$FF
 340 ' #E2 DEC C
 350 ' JR NZ.#E2
@@ -609,7 +598,7 @@ Fichiers CASO & CASI.
 370 ' JR NZ.#E1
 380 ' POP BC
 390 ' RET
-400 '#DD DEFB $01 ,02 , 03 , 04 , 05 , 06 , 00		; données
+400 '#DD DEFB $01,02,03,04,05,06,00		; données
 410 ']
 ```
 
@@ -714,27 +703,27 @@ Fichiers GPR et KBD
 ```
 10  ' [
 20  ' ORG $1C00				; Les lignes 20 à 70 constituent l'initialisation
-30  ' * INIT #1,"GPR:"		; du dispositif 1 ...
+30  ' * INIT #1,"GPR:"		; du dispositif 1...
 40  ' LD DE.$E7B2			; 
 50  ' LD IY.$02C5			; 
 60  ' LD A.$0				; 
 70  ' CALL $F6A8			; 
 80  ' * INIT #2,"KBD:"		; Les lignes 80 à 120 représentent l'initialisation
-90  ' LD DE.$E778			; du dispositif n°2 .
+90  ' LD DE.$E778			; du dispositif n°2.
 100 ' LD IY.$02CD			; 
 110 ' LD A.$0				; 
 120 ' CALL $E6A8			; 
-130 ' * Assignation de KBD	; Entrées sur la console ...
+130 ' * Assignation de KBD	; Entrées sur la console...
 140 ' #BL LD DE.$2CD		; 
 150 ' CALL $E827			; 
-170 ' CALL $E8D4			; Entrée d'une touche ...
+170 ' CALL $E8D4			; Entrée d'une touche...
 175 ' PUSH AF				; 
 190 ' LD DE.$2C5			; Les sorties se font sur l'imprimante
 200 ' CALL $E827			; 
 205 ' POP AF				; 
 206 ' CP $0E				; Si on appuie sur CTRL N , on arrête
 207 ' RETZ					; 
-210 ' CALL $E88F			; Sinon , écriture sur l'imprimante .
+210 ' CALL $E88F			; Sinon, écriture sur l'imprimante.
 220 ' JR #BL				; 
 230 ' ]
 ```
@@ -744,7 +733,7 @@ Fichiers GPR et KBD
 ```basic
 10 FOR I=&H1C00 TO &H1C00+48
 20 READ A$: POKE I,VAL("&H"+A$): NEXT
-40 PRINT "EXEC &H1C00 pour démarrer ... "
+40 PRINT "EXEC &H1C00 pour démarrer... "
 50 DATA 11,F8,E7,FD,21,CS,02,3E,00,CD,A8,E6,11,78,E7
 60 DATA FD,21,CD,02,3E,00,CD,A8,E6,11,CD,02,CD,27,E8,CD,D4
 70 DATA E8,F5,11,CS,02,CD,27,E8,F1,FE,0E,C8,CD,8F,E8,18,E7
@@ -766,10 +755,10 @@ Prise SERIE.
 50  ' LD B."G"				; Mode G de l'ACIA
 60  ' LD IX.&1200			; Vitesse : 1200 bauds
 70  ' LD IY.$2C5			; 
-80  ' CALL $E6A8			; Ouverture ...
+80  ' CALL $E6A8			; Ouverture...
 85  ' LD DE.$2C5			; 
 86  ' CALL $E827			; 
-87  ' LD HL.#ME				; Ecriture du message ...
+87  ' LD HL.#ME				; Ecriture du message...
 90  ' #ET LD A.(HL)			; 
 91  ' CP $0					; 
 92  ' JR Z.#FI				; 
@@ -778,7 +767,7 @@ Prise SERIE.
 106 ' JR #ET				; 
 120 ' #FI RET				; 
 124 ' #ME DEFB &12			; 
-125 ' DEFM Cela marche bien comme cela ...
+125 ' DEFM Cela marche bien comme cela...
 126 ' DEFB $00				; 
 130 ' ]
 ```
@@ -791,7 +780,7 @@ Prise Série, le BASIC.
 ```basic
 10 FOR I=&H1C00 TO &H1C00+63
 20 READ A$: POKE I,VAL("&H"+A$): NEXT
-40 PRINT "EXEC &H1C00 pour démarrer ... "
+40 PRINT "EXEC &H1C00 pour démarrer... "
 60 DATA 11,A4,E7,3E,00,06,47,DD,21,BO,04,FD,21,CS,02
 70 DATA CD,A8,E6,11,C5,02,CD,27,E8,21,27,1C,7E,FE,00,28,06
 80 DATA CD,8F,E8,23,18,F5,C9,0C,43,41,20,4D,41,52,43,48
@@ -804,19 +793,18 @@ NDR : Modifié pour être plus lisible
 
 Lecture Série.
 
-
 ```
 20  ' [
 30  ' ORG $1C00				; 
 40  ' LD DE.$E7A4			; Les lignes 40 à 90 initialisent le 1er fichier
-50  ' LD A.$0				;à COM .
+50  ' LD A.$0				; à COM.
 60  ' LD B."G"				; 
 70  ' LD IX.&1200			; 
 80  ' LD IY.$2C5			; 
 90  ' CALL $E6A8			; 
-100 ' LD DE.$2C5			; Les lignes 100 à 110 assignent l'entrée .
+100 ' LD DE.$2C5			; Les lignes 100 à 110 assignent l'entrée.
 110 ' CALL $E827			; 
-120 ' CALL $E8D4			; Caractère entré dans A .
+120 ' CALL $E8D4			; Caractère entré dans A.
 130 ' CALL $C1BE			; Caractère affiché à l'écran
 140 ' RET					; 
 150 ' ]
@@ -839,9 +827,11 @@ ___
 
 Concerne l'extension X-720.
 
-Figure 12 : Test.
+Figure 12 : Test de la presence de la x-720.
 
-Dans le code BASIC il y a un RET et pas dans les ASM, donc ajout.
+NDR :
+- Dans le code BASIC il y a un RET et pas dans les ASM, donc rajout.
+- Possible confusion avec des valeurs décimales, donc ajout du $ dans l'asm décodé.
 
 ```
 10 ' [
@@ -859,12 +849,12 @@ Dans le code BASIC il y a un RET et pas dans les ASM, donc ajout.
 <p align="center">────────────────────</p>
 
 ```asm
-1C00	3E 80			LD A,80
-1C02	32 00 80		LD (8000),A
-1C05	3A 00 80		LD A,(8000)
-1C08	FE 80			CP 80
-1C0A	C2 AA F1		JP NZ,F1AA
-1C0D	C9
+1C00	3E 80			LD A,80			; 
+1C02	32 00 80		LD ($8000),A	; Debut VRAM
+1C05	3A 00 80		LD A,($8000)	; 
+1C08	FE 80			CP $80			; 
+1C0A	C2 AA F1		JP NZ,$F1AA		; Saut en erreur
+1C0D	C9				RET				; 
 ```
 
 <p align="center">────────────────────</p>
@@ -882,6 +872,7 @@ Dans le code BASIC il y a un RET et pas dans les ASM, donc ajout.
 
 Figure 13 : Effacement.
 
+
 ```
 10 ' [
 20 ' ORG $1C00
@@ -889,9 +880,9 @@ Figure 13 : Effacement.
 40 ' CALL #SC : * EFFACEMENT DE LA
 50 ' CALL $CE9E : * 8 ème LIGNE à LA FIN
 60 ' LD HL.$108
-70 ' LD ($B8).HL : * CURSEUR (Cl , L8 )
+70 ' LD ($B8).HL : * CURSEUR (C1 , L8 )
 80 ' RET
-90 ' #SC LD A.$8 : * Ligne de roulemen1
+90 ' #SC LD A.$8 : * Ligne de roulement
 100 ' LD ($BB).A
 110 ' LD A.&16 : * DERNIERE LIGNE
 120 ' LD ($BC).A
@@ -901,21 +892,19 @@ Figure 13 : Effacement.
 160 ' ]
 ```
 
-<p align="center">────────────────────</p>
-
 ```asm
-1C00 CD 0D 1C			CALL 1C0D
-1C03 CD 9E CE			CALL CE9E
-1C06 21 08 01			LD HL,0108
-1C09 22 B8 00			LD (00B8),HL
-1C0C C9					RET
-1C0D 3E	08				LD A,08
-1C0F 32	BB 00			LD (00BB),A
-1C12 3E 10				LD A,10
-1C17 3A 10 00			LD A,(0010)
-1C14 32 BC 00			LD (00BC),A
-1C1A 32 BD 00			LD (00BD),A
-1C1D C9 				RET
+1C00 CD 0D 1C			CALL 1C0D		; Effacement de la
+1C03 CD 9E CE			CALL CE9E		; 8ème ligne à la fin
+1C06 21 08 01			LD HL,$0108		; Curseur (C1,L8)
+1C09 22 B8 00			LD ($00B8),HL	; 
+1C0C C9					RET				; 
+1C0D 3E	08				LD A,$08		; Ligne de roulement
+1C0F 32	BB 00			LD ($00BB),A	; 
+1C12 3E 10				LD A,$10		; Derniere ligne
+1C14 32 BC 00			LD ($00BC),A	; 
+1C17 3A 10 00			LD A,($0010)	; Nb de lignes
+1C1A 32 BD 00			LD ($00BD),A	; 
+1C1D C9 				RET				; 
 ```
 
 <p align="center">────────────────────</p>
@@ -952,13 +941,13 @@ Figure 14 : Screen.
 <p align="center">────────────────────</p>
 
 ```asm
-1C00 3E 00			LD A,00
-1C02 32 D1 00		LD (00D1),A
-1C05 4F				LD C,A
-1C06 32 01			LD A,01
-1C08 57				LD D,A
-1C09 SF				LD E,A
-1C0A C3 09 AB		JP AB09
+1C00 3E 00			LD A,$00			; SCREEN 1
+1C02 32 D1 00		LD ($00D1),A		; 
+1C05 4F				LD C,A				; 
+1C06 32 01			LD A,$01			; 
+1C08 57				LD D,A				; Page active - 1
+1C09 5F				LD E,A				; Page visuelle - 1
+1C0A C3 09 AB		JP $AB09			; 
 ```
 
 <p align="center">────────────────────</p>
@@ -971,6 +960,7 @@ Figure 14 : Screen.
 50 DATA 3E,00,32,D1,00,4F,3E,01,57
 60 DATA 5F,C3,09,AB
 ```
+
 
 <p align="center">────────────────────</p>
 
@@ -993,13 +983,13 @@ Figure 15 : Color.
 <p align="center">────────────────────</p>
 
 ```asm
-1C00 3E 01			LD A,01
-1C02 32 E5 04		LD (04E5),A
-1C05 3E 02			LD A,02
-1C07 32 E6 04		LD (04E6),A
-1C0A 3E 00			LD A,00
-1C0C 32 E7 04		LD (04E7),A
-1C0F C9				RET
+1C00 3E 01			LD A,$01			; 
+1C02 32 E5 04		LD ($04E5),A		; Couleur lettres
+1C05 3E 02			LD A,$02			; 
+1C07 32 E6 04		LD ($04E6),A		; 
+1C0A 3E 00			LD A,$00			; 
+1C0C 32 E7 04		LD ($04E7),A		; Palette 0 ou 2
+1C0F C9				RET					; 
 ```
 
 <p align="center">────────────────────</p>
@@ -1060,6 +1050,7 @@ NDR : version avec ajout d'espaces pour la lisibilité.
 
 <p align="center">────────────────────</p>
 
+
 Figure 17 : EXEMPLE
 
 ```basic
@@ -1119,10 +1110,12 @@ Figure 18 : Logo CANON
 
 Figure 19 : Copie rapide
 
+NDR : caractères accentués absent, rajout.
+
 ```basic
-1 REM Copie cran
-2 REM Mthode de la chaine
-3 REM DATA cres par LMDATA.
+1 REM Copie écran
+2 REM Méthode de la chaine
+3 REM DATA créées par LMDATA.
 10 CLEAR 100: DEFINT A-Z
 20 CH$=STRING$(53,"£")
 30 GOSUB 300
@@ -1134,10 +1127,10 @@ Figure 19 : Copie rapide
 200 GOSUB 300:EXEC AD
 210 END
 300 AD=VARPTR(CH$): AD=PEEK(AD+1)+256*PEEK(AD+2): RETURN
-10000 DATA006,000,033,020,002,197,229,001,019,000,009,126,254,032,032,004
-10010 DATA043,013,032,247,012,225,229,126,004,035,229,197,205,247,206,193
-10020 DATA225,120,185,032,242,205,176,207,225,001,020,000,009,193,004,120
-10030 DATA254,004,032,209,201
+10000 DATA 006,000,033,020,002,197,229,001,019,000,009,126,254,032,032,004
+10010 DATA 043,013,032,247,012,225,229,126,004,035,229,197,205,247,206,193
+10020 DATA 225,120,185,032,242,205,176,207,225,001,020,000,009,193,004,120
+10030 DATA 254,004,032,209,201
 ```
 
 ___
@@ -1147,7 +1140,7 @@ FIGURE 20 : Logogenese
 
 ```basic
 1 'ATTENTION NE PAS RENUMEROTER
-10 DEFINT A-Z: CLS: PRINT"Logognse"
+10 DEFINT A-Z: CLS: PRINT"Logogénse"
 20 RM$=STRING$(18,0): GOSUB 90
 30 FOR I=0 TO 17: READ B$: POKE AD+I, VAL("&H"+B$): NEXT: Z=RND(0)
 40 DATA 23,23,5E,23,56,CD,0D,F3,60,69,D2,38,F6,2B,22,28,03,C9
@@ -1177,7 +1170,7 @@ FIGURE 20 : Logogenese
 113 DATA ICONO,IDEO,INFRA,ISO
 114 DATA INTRA,LATERO,LIPO,LOGO
 115 DATA LOXO,MACRO,MEGALO,METEO
-116 DATA META,§ICRO,MKsO,MNEMO
+116 DATA META,§ICRO,MKsO,MNEMO
 117 DATA MORPHO,MYTHO,NECRO,NEO
 118 DATA NOSO,NUGLEO,OCTO,OLEO
 119 DATA OMNI,ORTHO,PALEO,PAN
@@ -1371,8 +1364,7 @@ Figure 21 : LLIST
 ```
 
 Passage par analyse IA pour vérifier le code.\
-Puis l'IA fait la conversion LM en rapport aussi avec le premier LM ci-dessus :
-
+Puis l'IA fait la conversion LM en rapport aussi avec le premier LM ci-dessus.\
 Cela reste encore à vérifier.
 
 <p align="center">────────────────────</p>
@@ -1617,12 +1609,14 @@ Cela reste encore à vérifier.
 0A2F		END
 ```
 
-NDR : Il faudrait faire les commentaires.
+
 
 ___
 ## Page 95
 
 Figure 22 : Chargeurs
+
+NDR : vérifier la fonction MOTOR, si ON OFF est nécessaire car absent du code.
 
 ```basic
 0 CLEAR 50,&H7FF
@@ -1690,7 +1684,7 @@ Listing logo Canon
 250 DATA 8,6,9,4,3,5,1,5,2,5,4,7,5,5,2,5,3,79,79
 ```
 
-NDR : 2 fois ? à vérifier.
+NDR : présent 2 fois ? à vérifier.
 
 ___
 ## Page 98
@@ -1698,6 +1692,7 @@ ___
 Figure 24 : Labyrinthe 3D
 
 Le fichier DATA sera externe.
+
 
 <p align="center">────────────────────</p>
 
@@ -1747,8 +1742,7 @@ ___
 
 Figure 26 : Solitaire
 
-```
-```
+Le fichier DATA sera externe.
 
 <p align="center">────────────────────</p>
 
@@ -1794,8 +1788,7 @@ ___
 
 Figure 28 : Les Pentominos
 
-```
-```
+Le fichier DATA sera externe.
 
 <p align="center">────────────────────</p>
 
@@ -2092,13 +2085,10 @@ ___
 
 Figure 39: OTHELLO
 
-Dans un fichier externe. Othello.txt
-
+Le fichier DATA sera externe.
 
 ___
 ## Page 144
-
-Figure 40:
 
 ```basic
 5 REM *** OTHELLO - REVERSI ***
@@ -2124,19 +2114,19 @@ Figure 40:
 
 NDR : Ligne 120 corrigée pour le nom.
 
+<p align="center">────────────────────</p>
+
 
 ```basic
-5 REM *** CHARGEUR DE CODES
-10 CLEAR,&H7FF: A = &H800
-20 PRINT HEX$(A);" : ";: INPUT C$
-30 V=VAL("&H"+C$): POKE A, V
-40 A=A+1: IF A>&H1400 THEN PRINT "...": BEEP 2,3: END
-50 GOTO 20
+5 REM *** ENTREUR DE CODES - VIDEO ***
+10 CLEAR 50,&H7FF:A=&H800
+20 PRINTHEX$(A);" : ";:INPUT C$
+30 V=VAL("&H"+C$):POKE A,V
+49 A=A+1:IF A>&H1400 THEN PRINT"...":BEEP 2,3:END
+50 GOTO20
 ```
 
 
-
-
-
+___
 EOF
 ___
