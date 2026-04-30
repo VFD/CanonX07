@@ -53,7 +53,7 @@ Code pour l'assembleur Canon X07 - MS.
 240 ']
 ```
 
-
+<p align="center">────────────────────</p>
 
 
 ### page 62
@@ -74,11 +74,13 @@ Code pour l'assembleur Canon X07 - MS.
 120 CLS : FOR I=&H1025+N TO &H1026 STEP -1 : PRINT PEEK(I);: NEXT I :BHEP 9,2 : END
 ```
 
+<p align="center">────────────────────</p>
+
 ### page 85 - clignotement écran
 
 ```asm
 		LD B,$FF
-#1		LD B,$2B
+#1		LD A,$2B
 		CALL $E428
 		LD A,$2C
 		CALL $E428
@@ -86,6 +88,10 @@ Code pour l'assembleur Canon X07 - MS.
 		RET
 ```
 
+NDR: le code ci-dessus a été corrigé.
+
+
+<p align="center">────────────────────</p>
 
 ### page 86
 
@@ -105,9 +111,11 @@ Errata nécessaire "pop AF" au lieu de "POP HL".
 	OUT ($F5),A			; Sortie de A sur le port $F5
 	POP BC				; Récupèration du registre BC
 	POP DE				; Rècupération du registre DE
-	POP AF				; Rêcupèration du registre HL
+	POP AF				; Rêcupèration du registre AF
 	RET					; RETOUR AU BASIC
 ```
+
+<p align="center">────────────────────</p>
 
 La démonstration suivante n'est pas le code LM ci-dessus.
 
@@ -128,6 +136,8 @@ La démonstration suivante n'est pas le code LM ci-dessus.
 98 DATA D3,F5,D1,C1,F1,C9,00,00
 99 DATA 00,00,00,00,00,00,00,00
 ```
+
+<p align="center">────────────────────</p>
 
 L'ASM décodé ci-dessous :
 
@@ -176,7 +186,7 @@ C145 : 00             NOP
 
 ```
 
-
+<p align="center">────────────────────</p>
 
 ### page 120
 
@@ -186,8 +196,12 @@ C145 : 00             NOP
 
 ```
 
+<p align="center">────────────────────</p>
+
 ```basic
 ```
+
+<p align="center">────────────────────</p>
 
 ### page 122
 
@@ -195,11 +209,18 @@ C145 : 00             NOP
 ```asm
 ```
 
-```basic
-```
+<p align="center">────────────────────</p>
+
 
 ```basic
 ```
+
+<p align="center">────────────────────</p>
+
+```basic
+```
+
+<p align="center">────────────────────</p>
 
 ### page 124
 
@@ -207,12 +228,17 @@ C145 : 00             NOP
 ```asm
 ```
 
-```basic
-```
+<p align="center">────────────────────</p>
 
 ```basic
 ```
 
+<p align="center">────────────────────</p>
+
+```basic
+```
+
+<p align="center">────────────────────</p>
 
 ### page 126
 
@@ -220,11 +246,17 @@ C145 : 00             NOP
 ```asm
 ```
 
-```basic
-```
+<p align="center">────────────────────</p>
 
 ```basic
 ```
+
+<p align="center">────────────────────</p>
+
+```basic
+```
+
+<p align="center">────────────────────</p>
 
 
 ### page 128
@@ -251,6 +283,8 @@ Code pour l'assembleur Canon X07 - MS.
 150 'DEFB #00
 160 ']
 ```
+
+<p align="center">────────────────────</p>
 
 Le LM :
 
@@ -290,6 +324,8 @@ Le LM :
 
 ```
 
+<p align="center">────────────────────</p>
+
 Le bon dump :
 
 ```
@@ -299,6 +335,8 @@ Le bon dump :
 2018 : FE C3 3D F2 76 69 76 65   ..=.vive
 2020 : 20 6C 65 20 58 30 37 00    le X07.
 ```
+
+<p align="center">────────────────────</p>
 
 Le chargeur BASIC :
 
@@ -343,6 +381,8 @@ Code pour l'assembleur Canon X07 - MS.
 220 ']
 ```
 
+<p align="center">────────────────────</p>
+
 Le LM :
 
 ```asm
@@ -363,7 +403,7 @@ Le LM :
 1C15		23				INC HL
 1C16		18 EE			JR 1C06
 
-; #TB : DEFM "BONJOUR DE Y07"
+; #TB : DEFM "BONJOUR DE X07"
 ;       DEFB 00
 
 1C18		42				DEFB 42h		; 'B'
@@ -383,6 +423,8 @@ Le LM :
 1C26		00				DEFB 00h		; fin de chaîne
 ```
 
+<p align="center">────────────────────</p>
+
 Le chargeur BASIC :
 
 ```basic
@@ -394,6 +436,7 @@ Le chargeur BASIC :
 70 DATA 18,EE,42,4F,4E,4A,4F,55,52,20,44,45,20,58,30,37,00
 ```
 
+<p align="center">────────────────────</p>
 
 ### page 132 - Bruitage
 
@@ -440,6 +483,7 @@ Code pour l'assembleur Canon X07 - MS.
 
 NDR : asm à faire.
 
+<p align="center">────────────────────</p>
 
 Le chargeur BASIC :
 
@@ -453,6 +497,7 @@ Le chargeur BASIC :
 70 DATA 1B,F6,7B,3D,2B,05,D3,F3,47,1B,EB,3E,00,D3,F4,C9,F5,3E,80,3D,20,FD,F1,C9
 ```
 
+<p align="center">────────────────────</p>
 
 ### page 134 - Redefinition de touche
 
@@ -487,6 +532,8 @@ Code pour l'assembleur Canon X07 - MS.
 240 ']
 ```
 
+<p align="center">────────────────────</p>
+
 Le LM :
 
 ```asm
@@ -510,6 +557,8 @@ Le LM :
 1C1F	37				DEFB 37h           ; "7"
 1C20	00				DEFB 00h           ; fin de chaîne
 ```
+
+<p align="center">────────────────────</p>
 
 Le chargeur BASIC :
 

@@ -14,12 +14,17 @@ ___
 
 Certain listings ont pu être retrouvés chez l'association Silicium.\
 On peut les retrouver aussi dans la bibliothèque des programmes :
-- "[sources](../programs/LogiStick)".
-- "[sources](../programs/ClubC7)".
+- "[sources LogiStick](../programs/LogiStick)".
+- "[sources Club C7](../programs/ClubC7)".
 
 Les codes L.M qui sont entre les crochets [ et ] sont pour l'assembleur 2 passes de la revue Micro Systèmes.\
 Au besoin utilisation de [ASM80.com](https://www.asm80.com/onepage/asmz80.html).\
 L'idée est de regénérer les Datas.
+
+
+Les pages de codes du livre sont en cours de reconstruction.
+Il nous faut trouver les codes sources pour régénérer les codes hexa des programmes.
+
 
 ___
 ## Page 22
@@ -1022,7 +1027,7 @@ Figure 16 : LMDATA
 70 LB=NC-JC*LL: IF LB=0 THEN 100
 80 GOSUB 200
 90 PRINT"Effacer la fin de la ligne";10000+10*JC
-100 PRINT"Effacer les lignes";10000+10*(JC+1);"‰";10150;
+100 PRINT"Effacer les lignes";10000+10*(JC+1);"";10150;
 110 IF INKEY$="" THEN 110
 120 END
 200 FOR I=1 TO LB: VC=PEEK(DM): DM=DM+1
@@ -1170,7 +1175,7 @@ FIGURE 20 : Logogenese
 113 DATA ICONO,IDEO,INFRA,ISO
 114 DATA INTRA,LATERO,LIPO,LOGO
 115 DATA LOXO,MACRO,MEGALO,METEO
-116 DATA META,§ICRO,MKsO,MNEMO
+116 DATA META,MICRO,MACRO,MNEMO
 117 DATA MORPHO,MYTHO,NECRO,NEO
 118 DATA NOSO,NUGLEO,OCTO,OLEO
 119 DATA OMNI,ORTHO,PALEO,PAN
@@ -1291,83 +1296,87 @@ Figure 21 : LLIST
 
 
 ```
-0800 : 2A 12 02 28 01 6C 01 AF
-0808 : E0 42 E5 E5 E5 CD 9E CE
-0810 : 21 67 08 CD F7 FE E1 CD
-0818 : 98 BB 21 71 08 CD F7 FE
-0820 : AF CD 0A C9 28 FA E1 11
-0828 : BD 08 AF ED 52 E5 C1 DD
-0830 : 21 88 08 DD 6E 00 DD 66
-0838 : 01 5E 23 56 2B E5 EB 09
-0840 : EB E1 73 23 72 DD 23 DD
-0848 : 23 DD 7E 00 FE 00 20 E3
-0850 : 01 21 B0 08 01 6C 01 ED
-0858 : B0 21 00 08 3E C3 06 14
-0860 : 77 23 10 FC C3 C3 C3 4E
-0868 : 6F 74 65 7A 20 41 44 3D
-0870 : 00 0D 0A 0A 50 72 65 73
-0878 : 73 65 7A 20 75 6E 65 20
-0880 : 74 6F 75 63 68 65 2E 00
-0888 : C1 08 D3 08 D6 08 E0 08
-0890 : E3 08 ED 08 FC 08 20 09
-0898 : 32 09 37 09 3F 09 44 09
-08A0 : 49 09 4D 09 53 09 58 09
-08A8 : 5B 09 5E 09 61 09 66 09
-08B0 : 6B 09 6F 09 72 09 7C 09
-08B8 : BC 09 C1 09 00 CD 9E CE
-08C0 : 21 C5 09 C0 F7 FE AF CD
-08C8 : 0A C9 28 FA C0 9E CE CD
-08D0 : B7 CF 21 04 0A 11 0F 09
-08D8 : 01 25 00 ED B0 3E 31 32
-08E0 : 87 09 21 05 09 C0 F7 FE
-08E8 : CD F2 EB 23 11 0F 09 06
-08F0 : 14 7E FE 00 28 05 12 23
-08F8 : 13 10 F6 CD 56 09 DD 2A
-0900 : B2 00 AF DD BE 01 CA C3
-0908 : C3 DD E5 DD 6E 00 DD 66
-0910 : 01 DD 5E 02 DD 56 03 E5
-0918 : DD E1 E1 01 04 00 09 CD
-0920 : 90 09 06 06 C5 CD FE FE
-0928 : C1 21 D5 00 7E FE 00 20
-0930 : 05 CD 43 09 18 CC CD 93
-0938 : 09 23 04 3E 27 B8 CC 43
-0940 : 09 18 E9 CD 89 09 06 00
-0948 : 3A 88 09 3C 32 88 09 FE
-0950 : 38 C0 CD 56 09 C9 E5 21
-0958 : 81 09 CD 77 09 21 DF 09
-0960 : CD 77 09 3E 02 32 88 09
-0968 : AF 47 3A 87 09 3C 32 87
-0970 : 09 21 FE 09 77 E1 C9 7E
-0978 : FE 00 C8 CD 93 09 23 18
-0980 : F6 0D 0A 0A 0A 0A 00 31
-0988 : 02 E5 D5 C5 CD B0 CF C1
-0990 : D1 E1 C9 E5 D5 C5 CD F7
-0998 : CE C1 D1 E1 C9 E5 E8 22
-09A0 : 50 04 01 07 07 21 D5 00
-09A8 : CD 5F BE 21 D5 00 3E 30
-09B0 : BE 20 05 36 20 23 18 F6
-09B8 : 21 D5 00 CD 77 09 3E 20
-09C0 : CD 93 09 E1 C9 49 6D 70
-09C8 : 72 69 6D 61 6E 74 65 20
-09D0 : 4F 4B 20 3F 00 54 69 74
-09D8 : 72 65 20 3A 0A 0D 00 20
-09E0 : 20 20 20 20 20 20 20 20
-09E8 : 20 20 20 20 20 20 20 20
-09F0 : 20 20 20 20 20 20 20 20
-09F8 : 20 20 20 20 20 20 20 20
-0A00 : 20 20 20 20 20 20 20 20
-0A08 : 20 20 20 20 20 20 20 20
-0A10 : 20 20 20 20 20 20 20 20
-0A18 : 20 20 20 20 20 50 61 67
-0A20 : 65 3A 20 31 20 0D 0A 0A
-0A28 : 00 A5 2E 2E 2C 2E 2E 2E
+0800 : 2A 12 02 28 01 6C 01 AF  *..(.l..
+0808 : ED 42 E5 E5 E5 CD 9E CE  .B......
+0810 : 21 67 08 CD F7 FE E1 CD  !g......
+0818 : 98 BB 21 71 08 CD F7 FE  ..!q....
+0820 : AF CD 0A C9 28 FA E1 11  ....(...
+0828 : BD 08 AF ED 52 E5 C1 DD  ....R...
+0830 : 21 88 08 DD 6E 00 DD 66  !...n..f
+0838 : 01 5E 23 56 2B E5 EB 09  .^#V+...
+0840 : EB E1 73 23 72 DD 23 DD  ..s#r.#.
+0848 : 23 DD 7E 00 FE 00 20 E3  #.~... .
+0850 : 01 21 B0 08 01 6C 01 ED  .!...l..
+0858 : B0 21 00 08 3E C3 06 14  .!..>...
+0860 : 77 23 10 FC C3 C3 C3 4E  w#.....N
+0868 : 6F 74 65 7A 20 41 44 3D  otez AD=
+0870 : 00 0D 0A 0A 50 72 65 73  ....Pres
+0878 : 73 65 7A 20 75 6E 65 20  sez une 
+0880 : 74 6F 75 63 68 65 2E 00  touche..
+0888 : C1 08 D3 08 D6 08 E0 08  ........
+0890 : E3 08 ED 08 FC 08 20 09  ...... .
+0898 : 32 09 37 09 3F 09 44 09  2.7.?.D.
+08A0 : 49 09 4D 09 53 09 58 09  I.M.S.X.
+08A8 : 5B 09 5E 09 61 09 66 09  [.^.a.f.
+08B0 : 6B 09 6F 09 72 09 7C 09  k.o.r.|.
+08B8 : BC 09 C1 09 00 CD 9E CE  ........
+08C0 : 21 C5 09 C0 F7 FE AF CD  !.......
+08C8 : 0A C9 28 FA C0 9E CE CD  ..(.....
+08D0 : B7 CF 21 04 0A 11 0F 09  ..!.....
+08D8 : 01 25 00 ED B0 3E 31 32  .%...>12
+08E0 : 87 09 21 05 09 C0 F7 FE  ..!.....
+08E8 : CD F2 EB 23 11 0F 09 06  ...#....
+08F0 : 14 7E FE 00 28 05 12 23  .~..(..#
+08F8 : 13 10 F6 CD 56 09 DD 2A  ....V..*
+0900 : B2 00 AF DD BE 01 CA C3  ........
+0908 : C3 DD E5 DD 6E 00 DD 66  ....n..f
+0910 : 01 DD 5E 02 DD 56 03 E5  ..^..V..
+0918 : DD E1 E1 01 04 00 09 CD  ........
+0920 : 90 09 06 06 C5 CD FE FE  ........
+0928 : C1 21 D5 00 7E FE 00 20  .!..~.. 
+0930 : 05 CD 43 09 18 CC CD 93  ..C.....
+0938 : 09 23 04 3E 27 B8 CC 43  .#.>'..C
+0940 : 09 18 E9 CD 89 09 06 00  ........
+0948 : 3A 88 09 3C 32 88 09 FE  :..<2...
+0950 : 38 C0 CD 56 09 C9 E5 21  8..V...!
+0958 : 81 09 CD 77 09 21 DF 09  ...w.!..
+0960 : CD 77 09 3E 02 32 88 09  .w.>.2..
+0968 : AF 47 3A 87 09 3C 32 87  .G:..<2.
+0970 : 09 21 FE 09 77 E1 C9 7E  .!..w..~
+0978 : FE 00 C8 CD 93 09 23 18  ......#.
+0980 : F6 0D 0A 0A 0A 0A 00 31  .......1
+0988 : 02 E5 D5 C5 CD B0 CF C1  ........
+0990 : D1 E1 C9 E5 D5 C5 CD F7  ........
+0998 : CE C1 D1 E1 C9 E5 E8 22  ......."
+09A0 : 50 04 01 07 07 21 D5 00  P....!..
+09A8 : CD 5F BE 21 D5 00 3E 30  ._.!..>0
+09B0 : BE 20 05 36 20 23 18 F6  . .6 #..
+09B8 : 21 D5 00 CD 77 09 3E 20  !...w.> 
+09C0 : CD 93 09 E1 C9 49 6D 70  .....Imp
+09C8 : 72 69 6D 61 6E 74 65 20  rimante 
+09D0 : 4F 4B 20 3F 00 54 69 74  OK ?.Tit
+09D8 : 72 65 20 3A 0A 0D 00 20  re :... 
+09E0 : 20 20 20 20 20 20 20 20          
+09E8 : 20 20 20 20 20 20 20 20          
+09F0 : 20 20 20 20 20 20 20 20          
+09F8 : 20 20 20 20 20 20 20 20          
+0A00 : 20 20 20 20 20 20 20 20          
+0A08 : 20 20 20 20 20 20 20 20          
+0A10 : 20 20 20 20 20 20 20 20          
+0A18 : 20 20 20 20 20 50 61 67       Pag
+0A20 : 65 3A 20 31 20 0D 0A 0A  e: 1 ...
+0A28 : 00 A5 2E 2E 2C 2E 2E 2E  ....,...
 ```
+
+NDR : le dump ASCII est différent car en UTF-8, qui n'est pas la sortie imprimante qui avait été utilisée.
 
 Passage par analyse IA pour vérifier le code.\
 Puis l'IA fait la conversion LM en rapport aussi avec le premier LM ci-dessus.\
 Cela reste encore à vérifier.
 
 <p align="center">────────────────────</p>
+
+à refaire suite à détection bug data.
 
 ```
 ; LLIST - Relocateur pour Canon X07
@@ -1603,7 +1612,7 @@ Cela reste encore à vérifier.
 0A05		DB '        '			; 8 espaces
 0A0D		DB '        '			; 8 espaces
 0A15		DB '        '			; 8 espaces
-0A1D		DB 'Page: 1 ',0D,0A,0A,0	; En-tête de page
+0A1D		DB 'Page: 1 ',0D,0A,0A,0		; En-tête de page
 0A28		DB $A5,$2E,$2E,$2C,$2E,$2E,$2E	; Données finales
 
 0A2F		END
@@ -1619,7 +1628,7 @@ Figure 22 : Chargeurs
 NDR : vérifier la fonction MOTOR, si ON OFF est nécessaire car absent du code.
 
 ```basic
-0 CLEAR 50,&H7FF
+10 CLEAR 50,&H7FF
 20 INIT#1,"CASI:"
 30 INPUT#1,N$,D,F
 40 MOTOR
@@ -1891,7 +1900,7 @@ BOUCLE		XOR A					; A=0
 			POP IX					; IX pointe sur la ligne suivante
 			POP HL					; On récupère l'adresse du début de la ligne
 			LD BC,4					; 
-			ADD HL,BC				; HL contie nt le premier code de la l igne
+			ADD HL,BC				; HL contient le premier code de la ligne
 			...						; Traitement
 			JP BOUCLE				; 
 ```
