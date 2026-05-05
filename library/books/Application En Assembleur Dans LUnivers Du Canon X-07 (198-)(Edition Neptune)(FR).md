@@ -99,7 +99,7 @@ Exemple 4
 50 A!(0) = 0 : GOSUB 100
 60 PRINT A!(0) ; A!(1) ; A!(20)
 70 END
-100 U(1) = VARPTR (A!(0)) : U(3) = VARPTR (A!(1)) U(5) = N*4
+100 U(1) = VARPTR (A!(0)) : U(3) = VARPTR (A!(1)) : U(5) = N*4
 110 EXEC VARPTR (U(0)) : RETURN
 ```
 
@@ -318,6 +318,89 @@ LPRINT		LD A,(HL)			; A est chargé avec l'un des codes de la chaîne
 			INC HL				; Incrémentation du registre HL
 			JR LPRINT			; On continue le cycle ...
 ```
+
+
+___
+## Page 42
+
+
+```asm
+
+```
+
+<p align="center">────────────────────</p>
+
+```asm
+
+```
+
+___
+## Page 44
+
+```
+5 ' [
+10 ' LD A.$C3
+20 ' LD ($AB).A
+30 ' LD HL.#DB
+40 ' LD ($AC).HL
+50 ' RET
+60 ' #DB LD A.E
+70 ' CP $2
+80 ' RET NZ
+90 ' CALL #DE
+100 ' CP "E"
+110 ' RET NZ
+120 ' CALL #DE
+130 ' CP "T"
+140 ' RET NZ
+150 ' CALL #DE
+160 ' CP "R"
+170 ' RET NZ
+180 ' CALL #DE
+190 ' CP "A"
+200 ' RET NZ
+210 ' CALL #DE
+220 ' CP "C"
+230 ' RET NZ
+240 ' JP $C4D1
+250 #DE DEC HL
+260 ' LD A .(HL)
+270 ' RET
+280 ' ]
+```
+
+___
+## Page 45
+
+```basic
+10 ' Instruction CARTE
+20 FOR I=&H1C00 TO &H1C00+51
+30 READ A$: POKE I,VAL("&H"+A$)
+40 NEXT
+50 EXEC &H1C00
+60 DATA 3E, C3, 32, AB, 0, 21, C, 1C, 22, AC, 0, C9, 7B, FE, 2, C0, CD, 31, 1C, FE, 45, C0, CD, 31, 1C, FE, 54, C0, CD, 31, 1C, FE, 52, C0, CD, 31, 1C, FE, 41, C0, CD, 31, 1C, FE, 43, C0, C3, D1, C4, 2B, 7E, C9
+```
+
+<p align="center">────────────────────</p>
+
+```
+5 ' [						; Début du programme
+10 ' ORG $1C00				; Les lignes 10 à 70 détourne le
+30 ' LD A.$C3				; crochet d'erreur sur notre routine.
+40 ' LD ($99).A
+50 ' LD HL.#DB
+60 ' LD ($9A).HL
+70 ' RET
+80 ' #DB PUSH HL			; les lignes 80 à 110 affichent le
+90 ' LD HL.#ME				; message...
+100 ' CALL $D5B0
+110 ' POP HL
+120 ' RET					; On continue le programme
+130 ' #ME DEFM PAINT
+140 ' DEFB $00
+150 ' ]
+```
+
 
 ___
 ## Page 55
@@ -690,11 +773,12 @@ ___
 20 READ A$ : POKE I,VAL("&H"+A$)
 30 NEXT I
 40 PRINT "EXEC &H1C00 POUR DEMARRER LE PROGRAMME"
-50 DATA 11,87,E7,FD,21,CS,02,3E,00,CD,A8,E6,DB,F4,CB
-60 DATA C7,D3,F4,11,CS,02,CD,27,E8,CD,D4,E8,20,PB,CD,D4,E8
-70 DATA 20,F6,CD,D4,ES,20,F1,21,00,1B,CD,D4,E8,FE,FF,28,04
-80 DATA 77,23,18,F5,CD,D4,E8,FE,FF,28,04,7E,23,18,EA,CD,D4
-90 DATA E8,8F,FE,FF,28,04,7E,23,18,DF,DB,F4,CB,87,D3,F4,C9
+50 DATA 11,87,E7,FD,21,CS,02,3E,00,CD,A8,E6,DB,F4,CB,C7
+60 DATA D3,F4,11,CS,02,CD,27,E8,CD,D4,E8,20,PB,CD,D4,E8
+70 DATA 20,F6,CD,D4,ES,20,F1,21,00,1B,CD,D4,E8,FE,FF,28
+80 DATA 04,77,23,18,F5,CD,D4,E8,FE,FF,28,04,7E,23,18,EA
+90 DATA CD,D4,E8,8F,FE,FF,28,04,7E,23,18,DF,DB,F4,CB,87
+100 DATA D3,F4,C9
 ```
 
 NDR : Modifié pour être plus lisible
@@ -1147,7 +1231,7 @@ FIGURE 20 : Logogenese
 1 'ATTENTION NE PAS RENUMEROTER
 10 DEFINT A-Z: CLS: PRINT"Logogénse"
 20 RM$=STRING$(18,0): GOSUB 90
-30 FOR I=0 TO 17: READ B$: POKE AD+I, VAL("&H"+B$): NEXT: Z=RND(0)
+30 FOR I=0 TO 17: READ B$: POKE AD+I,VAL("&H"+B$): NEXT: Z=RND(0)
 40 DATA 23,23,5E,23,56,CD,0D,F3,60,69,D2,38,F6,2B,22,28,03,C9
 45 J=INT(RND(1)*33)+100: GOSUB 90
 50 Z=USR(AD,J): N=INT(RND(1)*4+1)
@@ -1207,6 +1291,49 @@ FIGURE 20 : Logogenese
 212 DATA STASE,STENIE,THEISME,TONIQUE
 213 DATA TROPE,TYPE,VORE,TIQUE
 ```
+
+Ligne 116 à revoir, car PB dans le scan du livre et probablement dans le livre.
+
+L'ASM logé dans RM$.  à vérifier.
+
+```basic
+40 DATA 23,23,5E,23,56,CD,0D,F3,60,69,D2,38,F6,2B,22,28,03,C9
+```
+
+
+```asm
+23      	INC HL
+23      	INC HL
+5E      	LD E,(HL)
+23      	INC HL
+56      	LD D,(HL)
+CD 0D F3	CALL $F30D
+60      	LD H,B
+69      	LD L,C
+D2 38 F6	JP NC,$F638
+2B      	DEC HL
+22 28 03	LD ($0328),HL
+C9      	RET
+```
+
+Initialisation (lignes 10-20) Le programme affiche "Logogénèse" et crée un buffer mémoire RM$ de 18 octets pour y charger du code machine Z80.
+
+Chargement du code machine (lignes 30-40) Les données hexadécimales sont converties en octets et stockées en mémoire. Ce code Z80 permet de faire un RESTORE calculé vers n'importe quelle ligne DATA.
+
+Boucle principale (lignes 45-80) Le programme génère des mots aléatoires en boucle :
+
+- Génère un nombre J aléatoire entre 100 et 132
+- Exécute le code Z80 pour faire un RESTORE calculé vers la ligne J (préfixes)
+- Génère N aléatoire entre 1 et 4
+- Lit N mots successifs depuis cette ligne DATA, seul le Nème reste dans D$ (un préfixe)
+- Génère un nombre K aléatoire entre 200 et 213
+- Exécute le code Z80 pour faire un RESTORE calculé vers la ligne K (suffixes)
+- Génère N aléatoire entre 1 et 4
+- Lit N mots successifs depuis cette ligne DATA, seul le Nème reste dans F$ (un suffixe)
+- Affiche D$;F$ (préfixe + suffixe = mot composé)
+- Recommence si on appuie sur une touche
+
+
 
 ___
 ## Page 92
