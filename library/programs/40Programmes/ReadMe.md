@@ -46,11 +46,12 @@ Ci-dessous les tableaux d'avancement de récupération des listings.
 
 ### Travail en cours - Recherche et/ou Saisie
 
-Dans l'ordre du livre.
+Dans l'ordre du livre.\
+44 programmes en tout.
 
 <p align="center">────────────────────</p>
 
-#### Jeux
+#### Jeux (15)
 
 | Nom              | État | Commentaire |
 |------------------|------|-------------|
@@ -73,7 +74,7 @@ Dans l'ordre du livre.
 
 <p align="center">────────────────────</p>
 
-#### Apprentissage
+#### Apprentissage (4)
 
 | Nom            | État | Commentaire |
 |----------------|------|-------------|
@@ -89,7 +90,7 @@ Bugs :
 
 <p align="center">────────────────────</p>
 
-#### Mathématiques
+#### Mathématiques (8)
 
 | Nom                   | État | Commentaire |
 |-----------------------|------|-------------|
@@ -105,7 +106,7 @@ Bugs :
 
 <p align="center">────────────────────</p>
 
-#### Vie pratique
+#### Vie pratique (10)
 
 | Nom                     | État | Commentaire |
 |-------------------------|------|-------------|
@@ -162,7 +163,7 @@ Ajustement 2026 des distances.
 
 <p align="center">────────────────────</p>
 
-#### Graphisme
+#### Graphisme (7)
 
 | Nom               | État | Commentaire |
 |-------------------|------|-------------|
