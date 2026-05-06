@@ -171,7 +171,7 @@ Ajustement 2026 des distances.
 | Cercles colorés   | 📝 | X-710 |
 | Cycloîdes         | 📝 | X-710 |
 | Ellipses          | 📝 | X-710 |
-| Graphismes divers | ❕ | LCD |
+| Graphismes divers | 📝 | LCD |
 | Inversion vidéo   | 📝 | LCD |
 | Télécran          | 📝 | LCD |
 
