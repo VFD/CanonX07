@@ -124,6 +124,7 @@ Bugs :
 
 **BONUS**
 
+<br />
 Ajustement 2026 des capacités.
 
 | Option | De | Vers | Formule |
@@ -141,7 +142,7 @@ Ajustement 2026 des capacités.
 | 6 | Litres | Quarts US | Quarts US = Litres × 1.05669 |
 | 6 | Quarts US | Litres | Litres = Quarts US × 0.946353 |
 
-
+<br /><br />
 Ajustement 2026 des distances.
 
 | Option | De | Vers | Formule |
@@ -156,6 +157,8 @@ Ajustement 2026 des distances.
 | 4 | Miles nautiques | Kilomètres | Km = Mn × 1.852 |
 | 5 | Mètres | Yards | Yards = Mètres × 1.0936132 |
 | 5 | Yards | Mètres | Mètres = Yards × 0.9144 |
+
+<br />
 
 <p align="center">────────────────────</p>
 
