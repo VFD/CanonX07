@@ -80,10 +80,11 @@ Dans l'ordre du livre.
 | Dactylographie | 📝 |  |
 | Mélodia        | 📝 |  |
 | Morse          | 📝 | problème de cohérence sur le morse |
-| Signalisation  | 📝 | Ohio ? - Oscar |
+| Signalisation  | 📝 |  |
 
-Morse :
-- les data doivent correspondre à la chaîne H$ 
+Bugs :
+- Morse : les data doivent correspondre à la chaîne H$
+- Signalisation : Ohio ? - Oscar, à réviser
 
 
 <p align="center">────────────────────</p>
@@ -95,11 +96,11 @@ Morse :
 | Calculs sur fractions | 📝 |  |
 | Cinématique           | 📝 |  |
 | Discriminant          | 📝 | a*x^2 + b*x + c = 0|
-| Factorielles          | 📝 |  |
-| Nombres premiers      | 📝 |  |
+| Factorielles          | 📝 | n! |
+| Nombres premiers      | 📝 | 1, 3, 5, 7, ... |
 | PGCD - PPCM           | 📝 |  |
 | Statistiques          | 📝 |  |
-| Surfaces diverse      | 📝 |  |
+| Surfaces diverse      | 📝 | carré, cercle, cylindre, cube, sphère |
 
 
 <p align="center">────────────────────</p>
@@ -130,10 +131,11 @@ Morse :
 | Cercles colorés   | 📝 | X-710 |
 | Cycloîdes         | 📝 | X-710 |
 | Ellipses          | 📝 | X-710 |
-| Graphismes divers | ❕ |  |
-| Inversion vidéo   | 📝 |  |
-| Télécran          | 📝 |  |
+| Graphismes divers | ❕ | LCD |
+| Inversion vidéo   | 📝 | LCD |
+| Télécran          | 📝 | LCD |
 
-
+NDR :
+- Prendre plutôt la version assembleur du Club C7pour l'inversion vidéo.
 
 ___
