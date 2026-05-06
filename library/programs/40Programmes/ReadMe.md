@@ -116,10 +116,26 @@ Bugs :
 | Conversion arabe-romain | 📝 |  |
 | Conversion de capacités | ❕ |  |
 | Conversion de forces    | 📝 |  |
-| Conversion de longueurs | ❕ |  |
+| Conversion de longueurs | 📝 |  |
 | Conversion de poids     | 📝 |  |
 | Dates                   | ❕ |  |
 
+<p align="center">────────────────────</p>
+
+BONUS:
+
+| Option | De | Vers | Formule |
+|--------|-----|------|---------|
+| 1 | Mètres | Pieds | Pieds = Mètres × 3.2808399 |
+| 1 | Pieds | Mètres | Mètres = pieds × 0.3048 |
+| 2 | Mètres | Pouces | Pouces = Mètres × 39.37 |
+| 2 | Pouces | Mètres | Mètres = Pouces × 0.0254 |
+| 3 | Kilomètres | Miles | Miles = Km × 0.621504 |
+| 3 | Miles | Kilomètres | Km = Miles × 1.609 |
+| 4 | Kilomètres | Miles nautiques | Mn = Km × 0.5399568 |
+| 4 | Miles nautiques | Kilomètres | Km = Mn × 1.852 |
+| 5 | Mètres | Yards | Yards = Mètres × 1.0936132 |
+| 5 | Yards | Mètres | Mètres = Yards × 0.9144 |
 
 <p align="center">────────────────────</p>
 
