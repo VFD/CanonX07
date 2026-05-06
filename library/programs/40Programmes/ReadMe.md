@@ -111,15 +111,15 @@ Bugs :
 | Nom                     | État | Commentaire |
 |-------------------------|------|-------------|
 | Biorythme               | 📝 |  |
-| Canon script            | ❕ |  |
+| Canon script            | 📝 |  |
 | Compteur téléphonique   | 📝 |  |
 | Conversion acre-hectare | 📝 |  |
 | Conversion arabe-romain | 📝 |  |
-| Conversion de capacités | ❕ |  |
+| Conversion de capacités | 📝 |  |
 | Conversion de forces    | 📝 |  |
 | Conversion de longueurs | 📝 |  |
 | Conversion de poids     | 📝 |  |
-| Dates                   | ❕ |  |
+| Dates                   | 📝 |  |
 
 <p align="center">────────────────────</p>
 
