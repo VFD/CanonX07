@@ -124,6 +124,24 @@ Bugs :
 
 **BONUS**
 
+Ajustement 2026 des capacités.
+
+| Option | De | Vers | Formule |
+|--------|-----|------|---------|
+| 1 | Litres | Gallons GB | Gallons GB = Litres × 0.219969 |
+| 1 | Gallons GB | Litres | Litres = Gallons GB × 4.54609 |
+| 2 | Litres | Gallons US | Gallons US = Litres × 0.264172 |
+| 2 | Gallons US | Litres | Litres = Gallons US × 3.78541 |
+| 3 | Litres | Pints GB | Pints GB = Litres × 1.75975 |
+| 3 | Pints GB | Litres | Litres = Pints GB × 0.568261 |
+| 4 | Litres | Pints US | Pints US = Litres × 2.11338 |
+| 4 | Pints US | Litres | Litres = Pints US × 0.473176 |
+| 5 | Litres | Quarts GB | Quarts GB = Litres × 0.879875 |
+| 5 | Quarts GB | Litres | Litres = Quarts GB × 1.13652 |
+| 6 | Litres | Quarts US | Quarts US = Litres × 1.05669 |
+| 6 | Quarts US | Litres | Litres = Quarts US × 0.946353 |
+
+
 Ajustement 2026 des distances.
 
 | Option | De | Vers | Formule |
