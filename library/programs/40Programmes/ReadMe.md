@@ -108,15 +108,15 @@ Morse :
 
 | Nom                     | État | Commentaire |
 |-------------------------|------|-------------|
-| Biorythme               | ❕ |  |
+| Biorythme               | 📝 |  |
 | Canon script            | ❕ |  |
-| Compteur téléphonique   | ❕ |  |
+| Compteur téléphonique   | 📝 |  |
 | Conversion acre-hectare | 📝 |  |
 | Conversion arabe-romain | 📝 |  |
 | Conversion de capacités | ❕ |  |
-| Conversion de forces    | ❕ |  |
+| Conversion de forces    | 📝 |  |
 | Conversion de longueurs | ❕ |  |
-| Conversion de poids     | ❕ |  |
+| Conversion de poids     | 📝 |  |
 | Dates                   | ❕ |  |
 
 
