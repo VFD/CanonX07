@@ -171,6 +171,10 @@ NDR :
 | 5 | Mètres | Yards | Yards = Mètres × 1.0936132 |
 | 5 | Yards | Mètres | Mètres = Yards × 0.9144 |
 
+NDR :
+- 1 Yard = 3 * Pieds (Foot).
+- Pouce = Inch
+
 ###### Exemples avec "DEF FN"
 
 Les conversions étant très simples, utiliser "DEF FN" aurait été plus logique.\
