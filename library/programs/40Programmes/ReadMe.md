@@ -173,12 +173,13 @@ NDR :
 
 ###### Exemples avec "DEF FN"
 
-Les conversions étant très simples, utiliser "DEF FN" aurait été plus logique.
+Les conversions étant très simples, utiliser "DEF FN" aurait été plus logique.\
+Après on reste limité à 2 caractère pour le nom...
 
 ```basic
 10 DEF FN KM(ML)=ML*1.60934
 ...
-100 PRINT "Miles = ";FN KM(X)
+100 PRINT "Kilomètre = ";FN KM(X)
 ...
 ```
 
