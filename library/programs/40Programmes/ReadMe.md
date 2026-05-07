@@ -8,7 +8,9 @@ Auteurs : Gilles PROBST, André TONIC, Bertrand RAVEL.
 ___
 # Introduction
 
-To DO
+44 programmes pour le X-07.\
+Ce livre est aussi issu, sans doute, d'un partenariat avec le CLub C7, en effet, André TONIC est co-auteur.\
+Voir le jeu du pendu.
 
 Il existe une cassette contenant les programmes.\
 Distribuée par D.D.I.
@@ -26,10 +28,16 @@ C'est le cas notament des boucles qui utilisent des variables différentes,
 alors qu'il serait possible d'en utiliser pratiquement 1 ou 2.
 
 Il y avait sans doute un choix fait de condenser les programmes au détrimant de la lisibilité.\
-Probable version [a2] à faire pour décondenser ceux-ci et effectuer des corrections.
+Probable version [a2] à faire pour décondenser ceux-ci et effectuer des corrections et optimisations.
 
 Certains éléments pourraient être utilisés comme sous routines.\
 C'est à étudier pour, par exemple, les utiliser dans **X07-Studio**.
+
+Les listings étant disponibles, il est maintenant nécessaire de tous les vérifier et tester.
+
+NDR :
+- Au niveau des listing de conversions, les paramètres sont ajustés à date de 2026.
+- Il est interressant de noter l'algorithme de Jean MEEUS dans le logiciel "Dates".
 
 <p align="center">────────────────────</p>
 
@@ -121,12 +129,16 @@ Bugs :
 | Conversion de poids     | 📝 |  |
 | Dates                   | 📝 |  |
 
+NDR :
+- Il aurait été sans doute plus pertinent d'utiliser "DEF FN".
+
+
 <p align="center">────────────────────</p>
 
-**BONUS**
+##### **BONUS**
 
-<br />
-Ajustement 2026 des capacités.
+###### Ajustement 2026 des capacités.
+
 
 | Option | De | Vers | Formule |
 |--------|-----|------|---------|
@@ -143,8 +155,8 @@ Ajustement 2026 des capacités.
 | 6 | Litres | Quarts US | Quarts US = Litres × 1.05669 |
 | 6 | Quarts US | Litres | Litres = Quarts US × 0.946353 |
 
-<br /><br />
-Ajustement 2026 des distances.
+
+###### Ajustement 2026 des distances.
 
 | Option | De | Vers | Formule |
 |--------|-----|------|---------|
@@ -159,7 +171,17 @@ Ajustement 2026 des distances.
 | 5 | Mètres | Yards | Yards = Mètres × 1.0936132 |
 | 5 | Yards | Mètres | Mètres = Yards × 0.9144 |
 
-<br />
+###### Exemples avec "DEF FN"
+
+Les conversions étant très simples, utiliser "DEF FN" aurait été plus logique.
+
+```basic
+10 DEF FN KM(ML)=ML*1.60934
+...
+100 PRINT "Miles = ";FN KM(X)
+...
+```
+
 
 <p align="center">────────────────────</p>
 
@@ -176,6 +198,6 @@ Ajustement 2026 des distances.
 | Télécran          | 📝 | LCD |
 
 NDR :
-- Prendre plutôt la version assembleur du Club C7pour l'inversion vidéo.
+- Prendre plutôt la version assembleur du Club C7 pour l'inversion vidéo.
 
 ___
