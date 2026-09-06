@@ -128,6 +128,12 @@ Une fois le chargement effectué appuyez sur RUN.
 
 Dimension (HxL) : 172x267.
 
+
+<img src="Jeux Volume Un, Jaquette (1984)(Power Soft)(FR).png" width="200">
+
+
+
+
 Format dédié de la boite.
 
 
